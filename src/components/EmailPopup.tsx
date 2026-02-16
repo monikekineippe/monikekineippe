@@ -23,8 +23,22 @@ const EmailPopup = () => {
   useEffect(() => {
     const dismissed = sessionStorage.getItem("email-popup-dismissed");
     if (dismissed) return;
+
+    // Timer de 6 segundos
     const timer = setTimeout(() => setOpen(true), 6000);
-    return () => clearTimeout(timer);
+
+    // Exit intent (mouse saindo pela parte superior)
+    const handleMouseLeave = (e: MouseEvent) => {
+      if (e.clientY <= 0 && !sessionStorage.getItem("email-popup-dismissed")) {
+        setOpen(true);
+      }
+    };
+    document.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("mouseleave", handleMouseLeave);
+    };
   }, []);
 
   const handleClose = (val: boolean) => {
