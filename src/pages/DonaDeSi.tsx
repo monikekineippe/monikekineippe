@@ -1,15 +1,21 @@
-import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
+import logoIcon from "@/assets/logo-icon.png";
 
 const DonaDeSi = () => {
   return (
     <>
-      <PageHero
-        tag="Individual"
-        title="Mentoria Dona de $i"
-        subtitle={'Você não precisa de mais "força". Você precisa de sistema, limites e direção.'}
-      />
+      <div className="section-padding bg-primary text-primary-foreground text-center">
+        <div className="container mx-auto max-w-3xl">
+          <img src={logoIcon} alt="Monike Kineippe" className="w-20 h-20 mx-auto mb-6 object-contain" />
+          <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-6">Individual</span>
+          <h1 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6">Mentoria Dona de $i</h1>
+          <p className="text-base md:text-lg text-primary-foreground/70 font-sans leading-relaxed max-w-2xl mx-auto">
+            Você não precisa de mais "força". Você precisa de sistema, limites e direção.
+          </p>
+          <div className="mt-10 w-16 h-px bg-secondary mx-auto" />
+        </div>
+      </div>
 
       <Section>
         <div className="max-w-2xl mx-auto">

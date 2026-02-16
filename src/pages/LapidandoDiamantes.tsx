@@ -1,15 +1,21 @@
-import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
+import logoIcon from "@/assets/logo-icon.png";
 
 const LapidandoDiamantes = () => {
   return (
     <>
-      <PageHero
-        tag="Aplicação"
-        title="Mentoria Lapidando Diamante$"
-        subtitle="Para mulheres com conteúdo e história, mas sem estrutura previsível de oferta e vendas."
-      />
+      <div className="section-padding bg-primary text-primary-foreground text-center">
+        <div className="container mx-auto max-w-3xl">
+          <img src={logoIcon} alt="Monike Kineippe" className="w-20 h-20 mx-auto mb-6 object-contain" />
+          <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-6">Aplicação</span>
+          <h1 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6">Mentoria Lapidando Diamante$</h1>
+          <p className="text-base md:text-lg text-primary-foreground/70 font-sans leading-relaxed max-w-2xl mx-auto">
+            Para mulheres com conteúdo e história, mas sem estrutura previsível de oferta e vendas.
+          </p>
+          <div className="mt-10 w-16 h-px bg-secondary mx-auto" />
+        </div>
+      </div>
 
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
