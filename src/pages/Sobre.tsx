@@ -42,16 +42,62 @@ const Sobre = () => {
       />
 
       <Section>
-        <div className="max-w-2xl mx-auto space-y-8">
-          {[
-            "Eu não construí minha vida com 'sorte'. Eu construí com decisão. Já quebrei, já recomecei e já reconstruí.",
-            "Hoje eu ajudo mulheres a transformarem conhecimento em renda digital sólida, com previsibilidade e verdade.",
-            "Minha tese é simples: você já tem valor. Só falta estrutura.",
-          ].map((text, i) => (
-            <p key={i} className="text-muted-foreground font-sans leading-relaxed text-center text-base md:text-lg">
-              "{text}"
-            </p>
-          ))}
+        <div className="max-w-3xl mx-auto space-y-6 font-sans text-muted-foreground leading-relaxed text-base md:text-lg">
+          <p className="text-foreground font-serif text-xl md:text-2xl text-center italic">
+            Eu não aprendi negócios em teoria.<br />
+            Aprendi na prática. E, algumas vezes, na dor.
+          </p>
+
+          <p>
+            Abri meu primeiro CNPJ aos 18 anos. Enquanto muitas pessoas ainda buscavam um caminho, eu já estava contratando, liderando e tomando decisões que exigiam maturidade antes da idade. Cresci vendo meu pai empreender, mas também vivi a frustração de ouvir que negócios não eram lugar para mulheres. Foi ali que decidi que não seria apenas empreendedora — seria empresária.
+          </p>
+
+          <p>
+            Ao longo de mais de 17 anos, construí, vendi, fali, recomecei. Vendi uma agência valorizada, enfrentei dois episódios de burnout, vivi cinco perdas gestacionais e, mesmo assim, escolhi continuar construindo. Não romantizo a jornada. Eu a estruturei.
+          </p>
+
+          <p>
+            Foi na maternidade e no momento em que precisei pausar tudo que entendi algo definitivo: talento não basta. Força não basta. Motivação não basta. O que sustenta um negócio é <strong className="text-foreground">estrutura</strong>.
+          </p>
+
+          <p>
+            Hoje, sou estrategista de negócios digitais femininos com alma. Ajudo mulheres — especialmente mães e prestadoras de serviço — a transformarem conhecimento em produtos digitais estruturados, com previsibilidade e lucro. Meu trabalho não é ensinar a postar mais. É organizar o caos, estruturar ofertas, sustentar posicionamento e construir base sólida para crescer com consistência.
+          </p>
+
+          <p>
+            Fui além da mentoria tradicional. Desenvolvi métodos próprios como o <strong className="text-foreground">ALMA DIGITAL™</strong> e o <strong className="text-foreground">Sistema SE$ (Sistema + Essência = Suce$$o)</strong>, unindo estratégia, identidade e execução. E encontrei na inteligência artificial uma aliada poderosa.
+          </p>
+
+          <p className="text-foreground font-serif text-lg md:text-xl text-center italic">
+            Mas não qualquer IA.
+          </p>
+
+          <p>
+            Eu desenvolvo e implemento IA humanizada — assistentes personalizados que não substituem a essência da empreendedora, mas potencializam sua capacidade estratégica. A tecnologia, quando bem direcionada, libera tempo, reduz sobrecarga e aumenta clareza. Ela não tira a alma do negócio. Ela protege.
+          </p>
+
+          <div className="py-4">
+            <p className="text-foreground font-serif text-lg mb-4 text-center">Minha abordagem une três forças:</p>
+            <ul className="space-y-2 text-center">
+              <li><strong className="text-foreground">Estrutura</strong> de Governante.</li>
+              <li><strong className="text-foreground">Clareza</strong> de Sábio.</li>
+              <li><strong className="text-foreground">Inovação</strong> de Criador.</li>
+            </ul>
+          </div>
+
+          <p className="text-foreground font-serif text-center text-lg italic">
+            Não vendo atalhos.<br />
+            Construo sistemas.
+          </p>
+
+          <p>
+            Hoje, lidero um ecossistema que inclui mentorias, plataforma educacional, implementação de IA e automações estratégicas — tudo com um único propósito: ajudar mulheres a deixarem de sobreviver no improviso e passarem a viver com previsibilidade, liberdade e autoridade.
+          </p>
+
+          <p className="text-foreground font-serif text-center text-xl md:text-2xl pt-4 italic">
+            Porque sem estrutura, não existe liberdade.<br />
+            E você nunca conquistará o que a sua imaginação não conquistou primeiro. 💎🍀✨
+          </p>
         </div>
       </Section>
 
