@@ -117,7 +117,7 @@ const Index = () => {
           </div>
           <div className="flex flex-col gap-3 mt-4">
             <Button variant="hero" size="lg" asChild>
-              <Link to="/lapidando-diamantes">Aplicar para Lapidando</Link>
+              <a href="https://mentorialapidandodiamantes.lovable.app/" target="_blank" rel="noopener noreferrer">Aplicar para Lapidando</a>
             </Button>
             <Button variant="heroOutline" size="lg" asChild>
               <Link to="/dona-de-si">Entrar na lista da Dona de $i</Link>
