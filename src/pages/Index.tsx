@@ -22,20 +22,6 @@ const Index = () => {
     <>
       <EmailPopup />
 
-      {/* HERO — clean */}
-      <section className="min-h-[85vh] flex items-center bg-primary text-primary-foreground relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 35px, currentColor 35px, currentColor 36px)" }} />
-        <div className="container mx-auto max-w-3xl px-6 py-24 text-center relative z-10">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium leading-[1.15] mb-8 animate-fade-up">
-            Você já tem valor.<br />
-            Só falta <span className="text-secondary">estrutura</span>.
-          </h1>
-          <p className="text-base md:text-lg text-primary-foreground/70 font-sans leading-relaxed max-w-xl mx-auto animate-fade-up" style={{ animationDelay: "0.15s" }}>
-            Estratégia humana + IA com intenção para mulheres que querem vender com verdade.
-          </p>
-        </div>
-      </section>
-
       {/* CAMINHOS — 4 CARDS */}
       <Section>
         <div className="text-center mb-16">
