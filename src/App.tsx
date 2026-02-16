@@ -3,7 +3,20 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
 import Index from "./pages/Index";
+import Diagnostico from "./pages/Diagnostico";
+import CoruJah from "./pages/CoruJah";
+import Mentorias from "./pages/Mentorias";
+import LapidandoDiamantes from "./pages/LapidandoDiamantes";
+import DonaDeSi from "./pages/DonaDeSi";
+import MetodoMulherNoPoder from "./pages/MetodoMulherNoPoder";
+import IAHumanizada from "./pages/IAHumanizada";
+import Palestras from "./pages/Palestras";
+import Livros from "./pages/Livros";
+import Conteudos from "./pages/Conteudos";
+import Sobre from "./pages/Sobre";
+import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -14,11 +27,24 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/diagnostico" element={<Diagnostico />} />
+            <Route path="/corujah" element={<CoruJah />} />
+            <Route path="/mentorias" element={<Mentorias />} />
+            <Route path="/lapidando-diamantes" element={<LapidandoDiamantes />} />
+            <Route path="/dona-de-si" element={<DonaDeSi />} />
+            <Route path="/metodo-mulher-no-poder" element={<MetodoMulherNoPoder />} />
+            <Route path="/ia-humanizada" element={<IAHumanizada />} />
+            <Route path="/palestras" element={<Palestras />} />
+            <Route path="/livros" element={<Livros />} />
+            <Route path="/conteudos" element={<Conteudos />} />
+            <Route path="/sobre" element={<Sobre />} />
+            <Route path="/contato" element={<Contato />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
