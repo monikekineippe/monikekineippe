@@ -146,6 +146,20 @@ const Index = () => {
         </DialogContent>
       </Dialog>
 
+      {/* IMPLEMENTAÇÃO IA — destaque */}
+      <section className="bg-primary text-primary-foreground section-padding">
+        <div className="container mx-auto max-w-4xl text-center">
+          <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Escala com estrutura</span>
+          <h2 className="text-2xl md:text-3xl font-serif mt-4 mb-4">Programa de Implementação para Escala</h2>
+          <p className="text-primary-foreground/80 font-sans text-sm leading-relaxed max-w-2xl mx-auto mb-8">
+            IA e automações humanizadas para você parar de fazer tudo sozinha e começar a operar com inteligência, processo e leveza.
+          </p>
+          <Button variant="gold" size="xl" asChild>
+            <a href="https://programaiahumanizada.lovable.app/" target="_blank" rel="noopener noreferrer">Conhecer o Programa</a>
+          </Button>
+        </div>
+      </section>
+
       {/* SOBRE — com fotos */}
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
