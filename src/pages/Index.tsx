@@ -150,7 +150,7 @@ const Index = () => {
       <section className="bg-primary text-primary-foreground section-padding">
         <div className="container mx-auto max-w-4xl text-center">
           <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Escala com estrutura</span>
-          <h2 className="text-2xl md:text-3xl font-serif mt-4 mb-4">Programa de Implementação para Escala</h2>
+          <h2 className="text-2xl md:text-3xl font-serif mt-4 mb-4">Programas de Implementação</h2>
           <p className="text-primary-foreground/80 font-sans text-sm leading-relaxed max-w-2xl mx-auto mb-8">
             IA e automações humanizadas para você parar de fazer tudo sozinha e começar a operar com inteligência, processo e leveza.
           </p>
