@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Section from "@/components/Section";
+import EmailPopup from "@/components/EmailPopup";
 import {
   Dialog,
   DialogContent,
@@ -9,6 +10,8 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { useState } from "react";
+import monike1 from "@/assets/monike-1.jpg";
+import monike2 from "@/assets/monike-2.jpg";
 
 type ModalKey = "diagnostico" | "corujah" | "mentorias" | "autoridade" | null;
 
@@ -17,32 +20,28 @@ const Index = () => {
 
   return (
     <>
-      {/* HERO */}
-      <section className="min-h-[90vh] flex items-center bg-primary text-primary-foreground relative overflow-hidden">
+      <EmailPopup />
+
+      {/* HERO — clean */}
+      <section className="min-h-[85vh] flex items-center bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 35px, currentColor 35px, currentColor 36px)" }} />
-        <div className="container mx-auto max-w-4xl px-6 py-24 text-center relative z-10">
-          <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-8 animate-fade-up">
-            Monike Kineippe
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-medium leading-[1.15] mb-8 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+        <div className="container mx-auto max-w-3xl px-6 py-24 text-center relative z-10">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium leading-[1.15] mb-8 animate-fade-up">
             Você já tem valor.<br />
-            Só falta estrutura pra transformar<br className="hidden md:block" /> isso em <span className="text-secondary">previsibilidade</span>.
+            Só falta <span className="text-secondary">estrutura</span>.
           </h1>
-          <p className="text-base md:text-lg text-primary-foreground/70 font-sans leading-relaxed max-w-2xl mx-auto mb-12 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            Estratégia humana + IA com intenção para mulheres que querem vender com verdade e construir um negócio sólido.
+          <p className="text-base md:text-lg text-primary-foreground/70 font-sans leading-relaxed max-w-xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.15s" }}>
+            Estratégia humana + IA com intenção para mulheres que querem vender com verdade.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
+          <div className="animate-fade-up" style={{ animationDelay: "0.25s" }}>
             <Button variant="gold" size="xl" asChild>
               <Link to="/diagnostico">Quero meu Diagnóstico</Link>
-            </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/corujah">Conhecer a CoruJah</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* CENTRAL — 4 CARDS */}
+      {/* CAMINHOS — 4 CARDS */}
       <Section>
         <div className="text-center mb-16">
           <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Caminhos</span>
@@ -169,70 +168,31 @@ const Index = () => {
         </DialogContent>
       </Dialog>
 
-      {/* PARA QUEM É */}
-      <Section variant="accent">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-serif">Para quem é</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          {[
-            "Você tem conhecimento e entrega, mas trava na estrutura.",
-            "Você vende no improviso e isso custa energia e dinheiro.",
-            'Você quer previsibilidade, não apenas "picos" de faturamento.',
-          ].map((text, i) => (
-            <div key={i} className="text-center font-sans text-sm text-muted-foreground leading-relaxed">
-              <div className="w-8 h-px bg-secondary mx-auto mb-6" />
-              <p>{text}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* O QUE MUDA */}
+      {/* SOBRE — com fotos */}
       <Section>
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-serif">O que muda quando você para de improvisar</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { title: "Clareza de oferta", text: "O que você vende, para quem e por que vale." },
-            { title: "Sistema de execução", text: "Rotina possível, sem perfeccionismo." },
-            { title: "Vendas com verdade ✨", text: "Sem personagem, sem violência interna." },
-          ].map((item, i) => (
-            <div key={i} className="p-8 bg-card gold-border rounded-lg text-center">
-              <h3 className="font-serif text-lg mb-3">{item.title}</h3>
-              <p className="text-sm text-muted-foreground font-sans">{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* CAMINHOS RÁPIDOS */}
-      <Section variant="card">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { title: "Diagnóstico gratuito", path: "/diagnostico" },
-            { title: "Implementação IA Humanizada", path: "/ia-humanizada" },
-            { title: "Convite para palestras", path: "/palestras" },
-          ].map((item, i) => (
-            <Link key={i} to={item.path} className="group p-8 bg-background gold-border rounded-lg text-center hover:border-secondary/60 transition-all">
-              <h3 className="font-serif text-lg mb-4 group-hover:text-primary transition-colors">{item.title}</h3>
-              <span className="text-xs font-sans tracking-widest uppercase text-secondary">Saiba mais →</span>
-            </Link>
-          ))}
-        </div>
-      </Section>
-
-      {/* MINI SOBRE */}
-      <Section>
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-serif mb-6">Eu não ensino fórmula. Eu te devolvo direção.</h2>
-          <p className="text-muted-foreground font-sans leading-relaxed mb-8">
-            Sou empresária desde os 18 anos. Já falhei, recomecei e reconstruí. Hoje guio mulheres a transformarem conhecimento em renda digital sólida, com previsibilidade e verdade, usando IA com intenção.
-          </p>
-          <Button variant="heroOutline" size="lg" asChild>
-            <Link to="/sobre">Conhecer minha história</Link>
-          </Button>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+          <div className="relative">
+            <img
+              src={monike1}
+              alt="Monike Kineippe"
+              className="rounded-lg w-full object-cover aspect-[3/4] premium-shadow"
+            />
+            <img
+              src={monike2}
+              alt="Monike Kineippe com diamante"
+              className="absolute -bottom-6 -right-6 w-40 h-40 object-cover rounded-lg gold-border shadow-xl hidden md:block"
+            />
+          </div>
+          <div className="text-center md:text-left">
+            <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Sobre</span>
+            <h2 className="text-2xl md:text-3xl font-serif mt-3 mb-6">Eu não ensino fórmula.<br />Eu te devolvo direção.</h2>
+            <p className="text-muted-foreground font-sans leading-relaxed mb-8">
+              Sou empresária desde os 18 anos. Já falhei, recomecei e reconstruí. Hoje guio mulheres a transformarem conhecimento em renda digital sólida, com previsibilidade e verdade, usando IA com intenção.
+            </p>
+            <Button variant="heroOutline" size="lg" asChild>
+              <Link to="/sobre">Conhecer minha história</Link>
+            </Button>
+          </div>
         </div>
       </Section>
 
