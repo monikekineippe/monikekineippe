@@ -181,20 +181,24 @@ const Index = () => {
             <p className="text-muted-foreground font-sans leading-relaxed mb-8">
               Sou empresária desde os 18 anos. Já falhei, recomecei e reconstruí. Hoje guio mulheres a transformarem conhecimento em renda digital sólida, com previsibilidade e verdade, usando IA com intenção.
             </p>
-            <Button variant="heroOutline" size="lg" asChild>
-              <Link to="/sobre">Conhecer minha história</Link>
-            </Button>
+            <div className="flex justify-center md:justify-start">
+              <Button variant="heroOutline" size="lg" asChild>
+                <Link to="/sobre">Conhecer minha história</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </Section>
 
       {/* CTA FINAL */}
       <section className="bg-primary text-primary-foreground section-padding text-center">
-        <div className="container mx-auto max-w-2xl">
+        <div className="container mx-auto max-w-2xl px-6">
           <h2 className="text-2xl md:text-4xl font-serif mb-8">Chega de improviso. Escolha estrutura.</h2>
-          <Button variant="gold" size="xl" asChild>
-            <Link to="/diagnostico">Quero meu Diagnóstico</Link>
-          </Button>
+          <div className="flex justify-center">
+            <Button variant="gold" size="xl" className="w-full sm:w-auto" asChild>
+              <Link to="/diagnostico">Quero meu Diagnóstico</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </>
