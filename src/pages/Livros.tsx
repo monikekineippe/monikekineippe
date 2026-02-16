@@ -26,7 +26,7 @@ const Livros = () => {
                 <img
                   src={livroCapa}
                   alt="Livro Empreender Nunca Foi Sorte"
-                  className="w-full rounded-lg shadow-xl gold-border"
+                  className="w-full rounded-lg shadow-xl gold-border rotate-180"
                 />
                 <img
                   src={livroLeitura}
