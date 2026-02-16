@@ -4,14 +4,8 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Início", path: "/" },
-  { label: "Diagnóstico", path: "/diagnostico" },
-  { label: "CoruJah", path: "/corujah" },
-  { label: "Mentorias", path: "/mentorias" },
-  { label: "IA Humanizada", path: "/ia-humanizada" },
   { label: "Palestras", path: "/palestras" },
   { label: "Livros", path: "/livros" },
-  { label: "Conteúdos", path: "/conteudos" },
-  { label: "Sobre", path: "/sobre" },
   { label: "Contato", path: "/contato" },
 ];
 
