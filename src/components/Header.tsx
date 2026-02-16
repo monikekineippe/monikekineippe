@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoMk from "@/assets/logo-mk.png";
 
 const navItems = [
   { label: "Início", path: "/" },
@@ -16,8 +17,8 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-secondary/10">
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
-        <Link to="/" className="font-serif text-xl tracking-wider text-foreground">
-          <span className="text-primary font-semibold">MK</span>
+        <Link to="/" className="flex items-center">
+          <img src={logoMk} alt="Monike Kineippe" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop nav */}
