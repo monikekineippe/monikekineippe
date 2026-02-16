@@ -24,8 +24,8 @@ const EmailPopup = () => {
     const dismissed = sessionStorage.getItem("email-popup-dismissed");
     if (dismissed) return;
 
-    // Timer de 6 segundos
-    const timer = setTimeout(() => setOpen(true), 6000);
+    // Timer de 10 segundos
+    const timer = setTimeout(() => setOpen(true), 10000);
 
     // Exit intent (mouse saindo pela parte superior)
     const handleMouseLeave = (e: MouseEvent) => {
