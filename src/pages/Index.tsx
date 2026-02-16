@@ -30,14 +30,9 @@ const Index = () => {
             Você já tem valor.<br />
             Só falta <span className="text-secondary">estrutura</span>.
           </h1>
-          <p className="text-base md:text-lg text-primary-foreground/70 font-sans leading-relaxed max-w-xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.15s" }}>
+          <p className="text-base md:text-lg text-primary-foreground/70 font-sans leading-relaxed max-w-xl mx-auto animate-fade-up" style={{ animationDelay: "0.15s" }}>
             Estratégia humana + IA com intenção para mulheres que querem vender com verdade.
           </p>
-          <div className="animate-fade-up" style={{ animationDelay: "0.25s" }}>
-            <Button variant="gold" size="xl" asChild>
-              <Link to="/diagnostico">Quero meu Diagnóstico</Link>
-            </Button>
-          </div>
         </div>
       </section>
 
