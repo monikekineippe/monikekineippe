@@ -23,8 +23,12 @@ const Footer = () => {
           <div>
             <h4 className="font-sans text-xs tracking-widest uppercase text-secondary mb-4">Links Rápidos</h4>
             <div className="flex flex-col gap-2">
+              <Link to="/diagnostico" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">Diagnóstico</Link>
+              <Link to="/corujah" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">CoruJah</Link>
+              <Link to="/mentorias" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">Mentorias</Link>
               <Link to="/palestras" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">Palestras</Link>
               <Link to="/livros" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">Livros</Link>
+              <Link to="/sobre" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">Sobre</Link>
               <Link to="/contato" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">Contato</Link>
             </div>
           </div>
