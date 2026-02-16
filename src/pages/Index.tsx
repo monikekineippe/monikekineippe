@@ -142,9 +142,6 @@ const Index = () => {
             <Button variant="heroOutline" size="lg" asChild>
               <Link to="/livros">Livros</Link>
             </Button>
-            <Button variant="ghost" size="lg" asChild>
-              <Link to="/conteudos">Conteúdos</Link>
-            </Button>
           </div>
         </DialogContent>
       </Dialog>
