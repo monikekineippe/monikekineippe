@@ -158,7 +158,7 @@ const Index = () => {
             <img
               src={monike2}
               alt="Monike Kineippe com diamante"
-              className="absolute -bottom-6 -right-6 w-40 h-40 object-cover rounded-lg gold-border shadow-xl hidden md:block"
+              className="absolute -bottom-6 -right-6 w-40 h-40 object-cover object-top rounded-lg gold-border shadow-xl hidden md:block"
             />
           </div>
           <div className="text-center md:text-left">
