@@ -3,6 +3,8 @@ import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useState } from "react";
+import livroCapa from "@/assets/livro-capa.jpg";
+import livroLeitura from "@/assets/livro-leitura.jpg";
 
 const Livros = () => {
   const [sinopse, setSinopse] = useState(false);
@@ -16,20 +18,39 @@ const Livros = () => {
       />
 
       <Section>
-        <div className="max-w-2xl mx-auto">
-          <div className="p-8 md:p-12 gold-border rounded-lg bg-card text-center">
-            <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-secondary">Livro principal</span>
-            <h2 className="text-2xl md:text-3xl font-serif mt-4 mb-4">Empreender nunca foi sorte</h2>
-            <p className="text-sm text-muted-foreground font-sans leading-relaxed mb-8">
-              Um livro sobre autonomia, reconstrução e estrutura. Pra quem cansou de depender e decidiu construir.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer">Comprar</a>
-              </Button>
-              <Button variant="heroOutline" size="lg" onClick={() => setSinopse(true)}>
-                Ler sinopse
-              </Button>
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            {/* Book images */}
+            <div className="relative flex justify-center">
+              <div className="relative w-64 md:w-72">
+                <img
+                  src={livroCapa}
+                  alt="Livro Empreender Nunca Foi Sorte"
+                  className="w-full rounded-lg shadow-xl gold-border"
+                />
+                <img
+                  src={livroLeitura}
+                  alt="Monike lendo seu livro"
+                  className="absolute -bottom-8 -right-8 w-36 h-36 object-cover rounded-lg gold-border shadow-xl hidden md:block"
+                />
+              </div>
+            </div>
+
+            {/* Book info */}
+            <div className="text-center md:text-left">
+              <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-secondary">Livro principal</span>
+              <h2 className="text-2xl md:text-3xl font-serif mt-4 mb-4">Empreender nunca foi sorte</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed mb-8">
+                Um livro sobre autonomia, reconstrução e estrutura. Pra quem cansou de depender e decidiu construir.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <Button variant="hero" size="lg" asChild>
+                  <a href="#" target="_blank" rel="noopener noreferrer">Comprar</a>
+                </Button>
+                <Button variant="heroOutline" size="lg" onClick={() => setSinopse(true)}>
+                  Ler sinopse
+                </Button>
+              </div>
             </div>
           </div>
         </div>
