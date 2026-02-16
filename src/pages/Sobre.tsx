@@ -126,22 +126,6 @@ const Sobre = () => {
         </div>
       </Section>
 
-      <Section variant="accent">
-        <div className="max-w-xl mx-auto">
-          <h2 className="text-xl font-serif mb-6 text-center">Credenciais</h2>
-          <ul className="space-y-3 text-sm font-sans text-muted-foreground">
-            {[
-              "Empresária há 17+ anos",
-              'Autora de "Empreender nunca foi sorte"',
-              "Palestrante e mentora de negócios digitais femininos",
-              "Criadora da CoruJah e dos métodos de estrutura e previsibilidade",
-            ].map((t, i) => (
-              <li key={i} className="flex gap-3"><span className="text-secondary">💎</span>{t}</li>
-            ))}
-          </ul>
-        </div>
-      </Section>
-
       <Section>
         <div className="text-center">
           <Button variant="hero" size="xl" asChild>
