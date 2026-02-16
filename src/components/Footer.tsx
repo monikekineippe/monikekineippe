@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Youtube } from "lucide-react";
+import logoMkGold from "@/assets/logo-mk-gold.png";
 
 const Footer = () => {
   const socials = [
@@ -59,8 +60,8 @@ const Footer = () => {
 
           {/* Brand */}
           <div className="flex flex-col items-start md:items-end justify-between">
-            <Link to="/" className="font-serif text-2xl tracking-wider mb-4">
-              <span className="text-secondary">MK</span>
+            <Link to="/" className="mb-4">
+              <img src={logoMkGold} alt="Monike Kineippe" className="h-14 w-auto" />
             </Link>
             <p className="text-primary-foreground/40 text-xs">© MK Company. Todos os direitos reservados.</p>
           </div>
