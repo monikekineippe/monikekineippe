@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 12%;
 
-    --primary: 0 57% 34%;
+    --primary: 36 45% 30%;
     --primary-foreground: 40 30% 95%;
 
     --secondary: 40 33% 55%;
@@ -36,8 +36,8 @@
 
     --gold: 40 33% 55%;
     --gold-light: 40 30% 75%;
-    --wine: 0 57% 34%;
-    --wine-dark: 0 57% 24%;
+    --wine: 36 45% 30%;
+    --wine-dark: 36 45% 22%;
     --offwhite: 0 0% 97.3%;
     --blue-light: 207 52% 90%;
 
@@ -58,7 +58,7 @@
     --card-foreground: 40 30% 95%;
     --popover: 0 0% 9%;
     --popover-foreground: 40 30% 95%;
-    --primary: 0 57% 40%;
+    --primary: 36 45% 36%;
     --primary-foreground: 40 30% 95%;
     --secondary: 40 33% 45%;
     --secondary-foreground: 0 0% 100%;
