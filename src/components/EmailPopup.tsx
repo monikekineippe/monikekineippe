@@ -10,12 +10,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 
+const GOOGLE_SCRIPT_URL = "COLE_SUA_URL_AQUI";
+
 const EmailPopup = () => {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const dismissed = sessionStorage.getItem("email-popup-dismissed");
@@ -29,9 +32,21 @@ const EmailPopup = () => {
     if (!val) sessionStorage.setItem("email-popup-dismissed", "true");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!consent) return;
+    setLoading(true);
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email }),
+      });
+    } catch (err) {
+      console.error("Erro ao enviar para planilha:", err);
+    }
+    setLoading(false);
     setSubmitted(true);
     sessionStorage.setItem("email-popup-dismissed", "true");
     setTimeout(() => setOpen(false), 2000);
@@ -80,8 +95,8 @@ const EmailPopup = () => {
                 Autorizo receber comunicações da Monike Kineippe. Posso cancelar a qualquer momento.
               </label>
             </div>
-            <Button type="submit" variant="hero" size="lg" className="w-full" disabled={!consent}>
-              Quero receber
+            <Button type="submit" variant="hero" size="lg" className="w-full" disabled={!consent || loading}>
+              {loading ? "Enviando..." : "Quero receber"}
             </Button>
           </form>
         )}
