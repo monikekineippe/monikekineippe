@@ -315,16 +315,16 @@ const ImpostorSyndrome = () => {
         </div>
 
         <Reveal>
-          <p className="text-3xl font-serif font-bold mb-6 text-secondary-foreground">
+          <p className="text-3xl font-serif font-bold mb-6 text-primary-foreground">
             TUDO MENTIRA!
           </p>
-          <p className="text-base leading-relaxed mb-6 text-secondary-foreground/70 font-sans">
+          <p className="text-base leading-relaxed mb-6 text-primary-foreground/70 font-sans">
             O mercado está cheio de gente vendendo o que não sabe. E você, cheia de experiência, conteúdo e boa vontade, com medo de botar a cara no sol?
           </p>
-          <p className="font-serif text-lg italic text-primary">
+          <p className="font-serif text-lg italic text-secondary">
             "EU ACREDITO EM VOCÊ, como um dia eu quis que alguém tivesse acreditado em mim."
           </p>
-          <p className="text-sm mt-2 text-secondary-foreground/50 font-sans">— Monike Kineippe</p>
+          <p className="text-sm mt-2 text-primary-foreground/50 font-sans">— Monike Kineippe</p>
         </Reveal>
       </div>
     </section>
