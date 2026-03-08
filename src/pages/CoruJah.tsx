@@ -75,7 +75,7 @@ const Hero = () => (
 
         <h1 className="font-serif text-4xl md:text-5xl font-bold leading-[1.15] mb-6 text-foreground">
           Você não precisa aprender mais nada para criar um{" "}
-          <span className="text-primary">produto digital</span>
+          <span className="text-secondary">produto digital</span>
         </h1>
 
         <p className="text-xl mb-2 font-medium font-sans text-foreground">
