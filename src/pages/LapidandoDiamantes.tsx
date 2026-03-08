@@ -77,9 +77,9 @@ const LapidandoDiamantes = () => {
           <div className="flex items-center justify-center gap-4 md:gap-8 text-sm" style={{ color: "#E8D5A3" }}>
             <span>3 CNPJs</span>
             <span style={{ color: "#C9A84C" }}>·</span>
-            <span>+200 alunas</span>
+            <span>+650 alunas</span>
             <span style={{ color: "#C9A84C" }}>·</span>
-            <span>+10 anos de campo</span>
+            <span>+18 anos empreendendo</span>
           </div>
         </Reveal>
       </section>
