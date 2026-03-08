@@ -69,7 +69,7 @@ const Hero = () => (
       </Reveal>
 
       <Reveal>
-        <span className="inline-block text-xs font-medium font-sans tracking-widest uppercase mb-6 px-4 py-2 rounded-full bg-primary/10 text-primary">
+        <span className="inline-block text-xs font-medium font-sans tracking-widest uppercase mb-6 px-4 py-2 rounded-full bg-secondary/15 text-secondary">
           IA Estratégica para Empreendedoras
         </span>
 
