@@ -508,7 +508,7 @@ const Pricing = () => {
               href={buyLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-full sm:w-auto px-12 py-4 rounded-full text-base font-semibold text-primary-foreground tracking-wide transition-all hover:brightness-110 hover:scale-[1.02] bg-primary font-sans"
+              className="inline-flex items-center justify-center w-full sm:w-auto px-12 py-4 rounded-full text-base font-semibold text-white tracking-wide transition-all hover:brightness-110 hover:scale-[1.02] bg-green-cta font-sans"
             >
               QUERO CRIAR MEU PRODUTO AGORA
             </a>
