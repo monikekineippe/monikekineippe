@@ -69,7 +69,7 @@ const Hero = () => (
       </Reveal>
 
       <Reveal>
-        <span className="inline-block text-xs font-medium font-sans tracking-widest uppercase mb-6 px-4 py-2 rounded-full bg-primary/10 text-primary">
+        <span className="inline-block text-xs font-medium font-sans tracking-widest uppercase mb-6 px-4 py-2 rounded-full bg-secondary/15 text-secondary">
           IA Estratégica para Empreendedoras
         </span>
 
@@ -184,8 +184,8 @@ const WhatItDoes = () => {
           {features.map((f, i) => (
             <Reveal key={i}>
               <div className="bg-card rounded-xl p-8 border border-border shadow-sm h-full text-center">
-                <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5 bg-primary/10">
-                  <f.icon size={28} className="text-primary" />
+                <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5 bg-secondary/15">
+                  <f.icon size={28} className="text-secondary" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold mb-3 text-foreground">
                   {f.title}
@@ -250,8 +250,8 @@ const BeforeAfter = () => {
           </Reveal>
 
           <Reveal>
-            <div className="rounded-xl p-8 h-full bg-primary/5">
-              <h3 className="font-serif text-xl font-semibold mb-6 text-primary">
+             <div className="rounded-xl p-8 h-full bg-secondary/10">
+               <h3 className="font-serif text-xl font-semibold mb-6 text-secondary">
                 DEPOIS
               </h3>
               <ul className="space-y-4">
@@ -558,7 +558,7 @@ const Mentor = () => (
       </Reveal>
 
       <Reveal>
-        <span className="inline-block text-xs font-medium tracking-widest uppercase mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary font-sans">
+        <span className="inline-block text-xs font-medium tracking-widest uppercase mb-4 px-4 py-2 rounded-full bg-secondary/15 text-secondary font-sans">
           Criadora da CoruJah
         </span>
 
