@@ -204,9 +204,9 @@ const MetodoMulherNoPoder = () => {
             <p className="text-sm font-sans text-muted-foreground uppercase tracking-widest mb-2">Por apenas</p>
             <div className="flex items-baseline justify-center gap-2 mb-1">
               <span className="text-lg font-sans text-muted-foreground">12x</span>
-              <span className="text-5xl font-serif font-bold text-foreground">R$ 49,70</span>
+              <span className="text-5xl font-serif font-bold text-foreground">R$ 51,10</span>
             </div>
-            <p className="text-sm font-sans text-muted-foreground mb-6">ou R$ 497 à vista</p>
+            <p className="text-sm font-sans text-muted-foreground mb-6">ou R$ 511 à vista</p>
             <p className="text-sm font-sans text-muted-foreground mb-8">Caminhe conosco por 1 ano.</p>
             <Button variant="gold" size="xl" className="w-full sm:w-auto" asChild>
               <a href={buyLink} target="_blank" rel="noopener noreferrer">Quero caminhar com vocês</a>
