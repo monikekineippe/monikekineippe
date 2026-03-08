@@ -749,7 +749,7 @@ const FinalCTA = () => (
    ════════════════════════════════════════════════════════ */
 const LPFooter = () => (
   <footer className="py-10 px-6 text-center" style={{ backgroundColor: C.black }}>
-    <img src={metodoLogo} alt="Método Mulher no Poder" className="h-10 mx-auto mb-4 object-contain" />
+    
     <p className="text-sm" style={{ color: "#777", fontFamily: "'Inter', sans-serif" }}>
       © 2025 Comunidade Empresária 4.0 · Monike Kineippe
     </p>
