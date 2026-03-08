@@ -681,7 +681,7 @@ const LPFooter = () => (
    PAGE
    ════════════════════════════════════════════════════════ */
 const CoruJah = () => (
-  <div className="min-h-screen bg-background">
+  <div className="min-h-screen" style={{ backgroundColor: "#FAF7F2" }}>
     <Navbar />
     <Hero />
     <TheProblem />
