@@ -250,8 +250,8 @@ const BeforeAfter = () => {
           </Reveal>
 
           <Reveal>
-            <div className="rounded-xl p-8 h-full bg-primary/5">
-              <h3 className="font-serif text-xl font-semibold mb-6 text-primary">
+             <div className="rounded-xl p-8 h-full bg-secondary/10">
+               <h3 className="font-serif text-xl font-semibold mb-6 text-secondary">
                 DEPOIS
               </h3>
               <ul className="space-y-4">
