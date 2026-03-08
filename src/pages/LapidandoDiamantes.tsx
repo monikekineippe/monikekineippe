@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, ReactNode } from "react";
 import { Gem, Star, Users, CheckCircle, ArrowRight, Shield, Clock, ChevronDown, Instagram, MessageCircle, Search, Map, Target, Trophy, Compass, Handshake, Scale, KeyRound } from "lucide-react";
 import monikePhoto from "@/assets/monike-1.jpg";
+import diamanteIcon from "@/assets/diamante-icon.png";
 
 /* ─── Scroll-reveal wrapper ─── */
 function Reveal({ children, className = "" }: { children: ReactNode; className?: string }) {
@@ -56,7 +57,7 @@ const LapidandoDiamantes = () => {
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(#C9A84C 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
         <Reveal className="relative z-10">
           <div className="flex justify-center mb-6">
-            <Gem size={48} style={{ color: "#C9A84C", filter: "drop-shadow(0 0 18px rgba(201,168,76,0.45))" }} />
+            <img src={diamanteIcon} alt="Lapidando Diamantes" className="w-16 h-16 md:w-20 md:h-20 object-contain" style={{ filter: "drop-shadow(0 0 18px rgba(201,168,76,0.45))" }} />
           </div>
           <p className="text-xs tracking-[0.35em] uppercase mb-6" style={{ color: "#C9A84C" }}>✦ MENTORIA EM GRUPO · VAGAS LIMITADAS ✦</p>
           <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl leading-tight mb-6 max-w-3xl mx-auto" style={{ color: "#FAF7F2" }}>
