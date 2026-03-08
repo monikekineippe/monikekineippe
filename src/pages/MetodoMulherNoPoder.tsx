@@ -6,7 +6,7 @@ import monike1 from "@/assets/monike-1.jpg";
 import { Clock, Users, Handshake, Wrench, MessageCircle, GraduationCap, BookOpen, Network, Gift, Hammer, Mic, Star } from "lucide-react";
 
 const MetodoMulherNoPoder = () => {
-  const buyLink = "https://pay.hotmart.com/M95700816P?off=mmfhyp7p";
+  const buyLink = "https://payfast.greenn.com.br/redirect/188551";
 
   return (
     <>
