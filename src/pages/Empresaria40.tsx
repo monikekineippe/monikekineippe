@@ -246,12 +246,19 @@ const Product = () => {
    SEÇÃO 5 — PROVA SOCIAL
    ════════════════════════════════════════════════════════ */
 const SocialProof = () => {
-  const testimonials = [
-    { name: "Ana Paula, 34 anos", text: "Em 2 meses apliquei mais do que em 1 ano de cursos sozinha." },
-    { name: "Carla Mendes", text: "Finalmente entendi como organizar minha rotina sem me sentir culpada." },
-    { name: "Renata Costa", text: "A comunidade mudou não só meu negócio, mas minha relação com o trabalho." },
-    { name: "Juliana Ramos", text: "Vale cada centavo. O hotseat semanal sozinho já justifica o investimento." },
+  const screenshots = [
+    { src: "/depoimentos/d5.jpeg", alt: "Depoimento de aluna da comunidade" },
+    { src: "/depoimentos/a1.jpg", alt: "Depoimento de aluna da comunidade" },
+    { src: "/depoimentos/wa103.jpg", alt: "Depoimento de aluna da comunidade" },
+    { src: "/depoimentos/d1.jpg", alt: "Depoimento de aluna da comunidade" },
+    { src: "/depoimentos/insta-nov.jpg", alt: "Depoimento de aluna da comunidade" },
+    { src: "/depoimentos/a2.jpg", alt: "Depoimento de aluna da comunidade" },
+    { src: "/depoimentos/d4.jpeg", alt: "Depoimento de aluna da comunidade" },
+    { src: "/depoimentos/d2.jpeg", alt: "Depoimento de aluna da comunidade" },
   ];
+
+  const [showAll, setShowAll] = useState(false);
+  const visible = showAll ? screenshots : screenshots.slice(0, 4);
 
   return (
     <section className="py-20 md:py-28 px-6" style={{ backgroundColor: C.black }}>
@@ -268,37 +275,27 @@ const SocialProof = () => {
           </p>
         </Reveal>
 
-        <div className="grid sm:grid-cols-2 gap-6 mb-10">
-          {testimonials.map((t, i) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          {visible.map((s, i) => (
             <Reveal key={i}>
-              <div className="rounded-xl p-7 text-left" style={{ backgroundColor: C.cardDark }}>
-                <div className="flex items-center gap-3 mb-4">
-                  <div
-                    className="w-11 h-11 rounded-full flex items-center justify-center font-serif font-bold text-sm"
-                    style={{ backgroundColor: C.gold, color: "#fff" }}
-                  >
-                    {t.name.charAt(0)}
-                  </div>
-                  <span className="text-sm font-medium text-white" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    {t.name}
-                  </span>
-                </div>
-                <p className="text-sm leading-relaxed italic" style={{ color: "#ccc", fontFamily: "'Inter', sans-serif" }}>
-                  "{t.text}"
-                </p>
+              <div className="rounded-xl overflow-hidden shadow-lg hover:scale-[1.03] transition-transform cursor-pointer">
+                <img src={s.src} alt={s.alt} className="w-full h-auto object-cover" loading="lazy" />
               </div>
             </Reveal>
           ))}
         </div>
 
-        <Reveal>
-          <button
-            className="px-8 py-3 rounded-full text-sm font-medium border transition-all hover:bg-white/10"
-            style={{ borderColor: "rgba(255,255,255,0.3)", color: "#fff", fontFamily: "'Inter', sans-serif" }}
-          >
-            VER MAIS RESULTADOS
-          </button>
-        </Reveal>
+        {!showAll && screenshots.length > 4 && (
+          <Reveal>
+            <button
+              onClick={() => setShowAll(true)}
+              className="px-8 py-3 rounded-full text-sm font-medium border transition-all hover:bg-white/10"
+              style={{ borderColor: "rgba(255,255,255,0.3)", color: "#fff", fontFamily: "'Inter', sans-serif" }}
+            >
+              VER MAIS RESULTADOS
+            </button>
+          </Reveal>
+        )}
       </div>
     </section>
   );
