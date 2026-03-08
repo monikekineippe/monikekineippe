@@ -483,7 +483,8 @@ const Mentor = () => (
         <div className="flex flex-wrap gap-6">
           {[
             { num: "3", label: "CNPJs ativos" },
-            { num: "+200", label: "alunas" },
+            { num: "+650", label: "alunas" },
+            { num: "+150h", label: "de palco" },
             { num: "+20", label: "segmentos" },
           ].map((s, i) => (
             <div key={i} className="text-center">
