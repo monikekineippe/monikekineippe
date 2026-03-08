@@ -113,7 +113,7 @@ const Index = () => {
           <div className="space-y-3 text-sm font-sans text-muted-foreground">
             <p><strong className="text-foreground">Lapidando Diamante$ (Grupo):</strong> para organizar posicionamento, oferta e execução com direção.</p>
             <p><strong className="text-foreground">Dona de $i (Individual):</strong> para alinhar negócio + vida, com limites, consistência e decisões maduras.</p>
-            <p><strong className="text-foreground">Método Mulher no Poder:</strong> ecossistema e comunidade para quem carrega tudo e não quer mais "sobreviver".</p>
+            <p><strong className="text-foreground">Comunidade Empresária 4.0:</strong> ecossistema e networking para quem carrega tudo e não quer mais "sobreviver".</p>
           </div>
           <div className="flex flex-col gap-3 mt-4">
             <Button variant="hero" size="lg" asChild>

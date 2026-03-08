@@ -25,7 +25,7 @@ const Mentorias = () => {
     {
       title: "Comunidade Empresária 4.0",
       label: "Ecossistema",
-      text: "Ecossistema e comunidade para quem carrega tudo e quer viver plenamente, sem abrir mão dos sonhos.",
+      text: "Ecossistema e networking para quem carrega tudo e não quer mais 'sobreviver'.",
       cta: "Participe da Comunidade Empresária 4.0",
       link: "/empresaria-40",
       external: false,
