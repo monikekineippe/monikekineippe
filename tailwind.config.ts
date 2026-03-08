@@ -60,6 +60,10 @@ export default {
           dark: "hsl(var(--wine-dark))",
         },
         "blue-light": "hsl(var(--blue-light))",
+        "green-cta": {
+          DEFAULT: "hsl(var(--green-cta))",
+          dark: "hsl(var(--green-cta-dark))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

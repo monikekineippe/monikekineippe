@@ -49,7 +49,7 @@ const Navbar = () => {
         </a>
         <a
           href="#preco"
-          className="inline-flex items-center px-6 py-2.5 rounded-full text-sm font-medium text-primary-foreground bg-primary transition-all hover:bg-primary/90"
+          className="inline-flex items-center px-6 py-2.5 rounded-full text-sm font-medium text-white bg-green-cta transition-all hover:bg-green-cta-dark"
         >
           Quero minha CoruJah
         </a>
@@ -75,7 +75,7 @@ const Hero = () => (
 
         <h1 className="font-serif text-4xl md:text-5xl font-bold leading-[1.15] mb-6 text-foreground">
           Você não precisa aprender mais nada para criar um{" "}
-          <span className="text-primary">produto digital</span>
+          <span className="text-secondary">produto digital</span>
         </h1>
 
         <p className="text-xl mb-2 font-medium font-sans text-foreground">
@@ -88,7 +88,7 @@ const Hero = () => (
 
         <a
           href="#preco"
-          className="inline-flex items-center justify-center px-10 py-4 rounded-full text-base font-semibold text-primary-foreground tracking-wide transition-all hover:brightness-110 hover:scale-[1.02] bg-primary font-sans"
+          className="inline-flex items-center justify-center px-10 py-4 rounded-full text-base font-semibold text-white tracking-wide transition-all hover:brightness-110 hover:scale-[1.02] bg-green-cta font-sans"
         >
           QUERO TER MEU PRODUTO DIGITAL
         </a>
@@ -135,7 +135,7 @@ const TheProblem = () => (
             <p className="text-sm leading-relaxed mb-4 text-muted-foreground font-sans">
               Quando precisa decidir o que entra, o que fica de fora, como transformar anos de experiência em algo claro, vendável e estruturado.
             </p>
-            <p className="font-medium italic mb-4 text-primary font-sans">
+            <p className="font-medium italic mb-4 text-secondary font-sans">
               De repente, tudo parece demais.
             </p>
             <ul className="space-y-2 text-sm text-muted-foreground font-sans">
@@ -269,7 +269,7 @@ const BeforeAfter = () => {
         <Reveal className="text-center mt-10">
           <a
             href="#preco"
-            className="inline-flex items-center justify-center px-10 py-4 rounded-full text-base font-semibold text-primary-foreground tracking-wide transition-all hover:brightness-110 hover:scale-[1.02] bg-primary font-sans"
+            className="inline-flex items-center justify-center px-10 py-4 rounded-full text-base font-semibold text-white tracking-wide transition-all hover:brightness-110 hover:scale-[1.02] bg-green-cta font-sans"
           >
             QUERO MINHA CORUJAH AGORA
           </a>
@@ -291,13 +291,13 @@ const ImpostorSyndrome = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 px-6 bg-secondary">
+    <section className="py-20 md:py-28 px-6 bg-primary">
       <div className="max-w-3xl mx-auto text-center">
         <Reveal>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-secondary-foreground">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">
             A 1ª missão da CoruJah é caçar a sua
           </h2>
-          <p className="text-2xl font-serif font-bold mb-10 text-primary">
+          <p className="text-2xl font-serif font-bold mb-10 text-secondary">
             Síndrome da Impostora
           </p>
         </Reveal>
@@ -305,8 +305,8 @@ const ImpostorSyndrome = () => {
         <div className="space-y-4 mb-10">
           {lies.map((lie, i) => (
             <Reveal key={i}>
-              <div className="rounded-lg px-6 py-4 bg-secondary/70 border border-secondary-foreground/10">
-                <p className="text-base italic text-secondary-foreground/80 font-sans">
+              <div className="rounded-lg px-6 py-4 bg-primary/70 border border-primary-foreground/10">
+                <p className="text-base italic text-primary-foreground/80 font-sans">
                   "{lie}"
                 </p>
               </div>
@@ -315,16 +315,16 @@ const ImpostorSyndrome = () => {
         </div>
 
         <Reveal>
-          <p className="text-3xl font-serif font-bold mb-6 text-secondary-foreground">
+          <p className="text-3xl font-serif font-bold mb-6 text-primary-foreground">
             TUDO MENTIRA!
           </p>
-          <p className="text-base leading-relaxed mb-6 text-secondary-foreground/70 font-sans">
+          <p className="text-base leading-relaxed mb-6 text-primary-foreground/70 font-sans">
             O mercado está cheio de gente vendendo o que não sabe. E você, cheia de experiência, conteúdo e boa vontade, com medo de botar a cara no sol?
           </p>
-          <p className="font-serif text-lg italic text-primary">
+          <p className="font-serif text-lg italic text-secondary">
             "EU ACREDITO EM VOCÊ, como um dia eu quis que alguém tivesse acreditado em mim."
           </p>
-          <p className="text-sm mt-2 text-secondary-foreground/50 font-sans">— Monike Kineippe</p>
+          <p className="text-sm mt-2 text-primary-foreground/50 font-sans">— Monike Kineippe</p>
         </Reveal>
       </div>
     </section>
@@ -445,17 +445,17 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="preco" className="py-20 md:py-28 px-6 bg-secondary">
+    <section id="preco" className="py-20 md:py-28 px-6 bg-primary">
       <div className="max-w-2xl mx-auto text-center">
         <Reveal>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-12 text-secondary-foreground">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-12 text-primary-foreground">
             A oportunidade de colocar seu produto no mundo está aqui.
           </h2>
         </Reveal>
 
         <Reveal>
           <div className="bg-card rounded-3xl p-10 md:p-12 shadow-2xl text-center">
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase mb-6 px-5 py-2 rounded-full text-primary-foreground bg-primary font-sans">
+            <span className="inline-block text-xs font-semibold tracking-widest uppercase mb-6 px-5 py-2 rounded-full text-white bg-green-cta font-sans">
               OFERTA DE LANÇAMENTO
             </span>
 
@@ -508,7 +508,7 @@ const Pricing = () => {
               href={buyLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-full sm:w-auto px-12 py-4 rounded-full text-base font-semibold text-primary-foreground tracking-wide transition-all hover:brightness-110 hover:scale-[1.02] bg-primary font-sans"
+              className="inline-flex items-center justify-center w-full sm:w-auto px-12 py-4 rounded-full text-base font-semibold text-white tracking-wide transition-all hover:brightness-110 hover:scale-[1.02] bg-green-cta font-sans"
             >
               QUERO CRIAR MEU PRODUTO AGORA
             </a>
@@ -537,7 +537,7 @@ const Guarantee = () => (
         <p className="text-base leading-relaxed mb-6 text-muted-foreground font-sans">
           Se a CoruJah não superar suas expectativas ou não fizer sentido para o seu negócio, basta solicitar o reembolso total do seu investimento. Sem perguntas, sem burocracia.
         </p>
-        <p className="font-serif text-lg italic text-primary">
+        <p className="font-serif text-lg italic text-secondary">
           — Monike Kineippe
         </p>
       </Reveal>
@@ -573,7 +573,7 @@ const Mentor = () => (
           <p className="text-base leading-relaxed">
             Empresária desde os 18 anos. Já sentiu na pele a sobrecarga, a frustração com fórmulas que não funcionam e o desafio de equilibrar negócios, maternidade e vida pessoal.
           </p>
-          <p className="text-base leading-relaxed italic text-primary">
+          <p className="text-base leading-relaxed italic text-secondary">
             "Eu criei a CoruJah porque sei como é ter muito conhecimento e não saber por onde começar. Agora, você não precisa mais ficar travada."
           </p>
         </div>
@@ -654,7 +654,7 @@ const FinalCTA = () => (
           href={buyLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center px-12 py-4 rounded-full text-base font-semibold tracking-wide transition-all hover:scale-[1.02] bg-secondary text-secondary-foreground font-sans"
+          className="inline-flex items-center justify-center px-12 py-4 rounded-full text-base font-semibold tracking-wide transition-all hover:scale-[1.02] bg-green-cta text-white font-sans"
         >
           QUERO CRIAR MEU PRODUTO AGORA
         </a>
@@ -667,11 +667,11 @@ const FinalCTA = () => (
    FOOTER
    ════════════════════════════════════════════════════════ */
 const LPFooter = () => (
-  <footer className="py-10 px-6 text-center bg-secondary">
-    <p className="text-sm text-secondary-foreground/70 font-sans">
+<footer className="py-10 px-6 text-center bg-primary">
+    <p className="text-sm text-primary-foreground/70 font-sans">
       © 2025 CoruJah IA · Monike Kineippe
     </p>
-    <p className="text-xs mt-1 text-secondary-foreground/50 font-sans">
+    <p className="text-xs mt-1 text-primary-foreground/50 font-sans">
       Todos os direitos reservados
     </p>
   </footer>
