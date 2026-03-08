@@ -565,7 +565,7 @@ const Pricing = () => {
 
         <Reveal>
           <div className="bg-white rounded-3xl p-10 md:p-12 shadow-2xl text-center">
-            <img src={metodoIcon} alt="Método Mulher no Poder" className="w-12 h-12 mx-auto mb-4 object-contain" />
+            
             <span
               className="inline-block text-xs font-semibold tracking-widest uppercase mb-6 px-5 py-2 rounded-full text-white"
               style={{ backgroundColor: C.gold, fontFamily: "'Inter', sans-serif" }}
