@@ -573,7 +573,7 @@ const Mentor = () => (
           <p className="text-base leading-relaxed">
             Empresária desde os 18 anos. Já sentiu na pele a sobrecarga, a frustração com fórmulas que não funcionam e o desafio de equilibrar negócios, maternidade e vida pessoal.
           </p>
-          <p className="text-base leading-relaxed italic text-primary">
+          <p className="text-base leading-relaxed italic text-secondary">
             "Eu criei a CoruJah porque sei como é ter muito conhecimento e não saber por onde começar. Agora, você não precisa mais ficar travada."
           </p>
         </div>
