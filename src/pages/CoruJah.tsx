@@ -294,10 +294,10 @@ const ImpostorSyndrome = () => {
     <section className="py-20 md:py-28 px-6 bg-primary">
       <div className="max-w-3xl mx-auto text-center">
         <Reveal>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-secondary-foreground">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">
             A 1ª missão da CoruJah é caçar a sua
           </h2>
-          <p className="text-2xl font-serif font-bold mb-10 text-primary">
+          <p className="text-2xl font-serif font-bold mb-10 text-secondary">
             Síndrome da Impostora
           </p>
         </Reveal>
