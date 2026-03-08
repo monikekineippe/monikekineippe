@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import logoMk from "@/assets/logo-mk.png";
 import monike1 from "@/assets/monike-1.jpg";
+import corujahMockup from "@/assets/corujah-hero-mockup.png";
 
 const buyLink = "https://payfast.greenn.com.br/redirect/212761";
 
