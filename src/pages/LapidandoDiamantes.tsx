@@ -309,18 +309,6 @@ const LapidandoDiamantes = () => {
         </div>
       </section>
 
-      {/* ═══════ URGÊNCIA ═══════ */}
-      <section className="py-16 md:py-20 px-5 text-center" style={{ backgroundColor: "#C9A84C" }}>
-        <Reveal>
-          <Clock size={36} style={{ color: "#0D0D0D" }} className="mx-auto mb-5" />
-          <h2 className="font-serif text-2xl md:text-3xl mb-3" style={{ color: "#0D0D0D" }}>As vagas do próximo grupo estão abertas.</h2>
-          <p className="text-sm mb-8" style={{ color: "#0D0D0D" }}>Quando fechar, a próxima oportunidade pode demorar meses.</p>
-          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-block text-xs tracking-widest uppercase px-8 py-4 rounded font-semibold transition-all duration-300 hover:scale-105" style={{ backgroundColor: "#0D0D0D", color: "#FAF7F2" }}>
-            GARANTIR MINHA VAGA AGORA
-          </a>
-        </Reveal>
-      </section>
-
       {/* ═══════ FAQ ═══════ */}
       <section className="py-20 md:py-28 px-5" style={{ backgroundColor: "#FAF7F2" }}>
         <div className="max-w-[800px] mx-auto">
