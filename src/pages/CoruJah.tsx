@@ -448,7 +448,7 @@ const Pricing = () => {
     <section id="preco" className="py-20 md:py-28 px-6 bg-primary">
       <div className="max-w-2xl mx-auto text-center">
         <Reveal>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-12 text-secondary-foreground">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-12 text-primary-foreground">
             A oportunidade de colocar seu produto no mundo está aqui.
           </h2>
         </Reveal>
