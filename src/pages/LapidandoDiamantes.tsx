@@ -293,7 +293,8 @@ const LapidandoDiamantes = () => {
                 ))}
               </ul>
               <div className="h-px w-full mb-8" style={{ backgroundColor: "rgba(201,168,76,0.25)" }} />
-              <p className="font-serif text-xl text-center mb-2" style={{ color: "#E8D5A3" }}>Investimento sob consulta · Vagas limitadas</p>
+              <p className="font-serif text-xl text-center mb-2" style={{ color: "#E8D5A3" }}>Próxima turma em 20 de março</p>
+              <p className="font-serif text-base text-center mb-2" style={{ color: "#C9A84C" }}>Apenas 10 vagas disponíveis!</p>
               <p className="text-xs text-center mb-8" style={{ color: "rgba(250,247,242,0.45)" }}>
                 O valor e as condições são apresentados após uma conversa inicial para garantir que a mentoria é o momento certo para o seu negócio.
               </p>
