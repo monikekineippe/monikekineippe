@@ -23,11 +23,11 @@ const Mentorias = () => {
       external: false,
     },
     {
-      title: "Método Mulher no Poder",
+      title: "Comunidade Empresária 4.0",
       label: "Ecossistema",
       text: "Ecossistema e comunidade para quem carrega tudo e quer viver plenamente, sem abrir mão dos sonhos.",
-      cta: "Ver detalhes",
-      link: "/metodo-mulher-no-poder",
+      cta: "Participe da Comunidade Empresária 4.0",
+      link: "/empresaria-40",
       external: false,
     },
   ];
