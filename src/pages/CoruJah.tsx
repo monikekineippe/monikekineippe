@@ -667,11 +667,11 @@ const FinalCTA = () => (
    FOOTER
    ════════════════════════════════════════════════════════ */
 const LPFooter = () => (
-  <footer className="py-10 px-6 text-center bg-secondary">
-    <p className="text-sm text-secondary-foreground/70 font-sans">
+<footer className="py-10 px-6 text-center bg-primary">
+    <p className="text-sm text-primary-foreground/70 font-sans">
       © 2025 CoruJah IA · Monike Kineippe
     </p>
-    <p className="text-xs mt-1 text-secondary-foreground/50 font-sans">
+    <p className="text-xs mt-1 text-primary-foreground/50 font-sans">
       Todos os direitos reservados
     </p>
   </footer>
