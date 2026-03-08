@@ -263,7 +263,7 @@ const LapidandoDiamantes = () => {
               </Reveal>
             ))}
           </div>
-          <p className="text-center text-xs italic" style={{ color: "#999" }}>Substitua pelos depoimentos reais das suas alunas da mentoria.</p>
+          
         </div>
       </section>
 
