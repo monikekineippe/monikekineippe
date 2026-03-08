@@ -184,8 +184,8 @@ const WhatItDoes = () => {
           {features.map((f, i) => (
             <Reveal key={i}>
               <div className="bg-card rounded-xl p-8 border border-border shadow-sm h-full text-center">
-                <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5 bg-primary/10">
-                  <f.icon size={28} className="text-primary" />
+                <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5 bg-secondary/15">
+                  <f.icon size={28} className="text-secondary" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold mb-3 text-foreground">
                   {f.title}
