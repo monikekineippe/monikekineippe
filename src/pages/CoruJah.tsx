@@ -63,13 +63,17 @@ const Navbar = () => {
    ════════════════════════════════════════════════════════ */
 const Hero = () => (
   <section className="pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-background">
-    <div className="max-w-5xl mx-auto text-center">
+    <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <Reveal className="flex justify-center">
+        <img src={corujahMockup} alt="CoruJah IA - Plataforma" className="w-full max-w-md" />
+      </Reveal>
+
       <Reveal>
         <span className="inline-block text-xs font-medium font-sans tracking-widest uppercase mb-6 px-4 py-2 rounded-full bg-primary/10 text-primary">
           IA Estratégica para Empreendedoras
         </span>
 
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.15] mb-6 text-foreground">
+        <h1 className="font-serif text-4xl md:text-5xl font-bold leading-[1.15] mb-6 text-foreground">
           Você não precisa aprender mais nada para criar um{" "}
           <span className="text-primary">produto digital</span>
         </h1>
@@ -78,7 +82,7 @@ const Hero = () => (
           A CoruJah te ajuda a fazer acontecer!
         </p>
 
-        <p className="text-lg max-w-2xl mx-auto mb-10 leading-relaxed font-sans text-muted-foreground">
+        <p className="text-lg mb-10 leading-relaxed font-sans text-muted-foreground">
           Uma IA estratégica feita para empreendedoras experientes que travam na hora de organizar, decidir e lançar.
         </p>
 
