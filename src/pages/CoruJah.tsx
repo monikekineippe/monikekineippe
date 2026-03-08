@@ -294,10 +294,10 @@ const ImpostorSyndrome = () => {
     <section className="py-20 md:py-28 px-6 bg-secondary">
       <div className="max-w-3xl mx-auto text-center">
         <Reveal>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-secondary-foreground">
             A 1ª missão da CoruJah é caçar a sua
           </h2>
-          <p className="text-2xl font-serif font-bold mb-10 text-secondary">
+          <p className="text-2xl font-serif font-bold mb-10 text-primary">
             Síndrome da Impostora
           </p>
         </Reveal>
@@ -306,7 +306,7 @@ const ImpostorSyndrome = () => {
           {lies.map((lie, i) => (
             <Reveal key={i}>
               <div className="rounded-lg px-6 py-4 bg-secondary/70 border border-secondary-foreground/10">
-                <p className="text-base italic text-primary-foreground/70 font-sans">
+                <p className="text-base italic text-secondary-foreground/80 font-sans">
                   "{lie}"
                 </p>
               </div>
@@ -315,16 +315,16 @@ const ImpostorSyndrome = () => {
         </div>
 
         <Reveal>
-          <p className="text-3xl font-serif font-bold mb-6 text-primary-foreground">
+          <p className="text-3xl font-serif font-bold mb-6 text-secondary-foreground">
             TUDO MENTIRA!
           </p>
-          <p className="text-base leading-relaxed mb-6 text-primary-foreground/60 font-sans">
+          <p className="text-base leading-relaxed mb-6 text-secondary-foreground/70 font-sans">
             O mercado está cheio de gente vendendo o que não sabe. E você, cheia de experiência, conteúdo e boa vontade, com medo de botar a cara no sol?
           </p>
-          <p className="font-serif text-lg italic text-secondary">
+          <p className="font-serif text-lg italic text-primary">
             "EU ACREDITO EM VOCÊ, como um dia eu quis que alguém tivesse acreditado em mim."
           </p>
-          <p className="text-sm mt-2 text-primary-foreground/40 font-sans">— Monike Kineippe</p>
+          <p className="text-sm mt-2 text-secondary-foreground/50 font-sans">— Monike Kineippe</p>
         </Reveal>
       </div>
     </section>
