@@ -8,17 +8,6 @@ import {
 import logoMk from "@/assets/logo-mk.png";
 import monike1 from "@/assets/monike-1.jpg";
 
-/* ─── Paleta CoruJah ─── */
-const C = {
-  green: "#2D6A2E",
-  greenLight: "#3A8B3C",
-  cream: "#FAF3E0",
-  black: "#1A1A1A",
-  gold: "#C9A84C",
-  goldLight: "#D4B86A",
-  cardDark: "#2A2A2A",
-};
-
 const buyLink = "https://payfast.greenn.com.br/redirect/212761";
 
 /* ─── Reveal wrapper ─── */
@@ -48,21 +37,18 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-      style={{
-        backgroundColor: scrolled ? "#fff" : "rgba(255,255,255,0.95)",
-        boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.08)" : "none",
-      }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-card shadow-md" : "bg-card/95"
+      }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="/" className="flex items-center gap-3">
           <img src={logoMk} alt="MK" className="h-10 w-auto" />
-          <span className="text-sm font-normal font-serif hidden sm:inline" style={{ color: C.black }}>CoruJah IA</span>
+          <span className="text-sm font-normal font-serif hidden sm:inline text-foreground">CoruJah IA</span>
         </a>
         <a
           href="#preco"
-          className="inline-flex items-center px-6 py-2.5 rounded-full text-sm font-medium text-white transition-all hover:brightness-110"
-          style={{ backgroundColor: C.green }}
+          className="inline-flex items-center px-6 py-2.5 rounded-full text-sm font-medium text-primary-foreground bg-primary transition-all hover:bg-primary/90"
         >
           Quero minha CoruJah
         </a>
@@ -75,41 +61,34 @@ const Navbar = () => {
    HERO
    ════════════════════════════════════════════════════════ */
 const Hero = () => (
-  <section className="pt-24 pb-16 md:pt-32 md:pb-24 px-6" style={{ backgroundColor: C.cream }}>
+  <section className="pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-background">
     <div className="max-w-5xl mx-auto text-center">
       <Reveal>
-        <span
-          className="inline-block text-xs font-medium tracking-widest uppercase mb-6 px-4 py-2 rounded-full"
-          style={{ backgroundColor: `${C.green}15`, color: C.green, fontFamily: "'Inter', sans-serif" }}
-        >
+        <span className="inline-block text-xs font-medium font-sans tracking-widest uppercase mb-6 px-4 py-2 rounded-full bg-primary/10 text-primary">
           IA Estratégica para Empreendedoras
         </span>
 
-        <h1
-          className="font-serif text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.15] mb-6"
-          style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}
-        >
+        <h1 className="font-serif text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.15] mb-6 text-foreground">
           Você não precisa aprender mais nada para criar um{" "}
-          <span style={{ color: C.green }}>produto digital</span>
+          <span className="text-primary">produto digital</span>
         </h1>
 
-        <p className="text-xl mb-2 font-medium" style={{ color: C.black, fontFamily: "'Inter', sans-serif" }}>
+        <p className="text-xl mb-2 font-medium font-sans text-foreground">
           A CoruJah te ajuda a fazer acontecer!
         </p>
 
-        <p className="text-lg max-w-2xl mx-auto mb-10 leading-relaxed" style={{ color: "#555", fontFamily: "'Inter', sans-serif" }}>
+        <p className="text-lg max-w-2xl mx-auto mb-10 leading-relaxed font-sans text-muted-foreground">
           Uma IA estratégica feita para empreendedoras experientes que travam na hora de organizar, decidir e lançar.
         </p>
 
         <a
           href="#preco"
-          className="inline-flex items-center justify-center px-10 py-4 rounded-full text-base font-semibold text-white tracking-wide transition-all hover:brightness-110 hover:scale-[1.02]"
-          style={{ backgroundColor: C.green, fontFamily: "'Inter', sans-serif" }}
+          className="inline-flex items-center justify-center px-10 py-4 rounded-full text-base font-semibold text-primary-foreground tracking-wide transition-all hover:brightness-110 hover:scale-[1.02] bg-primary font-sans"
         >
           QUERO TER MEU PRODUTO DIGITAL
         </a>
 
-        <p className="mt-4 text-sm" style={{ color: "#888", fontFamily: "'Inter', sans-serif" }}>
+        <p className="mt-4 text-sm text-muted-foreground font-sans">
           🔒 7 dias de garantia incondicional
         </p>
       </Reveal>
@@ -121,43 +100,40 @@ const Hero = () => (
    A TRAVA
    ════════════════════════════════════════════════════════ */
 const TheProblem = () => (
-  <section className="py-20 md:py-28 px-6 bg-white">
+  <section className="py-20 md:py-28 px-6 bg-card">
     <div className="max-w-4xl mx-auto">
       <Reveal>
-        <h2
-          className="font-serif text-3xl md:text-4xl font-bold text-center mb-12"
-          style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}
-        >
+        <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
           Vamos falar a verdade?
         </h2>
       </Reveal>
 
       <div className="grid md:grid-cols-2 gap-10 items-start">
         <Reveal>
-          <div className="space-y-4" style={{ fontFamily: "'Inter', sans-serif", color: "#444" }}>
+          <div className="space-y-4 font-sans text-muted-foreground">
             <p className="text-base leading-relaxed">
               Existe um tipo específico de trava que só mulheres experientes sentem.
             </p>
             <p>Não é falta de estudo.</p>
             <p>Não é falta de vivência.</p>
             <p>E definitivamente não é falta de capacidade.</p>
-            <p className="font-semibold" style={{ color: C.black }}>Você já acumulou conhecimento.</p>
+            <p className="font-semibold text-foreground">Você já acumulou conhecimento.</p>
             <p>Já viveu na prática. Já resolveu problemas reais. Já ajudou pessoas — mesmo que nunca tenha chamado isso de "produto".</p>
           </div>
         </Reveal>
 
         <Reveal>
-          <div className="rounded-xl p-8" style={{ backgroundColor: C.cream }}>
-            <p className="font-semibold mb-4" style={{ color: C.black, fontFamily: "'Inter', sans-serif" }}>
+          <div className="rounded-xl p-8 bg-background">
+            <p className="font-semibold mb-4 text-foreground font-sans">
               O problema começa quando você tenta organizar tudo isso.
             </p>
-            <p className="text-sm leading-relaxed mb-4" style={{ color: "#555", fontFamily: "'Inter', sans-serif" }}>
+            <p className="text-sm leading-relaxed mb-4 text-muted-foreground font-sans">
               Quando precisa decidir o que entra, o que fica de fora, como transformar anos de experiência em algo claro, vendável e estruturado.
             </p>
-            <p className="font-medium italic mb-4" style={{ color: C.green, fontFamily: "'Inter', sans-serif" }}>
+            <p className="font-medium italic mb-4 text-primary font-sans">
               De repente, tudo parece demais.
             </p>
-            <ul className="space-y-2 text-sm" style={{ color: "#555", fontFamily: "'Inter', sans-serif" }}>
+            <ul className="space-y-2 text-sm text-muted-foreground font-sans">
               <li>• Ideias demais</li>
               <li>• Possibilidades demais</li>
               <li>• Informações demais</li>
@@ -167,8 +143,8 @@ const TheProblem = () => (
       </div>
 
       <Reveal>
-        <blockquote className="mt-12 text-center border-l-4 pl-6 py-4 mx-auto max-w-2xl" style={{ borderColor: C.green }}>
-          <p className="font-serif text-lg italic" style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}>
+        <blockquote className="mt-12 text-center border-l-4 border-primary pl-6 py-4 mx-auto max-w-2xl">
+          <p className="font-serif text-lg italic text-foreground">
             "Essa trava não é falha. É falta de método certo para o seu nível de maturidade. E é exatamente aí que a CoruJah entra."
           </p>
         </blockquote>
@@ -188,16 +164,13 @@ const WhatItDoes = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 px-6" style={{ backgroundColor: C.cream }}>
+    <section className="py-20 md:py-28 px-6 bg-background">
       <div className="max-w-5xl mx-auto text-center">
         <Reveal>
-          <h2
-            className="font-serif text-3xl md:text-4xl font-bold mb-4"
-            style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Conheça a CoruJah — sua nova melhor amiga
           </h2>
-          <p className="text-lg mb-14" style={{ color: "#666", fontFamily: "'Inter', sans-serif" }}>
+          <p className="text-lg mb-14 text-muted-foreground font-sans">
             A inteligência estratégica que transforma seu conhecimento em produto digital.
           </p>
         </Reveal>
@@ -205,14 +178,14 @@ const WhatItDoes = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {features.map((f, i) => (
             <Reveal key={i}>
-              <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm h-full text-center">
-                <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5" style={{ backgroundColor: `${C.green}12` }}>
-                  <f.icon size={28} style={{ color: C.green }} />
+              <div className="bg-card rounded-xl p-8 border border-border shadow-sm h-full text-center">
+                <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5 bg-primary/10">
+                  <f.icon size={28} className="text-primary" />
                 </div>
-                <h3 className="font-serif text-xl font-semibold mb-3" style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="font-serif text-xl font-semibold mb-3 text-foreground">
                   {f.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#666", fontFamily: "'Inter', sans-serif" }}>
+                <p className="text-sm leading-relaxed text-muted-foreground font-sans">
                   {f.desc}
                 </p>
               </div>
@@ -246,28 +219,25 @@ const BeforeAfter = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 px-6 bg-white">
+    <section className="py-20 md:py-28 px-6 bg-card">
       <div className="max-w-5xl mx-auto">
         <Reveal>
-          <h2
-            className="font-serif text-3xl md:text-4xl font-bold text-center mb-14"
-            style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-14 text-foreground">
             A transformação que você vai experimentar
           </h2>
         </Reveal>
 
         <div className="grid md:grid-cols-2 gap-6">
           <Reveal>
-            <div className="rounded-xl p-8 h-full" style={{ backgroundColor: "#F5F3EF" }}>
-              <h3 className="font-serif text-xl font-semibold mb-6" style={{ color: "#888", fontFamily: "'Playfair Display', serif" }}>
+            <div className="rounded-xl p-8 h-full bg-muted">
+              <h3 className="font-serif text-xl font-semibold mb-6 text-muted-foreground">
                 ANTES
               </h3>
               <ul className="space-y-4">
                 {before.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <XIcon size={18} className="mt-0.5 flex-shrink-0" style={{ color: "#D44" }} />
-                    <span className="text-sm" style={{ color: "#666" }}>{item}</span>
+                  <li key={i} className="flex items-start gap-3 font-sans">
+                    <XIcon size={18} className="mt-0.5 flex-shrink-0 text-destructive" />
+                    <span className="text-sm text-muted-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -275,15 +245,15 @@ const BeforeAfter = () => {
           </Reveal>
 
           <Reveal>
-            <div className="rounded-xl p-8 h-full" style={{ backgroundColor: `${C.green}10` }}>
-              <h3 className="font-serif text-xl font-semibold mb-6" style={{ color: C.green, fontFamily: "'Playfair Display', serif" }}>
+            <div className="rounded-xl p-8 h-full bg-primary/5">
+              <h3 className="font-serif text-xl font-semibold mb-6 text-primary">
                 DEPOIS
               </h3>
               <ul className="space-y-4">
                 {after.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <Check size={18} className="mt-0.5 flex-shrink-0" style={{ color: C.green }} />
-                    <span className="text-sm" style={{ color: "#444" }}>{item}</span>
+                  <li key={i} className="flex items-start gap-3 font-sans">
+                    <Check size={18} className="mt-0.5 flex-shrink-0 text-primary" />
+                    <span className="text-sm text-foreground/80">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -294,8 +264,7 @@ const BeforeAfter = () => {
         <Reveal className="text-center mt-10">
           <a
             href="#preco"
-            className="inline-flex items-center justify-center px-10 py-4 rounded-full text-base font-semibold text-white tracking-wide transition-all hover:brightness-110 hover:scale-[1.02]"
-            style={{ backgroundColor: C.green, fontFamily: "'Inter', sans-serif" }}
+            className="inline-flex items-center justify-center px-10 py-4 rounded-full text-base font-semibold text-primary-foreground tracking-wide transition-all hover:brightness-110 hover:scale-[1.02] bg-primary font-sans"
           >
             QUERO MINHA CORUJAH AGORA
           </a>
@@ -317,16 +286,13 @@ const ImpostorSyndrome = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 px-6" style={{ backgroundColor: C.black }}>
+    <section className="py-20 md:py-28 px-6 bg-foreground">
       <div className="max-w-3xl mx-auto text-center">
         <Reveal>
-          <h2
-            className="font-serif text-3xl md:text-4xl font-bold mb-4 text-white"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">
             A 1ª missão da CoruJah é caçar a sua
           </h2>
-          <p className="text-2xl font-serif font-bold mb-10" style={{ color: C.gold }}>
+          <p className="text-2xl font-serif font-bold mb-10 text-secondary">
             Síndrome da Impostora
           </p>
         </Reveal>
@@ -334,8 +300,8 @@ const ImpostorSyndrome = () => {
         <div className="space-y-4 mb-10">
           {lies.map((lie, i) => (
             <Reveal key={i}>
-              <div className="rounded-lg px-6 py-4" style={{ backgroundColor: C.cardDark }}>
-                <p className="text-base italic" style={{ color: "#ccc", fontFamily: "'Inter', sans-serif" }}>
+              <div className="rounded-lg px-6 py-4 bg-foreground/80 border border-border/20">
+                <p className="text-base italic text-primary-foreground/70 font-sans">
                   "{lie}"
                 </p>
               </div>
@@ -344,16 +310,16 @@ const ImpostorSyndrome = () => {
         </div>
 
         <Reveal>
-          <p className="text-3xl font-serif font-bold mb-6" style={{ color: "#fff" }}>
+          <p className="text-3xl font-serif font-bold mb-6 text-primary-foreground">
             TUDO MENTIRA!
           </p>
-          <p className="text-base leading-relaxed mb-6" style={{ color: "#aaa", fontFamily: "'Inter', sans-serif" }}>
+          <p className="text-base leading-relaxed mb-6 text-primary-foreground/60 font-sans">
             O mercado está cheio de gente vendendo o que não sabe. E você, cheia de experiência, conteúdo e boa vontade, com medo de botar a cara no sol?
           </p>
-          <p className="font-serif text-lg italic" style={{ color: C.gold }}>
+          <p className="font-serif text-lg italic text-secondary">
             "EU ACREDITO EM VOCÊ, como um dia eu quis que alguém tivesse acreditado em mim."
           </p>
-          <p className="text-sm mt-2" style={{ color: "#777", fontFamily: "'Inter', sans-serif" }}>— Monike Kineippe</p>
+          <p className="text-sm mt-2 text-primary-foreground/40 font-sans">— Monike Kineippe</p>
         </Reveal>
       </div>
     </section>
@@ -376,16 +342,13 @@ const WhatYouGet = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 px-6" style={{ backgroundColor: C.cream }}>
+    <section className="py-20 md:py-28 px-6 bg-background">
       <div className="max-w-5xl mx-auto">
         <Reveal>
-          <h2
-            className="font-serif text-3xl md:text-4xl font-bold text-center mb-4"
-            style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">
             O que você vai receber com a CoruJah
           </h2>
-          <p className="text-center text-lg mb-14" style={{ color: "#666", fontFamily: "'Inter', sans-serif" }}>
+          <p className="text-center text-lg mb-14 text-muted-foreground font-sans">
             Tudo que precisa para transformar seu conhecimento em um produto digital lucrativo e escalável.
           </p>
         </Reveal>
@@ -393,12 +356,12 @@ const WhatYouGet = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {items.map((item, i) => (
             <Reveal key={i}>
-              <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm h-full hover:shadow-md transition-shadow">
-                <item.icon size={24} style={{ color: C.green }} className="mb-3" />
-                <h3 className="font-serif text-sm font-semibold mb-2" style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}>
+              <div className="bg-card rounded-xl p-6 border border-border shadow-sm h-full hover:shadow-md transition-shadow">
+                <item.icon size={24} className="text-primary mb-3" />
+                <h3 className="font-serif text-sm font-semibold mb-2 text-foreground">
                   {item.title}
                 </h3>
-                <p className="text-xs leading-relaxed" style={{ color: "#666", fontFamily: "'Inter', sans-serif" }}>
+                <p className="text-xs leading-relaxed text-muted-foreground font-sans">
                   {item.desc}
                 </p>
               </div>
@@ -414,16 +377,13 @@ const WhatYouGet = () => {
    DEPOIMENTOS
    ════════════════════════════════════════════════════════ */
 const Testimonials = () => (
-  <section className="py-20 md:py-28 px-6 bg-white">
+  <section className="py-20 md:py-28 px-6 bg-card">
     <div className="max-w-5xl mx-auto text-center">
       <Reveal>
-        <h2
-          className="font-serif text-3xl md:text-4xl font-bold mb-4"
-          style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}
-        >
+        <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-foreground">
           Outras mulheres já estão criando com a CoruJah
         </h2>
-        <p className="text-base mb-14" style={{ color: "#666", fontFamily: "'Inter', sans-serif" }}>
+        <p className="text-base mb-14 text-muted-foreground font-sans">
           Elas estavam travadas, com ideias na cabeça e pouca estrutura. Hoje, têm produtos digitais prontos e vendem com leveza.
         </p>
       </Reveal>
@@ -444,7 +404,7 @@ const Testimonials = () => (
 
       <Reveal>
         <blockquote className="max-w-2xl mx-auto">
-          <p className="text-base italic leading-relaxed" style={{ color: "#555", fontFamily: "'Inter', sans-serif" }}>
+          <p className="text-base italic leading-relaxed text-muted-foreground font-sans">
             💬 "Simplesmente apaixonada. A CoruJah fez o que eu tentei fazer por meses. Agora tenho meu produto pronto e uma direção clara. Em poucas horas, senti que desbloqueei anos."
           </p>
         </blockquote>
@@ -480,70 +440,61 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="preco" className="py-20 md:py-28 px-6" style={{ backgroundColor: C.black }}>
+    <section id="preco" className="py-20 md:py-28 px-6 bg-foreground">
       <div className="max-w-2xl mx-auto text-center">
         <Reveal>
-          <h2
-            className="font-serif text-3xl md:text-4xl font-bold mb-12 text-white"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-12 text-primary-foreground">
             A oportunidade de colocar seu produto no mundo está aqui.
           </h2>
         </Reveal>
 
         <Reveal>
-          <div className="bg-white rounded-3xl p-10 md:p-12 shadow-2xl text-center">
-            <span
-              className="inline-block text-xs font-semibold tracking-widest uppercase mb-6 px-5 py-2 rounded-full text-white"
-              style={{ backgroundColor: C.green, fontFamily: "'Inter', sans-serif" }}
-            >
+          <div className="bg-card rounded-3xl p-10 md:p-12 shadow-2xl text-center">
+            <span className="inline-block text-xs font-semibold tracking-widest uppercase mb-6 px-5 py-2 rounded-full text-primary-foreground bg-primary font-sans">
               OFERTA DE LANÇAMENTO
             </span>
 
-            <p className="text-sm line-through mb-1" style={{ color: "#999", fontFamily: "'Inter', sans-serif" }}>
+            <p className="text-sm line-through mb-1 text-muted-foreground font-sans">
               De R$ 247
             </p>
             <div className="mb-1">
-              <span className="text-sm" style={{ color: "#888", fontFamily: "'Inter', sans-serif" }}>por apenas</span>
+              <span className="text-sm text-muted-foreground font-sans">por apenas</span>
             </div>
             <div className="mb-1">
-              <span
-                className="font-serif text-6xl md:text-7xl font-bold"
-                style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}
-              >
+              <span className="font-serif text-6xl md:text-7xl font-bold text-foreground">
                 R$47
               </span>
             </div>
-            <p className="text-sm mb-8" style={{ color: "#888", fontFamily: "'Inter', sans-serif" }}>
-              ou 12x de <strong style={{ color: C.black }}>R$4,83</strong>
+            <p className="text-sm mb-8 text-muted-foreground font-sans">
+              ou 12x de <strong className="text-foreground">R$4,83</strong>
             </p>
 
-            <div className="h-px w-full mb-6" style={{ backgroundColor: "#eee" }} />
+            <div className="h-px w-full mb-6 bg-border" />
 
-            <p className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: C.green, fontFamily: "'Inter', sans-serif" }}>
+            <p className="text-xs font-semibold uppercase tracking-wider mb-4 text-primary font-sans">
               Receba imediatamente:
             </p>
 
             <ul className="text-left space-y-2.5 mb-6 max-w-sm mx-auto">
               {included.map((item, i) => (
-                <li key={i} className="flex items-start gap-3" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  <Check size={16} className="mt-0.5 flex-shrink-0" style={{ color: C.green }} />
-                  <span className="text-xs" style={{ color: "#444" }}>{item}</span>
+                <li key={i} className="flex items-start gap-3 font-sans">
+                  <Check size={16} className="mt-0.5 flex-shrink-0 text-primary" />
+                  <span className="text-xs text-foreground/80">{item}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="h-px w-full mb-6" style={{ backgroundColor: "#eee" }} />
+            <div className="h-px w-full mb-6 bg-border" />
 
-            <p className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: C.gold, fontFamily: "'Inter', sans-serif" }}>
+            <p className="text-xs font-semibold uppercase tracking-wider mb-4 text-secondary font-sans">
               + Bônus exclusivos:
             </p>
 
             <ul className="text-left space-y-2.5 mb-8 max-w-sm mx-auto">
               {bonuses.map((item, i) => (
-                <li key={i} className="flex items-start gap-3" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  <Check size={16} className="mt-0.5 flex-shrink-0" style={{ color: C.gold }} />
-                  <span className="text-xs" style={{ color: "#444" }}>{item}</span>
+                <li key={i} className="flex items-start gap-3 font-sans">
+                  <Check size={16} className="mt-0.5 flex-shrink-0 text-secondary" />
+                  <span className="text-xs text-foreground/80">{item}</span>
                 </li>
               ))}
             </ul>
@@ -552,13 +503,12 @@ const Pricing = () => {
               href={buyLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-full sm:w-auto px-12 py-4 rounded-full text-base font-semibold text-white tracking-wide transition-all hover:brightness-110 hover:scale-[1.02]"
-              style={{ backgroundColor: C.green, fontFamily: "'Inter', sans-serif" }}
+              className="inline-flex items-center justify-center w-full sm:w-auto px-12 py-4 rounded-full text-base font-semibold text-primary-foreground tracking-wide transition-all hover:brightness-110 hover:scale-[1.02] bg-primary font-sans"
             >
               QUERO CRIAR MEU PRODUTO AGORA
             </a>
 
-            <p className="mt-5 text-xs" style={{ color: "#999", fontFamily: "'Inter', sans-serif" }}>
+            <p className="mt-5 text-xs text-muted-foreground font-sans">
               🎯 Oferta de lançamento por tempo limitado · 🔒 7 dias de garantia
             </p>
           </div>
@@ -572,20 +522,17 @@ const Pricing = () => {
    GARANTIA
    ════════════════════════════════════════════════════════ */
 const Guarantee = () => (
-  <section className="py-20 md:py-28 px-6 bg-white">
+  <section className="py-20 md:py-28 px-6 bg-card">
     <div className="max-w-2xl mx-auto text-center">
       <Reveal>
-        <Shield size={56} className="mx-auto mb-6" style={{ color: C.green }} />
-        <h2
-          className="font-serif text-3xl md:text-4xl font-bold mb-6"
-          style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}
-        >
+        <Shield size={56} className="mx-auto mb-6 text-primary" />
+        <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-foreground">
           Garantia incondicional de 7 dias
         </h2>
-        <p className="text-base leading-relaxed mb-6" style={{ color: "#555", fontFamily: "'Inter', sans-serif" }}>
+        <p className="text-base leading-relaxed mb-6 text-muted-foreground font-sans">
           Se a CoruJah não superar suas expectativas ou não fizer sentido para o seu negócio, basta solicitar o reembolso total do seu investimento. Sem perguntas, sem burocracia.
         </p>
-        <p className="font-serif text-lg italic" style={{ color: C.green }}>
+        <p className="font-serif text-lg italic text-primary">
           — Monike Kineippe
         </p>
       </Reveal>
@@ -597,7 +544,7 @@ const Guarantee = () => (
    MENTORA
    ════════════════════════════════════════════════════════ */
 const Mentor = () => (
-  <section className="py-20 md:py-28 px-6" style={{ backgroundColor: C.cream }}>
+  <section className="py-20 md:py-28 px-6 bg-background">
     <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
       <Reveal className="flex justify-center">
         <div className="w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
@@ -606,28 +553,22 @@ const Mentor = () => (
       </Reveal>
 
       <Reveal>
-        <span
-          className="inline-block text-xs font-medium tracking-widest uppercase mb-4 px-4 py-2 rounded-full"
-          style={{ backgroundColor: `${C.green}15`, color: C.green, fontFamily: "'Inter', sans-serif" }}
-        >
+        <span className="inline-block text-xs font-medium tracking-widest uppercase mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary font-sans">
           Criadora da CoruJah
         </span>
 
-        <h2
-          className="font-serif text-3xl md:text-4xl font-bold mb-6"
-          style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}
-        >
+        <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-foreground">
           Monike Kineippe
         </h2>
 
-        <div className="space-y-4 mb-6" style={{ fontFamily: "'Inter', sans-serif", color: "#555" }}>
+        <div className="space-y-4 font-sans text-muted-foreground">
           <p className="text-base leading-relaxed">
             Estrategista de negócios femininos, mentora, palestrante, autora e criadora do Método Mulhere$ no Poder e Venda $em Vender.
           </p>
           <p className="text-base leading-relaxed">
             Empresária desde os 18 anos. Já sentiu na pele a sobrecarga, a frustração com fórmulas que não funcionam e o desafio de equilibrar negócios, maternidade e vida pessoal.
           </p>
-          <p className="text-base leading-relaxed italic" style={{ color: C.green }}>
+          <p className="text-base leading-relaxed italic text-primary">
             "Eu criei a CoruJah porque sei como é ter muito conhecimento e não saber por onde começar. Agora, você não precisa mais ficar travada."
           </p>
         </div>
@@ -652,13 +593,10 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 px-6 bg-white">
+    <section className="py-20 md:py-28 px-6 bg-card">
       <div className="max-w-2xl mx-auto">
         <Reveal>
-          <h2
-            className="font-serif text-3xl md:text-4xl font-bold text-center mb-12"
-            style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
             Dúvidas Frequentes
           </h2>
         </Reveal>
@@ -666,24 +604,22 @@ const FAQ = () => {
         <div className="space-y-3">
           {faqs.map((faq, i) => (
             <Reveal key={i}>
-              <div className="bg-white rounded-xl border border-gray-100 overflow-hidden">
+              <div className="bg-card rounded-xl border border-border overflow-hidden">
                 <button
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
+                  className="w-full flex items-center justify-between px-6 py-5 text-left transition-colors hover:bg-muted font-sans"
                 >
-                  <span className="text-sm font-medium pr-4" style={{ color: C.black }}>{faq.q}</span>
+                  <span className="text-sm font-medium pr-4 text-foreground">{faq.q}</span>
                   <ChevronDown
                     size={18}
-                    className="flex-shrink-0 transition-transform duration-300"
-                    style={{ color: C.green, transform: openIndex === i ? "rotate(180deg)" : "rotate(0deg)" }}
+                    className={`flex-shrink-0 transition-transform duration-300 text-primary ${openIndex === i ? "rotate-180" : ""}`}
                   />
                 </button>
                 <div
                   className="overflow-hidden transition-all duration-300"
                   style={{ maxHeight: openIndex === i ? "200px" : "0" }}
                 >
-                  <p className="px-6 pb-5 text-sm leading-relaxed" style={{ color: "#666", fontFamily: "'Inter', sans-serif" }}>
+                  <p className="px-6 pb-5 text-sm leading-relaxed text-muted-foreground font-sans">
                     {faq.a}
                   </p>
                 </div>
@@ -700,27 +636,20 @@ const FAQ = () => {
    CTA FINAL
    ════════════════════════════════════════════════════════ */
 const FinalCTA = () => (
-  <section
-    className="py-20 md:py-28 px-6 text-center"
-    style={{ background: `linear-gradient(135deg, ${C.green} 0%, ${C.greenLight} 100%)` }}
-  >
+  <section className="py-20 md:py-28 px-6 text-center bg-primary">
     <div className="max-w-3xl mx-auto">
       <Reveal>
-        <h2
-          className="font-serif text-4xl md:text-5xl font-bold text-white mb-6"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+        <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
           Seu conhecimento merece virar produto.
         </h2>
-        <p className="text-lg text-white/90 mb-10" style={{ fontFamily: "'Inter', sans-serif" }}>
+        <p className="text-lg text-primary-foreground/80 mb-10 font-sans">
           Pare de adiar. A CoruJah transforma o que você já sabe em algo claro, estruturado e pronto para vender.
         </p>
         <a
           href={buyLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center px-12 py-4 rounded-full text-base font-semibold tracking-wide transition-all hover:scale-[1.02]"
-          style={{ backgroundColor: "#fff", color: C.green, fontFamily: "'Inter', sans-serif" }}
+          className="inline-flex items-center justify-center px-12 py-4 rounded-full text-base font-semibold tracking-wide transition-all hover:scale-[1.02] bg-secondary text-secondary-foreground font-sans"
         >
           QUERO CRIAR MEU PRODUTO AGORA
         </a>
@@ -733,43 +662,36 @@ const FinalCTA = () => (
    FOOTER
    ════════════════════════════════════════════════════════ */
 const LPFooter = () => (
-  <footer className="py-10 px-6 text-center" style={{ backgroundColor: C.black }}>
-    <p className="text-sm" style={{ color: "#777", fontFamily: "'Inter', sans-serif" }}>
+  <footer className="py-10 px-6 text-center bg-foreground">
+    <p className="text-sm text-primary-foreground/50 font-sans">
       © 2025 CoruJah IA · Monike Kineippe
     </p>
-    <p className="text-xs mt-1" style={{ color: "#555", fontFamily: "'Inter', sans-serif" }}>
+    <p className="text-xs mt-1 text-primary-foreground/30 font-sans">
       Todos os direitos reservados
     </p>
   </footer>
 );
 
 /* ════════════════════════════════════════════════════════
-   PÁGINA PRINCIPAL
+   PAGE
    ════════════════════════════════════════════════════════ */
-const CoruJahLP = () => {
-  useEffect(() => {
-    document.documentElement.style.scrollBehavior = "smooth";
-    return () => { document.documentElement.style.scrollBehavior = ""; };
-  }, []);
+const CoruJah = () => (
+  <div className="min-h-screen bg-background">
+    <Navbar />
+    <Hero />
+    <TheProblem />
+    <WhatItDoes />
+    <BeforeAfter />
+    <ImpostorSyndrome />
+    <WhatYouGet />
+    <Testimonials />
+    <Pricing />
+    <Guarantee />
+    <Mentor />
+    <FAQ />
+    <FinalCTA />
+    <LPFooter />
+  </div>
+);
 
-  return (
-    <div className="min-h-screen" style={{ fontFamily: "'Inter', sans-serif" }}>
-      <Navbar />
-      <Hero />
-      <TheProblem />
-      <WhatItDoes />
-      <BeforeAfter />
-      <ImpostorSyndrome />
-      <WhatYouGet />
-      <Testimonials />
-      <Pricing />
-      <Guarantee />
-      <Mentor />
-      <FAQ />
-      <FinalCTA />
-      <LPFooter />
-    </div>
-  );
-};
-
-export default CoruJahLP;
+export default CoruJah;
