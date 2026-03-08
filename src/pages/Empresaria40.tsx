@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import monike1 from "@/assets/monike-1.jpg";
 import monike2 from "@/assets/monike-2.jpg";
+import logoMk from "@/assets/logo-mk.png";
 
 /* ─── Paleta ─── */
 const C = {
