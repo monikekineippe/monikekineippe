@@ -32,6 +32,7 @@ const App = () => (
           {/* Standalone landing page — sem Layout */}
           <Route path="/empresaria-40" element={<Empresaria40 />} />
           <Route path="/corujah" element={<CoruJah />} />
+          <Route path="/lapidando-diamantes" element={<LapidandoDiamantes />} />
 
           {/* Páginas com Header/Footer */}
           <Route element={<Layout />}>
