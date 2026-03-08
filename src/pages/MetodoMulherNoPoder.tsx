@@ -237,22 +237,6 @@ const MetodoMulherNoPoder = () => {
         </div>
       </Section>
 
-      {/* Quem é Monike */}
-      <Section>
-        <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-4">Quem vai te guiar</span>
-          <h2 className="text-2xl md:text-3xl font-serif font-medium leading-tight mb-8">Monike Kineippe</h2>
-          <p className="text-muted-foreground font-sans leading-relaxed mb-4">
-            Empresária nata, neurodivergente, casada e mãe atípica, já atuou nos mais distintos ramos. Atualmente é CEO de três CNPJs.
-          </p>
-          <p className="text-muted-foreground font-sans leading-relaxed mb-4">
-            Uma workaholic assumida, teve dois Burnouts e compreende bem os desafios vivenciados quando se é uma "MultiTarefas": filha, esposa, mãe e empresária.
-          </p>
-          <p className="text-muted-foreground font-sans leading-relaxed">
-            Apaixonada por construir negócios sólidos do completo zero, tem um olhar único para a jornada empreendedora feminina.
-          </p>
-        </div>
-      </Section>
 
       {/* FAQ */}
       <Section variant="accent">
