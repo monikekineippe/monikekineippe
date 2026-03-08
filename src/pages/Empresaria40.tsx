@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import monike1 from "@/assets/monike-1.jpg";
 import monike2 from "@/assets/monike-2.jpg";
+import logoMk from "@/assets/logo-mk.png";
 
 /* ─── Paleta ─── */
 const C = {
@@ -56,10 +57,9 @@ const Navbar = () => {
       }}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="font-serif text-lg tracking-tight" style={{ color: C.black }}>
-          <span className="font-bold">MK</span>
-          <span className="mx-2 text-xs" style={{ color: C.gold }}>|</span>
-          <span className="text-sm font-normal hidden sm:inline">Comunidade Empresária 4.0</span>
+        <a href="/" className="flex items-center gap-3">
+          <img src={logoMk} alt="MK" className="h-10 w-auto" />
+          <span className="text-sm font-normal hidden sm:inline font-serif" style={{ color: C.black }}>Comunidade Empresária 4.0</span>
         </a>
 
         <a
