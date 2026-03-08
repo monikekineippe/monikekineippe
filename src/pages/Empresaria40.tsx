@@ -8,9 +8,6 @@ import {
 import monike1 from "@/assets/monike-1.jpg";
 import monike2 from "@/assets/monike-2.jpg";
 import logoMk from "@/assets/logo-mk.png";
-import metodoIcon from "@/assets/metodo-icon.png";
-import metodoLogo from "@/assets/metodo-logo.png";
-import metodoSelo from "@/assets/metodo-selo.png";
 
 /* ─── Paleta ─── */
 const C = {
@@ -101,7 +98,7 @@ const Hero = () => (
   <section className="pt-24 pb-16 md:pt-32 md:pb-24 px-6" style={{ backgroundColor: C.offWhite }}>
     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
       <Reveal>
-        <img src={metodoIcon} alt="Método Mulher no Poder" className="w-14 h-14 mb-5 object-contain" />
+        
         <span
           className="inline-block text-xs font-medium tracking-widest uppercase mb-6 px-4 py-2 rounded-full"
           style={{ backgroundColor: `${C.gold}18`, color: C.gold }}
@@ -357,7 +354,7 @@ const Method = () => {
     >
       <div className="max-w-5xl mx-auto text-center">
         <Reveal>
-          <img src={metodoSelo} alt="Método Mulher no Poder" className="w-20 h-20 mx-auto mb-6 object-contain" />
+          
           <span
             className="inline-block text-xs font-medium tracking-widest uppercase mb-4 px-4 py-2 rounded-full"
             style={{ backgroundColor: `${C.gold}18`, color: C.gold, fontFamily: "'Inter', sans-serif" }}
@@ -568,7 +565,7 @@ const Pricing = () => {
 
         <Reveal>
           <div className="bg-white rounded-3xl p-10 md:p-12 shadow-2xl text-center">
-            <img src={metodoIcon} alt="Método Mulher no Poder" className="w-12 h-12 mx-auto mb-4 object-contain" />
+            
             <span
               className="inline-block text-xs font-semibold tracking-widest uppercase mb-6 px-5 py-2 rounded-full text-white"
               style={{ backgroundColor: C.gold, fontFamily: "'Inter', sans-serif" }}
@@ -632,7 +629,7 @@ const Guarantee = () => (
   <section className="py-20 md:py-28 px-6 bg-white">
     <div className="max-w-2xl mx-auto text-center">
       <Reveal>
-        <img src={metodoSelo} alt="Método Mulher no Poder" className="w-24 h-24 mx-auto mb-6 object-contain" />
+        <Shield size={56} className="mx-auto mb-6" style={{ color: C.gold }} />
         <h2
           className="font-serif text-3xl md:text-4xl font-bold mb-6"
           style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}
@@ -752,7 +749,7 @@ const FinalCTA = () => (
    ════════════════════════════════════════════════════════ */
 const LPFooter = () => (
   <footer className="py-10 px-6 text-center" style={{ backgroundColor: C.black }}>
-    <img src={metodoLogo} alt="Método Mulher no Poder" className="h-10 mx-auto mb-4 object-contain" />
+    
     <p className="text-sm" style={{ color: "#777", fontFamily: "'Inter', sans-serif" }}>
       © 2025 Comunidade Empresária 4.0 · Monike Kineippe
     </p>
