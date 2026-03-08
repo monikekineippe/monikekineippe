@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import Diagnostico from "./pages/Diagnostico";
@@ -22,6 +22,12 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+const LayoutWrapper = () => (
+  <Layout>
+    <Outlet />
+  </Layout>
+);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -29,8 +35,11 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          {/* Standalone landing page — no Layout */}
           <Route path="/empresaria-40" element={<Empresaria40 />} />
-          <Route element={<Layout><Routes>
+
+          {/* All other pages with Header/Footer Layout */}
+          <Route element={<LayoutWrapper />}>
             <Route path="/" element={<Index />} />
             <Route path="/diagnostico" element={<Diagnostico />} />
             <Route path="/corujah" element={<CoruJah />} />
@@ -45,7 +54,7 @@ const App = () => (
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="*" element={<NotFound />} />
-          </Routes></Layout>} path="*" />
+          </Route>
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
