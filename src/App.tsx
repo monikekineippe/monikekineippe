@@ -11,6 +11,7 @@ import Mentorias from "./pages/Mentorias";
 import LapidandoDiamantes from "./pages/LapidandoDiamantes";
 import DonaDeSi from "./pages/DonaDeSi";
 import MetodoMulherNoPoder from "./pages/MetodoMulherNoPoder";
+import Empresaria40 from "./pages/Empresaria40";
 import IAHumanizada from "./pages/IAHumanizada";
 import Palestras from "./pages/Palestras";
 import Livros from "./pages/Livros";
@@ -27,8 +28,12 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Layout>
-          <Routes>
+        <Routes>
+          {/* Standalone landing page — sem Layout */}
+          <Route path="/empresaria-40" element={<Empresaria40 />} />
+
+          {/* Páginas com Header/Footer */}
+          <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
             <Route path="/diagnostico" element={<Diagnostico />} />
             <Route path="/corujah" element={<CoruJah />} />
@@ -43,8 +48,8 @@ const App = () => (
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
+          </Route>
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
