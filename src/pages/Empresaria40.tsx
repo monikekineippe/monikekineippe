@@ -101,11 +101,12 @@ const Hero = () => (
   <section className="pt-24 pb-16 md:pt-32 md:pb-24 px-6" style={{ backgroundColor: C.offWhite }}>
     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
       <Reveal>
+        <img src={metodoIcon} alt="Método Mulher no Poder" className="w-14 h-14 mb-5 object-contain" />
         <span
           className="inline-block text-xs font-medium tracking-widest uppercase mb-6 px-4 py-2 rounded-full"
           style={{ backgroundColor: `${C.gold}18`, color: C.gold }}
         >
-          ✦ Mais de 200 mulheres já transformaram seus negócios
+          ✦ Mais de 650 mulheres já transformaram seus negócios
         </span>
 
         <h1
