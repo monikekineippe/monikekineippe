@@ -687,10 +687,10 @@ const FinalCTA = () => (
           className="font-serif text-4xl md:text-5xl font-bold text-white mb-6"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
-          Agora é a sua vez.
+          A única coisa que muda entre hoje e daqui a 6 meses é a decisão que você toma agora.
         </h2>
         <p className="text-lg text-white/90 mb-10" style={{ fontFamily: "'Inter', sans-serif" }}>
-          Pare de sobreviver. Comece a viver o negócio — e a vida — que você construiu para merecer.
+          Pare de adiar. Pare de tentar sozinha. Entre para uma comunidade de mulheres que estão crescendo juntas — com método, apoio e resultados reais.
         </p>
         <a
           href={buyLink}
