@@ -11,6 +11,7 @@ import Mentorias from "./pages/Mentorias";
 import LapidandoDiamantes from "./pages/LapidandoDiamantes";
 import DonaDeSi from "./pages/DonaDeSi";
 import MetodoMulherNoPoder from "./pages/MetodoMulherNoPoder";
+import Empresaria40 from "./pages/Empresaria40";
 import IAHumanizada from "./pages/IAHumanizada";
 import Palestras from "./pages/Palestras";
 import Livros from "./pages/Livros";
