@@ -336,8 +336,8 @@ const LapidandoDiamantes = () => {
           <img src={diamanteIcon} alt="Lapidando Diamantes" className="w-16 h-16 md:w-20 md:h-20 object-contain mx-auto mb-6" style={{ filter: "drop-shadow(0 0 20px rgba(201,168,76,0.5))" }} />
           <h2 className="font-serif text-2xl md:text-4xl mb-4">Todo diamante precisa ser lapidado.</h2>
           <p className="text-sm mb-10 max-w-md mx-auto" style={{ color: "rgba(250,247,242,0.65)" }}>Você já tem o que é preciso. Vamos trabalhar juntas para revelar isso.</p>
-          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-block text-xs tracking-widest uppercase px-10 py-4 rounded font-semibold transition-all duration-300 hover:scale-105 hover:brightness-110" style={{ backgroundColor: "#C9A84C", color: "#0D0D0D" }}>
-            QUERO MINHA VAGA
+          <a href="https://mika.monikekineippe.com.br/listadeespera" target="_blank" rel="noopener noreferrer" className="inline-block text-center text-xs tracking-widest uppercase px-10 py-4 rounded font-semibold transition-all duration-300 hover:scale-105 hover:brightness-110" style={{ backgroundColor: "#C9A84C", color: "#0D0D0D" }}>
+            QUERO APLICAR PARA A PRÓXIMA TURMA
           </a>
         </Reveal>
       </section>
