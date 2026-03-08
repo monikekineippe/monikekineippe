@@ -246,19 +246,25 @@ const Product = () => {
    SEÇÃO 5 — PROVA SOCIAL
    ════════════════════════════════════════════════════════ */
 const SocialProof = () => {
-  const screenshots = [
-    { src: "/depoimentos/d5.jpeg", alt: "Depoimento de aluna da comunidade" },
-    { src: "/depoimentos/a1.jpg", alt: "Depoimento de aluna da comunidade" },
-    { src: "/depoimentos/wa103.jpg", alt: "Depoimento de aluna da comunidade" },
-    { src: "/depoimentos/d1.jpg", alt: "Depoimento de aluna da comunidade" },
-    { src: "/depoimentos/insta-nov.jpg", alt: "Depoimento de aluna da comunidade" },
-    { src: "/depoimentos/a2.jpg", alt: "Depoimento de aluna da comunidade" },
-    { src: "/depoimentos/d4.jpeg", alt: "Depoimento de aluna da comunidade" },
-    { src: "/depoimentos/d2.jpeg", alt: "Depoimento de aluna da comunidade" },
+  const testimonials = [
+    { text: "Entrei perdida e em 3 meses organizei meu financeiro, contratei minha primeira funcionária e voltei a ter tempo pros meus filhos.", name: "Carla M.", role: "Dona de salão de beleza" },
+    { text: "Antes eu apagava incêndio todo dia. Hoje tenho processos, clareza e um faturamento que triplicou em 6 meses.", name: "Juliana R.", role: "Consultora de imagem" },
+    { text: "Finalmente encontrei um lugar que entende que eu sou mãe, esposa e empresária — tudo ao mesmo tempo.", name: "Renata C.", role: "Arquiteta" },
+    { text: "O networking é ouro. Já fechei parcerias com outras empresárias e minha visibilidade cresceu muito.", name: "Amanda T.", role: "Loja de roupas infantis" },
+    { text: "Eu achava que precisava de mais horas no dia. Na verdade, eu precisava de método e das pessoas certas ao meu lado.", name: "Patrícia S.", role: "Nutricionista e empresária" },
+    { text: "O hotseat semanal mudou meu jogo. Toda semana saio com pelo menos uma ação concreta pro meu negócio.", name: "Fernanda L.", role: "Dona de confeitaria" },
   ];
 
-  const [showAll, setShowAll] = useState(false);
-  const visible = showAll ? screenshots : screenshots.slice(0, 4);
+  const screenshots = [
+    { src: "/depoimentos/d5.jpeg", alt: "Depoimento de aluna" },
+    { src: "/depoimentos/a1.jpg", alt: "Depoimento de aluna" },
+    { src: "/depoimentos/wa103.jpg", alt: "Depoimento de aluna" },
+    { src: "/depoimentos/d1.jpg", alt: "Depoimento de aluna" },
+    { src: "/depoimentos/insta-nov.jpg", alt: "Depoimento de aluna" },
+    { src: "/depoimentos/a2.jpg", alt: "Depoimento de aluna" },
+  ];
+
+  const [showScreenshots, setShowScreenshots] = useState(false);
 
   return (
     <section className="py-20 md:py-28 px-6" style={{ backgroundColor: C.black }}>
@@ -275,26 +281,55 @@ const SocialProof = () => {
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-          {visible.map((s, i) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+          {testimonials.map((t, i) => (
             <Reveal key={i}>
-              <div className="rounded-xl overflow-hidden shadow-lg hover:scale-[1.03] transition-transform cursor-pointer">
-                <img src={s.src} alt={s.alt} className="w-full h-auto object-cover" loading="lazy" />
+              <div className="rounded-xl p-7 text-left h-full flex flex-col justify-between" style={{ backgroundColor: C.cardDark }}>
+                <p className="text-sm leading-relaxed italic mb-6" style={{ color: "#ddd", fontFamily: "'Inter', sans-serif" }}>
+                  "{t.text}"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center font-serif font-bold text-sm flex-shrink-0"
+                    style={{ backgroundColor: C.gold, color: "#fff" }}
+                  >
+                    {t.name.charAt(0)}
+                  </div>
+                  <div>
+                    <span className="text-sm font-medium text-white block" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      {t.name}
+                    </span>
+                    <span className="text-xs" style={{ color: C.gold, fontFamily: "'Inter', sans-serif" }}>
+                      {t.role}
+                    </span>
+                  </div>
+                </div>
               </div>
             </Reveal>
           ))}
         </div>
 
-        {!showAll && screenshots.length > 4 && (
+        {/* Screenshots reais */}
+        {!showScreenshots ? (
           <Reveal>
             <button
-              onClick={() => setShowAll(true)}
+              onClick={() => setShowScreenshots(true)}
               className="px-8 py-3 rounded-full text-sm font-medium border transition-all hover:bg-white/10"
               style={{ borderColor: "rgba(255,255,255,0.3)", color: "#fff", fontFamily: "'Inter', sans-serif" }}
             >
-              VER MAIS RESULTADOS
+              VER PRINTS REAIS DAS ALUNAS
             </button>
           </Reveal>
+        ) : (
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {screenshots.map((s, i) => (
+              <Reveal key={i}>
+                <div className="rounded-xl overflow-hidden shadow-lg hover:scale-[1.03] transition-transform">
+                  <img src={s.src} alt={s.alt} className="w-full h-auto object-cover" loading="lazy" />
+                </div>
+              </Reveal>
+            ))}
+          </div>
         )}
       </div>
     </section>
