@@ -537,7 +537,7 @@ const Guarantee = () => (
         <p className="text-base leading-relaxed mb-6 text-muted-foreground font-sans">
           Se a CoruJah não superar suas expectativas ou não fizer sentido para o seu negócio, basta solicitar o reembolso total do seu investimento. Sem perguntas, sem burocracia.
         </p>
-        <p className="font-serif text-lg italic text-primary">
+        <p className="font-serif text-lg italic text-secondary">
           — Monike Kineippe
         </p>
       </Reveal>
