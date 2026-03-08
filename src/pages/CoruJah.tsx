@@ -455,7 +455,7 @@ const Pricing = () => {
 
         <Reveal>
           <div className="bg-card rounded-3xl p-10 md:p-12 shadow-2xl text-center">
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase mb-6 px-5 py-2 rounded-full text-primary-foreground bg-primary font-sans">
+            <span className="inline-block text-xs font-semibold tracking-widest uppercase mb-6 px-5 py-2 rounded-full text-white bg-green-cta font-sans">
               OFERTA DE LANÇAMENTO
             </span>
 
