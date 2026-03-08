@@ -45,9 +45,9 @@ const LapidandoDiamantes = () => {
       <nav className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? "shadow-lg shadow-black/40" : ""}`} style={{ backgroundColor: "#0D0D0D", borderBottom: "1px solid rgba(201,168,76,0.25)" }}>
         <div className="max-w-[1200px] mx-auto flex items-center justify-between px-5 py-3">
           <span className="font-serif text-lg tracking-wide" style={{ color: "#C9A84C" }}>✦ Lapidando Diamantes</span>
-          <button onClick={() => scrollTo("inscricao")} className="text-xs tracking-widest uppercase px-5 py-2 rounded font-semibold transition-all duration-300 hover:scale-105 hover:brightness-110" style={{ backgroundColor: "#C9A84C", color: "#0D0D0D" }}>
-            QUERO UMA VAGA
-          </button>
+          <a href="https://mika.monikekineippe.com.br/listadeespera" target="_blank" rel="noopener noreferrer" className="text-center text-[10px] sm:text-xs tracking-widest uppercase px-5 py-2 rounded font-semibold transition-all duration-300 hover:scale-105 hover:brightness-110" style={{ backgroundColor: "#C9A84C", color: "#0D0D0D" }}>
+            QUERO APLICAR PARA A PRÓXIMA TURMA
+          </a>
         </div>
       </nav>
 
