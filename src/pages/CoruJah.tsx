@@ -305,7 +305,7 @@ const ImpostorSyndrome = () => {
         <div className="space-y-4 mb-10">
           {lies.map((lie, i) => (
             <Reveal key={i}>
-              <div className="rounded-lg px-6 py-4 bg-foreground/80 border border-border/20">
+              <div className="rounded-lg px-6 py-4 bg-secondary/70 border border-secondary-foreground/10">
                 <p className="text-base italic text-primary-foreground/70 font-sans">
                   "{lie}"
                 </p>
