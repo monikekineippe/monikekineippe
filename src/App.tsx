@@ -10,7 +10,7 @@ import CoruJah from "./pages/CoruJah";
 import Mentorias from "./pages/Mentorias";
 import LapidandoDiamantes from "./pages/LapidandoDiamantes";
 import DonaDeSi from "./pages/DonaDeSi";
-import MetodoMulherNoPoder from "./pages/MetodoMulherNoPoder";
+
 import Empresaria40 from "./pages/Empresaria40";
 import IAHumanizada from "./pages/IAHumanizada";
 import Palestras from "./pages/Palestras";
@@ -40,7 +40,7 @@ const App = () => (
             <Route path="/mentorias" element={<Mentorias />} />
             <Route path="/lapidando-diamantes" element={<LapidandoDiamantes />} />
             <Route path="/dona-de-si" element={<DonaDeSi />} />
-            <Route path="/metodo-mulher-no-poder" element={<MetodoMulherNoPoder />} />
+            
             <Route path="/ia-humanizada" element={<IAHumanizada />} />
             <Route path="/palestras" element={<Palestras />} />
             <Route path="/livros" element={<Livros />} />
