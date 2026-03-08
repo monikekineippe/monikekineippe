@@ -95,7 +95,7 @@ const Index = () => {
           </div>
           <div className="flex flex-col gap-3 mt-4">
             <Button variant="hero" size="lg" asChild>
-              <a href="https://solucoes.monikekineippe.com.br/corujah" target="_blank" rel="noopener noreferrer">Quero a CoruJah</a>
+              <a href="https://solucoes.monikekineippe.com.br/corujah" target="_blank" rel="noopener noreferrer">Saber mais sobre a CoruJah</a>
             </Button>
             <Button variant="heroOutline" size="lg" asChild>
               <a href="https://payfast.greenn.com.br/redirect/212761" target="_blank" rel="noopener noreferrer">Comprar agora</a>
