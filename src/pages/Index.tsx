@@ -123,7 +123,7 @@ const Index = () => {
               <Link to="/dona-de-si">LISTA DE ESPERA DONA DE $I</Link>
             </Button>
             <Button variant="ghost" size="lg" asChild>
-              <Link to="/metodo-mulher-no-poder">Ver Método Mulher no Poder</Link>
+              <Link to="/empresaria-40">Participe da Comunidade Empresária 4.0</Link>
             </Button>
           </div>
         </DialogContent>
