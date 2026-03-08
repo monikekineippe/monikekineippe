@@ -654,7 +654,7 @@ const FinalCTA = () => (
           href={buyLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center px-12 py-4 rounded-full text-base font-semibold tracking-wide transition-all hover:scale-[1.02] bg-secondary text-secondary-foreground font-sans"
+          className="inline-flex items-center justify-center px-12 py-4 rounded-full text-base font-semibold tracking-wide transition-all hover:scale-[1.02] bg-green-cta text-white font-sans"
         >
           QUERO CRIAR MEU PRODUTO AGORA
         </a>
