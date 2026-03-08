@@ -135,7 +135,7 @@ const TheProblem = () => (
             <p className="text-sm leading-relaxed mb-4 text-muted-foreground font-sans">
               Quando precisa decidir o que entra, o que fica de fora, como transformar anos de experiência em algo claro, vendável e estruturado.
             </p>
-            <p className="font-medium italic mb-4 text-primary font-sans">
+            <p className="font-medium italic mb-4 text-secondary font-sans">
               De repente, tudo parece demais.
             </p>
             <ul className="space-y-2 text-sm text-muted-foreground font-sans">
