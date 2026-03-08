@@ -49,7 +49,7 @@ const Navbar = () => {
         </a>
         <a
           href="#preco"
-          className="inline-flex items-center px-6 py-2.5 rounded-full text-sm font-medium text-primary-foreground bg-primary transition-all hover:bg-primary/90"
+          className="inline-flex items-center px-6 py-2.5 rounded-full text-sm font-medium text-white bg-green-cta transition-all hover:bg-green-cta-dark"
         >
           Quero minha CoruJah
         </a>
