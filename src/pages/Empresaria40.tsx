@@ -354,7 +354,7 @@ const Method = () => {
     >
       <div className="max-w-5xl mx-auto text-center">
         <Reveal>
-          <img src={metodoSelo} alt="Método Mulher no Poder" className="w-20 h-20 mx-auto mb-6 object-contain" />
+          
           <span
             className="inline-block text-xs font-medium tracking-widest uppercase mb-4 px-4 py-2 rounded-full"
             style={{ backgroundColor: `${C.gold}18`, color: C.gold, fontFamily: "'Inter', sans-serif" }}
