@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import logoMk from "@/assets/logo-mk.png";
 import monike1 from "@/assets/monike-1.jpg";
+import corujahMockup from "@/assets/corujah-hero-mockup.png";
 
 const buyLink = "https://payfast.greenn.com.br/redirect/212761";
 
@@ -62,13 +63,17 @@ const Navbar = () => {
    ════════════════════════════════════════════════════════ */
 const Hero = () => (
   <section className="pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-background">
-    <div className="max-w-5xl mx-auto text-center">
+    <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <Reveal className="flex justify-center">
+        <img src={corujahMockup} alt="CoruJah IA - Plataforma" className="w-full max-w-md" />
+      </Reveal>
+
       <Reveal>
         <span className="inline-block text-xs font-medium font-sans tracking-widest uppercase mb-6 px-4 py-2 rounded-full bg-primary/10 text-primary">
           IA Estratégica para Empreendedoras
         </span>
 
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.15] mb-6 text-foreground">
+        <h1 className="font-serif text-4xl md:text-5xl font-bold leading-[1.15] mb-6 text-foreground">
           Você não precisa aprender mais nada para criar um{" "}
           <span className="text-primary">produto digital</span>
         </h1>
@@ -77,7 +82,7 @@ const Hero = () => (
           A CoruJah te ajuda a fazer acontecer!
         </p>
 
-        <p className="text-lg max-w-2xl mx-auto mb-10 leading-relaxed font-sans text-muted-foreground">
+        <p className="text-lg mb-10 leading-relaxed font-sans text-muted-foreground">
           Uma IA estratégica feita para empreendedoras experientes que travam na hora de organizar, decidir e lançar.
         </p>
 
@@ -286,13 +291,13 @@ const ImpostorSyndrome = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 px-6 bg-foreground">
+    <section className="py-20 md:py-28 px-6 bg-secondary">
       <div className="max-w-3xl mx-auto text-center">
         <Reveal>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-secondary-foreground">
             A 1ª missão da CoruJah é caçar a sua
           </h2>
-          <p className="text-2xl font-serif font-bold mb-10 text-secondary">
+          <p className="text-2xl font-serif font-bold mb-10 text-primary">
             Síndrome da Impostora
           </p>
         </Reveal>
@@ -300,8 +305,8 @@ const ImpostorSyndrome = () => {
         <div className="space-y-4 mb-10">
           {lies.map((lie, i) => (
             <Reveal key={i}>
-              <div className="rounded-lg px-6 py-4 bg-foreground/80 border border-border/20">
-                <p className="text-base italic text-primary-foreground/70 font-sans">
+              <div className="rounded-lg px-6 py-4 bg-secondary/70 border border-secondary-foreground/10">
+                <p className="text-base italic text-secondary-foreground/80 font-sans">
                   "{lie}"
                 </p>
               </div>
@@ -310,16 +315,16 @@ const ImpostorSyndrome = () => {
         </div>
 
         <Reveal>
-          <p className="text-3xl font-serif font-bold mb-6 text-primary-foreground">
+          <p className="text-3xl font-serif font-bold mb-6 text-secondary-foreground">
             TUDO MENTIRA!
           </p>
-          <p className="text-base leading-relaxed mb-6 text-primary-foreground/60 font-sans">
+          <p className="text-base leading-relaxed mb-6 text-secondary-foreground/70 font-sans">
             O mercado está cheio de gente vendendo o que não sabe. E você, cheia de experiência, conteúdo e boa vontade, com medo de botar a cara no sol?
           </p>
-          <p className="font-serif text-lg italic text-secondary">
+          <p className="font-serif text-lg italic text-primary">
             "EU ACREDITO EM VOCÊ, como um dia eu quis que alguém tivesse acreditado em mim."
           </p>
-          <p className="text-sm mt-2 text-primary-foreground/40 font-sans">— Monike Kineippe</p>
+          <p className="text-sm mt-2 text-secondary-foreground/50 font-sans">— Monike Kineippe</p>
         </Reveal>
       </div>
     </section>
@@ -440,10 +445,10 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="preco" className="py-20 md:py-28 px-6 bg-foreground">
+    <section id="preco" className="py-20 md:py-28 px-6 bg-secondary">
       <div className="max-w-2xl mx-auto text-center">
         <Reveal>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-12 text-primary-foreground">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-12 text-secondary-foreground">
             A oportunidade de colocar seu produto no mundo está aqui.
           </h2>
         </Reveal>
@@ -662,11 +667,11 @@ const FinalCTA = () => (
    FOOTER
    ════════════════════════════════════════════════════════ */
 const LPFooter = () => (
-  <footer className="py-10 px-6 text-center bg-foreground">
-    <p className="text-sm text-primary-foreground/50 font-sans">
+  <footer className="py-10 px-6 text-center bg-secondary">
+    <p className="text-sm text-secondary-foreground/70 font-sans">
       © 2025 CoruJah IA · Monike Kineippe
     </p>
-    <p className="text-xs mt-1 text-primary-foreground/30 font-sans">
+    <p className="text-xs mt-1 text-secondary-foreground/50 font-sans">
       Todos os direitos reservados
     </p>
   </footer>
