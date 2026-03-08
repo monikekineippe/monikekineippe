@@ -558,7 +558,7 @@ const Mentor = () => (
       </Reveal>
 
       <Reveal>
-        <span className="inline-block text-xs font-medium tracking-widest uppercase mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary font-sans">
+        <span className="inline-block text-xs font-medium tracking-widest uppercase mb-4 px-4 py-2 rounded-full bg-secondary/15 text-secondary font-sans">
           Criadora da CoruJah
         </span>
 
