@@ -31,12 +31,12 @@ const App = () => (
         <Routes>
           {/* Standalone landing page — sem Layout */}
           <Route path="/empresaria-40" element={<Empresaria40 />} />
+          <Route path="/corujah" element={<CoruJah />} />
 
           {/* Páginas com Header/Footer */}
           <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
             <Route path="/diagnostico" element={<Diagnostico />} />
-            <Route path="/corujah" element={<CoruJah />} />
             <Route path="/mentorias" element={<Mentorias />} />
             <Route path="/lapidando-diamantes" element={<LapidandoDiamantes />} />
             <Route path="/dona-de-si" element={<DonaDeSi />} />
