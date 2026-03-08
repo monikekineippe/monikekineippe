@@ -629,7 +629,7 @@ const Guarantee = () => (
   <section className="py-20 md:py-28 px-6 bg-white">
     <div className="max-w-2xl mx-auto text-center">
       <Reveal>
-        <img src={metodoSelo} alt="Método Mulher no Poder" className="w-24 h-24 mx-auto mb-6 object-contain" />
+        <Shield size={56} className="mx-auto mb-6" style={{ color: C.gold }} />
         <h2
           className="font-serif text-3xl md:text-4xl font-bold mb-6"
           style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}
