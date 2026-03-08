@@ -119,31 +119,65 @@ const LapidandoDiamantes = () => {
       <section id="como-funciona" className="py-20 md:py-28 px-5" style={{ backgroundColor: "#0D0D0D" }}>
         <div className="max-w-[800px] mx-auto">
           <Reveal>
-            <h2 className="font-serif text-2xl md:text-4xl text-center mb-3">Como a mentoria funciona</h2>
-            <p className="text-center text-sm mb-14" style={{ color: "rgba(250,247,242,0.5)" }}>Não é um curso. É um processo de aceleração com olhar especializado para o seu negócio.</p>
+            <h2 className="font-serif text-2xl md:text-4xl text-center mb-3">12 semanas para transformar o seu negócio</h2>
+            <p className="text-center text-sm mb-10" style={{ color: "rgba(250,247,242,0.5)" }}>Um processo estruturado, com começo, meio e fim — e acompanhamento real em cada etapa.</p>
+          </Reveal>
+          <Reveal>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0 mb-10">
+              {[
+                { emoji: "⏱", text: "12 semanas" },
+                { emoji: "📅", text: "Encontros quinzenais" },
+                { emoji: "👥", text: "Grupo seleto" },
+              ].map((s, i) => (
+                <div key={i} className="flex items-center">
+                  {i > 0 && <div className="hidden sm:block w-px h-5 mx-6" style={{ backgroundColor: "rgba(201,168,76,0.4)" }} />}
+                  <span className="text-sm" style={{ color: "#C9A84C" }}>{s.emoji} {s.text}</span>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+          <Reveal>
+            <p className="text-sm text-center leading-relaxed max-w-[540px] mx-auto" style={{ color: "rgba(250,247,242,0.7)" }}>
+              A cada 15 dias você tem um encontro ao vivo com a Monike e o grupo.<br />
+              Entre os encontros, você implementa — com suporte para não travar sozinha.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ═══════ ETAPAS DA JORNADA ═══════ */}
+      <section className="pb-20 md:pb-28 px-5" style={{ backgroundColor: "#0D0D0D" }}>
+        <div className="max-w-[800px] mx-auto">
+          <Reveal>
+            <h3 className="font-serif text-xl md:text-2xl text-center mb-14" style={{ color: "#FAF7F2" }}>O que acontece nas 12 semanas</h3>
           </Reveal>
           <div className="relative">
-            {/* gold line */}
             <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px" style={{ backgroundColor: "rgba(201,168,76,0.3)" }} />
             {[
-              { icon: <Search size={20} />, title: "Diagnóstico do seu negócio", desc: "Começamos entendendo onde você está, onde quer chegar e o que está no caminho." },
-              { icon: <Map size={20} />, title: "Plano de aceleração personalizado", desc: "Com base no seu negócio real, não em teoria genérica." },
-              { icon: <Target size={20} />, title: "Encontros ao vivo em grupo", desc: "Sessões coletivas com aprofundamento, trocas reais e olhar da Monike sobre cada caso." },
-              { icon: <Trophy size={20} />, title: "Implementação acompanhada", desc: "Você não fica sozinha entre um encontro e outro — suporte para aplicar de verdade." },
+              { weeks: "SEMANAS 1-2", emoji: "🔍", title: "Diagnóstico e Clareza", desc: "Vamos mapear onde seu negócio está agora, o que está funcionando, o que está travando e onde você quer chegar. Sem achismos — com método." },
+              { weeks: "SEMANAS 3-4", emoji: "🎯", title: "Posicionamento e Proposta de Valor", desc: "Você vai definir com precisão o que vende, para quem vende e como comunicar isso de forma que gere desejo real no seu cliente." },
+              { weeks: "SEMANAS 5-6", emoji: "📣", title: "Estratégia de Atração e Vendas", desc: "Como atrair clientes certos e vender com consistência — sem depender de sorte, viralização ou desconto." },
+              { weeks: "SEMANAS 7-8", emoji: "⚙️", title: "Estrutura e Processos", desc: "Organizar o que já existe para que o negócio funcione melhor — com menos energia sua e mais resultado." },
+              { weeks: "SEMANAS 9-10", emoji: "📈", title: "Escala e Decisão Estratégica", desc: "Como crescer de forma sustentável: time, precificação, canais e decisões que preparam o negócio para o próximo nível." },
+              { weeks: "SEMANAS 11-12", emoji: "🏆", title: "Consolidação e Próximos Passos", desc: "Revisão dos avanços, ajuste do plano e construção do mapa para os próximos meses — para você continuar crescendo depois da mentoria." },
             ].map((step, i) => (
               <Reveal key={i} className="relative pl-16 md:pl-20 mb-10 last:mb-0">
-                <div className="absolute left-3 md:left-5 top-0 w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: "#C9A84C", color: "#0D0D0D" }}>
-                  {step.icon}
+                <div className="absolute left-3 md:left-5 top-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style={{ backgroundColor: "#C9A84C", color: "#0D0D0D" }}>
+                  {step.emoji}
                 </div>
-                <h3 className="font-serif text-lg mb-1" style={{ color: "#E8D5A3" }}>{step.title}</h3>
+                <p className="text-xs tracking-[0.2em] uppercase mb-1" style={{ color: "#C9A84C" }}>{step.weeks}</p>
+                <h4 className="font-serif text-lg mb-1" style={{ color: "#E8D5A3" }}>{step.title}</h4>
                 <p className="text-sm" style={{ color: "rgba(250,247,242,0.6)" }}>{step.desc}</p>
               </Reveal>
             ))}
           </div>
+          <Reveal className="text-center mt-14">
+            <button onClick={() => scrollTo("inscricao")} className="text-xs tracking-widest uppercase px-8 py-4 rounded font-semibold transition-all duration-300 hover:scale-105 hover:brightness-110" style={{ backgroundColor: "#C9A84C", color: "#0D0D0D" }}>
+              QUERO VIVER ESSE PROCESSO
+            </button>
+          </Reveal>
         </div>
       </section>
-
-      {/* ═══════ RESULTADOS ═══════ */}
       <section className="py-20 md:py-28 px-5" style={{ backgroundColor: "#FAF7F2" }}>
         <div className="max-w-[1200px] mx-auto">
           <Reveal>
