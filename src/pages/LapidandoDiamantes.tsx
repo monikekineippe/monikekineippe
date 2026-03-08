@@ -299,8 +299,8 @@ const LapidandoDiamantes = () => {
                 O valor e as condições são apresentados após uma conversa inicial para garantir que a mentoria é o momento certo para o seu negócio.
               </p>
               <div className="text-center">
-                <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-block w-full text-xs tracking-widest uppercase px-8 py-4 rounded font-semibold transition-all duration-300 hover:scale-105 hover:brightness-110 text-center" style={{ backgroundColor: "#C9A84C", color: "#0D0D0D" }}>
-                  QUERO CONVERSAR SOBRE UMA VAGA
+                <a href="https://mika.monikekineippe.com.br/listadeespera" target="_blank" rel="noopener noreferrer" className="inline-block w-full text-xs tracking-widest uppercase px-8 py-4 rounded font-semibold transition-all duration-300 hover:scale-105 hover:brightness-110 text-center" style={{ backgroundColor: "#C9A84C", color: "#0D0D0D" }}>
+                  QUERO APLICAR PARA A PRÓXIMA TURMA
                 </a>
                 <p className="text-xs mt-4" style={{ color: "#E8D5A3" }}>Você será direcionada para uma conversa com a equipe da Monike.</p>
               </div>
