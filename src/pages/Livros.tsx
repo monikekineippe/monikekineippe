@@ -122,7 +122,7 @@ const Livros = () => {
                   <img
                     src={livroCombo}
                     alt="Combo Livro Físico + Digital"
-                    className="w-48 mx-auto rounded-lg shadow-lg"
+                    className="w-48 h-48 mx-auto rounded-lg shadow-lg object-cover"
                   />
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">
