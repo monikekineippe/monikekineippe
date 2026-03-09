@@ -451,7 +451,7 @@ const LapidandoDiamantes = () => {
                     type="tel"
                     value={leadForm.telefone}
                     onChange={(e) => setLeadForm(prev => ({ ...prev, telefone: e.target.value }))}
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-amber-500 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:border-ring focus:outline-none transition-colors"
                     placeholder="(11) 99999-9999"
                     required
                   />
