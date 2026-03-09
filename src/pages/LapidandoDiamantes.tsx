@@ -399,6 +399,95 @@ const LapidandoDiamantes = () => {
         </div>
       </section>
 
+      {/* ═══════ FORMULÁRIO DE INTERESSE ═══════ */}
+      <section id="inscricao" className="py-20 md:py-28 px-5" style={{ backgroundColor: "#0D0D0D" }}>
+        <div className="max-w-[600px] mx-auto">
+          <Reveal>
+            <div className="text-center mb-12">
+              <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: "#C9A84C" }}>✦ VAGAS LIMITADAS ✦</p>
+              <h2 className="font-serif text-2xl md:text-3xl mb-4">Manifeste seu interesse</h2>
+              <p className="text-sm" style={{ color: "rgba(250,247,242,0.7)" }}>
+                Preencha o formulário abaixo e nossa equipe entrará em contato para uma conversa de alinhamento.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div className="rounded-lg p-6 md:p-8" style={{ backgroundColor: "#FAF7F2", border: "1px solid rgba(201,168,76,0.3)" }}>
+              <form onSubmit={handleLeadSubmit} className="space-y-4">
+                <div>
+                  <label className="text-xs tracking-[0.1em] uppercase font-semibold block mb-2" style={{ color: "#0D0D0D" }}>
+                    Nome completo *
+                  </label>
+                  <input
+                    type="text"
+                    value={leadForm.nome}
+                    onChange={(e) => setLeadForm(prev => ({ ...prev, nome: e.target.value }))}
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-amber-500 focus:outline-none transition-colors"
+                    placeholder="Seu nome completo"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="text-xs tracking-[0.1em] uppercase font-semibold block mb-2" style={{ color: "#0D0D0D" }}>
+                    E-mail *
+                  </label>
+                  <input
+                    type="email"
+                    value={leadForm.email}
+                    onChange={(e) => setLeadForm(prev => ({ ...prev, email: e.target.value }))}
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-amber-500 focus:outline-none transition-colors"
+                    placeholder="seu@email.com"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="text-xs tracking-[0.1em] uppercase font-semibold block mb-2" style={{ color: "#0D0D0D" }}>
+                    WhatsApp *
+                  </label>
+                  <input
+                    type="tel"
+                    value={leadForm.telefone}
+                    onChange={(e) => setLeadForm(prev => ({ ...prev, telefone: e.target.value }))}
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-amber-500 focus:outline-none transition-colors"
+                    placeholder="(11) 99999-9999"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="text-xs tracking-[0.1em] uppercase font-semibold block mb-2" style={{ color: "#0D0D0D" }}>
+                    Qual seu negócio?
+                  </label>
+                  <input
+                    type="text"
+                    value={leadForm.negocio}
+                    onChange={(e) => setLeadForm(prev => ({ ...prev, negocio: e.target.value }))}
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-amber-500 focus:outline-none transition-colors"
+                    placeholder="Ex: Consultoria, E-commerce, Serviços..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={leadLoading}
+                  className="w-full text-xs tracking-widest uppercase px-8 py-4 rounded font-semibold transition-all duration-300 hover:scale-105 hover:brightness-110 disabled:opacity-70 disabled:scale-100"
+                  style={{ backgroundColor: "#C9A84C", color: "#0D0D0D" }}
+                >
+                  {leadLoading ? "ENVIANDO..." : "QUERO SER CONTACTADA"}
+                </button>
+
+                <p className="text-xs text-center mt-4" style={{ color: "#666" }}>
+                  Ao enviar, você concorda que nossa equipe entre em contato via WhatsApp ou e-mail.
+                </p>
+              </form>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ═══════ CTA FINAL ═══════ */}
       <section className="py-20 md:py-28 px-5 text-center" style={{ background: "radial-gradient(ellipse at center, rgba(201,168,76,0.08) 0%, transparent 60%), #0D0D0D" }}>
         <Reveal>
