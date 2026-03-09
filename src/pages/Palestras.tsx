@@ -70,7 +70,7 @@ const Palestras = () => {
               { tag: "Treinamento", title: "Rotina comercial mínima para mães (3x30 min/semana)" },
               { tag: "Imersão curta", title: "Do off-line ao digital: seu funil simples em 90 min" },
               { tag: "Imersão", title: "IA com intenção: automação sem perder humanidade" },
-              { tag: "Palestra", title: "Esse não é o ano da força. É o ano do sistema." },
+              
               { tag: "Palestra", title: "Vendas com verdade: vender sem se violentar" },
               { tag: "Palestra", title: "Posicionamento e previsibilidade: estrutura que sustenta" },
             ].map((item, i) => (
