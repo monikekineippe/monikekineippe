@@ -73,6 +73,24 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      get_form_submissions: {
+        Args: never
+        Returns: {
+          data: Json
+          form_type: string
+          id: string
+          ip_address: unknown
+          page_source: string
+          submitted_at: string
+          user_agent: string | null
+        }[]
+        SetofOptions: {
+          from: "*"
+          to: "form_submissions"
+          isOneToOne: false
+          isSetofReturn: true
+        }
+      }
       insert_form_submission: {
         Args: {
           p_data: Json
