@@ -2,9 +2,11 @@ import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState } from "react";
-import livroCapa from "@/assets/livro-capa.jpg";
-import livroLeitura from "@/assets/livro-leitura.jpg";
+import livroTablet1 from "@/assets/livro-tablet-1.png";
+import livroTablet2 from "@/assets/livro-tablet-2.png";
+import livroCombo from "@/assets/livro-combo.png";
 
 const Livros = () => {
   const [sinopse, setSinopse] = useState(false);
