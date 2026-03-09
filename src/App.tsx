@@ -18,6 +18,7 @@ import Livros from "./pages/Livros";
 import Conteudos from "./pages/Conteudos";
 import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
