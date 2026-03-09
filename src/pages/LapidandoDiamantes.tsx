@@ -25,21 +25,26 @@ function Reveal({ children, className = "" }: { children: ReactNode; className?:
 const WA_LINK = "https://wa.me/+5511972313181?text=Quero%20saber%20mais%20da%20mentoria%20Lapidando%20Diamantes";
 
 const openTypebotPopup = () => {
-  if ((window as any).__typebotLoaded) {
-    (window as any).__typebotInstance?.open?.();
-    return;
+  // Remove qualquer instância anterior
+  const existingPopup = document.querySelector('typebot-popup');
+  if (existingPopup) {
+    existingPopup.remove();
   }
-  (window as any).__typebotLoaded = true;
+  
+  // Remove scripts antigos para evitar conflitos
+  const existingScripts = document.querySelectorAll('script[data-typebot]');
+  existingScripts.forEach(script => script.remove());
+  
   const typebotInitScript = document.createElement("script");
   typebotInitScript.type = "module";
+  typebotInitScript.setAttribute('data-typebot', 'true');
   typebotInitScript.innerHTML = `import Typebot from 'https://midias-s3-global.sendbot.cloud/sendbot/embeds/scripts/web.js'
-    const instance = Typebot.initPopup({
+    Typebot.initPopup({
       typebot: "espera",
       apiHost: "https://mika.monikekineippe.com.br",
       wsHost: "partykit.sendbot.co",
       autoShowDelay: 0,
-    });
-    window.__typebotInstance = instance;`;
+    });`;
   document.body.append(typebotInitScript);
 };
 
