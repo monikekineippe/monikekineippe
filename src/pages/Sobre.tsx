@@ -46,7 +46,7 @@ const Sobre = () => {
                 Abri meu primeiro CNPJ aos 18 anos. Enquanto muitas pessoas ainda buscavam um caminho, eu já estava contratando, liderando e tomando decisões que exigiam maturidade antes da idade.
               </p>
             </div>
-            <SobreImage src={sobre1} alt="Monike em evento ADESAMPA com seu livro" className="aspect-[4/5]" />
+            <SobreImage src={sobre5} alt="Monike com a família" className="aspect-[4/5]" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mt-12 md:mt-16">
