@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxlRHWrVIX6mdrqRRS78swsQuHsmFR4SfY3FGAz4HQ-WrK595ruKjOC4f7GIWGDDRGN/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzdP1ds5fOfxCHV4gTgQsqwwbYHt3e3X_Nd7ud3yMWytsZf-2KLhL_ajjrpbYWB59d4/exec";
 
 const EmailPopup = () => {
   const [open, setOpen] = useState(false);
