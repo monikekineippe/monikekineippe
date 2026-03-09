@@ -8,6 +8,7 @@ import livroTablet1 from "@/assets/livro-tablet-1.png";
 import livroTablet2 from "@/assets/livro-tablet-2.png";
 import livroFisicoAutora from "@/assets/livro-fisico-autora.png";
 import livroCombo from "@/assets/livro-combo.png";
+import ebookQuantoCobrar from "@/assets/ebook-quanto-cobrar.png";
 
 const Livros = () => {
   const [sinopse, setSinopse] = useState(false);
@@ -138,6 +139,35 @@ const Livros = () => {
                 </Button>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </Section>
+
+      {/* E-book Gratuito */}
+      <Section variant="accent">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-8">
+            <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-secondary">E-book gratuito</span>
+            <h2 className="text-2xl font-serif mt-4 mb-4">Quanto Cobrar?</h2>
+            <p className="text-lg text-muted-foreground font-sans mb-8 max-w-2xl mx-auto">
+              Descubra como precificar seus serviços de forma estratégica e aumentar seus lucros. 
+              Um guia completo para empreendedoras que querem valorizar seu trabalho.
+            </p>
+          </div>
+          
+          <div className="flex flex-col items-center gap-6">
+            <div className="w-48 h-48 mx-auto">
+              <img
+                src={ebookQuantoCobrar}
+                alt="E-book Quanto Cobrar"
+                className="w-full h-full rounded-lg shadow-2xl object-cover"
+              />
+            </div>
+            <Button variant="hero" size="lg" asChild>
+              <a href="https://ebookquantocobrar.lovable.app/" target="_blank" rel="noopener noreferrer">
+                QUERO MEU E-BOOK GRATUITO
+              </a>
+            </Button>
           </div>
         </div>
       </Section>
