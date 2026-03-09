@@ -162,9 +162,9 @@ const Sobre = () => {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-8">Minha forma de pensar negócios</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-            <SobreImage src={sobre5} alt="Monike com a família" className="aspect-square" />
             <SobreImage src={sobre6} alt="Livro Empreender Nunca Foi Sorte" className="aspect-square" />
-            <SobreImage src={sobre7} alt="Monike lendo seu livro" className="aspect-square hidden md:block" />
+            <SobreImage src={sobre7} alt="Monike lendo seu livro" className="aspect-square" />
+            <SobreImage src={sobre9} alt="Monike com diamante" className="aspect-square hidden md:block" />
           </div>
           <p className="text-center font-sans text-muted-foreground mb-6">Minha abordagem une três forças:</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-4">
