@@ -67,6 +67,46 @@ const LapidandoDiamantes = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
+  /* lead form submission */
+  const handleLeadSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!leadForm.nome || !leadForm.email || !leadForm.telefone) {
+      toast({
+        title: "Campos obrigatórios",
+        description: "Preencha nome, email e telefone.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setLeadLoading(true);
+    try {
+      const { error } = await supabase.rpc('insert_form_submission', {
+        p_form_type: 'lapidando-diamantes',
+        p_page_source: '/lapidando-diamantes',
+        p_data: leadForm,
+        p_user_agent: navigator.userAgent
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Interesse registrado!",
+        description: "Em breve entraremos em contato."
+      });
+
+      setLeadForm({ nome: "", email: "", telefone: "", negocio: "" });
+    } catch (error) {
+      console.error("Erro ao enviar lead:", error);
+      toast({
+        title: "Erro ao enviar",
+        description: "Tente novamente ou use o WhatsApp.",
+        variant: "destructive"
+      });
+    }
+    setLeadLoading(false);
+  };
+
   return (
     <div className="min-h-screen font-sans" style={{ backgroundColor: "#0D0D0D", color: "#FAF7F2" }}>
 
