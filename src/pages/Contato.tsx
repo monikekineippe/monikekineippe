@@ -41,7 +41,7 @@ const Contato = () => {
     }
 
     toast({ title: "Mensagem enviada!", description: "Entraremos em contato em breve." });
-    setForm({ nome: "", email: "", objetivo: "", instagram: "", mensagem: "" });
+    setForm({ nome: "", whatsapp: "", email: "", objetivo: "", instagram: "", mensagem: "" });
     setLoading(false);
   };
 
