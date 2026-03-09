@@ -52,6 +52,9 @@ const openTypebotPopup = () => {
 
 const LapidandoDiamantes = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [leadForm, setLeadForm] = useState({ nome: "", email: "", telefone: "", negocio: "" });
+  const [leadLoading, setLeadLoading] = useState(false);
+  const { toast } = useToast();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
