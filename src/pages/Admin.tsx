@@ -42,13 +42,10 @@ const Admin = () => {
   const fetchSubmissions = async () => {
     setLoading(true);
     try {
-      const { data, error } = await supabase
-        .from("form_submissions")
-        .select("*")
-        .order("submitted_at", { ascending: false });
+      const { data, error } = await supabase.rpc("get_form_submissions");
 
       if (error) throw error;
-      setSubmissions(data || []);
+      setSubmissions((data as FormSubmission[]) || []);
     } catch (error) {
       console.error("Erro ao buscar submissões:", error);
       toast({
@@ -157,11 +154,11 @@ const Admin = () => {
 
           <Card>
             <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium">Outros Formulários</CardTitle>
+              <CardTitle className="text-sm font-medium">Dona de $i</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-2xl font-bold">
-                {submissions.filter(s => s.form_type !== "lapidando-diamantes").length}
+                {submissions.filter(s => s.form_type === "dona-de-si-aplicacao").length}
               </p>
             </CardContent>
           </Card>

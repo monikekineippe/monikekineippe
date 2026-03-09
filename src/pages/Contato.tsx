@@ -3,6 +3,7 @@ import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxNWY78Z9sPxO37hWwNf9-6i9y3VpQxJFUEKu1G53y5SpH3YbWZIAU1GjGDIO9Wyeaf/exec";
 
@@ -14,6 +15,8 @@ const Contato = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+
+    // Save to Google Sheets
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
@@ -21,12 +24,24 @@ const Contato = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      toast({ title: "Mensagem enviada!", description: "Entraremos em contato em breve." });
-      setForm({ nome: "", email: "", objetivo: "", instagram: "", mensagem: "" });
     } catch (err) {
-      console.error("Erro ao enviar formulário:", err);
-      toast({ title: "Erro ao enviar", description: "Tente novamente mais tarde.", variant: "destructive" });
+      console.error("Erro ao enviar para planilha:", err);
     }
+
+    // Save to database
+    try {
+      await supabase.rpc("insert_form_submission", {
+        p_form_type: "contato",
+        p_page_source: "/contato",
+        p_data: form as any,
+        p_user_agent: navigator.userAgent,
+      });
+    } catch (err) {
+      console.error("Erro ao salvar no banco:", err);
+    }
+
+    toast({ title: "Mensagem enviada!", description: "Entraremos em contato em breve." });
+    setForm({ nome: "", email: "", objetivo: "", instagram: "", mensagem: "" });
     setLoading(false);
   };
 

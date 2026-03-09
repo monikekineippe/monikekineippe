@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import {
   Dialog,
   DialogContent,
@@ -43,8 +44,7 @@ const DonaDeSiForm = ({ open, onOpenChange }: DonaDeSiFormProps) => {
     if (!isStep3Valid) return;
     setLoading(true);
 
-    const payload = {
-      form_type: "dona-de-si-aplicacao",
+    const formData = {
       name: name.trim(),
       whatsapp: whatsapp.trim(),
       instagram: instagram.trim(),
@@ -54,15 +54,28 @@ const DonaDeSiForm = ({ open, onOpenChange }: DonaDeSiFormProps) => {
       availability,
     };
 
+    // Save to Google Sheets
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ form_type: "dona-de-si-aplicacao", ...formData }),
       });
     } catch (err) {
-      console.error("Erro ao enviar aplicação:", err);
+      console.error("Erro ao enviar para planilha:", err);
+    }
+
+    // Save to database
+    try {
+      await supabase.rpc("insert_form_submission", {
+        p_form_type: "dona-de-si-aplicacao",
+        p_page_source: "/dona-de-si",
+        p_data: formData as any,
+        p_user_agent: navigator.userAgent,
+      });
+    } catch (err) {
+      console.error("Erro ao salvar no banco:", err);
     }
 
     setLoading(false);
