@@ -79,9 +79,9 @@ const LapidandoDiamantes = () => {
             A Mentoria Lapidando Diamantes é para a empresária que já tem negócio, já sabe que tem potencial — mas sente que algo está travando o crescimento que ela merece.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a href="https://mika.monikekineippe.com.br/listadeespera" target="_blank" rel="noopener noreferrer" className="inline-block text-center text-xs tracking-widest uppercase px-8 py-4 rounded font-semibold transition-all duration-300 hover:scale-105 hover:brightness-110" style={{ backgroundColor: "#C9A84C", color: "#0D0D0D" }}>
+            <button onClick={openTypebotPopup} className="inline-block text-center text-xs tracking-widest uppercase px-8 py-4 rounded font-semibold transition-all duration-300 hover:scale-105 hover:brightness-110" style={{ backgroundColor: "#C9A84C", color: "#0D0D0D" }}>
               QUERO MINHA VAGA
-            </a>
+            </button>
             <button onClick={() => scrollTo("como-funciona")} className="text-xs tracking-widest uppercase px-8 py-4 rounded font-semibold border transition-all duration-300 hover:scale-105" style={{ borderColor: "rgba(250,247,242,0.4)", color: "#FAF7F2" }}>
               VER COMO FUNCIONA
             </button>
