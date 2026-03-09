@@ -707,6 +707,7 @@ const CoruJah = () => (
   <div className="min-h-screen" style={{ backgroundColor: "#FAF7F2" }}>
     <Navbar />
     <Hero />
+    <VideoSection />
     <TheProblem />
     <WhatItDoes />
     <BeforeAfter />
