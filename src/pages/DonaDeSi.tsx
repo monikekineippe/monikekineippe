@@ -1,14 +1,24 @@
+import { useState } from "react";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import logoIcon from "@/assets/logo-icon.png";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, X, ArrowRight, MessageCircle, Target, Zap, ClipboardList, Calendar } from "lucide-react";
-
-const WHATSAPP_LINK = "https://wa.me/5511972313181?text=Quero%20aplicar%20para%20a%20Dona%20de%20%24i";
+import { Check, X, ArrowRight, Target, Zap, ClipboardList, Calendar } from "lucide-react";
+import DonaDeSiForm from "@/components/DonaDeSiForm";
 
 const DonaDeSi = () => {
+  const [formOpen, setFormOpen] = useState(false);
+
+  const CtaButton = ({ children }: { children: React.ReactNode }) => (
+    <Button variant="gold" size="xl" onClick={() => setFormOpen(true)}>
+      {children}
+    </Button>
+  );
+
   return (
     <>
+      <DonaDeSiForm open={formOpen} onOpenChange={setFormOpen} />
+
       {/* HERO */}
       <div className="section-padding bg-primary text-primary-foreground text-center">
         <div className="container mx-auto max-w-3xl">
@@ -26,11 +36,7 @@ const DonaDeSi = () => {
             É aceleração personalizada pra quem quer resultado em dias, com plano + execução + correção.
           </p>
           <div className="mt-10">
-            <Button variant="gold" size="xl" asChild>
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                ✅ Quero aplicar para a Dona de $i
-              </a>
-            </Button>
+            <CtaButton>✅ Quero aplicar para a Dona de $i</CtaButton>
           </div>
           <div className="mt-10 w-16 h-px bg-secondary mx-auto" />
         </div>
@@ -202,11 +208,7 @@ const DonaDeSi = () => {
           <p className="text-sm text-muted-foreground font-sans mb-8">
             A Dona de $i é limitada porque exige acompanhamento real.
           </p>
-          <Button variant="gold" size="xl" asChild>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              ✅ Aplicar agora
-            </a>
-          </Button>
+          <CtaButton>✅ Aplicar agora</CtaButton>
           <div className="mt-8 text-left max-w-md mx-auto">
             <p className="text-xs font-sans tracking-[0.2em] uppercase text-secondary mb-4">Na aplicação eu avalio:</p>
             <ul className="space-y-2 text-sm font-sans text-muted-foreground">
@@ -267,11 +269,7 @@ const DonaDeSi = () => {
           <p className="text-lg font-serif text-primary-foreground mb-8">
             Se você quer previsibilidade em <strong className="text-secondary">dias</strong>, aplica pra Dona de $i.
           </p>
-          <Button variant="gold" size="xl" asChild>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              ✅ Quero aplicar para a Dona de $i
-            </a>
-          </Button>
+          <CtaButton>✅ Quero aplicar para a Dona de $i</CtaButton>
         </div>
       </Section>
     </>
