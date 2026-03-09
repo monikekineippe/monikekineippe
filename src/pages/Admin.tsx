@@ -27,7 +27,7 @@ const Admin = () => {
   const { toast } = useToast();
 
   const handleLogin = () => {
-    if (password === "admin123") {
+    if (password === "Milionaria2026") {
       setIsAuthenticated(true);
       fetchSubmissions();
     } else {
