@@ -1,87 +1,276 @@
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import logoIcon from "@/assets/logo-icon.png";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Check, X, ArrowRight, MessageCircle, Target, Zap, ClipboardList, Calendar } from "lucide-react";
+
+const WHATSAPP_LINK = "https://wa.me/5511972313181?text=Quero%20aplicar%20para%20a%20Dona%20de%20%24i";
 
 const DonaDeSi = () => {
   return (
     <>
+      {/* HERO */}
       <div className="section-padding bg-primary text-primary-foreground text-center">
         <div className="container mx-auto max-w-3xl">
           <img src={logoIcon} alt="Monike Kineippe" className="w-20 h-20 mx-auto mb-6 object-contain" />
-          <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-6">Individual</span>
-          <h1 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6">Mentoria Dona de $i</h1>
-          <p className="text-base md:text-lg text-primary-foreground/70 font-sans leading-relaxed max-w-2xl mx-auto">
-            Você não precisa de mais "força". Você precisa de sistema, limites e direção.
+          <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-4">Aceleração Individual</span>
+          <h1 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-4">
+            💎 Dona de $i
+          </h1>
+          <p className="text-lg md:text-xl text-primary-foreground/90 font-serif leading-relaxed max-w-2xl mx-auto mb-2">
+            7 dias para colocar dinheiro em movimento.<br />
+            14 dias para instalar um sistema de vendas.
           </p>
+          <p className="text-sm md:text-base text-primary-foreground/60 font-sans leading-relaxed max-w-xl mx-auto mt-6">
+            Isso não é mentoria pra "conversar bonito".<br />
+            É aceleração personalizada pra quem quer resultado em dias, com plano + execução + correção.
+          </p>
+          <div className="mt-10">
+            <Button variant="gold" size="xl" asChild>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                ✅ Quero aplicar para a Dona de $i
+              </a>
+            </Button>
+          </div>
           <div className="mt-10 w-16 h-px bg-secondary mx-auto" />
         </div>
       </div>
 
+      {/* PARA QUEM É / NÃO É */}
       <Section>
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-xl font-serif mb-6">O problema real</h2>
-          <p className="text-muted-foreground font-sans leading-relaxed">
-            Tem mulher que até sabe vender. O que ela não consegue é sustentar. Porque sustentar exige estrutura interna e estrutura de negócio.
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div>
+            <h2 className="text-xl font-serif mb-6 flex items-center gap-2">
+              <Check className="w-5 h-5 text-secondary" /> É pra você se:
+            </h2>
+            <ul className="space-y-4 text-sm font-sans text-muted-foreground">
+              {[
+                "Você já tem entrega validada (clientes ou histórico de venda)",
+                "Seu negócio está \"funcionando no improviso\" e você quer previsibilidade",
+                "Você precisa de alguém dizendo: faz isso / para com isso / agora é aqui",
+                "Você topa um sprint curto com foco (sem desculpa sofisticada)",
+              ].map((t, i) => (
+                <li key={i} className="flex gap-3 items-start">
+                  <Check className="w-4 h-4 text-secondary mt-0.5 shrink-0" />
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-xl font-serif mb-6 flex items-center gap-2">
+              <X className="w-5 h-5 text-destructive" /> Não é pra você se:
+            </h2>
+            <ul className="space-y-4 text-sm font-sans text-muted-foreground">
+              {[
+                "Você quer \"ir no seu tempo\" (aí é a Mentoria em Grupo)",
+                "Você está começando do zero absoluto",
+                "Você não vai executar o que for combinado",
+              ].map((t, i) => (
+                <li key={i} className="flex gap-3 items-start">
+                  <X className="w-4 h-4 text-destructive mt-0.5 shrink-0" />
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
+
+      {/* 7 DIAS */}
+      <Section variant="accent">
+        <div className="max-w-3xl mx-auto">
+          <div className="flex items-center gap-3 mb-6">
+            <Zap className="w-6 h-6 text-secondary" />
+            <h2 className="text-2xl font-serif">O que acontece em 7 dias</h2>
+          </div>
+          <p className="text-sm text-muted-foreground font-sans mb-6">Em 7 dias, você sai com:</p>
+          <ul className="space-y-3 text-sm font-sans text-foreground">
+            {[
+              "Oferta em 1 frase + Oferta em 1 tela (aprovadas por mim)",
+              "Script de convite + follow-up (copie e cole)",
+              "10 convites feitos (WhatsApp/Direct) com direção",
+              "Meta realista: 1 venda / 1–3 clientes (depende do seu ticket)",
+            ].map((t, i) => (
+              <li key={i} className="flex gap-3 items-start">
+                <ArrowRight className="w-4 h-4 text-secondary mt-0.5 shrink-0" />
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-sm font-sans text-secondary font-semibold">
+            Dinheiro em movimento. Sem perfeccionismo. Sem "postar e rezar".
           </p>
         </div>
       </Section>
 
-      <Section variant="accent">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-          <div>
-            <h2 className="text-xl font-serif mb-6">Para quem é</h2>
-            <ul className="space-y-3 text-sm font-sans text-muted-foreground">
-              {[
-                "Mulheres que estão no limite da sobrecarga",
-                "Prestadoras de serviço e mentoras que querem crescer com maturidade",
-                "Quem quer previsibilidade sem virar refém do digital",
-              ].map((t, i) => (
-                <li key={i} className="flex gap-3"><span className="text-secondary">—</span>{t}</li>
-              ))}
-            </ul>
+      {/* 14 DIAS */}
+      <Section>
+        <div className="max-w-3xl mx-auto">
+          <div className="flex items-center gap-3 mb-6">
+            <Target className="w-6 h-6 text-secondary" />
+            <h2 className="text-2xl font-serif">O que acontece em 14 dias</h2>
           </div>
-          <div>
-            <h2 className="text-xl font-serif mb-6">O que você constrói comigo</h2>
-            <ul className="space-y-3 text-sm font-sans text-muted-foreground">
-              {[
-                "Agenda e limites de CEO (sem culpa)",
-                "Oferta e escada de valor sustentável",
-                "Rotina de vendas compatível com sua vida",
-                "Decisões estratégicas sem autoengano",
-              ].map((t, i) => (
-                <li key={i} className="flex gap-3"><span className="text-secondary">✓</span>{t}</li>
-              ))}
-            </ul>
-          </div>
+          <p className="text-sm text-muted-foreground font-sans mb-6">Em 14 dias, você instala:</p>
+          <ul className="space-y-3 text-sm font-sans text-foreground">
+            {[
+              "Seu processo de vendas (CTA → conversa → script → follow-up → fechamento)",
+              "Sua rotina comercial mínima (pra não voltar pro improviso)",
+              "Um modelo repetível pra vender toda semana com leveza",
+              "(se fizer sentido) IA aplicada pra acelerar conteúdo, atendimento e execução",
+            ].map((t, i) => (
+              <li key={i} className="flex gap-3 items-start">
+                <ArrowRight className="w-4 h-4 text-secondary mt-0.5 shrink-0" />
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </Section>
 
-      <Section>
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-xl font-serif mb-6 text-center">Formato</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      {/* COMO FUNCIONA — SPRINT */}
+      <Section variant="accent">
+        <div className="max-w-3xl mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <Calendar className="w-6 h-6 text-secondary" />
+            <h2 className="text-2xl font-serif">Como funciona</h2>
+          </div>
+          <p className="text-xs font-sans tracking-[0.2em] uppercase text-secondary mb-8">
+            Formato: aceleração individual, online + WhatsApp · Sprint de 14 dias
+          </p>
+
+          <div className="space-y-6">
             {[
-              { label: "Formato", value: "Individual" },
-              { label: "Vagas", value: "Limitadas" },
-              { label: "Encontros", value: "Sob consulta" },
-              { label: "Duração", value: "Sob consulta" },
-            ].map((item, i) => (
-              <div key={i} className="p-4 gold-border rounded-lg">
-                <span className="text-[10px] font-sans tracking-widest uppercase text-secondary">{item.label}</span>
-                <p className="font-serif text-lg mt-1">{item.value}</p>
+              { days: "Dia 1–2", title: "Raio-X + Plano (48h)", desc: "Diagnóstico direto: onde o dinheiro está travando e qual é a rota mais curta." },
+              { days: "Dia 3–6", title: "Oferta e mensagens (com revisão)", desc: "Você constrói com templates. Eu reviso e deixo \"publicável\"." },
+              { days: "Dia 7", title: "Dinheiro em movimento", desc: "Você executa as abordagens com o script (com correções rápidas)." },
+              { days: "Dia 8–14", title: "Sistema instalado", desc: "Processo + rotina + ajustes com base no que o mercado respondeu." },
+            ].map((step, i) => (
+              <div key={i} className="flex gap-4 items-start">
+                <div className="w-20 shrink-0 text-right">
+                  <span className="text-xs font-sans font-semibold text-secondary">{step.days}</span>
+                </div>
+                <div className="w-px bg-border self-stretch" />
+                <div>
+                  <h3 className="font-serif text-base mb-1">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground font-sans">{step.desc}</p>
+                </div>
               </div>
             ))}
           </div>
+
+          <div className="mt-8 p-4 gold-border rounded-lg bg-card text-sm font-sans text-muted-foreground space-y-1">
+            <p><strong className="text-foreground">Suporte:</strong> WhatsApp com prioridade (janelas combinadas)</p>
+            <p><strong className="text-foreground">Entregáveis finais:</strong> oferta, scripts, rotina, CTA e funil de conversa</p>
+          </div>
+
+          <div className="mt-8 p-4 bg-primary/5 rounded-lg text-sm font-sans text-muted-foreground italic">
+            No grupo, você evolui com cadência semanal e comunidade.<br />
+            Na Dona de $i, eu acelero com você no foco e na correção.
+          </div>
         </div>
       </Section>
 
+      {/* ENTREGÁVEIS */}
+      <Section>
+        <div className="max-w-3xl mx-auto">
+          <div className="flex items-center gap-3 mb-6">
+            <ClipboardList className="w-6 h-6 text-secondary" />
+            <h2 className="text-2xl font-serif">O que você leva</h2>
+          </div>
+          <ul className="space-y-3 text-sm font-sans text-foreground">
+            {[
+              "Oferta em 1 frase + Oferta em 1 tela (versão final)",
+              "Script de convite + objeções + follow-up 3 dias",
+              "Roteiro de 7 dias (conteúdo + stories + CTA)",
+              "Rotina comercial mínima (checklist semanal)",
+              "Placar de previsibilidade (leads, conversas, conversão, receita, dreno de horas)",
+            ].map((t, i) => (
+              <li key={i} className="flex gap-3 items-start">
+                <Check className="w-4 h-4 text-secondary mt-0.5 shrink-0" />
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
+
+      {/* APLICAÇÃO */}
       <Section variant="card">
-        <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="hero" size="xl" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer">Entrar na lista de espera</a>
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-2xl font-serif mb-4">Aplicação</h2>
+          <p className="text-sm text-muted-foreground font-sans mb-8">
+            A Dona de $i é limitada porque exige acompanhamento real.
+          </p>
+          <Button variant="gold" size="xl" asChild>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              ✅ Aplicar agora
+            </a>
           </Button>
-          <Button variant="heroOutline" size="xl" asChild>
-            <a href="https://wa.me/5511972313181" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+          <div className="mt-8 text-left max-w-md mx-auto">
+            <p className="text-xs font-sans tracking-[0.2em] uppercase text-secondary mb-4">Na aplicação eu avalio:</p>
+            <ul className="space-y-2 text-sm font-sans text-muted-foreground">
+              {[
+                "Se você já tem entrega validada",
+                "Se seu gargalo é de aceleração (não de \"começar do zero\")",
+                "Se você tem agenda mínima pra executar 14 dias",
+              ].map((t, i) => (
+                <li key={i} className="flex gap-2 items-start">
+                  <span className="text-secondary">—</span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
+
+      {/* FAQ */}
+      <Section>
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-2xl font-serif mb-8 text-center">Perguntas frequentes</h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="faq-1">
+              <AccordionTrigger className="font-serif text-base text-left">
+                "Isso é igual à mentoria em grupo?"
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground font-sans">
+                Não. O grupo é construção com cadência semanal. A Dona de $i é sprint com correção próxima e resultado em dias.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq-2">
+              <AccordionTrigger className="font-serif text-base text-left">
+                "E se meu problema for falta de tempo/execução?"
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground font-sans">
+                A gente simplifica e instala rotina mínima. Se o gargalo for operacional pesado, eu recomendo o próximo degrau correto.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq-3">
+              <AccordionTrigger className="font-serif text-base text-left">
+                "Eu vou sair vendendo mesmo?"
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground font-sans">
+                Você vai sair com oferta clara + script + 10 convites executados. O objetivo é dinheiro em movimento com ação real.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </Section>
+
+      {/* CTA FINAL */}
+      <Section variant="wine">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-sm font-sans text-primary-foreground/70 mb-2">
+            Se você quer previsibilidade em semanas, vai pro grupo.
+          </p>
+          <p className="text-lg font-serif text-primary-foreground mb-8">
+            Se você quer previsibilidade em <strong className="text-secondary">dias</strong>, aplica pra Dona de $i.
+          </p>
+          <Button variant="gold" size="xl" asChild>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              ✅ Quero aplicar para a Dona de $i
+            </a>
           </Button>
         </div>
       </Section>
