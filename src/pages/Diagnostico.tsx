@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { supabase } from "@/integrations/supabase/client";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
@@ -59,9 +60,21 @@ const Diagnostico = () => {
     }
   });
 
-  const onSubmit = (data: DiagnosticoData) => {
+  const onSubmit = async (data: DiagnosticoData) => {
     setResultData(data);
     setShowResult(true);
+
+    // Save to database
+    try {
+      await supabase.rpc("insert_form_submission", {
+        p_form_type: "diagnostico",
+        p_page_source: "/diagnostico",
+        p_data: data as any,
+        p_user_agent: navigator.userAgent,
+      });
+    } catch (err) {
+      console.error("Erro ao salvar diagnóstico:", err);
+    }
   };
 
   const nextStep = async () => {
