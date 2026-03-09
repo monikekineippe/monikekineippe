@@ -10,7 +10,7 @@ const DonaDeSi = () => {
   const [formOpen, setFormOpen] = useState(false);
 
   const CtaButton = ({ children }: { children: React.ReactNode }) => (
-    <Button variant="gold" size="xl" onClick={() => setFormOpen(true)}>
+    <Button variant="gold" size="xl" className="whitespace-normal px-6 md:px-12" onClick={() => setFormOpen(true)}>
       {children}
     </Button>
   );
