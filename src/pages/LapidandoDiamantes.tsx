@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, ReactNode } from "react";
 import { Gem, Star, Users, CheckCircle, ArrowRight, Shield, Clock, ChevronDown, Instagram, MessageCircle, Search, Map, Target, Trophy, Compass, Handshake, Scale, KeyRound } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxNWY78Z9sPxO37hWwNf9-6i9y3VpQxJFUEKu1G53y5SpH3YbWZIAU1GjGDIO9Wyeaf/exec";
 import monikePhoto from "@/assets/monike-1.jpg";
 import diamanteIcon from "@/assets/diamante-icon.png";
 
