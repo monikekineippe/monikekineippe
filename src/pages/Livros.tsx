@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useState } from "react";
 import livroTablet1 from "@/assets/livro-tablet-1.png";
 import livroTablet2 from "@/assets/livro-tablet-2.png";
+import livroFisicoAutora from "@/assets/livro-fisico-autora.png";
 import livroCombo from "@/assets/livro-combo.png";
 
 const Livros = () => {
@@ -65,8 +66,8 @@ const Livros = () => {
               <CardContent className="text-center">
                 <div className="mb-4">
                   <img
-                    src={livroTablet2}
-                    alt="Versão Física do Livro"
+                    src={livroFisicoAutora}
+                    alt="Monike com o livro físico"
                     className="w-48 mx-auto rounded-lg shadow-lg"
                   />
                 </div>
@@ -93,8 +94,8 @@ const Livros = () => {
               <CardContent className="text-center">
                 <div className="mb-4">
                   <img
-                    src={livroTablet1}
-                    alt="Versão Digital do Livro"
+                    src={livroTablet2}
+                    alt="Mulher lendo no tablet"
                     className="w-48 mx-auto rounded-lg shadow-lg"
                   />
                 </div>
