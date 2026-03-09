@@ -147,9 +147,9 @@ const Livros = () => {
       <Section variant="accent">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
-            <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-secondary">E-book gratuito</span>
-            <h2 className="text-2xl font-serif mt-4 mb-4">Quanto Cobrar?</h2>
-            <p className="text-lg text-muted-foreground font-sans mb-8 max-w-2xl mx-auto">
+            <span className="font-sans text-sm tracking-[0.2em] uppercase text-secondary font-semibold">E-book gratuito</span>
+            <h2 className="text-4xl md:text-5xl font-serif mt-4 mb-6">Quanto Cobrar?</h2>
+            <p className="text-xl md:text-2xl text-muted-foreground font-sans mb-8 max-w-3xl mx-auto leading-relaxed">
               Descubra como precificar seus serviços de forma estratégica e aumentar seus lucros. 
               Um guia completo para empreendedoras que querem valorizar seu trabalho.
             </p>
