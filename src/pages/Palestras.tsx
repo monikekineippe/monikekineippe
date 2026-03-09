@@ -21,12 +21,6 @@ const featured = [
   },
 ];
 
-const otherThemes = [
-  "Esse não é o ano da força. É o ano do sistema.",
-  "Vendas com verdade: vender sem se violentar",
-  "IA com intenção: automação sem perder humanidade",
-  "Posicionamento e previsibilidade: estrutura que sustenta",
-];
 
 const Palestras = () => {
   return (
