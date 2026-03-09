@@ -46,11 +46,10 @@ const Sobre = () => {
                 Abri meu primeiro CNPJ aos 18 anos. Enquanto muitas pessoas ainda buscavam um caminho, eu já estava contratando, liderando e tomando decisões que exigiam maturidade antes da idade.
               </p>
             </div>
-            <SobreImage src={sobre5} alt="Monike com a famíliat-[4/5]" />
-          </div>
+            <SobreImage src={sobre5} alt="Monike com a família    </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mt-12 md:mt-16">
-            <SobreImage src={sobre8} alt="Monike em 1} alt="Monike em evento ADESAMPA com seu livrct-[4/5] md:order-1" />
+            <SobreImage src={sobre8} alt="Monike em 1} alt="Monike em 1} alt="Monike em evento ADESAMPA com seu livr] md:order-1" />
             <div className="space-y-6 font-sans text-muted-foreground leading-relaxed text-base md:text-lg md:order-2">
               <p>
                 Cresci vendo meu pai empreender.<br />
@@ -80,7 +79,7 @@ const Sobre = () => {
               </p>
               <p>Mesmo assim, continuei construindo.</p>
             </div>
-            <SobreImage src={sobre2} alt="Monike ministrando palestra sobre SWOT" className="aspect-[4/5]" />
+            <SobreImage src={sobre2} alt=8} alt="Monike em ensaio corporativoName="aspect-[4/5]" />
           </div>
           <p className="text-foreground font-serif text-lg text-center italic mt-10">
             Talento não sustenta negócio.<br />
