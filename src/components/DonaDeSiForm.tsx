@@ -14,8 +14,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 
-const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbxNWY78Z9sPxO37hWwNf9-6i9y3VpQxJFUEKu1G53y5SpH3YbWZIAU1GjGDIO9Wyeaf/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbycfxq1pSrMI7YQuo1jQ-qcgDxcH7tCY2s8atO8hj6vV0YbERIpYVZownjgmiGGr3BS/exec";
 
 interface DonaDeSiFormProps {
   open: boolean;
