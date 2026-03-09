@@ -8,7 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxNWY78Z9sPxO37hWwNf9-6i9y3VpQxJFUEKu1G53y5SpH3YbWZIAU1GjGDIO9Wyeaf/exec";
 
 const Contato = () => {
-  const [form, setForm] = useState({ nome: "", email: "", objetivo: "", instagram: "", mensagem: "" });
+  const [form, setForm] = useState({ nome: "", whatsapp: "", email: "", objetivo: "", instagram: "", mensagem: "" });
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
 
