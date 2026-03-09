@@ -85,29 +85,6 @@ const Palestras = () => {
         </div>
       </Section>
 
-      {/* WORKSHOPS & TREINAMENTOS */}
-      <Section>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-serif mb-10 text-center">Workshops, Aulas e Treinamentos</h2>
-          <div className="space-y-4">
-            {[
-              { tag: "Workshop", title: "Oferta em 1 Tela (em 60 min)" },
-              { tag: "Workshop", title: "Script de Direct/WhatsApp que fecha (sem ser chata)" },
-              { tag: "Aula prática", title: "Conteúdo com intenção em 30 min (com IA aplicada)" },
-              { tag: "Treinamento", title: "Rotina comercial mínima para mães (3x30 min/semana)" },
-              { tag: "Imersão curta", title: "Do off-line ao digital: seu funil simples em 90 min" },
-            ].map((item, i) => (
-              <div key={i} className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 p-6 gold-border rounded-lg bg-card">
-                <span className="shrink-0 inline-block font-sans text-[10px] tracking-[0.2em] uppercase text-secondary font-semibold bg-secondary/10 px-3 py-1 rounded-full w-fit">
-                  {item.tag}
-                </span>
-                <p className="font-serif text-base leading-snug">{item.title}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
 
       <Section>
         <div className="max-w-3xl mx-auto">
