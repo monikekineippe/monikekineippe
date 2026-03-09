@@ -8,7 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxNWY78Z9sPxO37hWwNf9-6i9y3VpQxJFUEKu1G53y5SpH3YbWZIAU1GjGDIO9Wyeaf/exec";
 
 const Contato = () => {
-  const [form, setForm] = useState({ nome: "", email: "", objetivo: "", instagram: "", mensagem: "" });
+  const [form, setForm] = useState({ nome: "", whatsapp: "", email: "", objetivo: "", instagram: "", mensagem: "" });
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
 
@@ -41,7 +41,7 @@ const Contato = () => {
     }
 
     toast({ title: "Mensagem enviada!", description: "Entraremos em contato em breve." });
-    setForm({ nome: "", email: "", objetivo: "", instagram: "", mensagem: "" });
+    setForm({ nome: "", whatsapp: "", email: "", objetivo: "", instagram: "", mensagem: "" });
     setLoading(false);
   };
 
@@ -79,6 +79,7 @@ const Contato = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             {[
               { key: "nome", label: "Nome", type: "text" },
+              { key: "whatsapp", label: "WhatsApp (com DDD)", type: "tel" },
               { key: "email", label: "E-mail", type: "email" },
               { key: "objetivo", label: "Objetivo", type: "text" },
               { key: "instagram", label: "Instagram", type: "text" },
