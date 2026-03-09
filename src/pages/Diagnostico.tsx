@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { supabase } from "@/integrations/supabase/client";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzdP1ds5fOfxCHV4gTgQsqwwbYHt3e3X_Nd7ud3yMWytsZf-2KLhL_ajjrpbYWB59d4/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxxwOuyf7_sVMEpQHkmDyhssEFEEmYbSmsjD3urHgyln94EuzwWX-rrWWbvwfkj8v62/exec";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
