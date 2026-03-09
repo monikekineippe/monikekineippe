@@ -79,6 +79,7 @@ const Contato = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             {[
               { key: "nome", label: "Nome", type: "text" },
+              { key: "whatsapp", label: "WhatsApp (com DDD)", type: "tel" },
               { key: "email", label: "E-mail", type: "email" },
               { key: "objetivo", label: "Objetivo", type: "text" },
               { key: "instagram", label: "Instagram", type: "text" },
