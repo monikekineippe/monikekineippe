@@ -204,11 +204,11 @@ const Sobre = () => {
               {carouselImages.map((img, i) => (
                 <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-2">
-                    <div className="aspect-[4/3] overflow-hidden rounded-lg">
+                    <div className="aspect-[3/4] overflow-hidden rounded-lg bg-muted">
                       <img
                         src={img.src}
                         alt={img.alt}
-                        className="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
+                        className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
                       />
                     </div>
                   </div>
