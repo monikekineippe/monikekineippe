@@ -3,6 +3,7 @@ import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxNWY78Z9sPxO37hWwNf9-6i9y3VpQxJFUEKu1G53y5SpH3YbWZIAU1GjGDIO9Wyeaf/exec";
 
