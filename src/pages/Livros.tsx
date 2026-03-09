@@ -66,8 +66,8 @@ const Livros = () => {
               <CardContent className="text-center">
                 <div className="mb-4">
                   <img
-                    src={livroTablet2}
-                    alt="Versão Física do Livro"
+                    src={livroFisicoAutora}
+                    alt="Monike com o livro físico"
                     className="w-48 mx-auto rounded-lg shadow-lg"
                   />
                 </div>
