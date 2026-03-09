@@ -42,13 +42,10 @@ const Admin = () => {
   const fetchSubmissions = async () => {
     setLoading(true);
     try {
-      const { data, error } = await supabase
-        .from("form_submissions")
-        .select("*")
-        .order("submitted_at", { ascending: false });
+      const { data, error } = await supabase.rpc("get_form_submissions");
 
       if (error) throw error;
-      setSubmissions(data || []);
+      setSubmissions((data as FormSubmission[]) || []);
     } catch (error) {
       console.error("Erro ao buscar submissões:", error);
       toast({
