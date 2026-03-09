@@ -423,7 +423,7 @@ const LapidandoDiamantes = () => {
                     type="text"
                     value={leadForm.nome}
                     onChange={(e) => setLeadForm(prev => ({ ...prev, nome: e.target.value }))}
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-amber-500 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:border-ring focus:outline-none transition-colors"
                     placeholder="Seu nome completo"
                     required
                   />
