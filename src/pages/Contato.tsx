@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxxwOuyf7_sVMEpQHkmDyhssEFEEmYbSmsjD3urHgyln94EuzwWX-rrWWbvwfkj8v62/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwfrHybNG4ArAMsp0goPl8qBWhv871v1cNNTiTRwJkH2vSwp8ryxAUkLdd_J50SHaJw/exec";
 
 const Contato = () => {
   const [form, setForm] = useState({ nome: "", whatsapp: "", email: "", objetivo: "", instagram: "", mensagem: "" });
