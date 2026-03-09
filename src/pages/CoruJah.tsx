@@ -102,6 +102,29 @@ const Hero = () => (
 );
 
 /* ════════════════════════════════════════════════════════
+   VÍDEO
+   ════════════════════════════════════════════════════════ */
+const VideoSection = () => (
+  <section className="py-16 md:py-20 px-6 bg-card">
+    <div className="max-w-3xl mx-auto">
+      <Reveal>
+        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+          <iframe
+            className="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/qM8rwbMyEwU?si=UDCPXszKIIZz9IeM"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+      </Reveal>
+    </div>
+  </section>
+);
+
+/* ════════════════════════════════════════════════════════
    A TRAVA
    ════════════════════════════════════════════════════════ */
 const TheProblem = () => (
@@ -684,6 +707,7 @@ const CoruJah = () => (
   <div className="min-h-screen" style={{ backgroundColor: "#FAF7F2" }}>
     <Navbar />
     <Hero />
+    <VideoSection />
     <TheProblem />
     <WhatItDoes />
     <BeforeAfter />
