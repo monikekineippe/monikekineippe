@@ -13,8 +13,8 @@ interface FormSubmission {
   page_source: string;
   data: any;
   submitted_at: string;
-  user_agent?: string;
-  ip_address?: string;
+  user_agent?: string | null;
+  ip_address?: unknown;
 }
 
 const Admin = () => {
