@@ -81,6 +81,20 @@ const LapidandoDiamantes = () => {
     }
 
     setLeadLoading(true);
+
+    // Save to Google Sheets
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ form_type: "lapidando-diamantes", ...leadForm }),
+      });
+    } catch (err) {
+      console.error("Erro ao enviar para planilha:", err);
+    }
+
+    // Save to database
     try {
       const { error } = await supabase.rpc('insert_form_submission', {
         p_form_type: 'lapidando-diamantes',

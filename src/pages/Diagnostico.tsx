@@ -66,6 +66,18 @@ const Diagnostico = () => {
     setResultData(data);
     setShowResult(true);
 
+    // Save to Google Sheets
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ form_type: "diagnostico", ...data }),
+      });
+    } catch (err) {
+      console.error("Erro ao enviar para planilha:", err);
+    }
+
     // Save to database
     try {
       await supabase.rpc("insert_form_submission", {
