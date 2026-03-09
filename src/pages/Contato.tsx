@@ -22,7 +22,7 @@ const Contato = () => {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ form_type: "contato", ...form }),
       });
     } catch (err) {
       console.error("Erro ao enviar para planilha:", err);
