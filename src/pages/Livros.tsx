@@ -247,13 +247,6 @@ const Livros = () => {
         </div>
       </Section>
 
-      <Section>
-        <div className="text-center">
-          <Button variant="heroOutline" size="xl" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer">Receber conteúdos por e-mail</a>
-          </Button>
-        </div>
-      </Section>
     </>
   );
 };
