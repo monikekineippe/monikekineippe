@@ -21,14 +21,14 @@ import sobre8 from "@/assets/sobre-8.jpg";
 import sobre9 from "@/assets/sobre-9.jpg";
 
 const carouselImages = [
+  { src: sobre8, alt: "Monike em ensaio corporativo" },
   { src: sobre1, alt: "Monike em evento ADESAMPA com seu livro" },
   { src: sobre2, alt: "Monike ministrando palestra sobre SWOT" },
-  { src: sobre3, alt: "Monike em entrevista em evento" },
-  { src: sobre4, alt: "Monike palestrando em evento" },
   { src: sobre5, alt: "Monike com a família" },
+  { src: sobre3, alt: "Monike em entrevista em evento" },
   { src: sobre6, alt: "Livro Empreender Nunca Foi Sorte" },
+  { src: sobre4, alt: "Monike palestrando em evento" },
   { src: sobre7, alt: "Monike lendo seu livro" },
-  { src: sobre8, alt: "Monike em ensaio corporativo" },
   { src: sobre9, alt: "Monike com diamante" },
 ];
 
