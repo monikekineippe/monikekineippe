@@ -51,16 +51,33 @@ const EmailPopup = () => {
     e.preventDefault();
     if (!consent) return;
     setLoading(true);
+
+    const formData = { name, email };
+
+    // Save to Google Sheets
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email }),
+        body: JSON.stringify(formData),
       });
     } catch (err) {
       console.error("Erro ao enviar para planilha:", err);
     }
+
+    // Save to database
+    try {
+      await supabase.rpc("insert_form_submission", {
+        p_form_type: "email-popup",
+        p_page_source: window.location.pathname,
+        p_data: formData as any,
+        p_user_agent: navigator.userAgent,
+      });
+    } catch (err) {
+      console.error("Erro ao salvar no banco:", err);
+    }
+
     setLoading(false);
     setSubmitted(true);
     sessionStorage.setItem("email-popup-dismissed", "true");
