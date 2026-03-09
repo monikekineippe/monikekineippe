@@ -142,14 +142,49 @@ const Livros = () => {
       </Section>
 
       <Dialog open={sinopse} onOpenChange={setSinopse}>
-        <DialogContent className="max-w-lg gold-border">
+        <DialogContent className="max-w-2xl gold-border">
           <DialogHeader>
-            <DialogTitle className="font-serif text-xl">Sinopse</DialogTitle>
-            <DialogDescription className="sr-only">Sinopse do livro</DialogDescription>
+            <DialogTitle className="font-serif text-2xl mb-4">Sobre o Livro "Empreender Nunca Foi Sorte"</DialogTitle>
+            <DialogDescription className="sr-only">Informações detalhadas sobre o livro</DialogDescription>
           </DialogHeader>
-          <p className="text-sm text-muted-foreground font-sans leading-relaxed">
-            Empreender nunca foi sorte é sobre assumir o controle. É sobre transformar bagagem em negócio, e negócio em legado. Sem fantasia. Sem fórmula. Com verdade.
-          </p>
+          
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-serif text-lg mb-2">Fundamentos do Empreendedorismo</h4>
+              <p className="text-sm text-muted-foreground">
+                Identifique oportunidades únicas e supere barreiras comuns enfrentadas no mundo dos negócios brasileiro.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-serif text-lg mb-2">Estratégias de Crescimento</h4>
+              <p className="text-sm text-muted-foreground">
+                Técnicas comprovadas para desenvolver seu negócio, desde o planejamento inicial até a expansão sustentável.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-serif text-lg mb-2">Liderança e Gestão de Equipes</h4>
+              <p className="text-sm text-muted-foreground">
+                Aprenda a construir e liderar equipes de alto desempenho com abordagens que valorizam a diversidade.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-serif text-lg mb-2">Finanças e Captação de Recursos</h4>
+              <p className="text-sm text-muted-foreground">
+                Domine os aspectos financeiros do seu negócio e conheça fontes de investimento voltadas para empreendedoras.
+              </p>
+            </div>
+
+            <div className="pt-4 border-t">
+              <h4 className="font-serif text-lg mb-2">Torne-se Protagonista da sua jornada!</h4>
+              <p className="text-sm text-muted-foreground">
+                Empreender nunca foi sorte é sobre assumir o controle. É sobre transformar bagagem em negócio, 
+                e negócio em legado. Sem fantasia. Sem fórmula. Com verdade.
+              </p>
+            </div>
+          </div>
         </DialogContent>
       </Dialog>
 
