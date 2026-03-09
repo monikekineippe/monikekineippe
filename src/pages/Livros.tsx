@@ -189,16 +189,28 @@ const Livros = () => {
       </Dialog>
 
       <Section variant="accent">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl font-serif mb-8 text-center">Outros materiais</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="p-8 bg-card gold-border rounded-lg text-center">
-              <h3 className="font-serif text-base mb-2">E-books e guias</h3>
-              <p className="text-xs text-muted-foreground font-sans">Em breve</p>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-serif mb-4">Transforme sua Carreira</h2>
+          <p className="text-lg text-muted-foreground font-sans mb-8 max-w-2xl mx-auto">
+            Mais do que um livro, é um guia completo para mulheres que desejam conquistar 
+            seu espaço e prosperar no empreendedorismo brasileiro.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 bg-card gold-border rounded-lg">
+              <h3 className="font-serif text-base mb-2">Fundamentos</h3>
+              <p className="text-xs text-muted-foreground font-sans">Base sólida para empreender</p>
             </div>
-            <div className="p-8 bg-card gold-border rounded-lg text-center">
-              <h3 className="font-serif text-base mb-2">Materiais de apoio</h3>
-              <p className="text-xs text-muted-foreground font-sans">Em breve</p>
+            <div className="p-6 bg-card gold-border rounded-lg">
+              <h3 className="font-serif text-base mb-2">Estratégias</h3>
+              <p className="text-xs text-muted-foreground font-sans">Crescimento sustentável</p>
+            </div>
+            <div className="p-6 bg-card gold-border rounded-lg">
+              <h3 className="font-serif text-base mb-2">Liderança</h3>
+              <p className="text-xs text-muted-foreground font-sans">Gestão de equipes</p>
+            </div>
+            <div className="p-6 bg-card gold-border rounded-lg">
+              <h3 className="font-serif text-base mb-2">Finanças</h3>
+              <p className="text-xs text-muted-foreground font-sans">Captação de recursos</p>
             </div>
           </div>
         </div>
