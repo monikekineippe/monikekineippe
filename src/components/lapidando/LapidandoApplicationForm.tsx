@@ -52,7 +52,7 @@ const LapidandoApplicationForm = ({ open, onOpenChange }: Props) => {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST", mode: "no-cors",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ form_type: "lapidando-diamantes-aplicacao", ...form, dataEnvio: new Date().toISOString() }),
+        body: JSON.stringify({ form_type: "lapidando-diamantes", ...form, dataEnvio: new Date().toISOString() }),
       });
     } catch (err) { console.error("Sheets error:", err); }
 
