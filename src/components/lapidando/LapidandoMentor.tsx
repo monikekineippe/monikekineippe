@@ -31,47 +31,43 @@ const LapidandoMentor = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-[auto_1fr] gap-12 md:gap-16 items-start">
-          {/* Photo + Story */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="flex justify-center md:justify-start"
-          >
-            <div className="w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden border-2 border-secondary/20 shadow-lg shadow-secondary/5">
-              <img src={sobre8} alt="Monike Kineippe" className="w-full h-full object-cover" />
-            </div>
-          </motion.div>
-          {/* Story */}
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+          {/* Left: Photo + Story */}
           <motion.div
             initial={{ opacity: 0, x: -20, filter: "blur(4px)" }}
             whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="space-y-5 font-sans text-[15px] leading-relaxed text-white/75"
+            className="space-y-6"
           >
-            <p>
-              Meu nome é <strong className="text-white">Monike Kineippe</strong>. Abri meu primeiro CNPJ aos 18 anos. 
-              De lá pra cá, foram mais de 17 anos construindo, vendendo e recomeçando negócios — passando por burnout, 
-              perdas e reconstruções que me ensinaram uma coisa definitiva:
-            </p>
-            <blockquote className="border-l-2 border-secondary/50 pl-5 text-white/90 italic font-serif text-lg">
-              "Talento não sustenta negócio. Estrutura sustenta."
-            </blockquote>
-            <p>
-              Hoje atuo como estrategista de negócios digitais femininos, ajudando mulheres a saírem do improviso 
-              e construírem ofertas, posicionamento e sistemas de vendas que geram renda com previsibilidade.
-            </p>
-            <p>
-              Desenvolvi os métodos <strong className="text-secondary/90">ALMA DIGITAL™</strong> e{" "}
-              <strong className="text-secondary/90">Mulher no Poder</strong>, unindo estratégia, identidade e execução — 
-              os mesmos pilares que aplico nas mentorias individuais.
-            </p>
+            <div className="flex justify-center md:justify-start">
+              <div className="w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden border-2 border-secondary/20 shadow-lg shadow-secondary/5">
+                <img src={sobre8} alt="Monike Kineippe" className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            <div className="space-y-5 font-sans text-[15px] leading-relaxed text-white/75">
+              <p>
+                Meu nome é <strong className="text-white">Monike Kineippe</strong>. Abri meu primeiro CNPJ aos 18 anos. 
+                De lá pra cá, foram mais de 17 anos construindo, vendendo e recomeçando negócios — passando por burnout, 
+                perdas e reconstruções que me ensinaram uma coisa definitiva:
+              </p>
+              <blockquote className="border-l-2 border-secondary/50 pl-5 text-white/90 italic font-serif text-lg">
+                "Talento não sustenta negócio. Estrutura sustenta."
+              </blockquote>
+              <p>
+                Hoje atuo como estrategista de negócios digitais femininos, ajudando mulheres a saírem do improviso 
+                e construírem ofertas, posicionamento e sistemas de vendas que geram renda com previsibilidade.
+              </p>
+              <p>
+                Desenvolvi os métodos <strong className="text-secondary/90">ALMA DIGITAL™</strong> e{" "}
+                <strong className="text-secondary/90">Mulher no Poder</strong>, unindo estratégia, identidade e execução — 
+                os mesmos pilares que aplico nas mentorias individuais.
+              </p>
+            </div>
           </motion.div>
 
-          {/* Milestones + Value proposition */}
+          {/* Right: Milestones + Value proposition */}
           <motion.div
             initial={{ opacity: 0, x: 20, filter: "blur(4px)" }}
             whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
@@ -95,7 +91,6 @@ const LapidandoMentor = () => {
               ))}
             </div>
 
-            {/* Value card */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97 }}
               whileInView={{ opacity: 1, scale: 1 }}
