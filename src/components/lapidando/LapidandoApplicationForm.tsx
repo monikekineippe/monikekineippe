@@ -58,7 +58,7 @@ const LapidandoApplicationForm = ({ open, onOpenChange }: Props) => {
 
     try {
       await supabase.rpc('insert_form_submission', {
-        p_form_type: 'lapidando-diamantes-aplicacao',
+        p_form_type: 'lapidando-diamantes',
         p_page_source: '/lapidando-diamantes',
         p_data: form,
         p_user_agent: navigator.userAgent
