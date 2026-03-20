@@ -21,19 +21,19 @@ const paymentOptions = [
     value: "cartao-12x",
     icon: CreditCard,
     label: "Cartão de crédito",
-    detail: "até 12x de R$ 205,32",
+    detail: "até 12x de R$ 166,42",
   },
   {
     value: "pix",
     icon: QrCode,
     label: "PIX à vista",
-    detail: "R$ 1.497,00",
+    detail: "R$ 1.997,00",
   },
   {
     value: "boleto-3x",
     icon: FileText,
     label: "Boleto parcelado",
-    detail: "até 3x de R$ 711,30",
+    detail: "até 3x de R$ 665,67",
   },
 ];
 
@@ -183,7 +183,7 @@ const LapidandoApplicationForm = ({ open, onOpenChange }: Props) => {
                 <>
                   <div className="text-center space-y-1 mb-2">
                     <p className="font-sans text-xs uppercase tracking-widest text-muted-foreground">Investimento</p>
-                    <p className="text-2xl font-serif font-bold">R$ 1.497,00</p>
+                    <p className="text-2xl font-serif font-bold">R$ 1.997,00</p>
                   </div>
                   <div className="space-y-2">
                     <Label className="font-sans text-sm">Escolha a forma de pagamento preferida:</Label>
