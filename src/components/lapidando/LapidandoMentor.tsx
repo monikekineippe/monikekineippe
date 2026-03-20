@@ -31,7 +31,19 @@ const LapidandoMentor = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+        <div className="grid md:grid-cols-[auto_1fr] gap-12 md:gap-16 items-start">
+          {/* Photo + Story */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="flex justify-center md:justify-start"
+          >
+            <div className="w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden border-2 border-secondary/20 shadow-lg shadow-secondary/5">
+              <img src={sobre8} alt="Monike Kineippe" className="w-full h-full object-cover" />
+            </div>
+          </motion.div>
           {/* Story */}
           <motion.div
             initial={{ opacity: 0, x: -20, filter: "blur(4px)" }}
