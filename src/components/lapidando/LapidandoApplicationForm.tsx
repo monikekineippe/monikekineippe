@@ -183,7 +183,7 @@ const LapidandoApplicationForm = ({ open, onOpenChange }: Props) => {
                 <>
                   <div className="text-center space-y-1 mb-2">
                     <p className="font-sans text-xs uppercase tracking-widest text-muted-foreground">Investimento</p>
-                    <p className="text-2xl font-serif font-bold">R$ 1.497,00</p>
+                    <p className="text-2xl font-serif font-bold">R$ 1.997,00</p>
                   </div>
                   <div className="space-y-2">
                     <Label className="font-sans text-sm">Escolha a forma de pagamento preferida:</Label>
