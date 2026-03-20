@@ -52,13 +52,13 @@ const LapidandoApplicationForm = ({ open, onOpenChange }: Props) => {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST", mode: "no-cors",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ form_type: "lapidando-diamantes-aplicacao", ...form, dataEnvio: new Date().toISOString() }),
+        body: JSON.stringify({ form_type: "lapidando-diamantes", ...form, dataEnvio: new Date().toISOString() }),
       });
     } catch (err) { console.error("Sheets error:", err); }
 
     try {
       await supabase.rpc('insert_form_submission', {
-        p_form_type: 'lapidando-diamantes-aplicacao',
+        p_form_type: 'lapidando-diamantes',
         p_page_source: '/lapidando-diamantes',
         p_data: form,
         p_user_agent: navigator.userAgent
