@@ -5,16 +5,37 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Diamond, ArrowRight, ArrowLeft, CheckCircle2, Loader2 } from "lucide-react";
+import { Diamond, ArrowRight, ArrowLeft, CheckCircle2, Loader2, CreditCard, QrCode, FileText } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwfrHybNG4ArAMsp0goPl8qBWhv871v1cNNTiTRwJkH2vSwp8ryxAUkLdd_J50SHaJw/exec";
 
-const TOTAL_STEPS = 5;
+const TOTAL_STEPS = 6;
 const channelOptions = ["Indicação", "Instagram", "Tráfego pago", "Outro"];
 const gargaloOptions = ["Oferta", "Posicionamento", "Vendas", "Tempo", "Constância"];
+
+const paymentOptions = [
+  {
+    value: "cartao-12x",
+    icon: CreditCard,
+    label: "Cartão de crédito",
+    detail: "até 12x de R$ 205,32",
+  },
+  {
+    value: "pix",
+    icon: QrCode,
+    label: "PIX à vista",
+    detail: "R$ 1.497,00",
+  },
+  {
+    value: "boleto-3x",
+    icon: FileText,
+    label: "Boleto parcelado",
+    detail: "até 3x de R$ 711,30",
+  },
+];
 
 interface Props {
   open: boolean;
@@ -31,6 +52,7 @@ const LapidandoApplicationForm = ({ open, onOpenChange }: Props) => {
     nome: "", email: "", whatsapp: "", instagram: "",
     oQueVende: "", praQuem: "", ticketMeta: "", canal: "",
     gargalo: "", tempoSemanal: "", continuarIgual: "", porqueLapidando: "",
+    formaPagamento: "",
   });
 
   const update = (field: string, value: string) => setForm(prev => ({ ...prev, [field]: value }));
@@ -42,6 +64,7 @@ const LapidandoApplicationForm = ({ open, onOpenChange }: Props) => {
       case 3: return form.ticketMeta.trim() && form.canal;
       case 4: return form.gargalo && form.tempoSemanal.trim();
       case 5: return form.continuarIgual.trim() && form.porqueLapidando.trim();
+      case 6: return !!form.formaPagamento;
       default: return false;
     }
   };
@@ -74,7 +97,7 @@ const LapidandoApplicationForm = ({ open, onOpenChange }: Props) => {
     setTimeout(() => {
       setStep(1);
       setSubmitted(false);
-      setForm({ nome: "", email: "", whatsapp: "", instagram: "", oQueVende: "", praQuem: "", ticketMeta: "", canal: "", gargalo: "", tempoSemanal: "", continuarIgual: "", porqueLapidando: "" });
+      setForm({ nome: "", email: "", whatsapp: "", instagram: "", oQueVende: "", praQuem: "", ticketMeta: "", canal: "", gargalo: "", tempoSemanal: "", continuarIgual: "", porqueLapidando: "", formaPagamento: "" });
     }, 300);
   };
 
@@ -154,6 +177,33 @@ const LapidandoApplicationForm = ({ open, onOpenChange }: Props) => {
                 <>
                   <div className="space-y-2"><Label className="font-sans text-sm">O que acontece se você continuar igual pelos próximos 3 meses?</Label><Textarea placeholder="Seja honesta consigo mesma..." value={form.continuarIgual} onChange={e => update("continuarIgual", e.target.value)} maxLength={500} rows={3} className="resize-none" /></div>
                   <div className="space-y-2"><Label className="font-sans text-sm">Por que a Lapidando Diamante$ é o que você precisa agora?</Label><Textarea placeholder="Me conta o que fez você chegar até aqui..." value={form.porqueLapidando} onChange={e => update("porqueLapidando", e.target.value)} maxLength={500} rows={3} className="resize-none" /></div>
+                </>
+              )}
+              {step === 6 && (
+                <>
+                  <div className="text-center space-y-1 mb-2">
+                    <p className="font-sans text-xs uppercase tracking-widest text-muted-foreground">Investimento</p>
+                    <p className="text-2xl font-serif font-bold">R$ 1.497,00</p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="font-sans text-sm">Escolha a forma de pagamento preferida:</Label>
+                    <RadioGroup value={form.formaPagamento} onValueChange={v => update("formaPagamento", v)} className="space-y-2">
+                      {paymentOptions.map(opt => (
+                        <label key={opt.value} className={`flex items-center gap-3 border rounded-lg px-4 py-3.5 cursor-pointer transition-colors font-sans ${
+                          form.formaPagamento === opt.value
+                            ? "border-secondary bg-secondary/10 text-foreground"
+                            : "border-input bg-background text-muted-foreground hover:border-secondary/50"
+                        }`}>
+                          <RadioGroupItem value={opt.value} />
+                          <opt.icon className="w-4 h-4 text-secondary/70 flex-shrink-0" />
+                          <div>
+                            <span className="text-sm font-medium block">{opt.label}</span>
+                            <span className="text-xs text-muted-foreground">{opt.detail}</span>
+                          </div>
+                        </label>
+                      ))}
+                    </RadioGroup>
+                  </div>
                 </>
               )}
 
