@@ -42,7 +42,7 @@ const LapidandoMentor = () => {
           >
             <div className="flex justify-center md:justify-start">
               <div className="w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden border-2 border-secondary/20 shadow-lg shadow-secondary/5">
-                <img src={sobre8} alt="Monike Kineippe" className="w-full h-full object-cover" />
+                <img src={sobre8} alt="Monike Kineippe" className="w-full h-full object-cover object-top" />
               </div>
             </div>
 
