@@ -57,6 +57,23 @@ const LapidandoApplicationForm = ({ open, onOpenChange }: Props) => {
 
   const update = (field: string, value: string) => setForm(prev => ({ ...prev, [field]: value }));
 
+  const savePartial = async (currentStep: number, currentForm: typeof form) => {
+    try {
+      await supabase.rpc('insert_form_submission', {
+        p_form_type: 'lapidando-diamantes-parcial',
+        p_page_source: '/lapidando-diamantes',
+        p_data: { ...currentForm, passoCompleto: currentStep, status: 'parcial' } as any,
+        p_user_agent: navigator.userAgent
+      });
+    } catch (err) { console.error("Partial save error:", err); }
+  };
+
+  const handleNext = () => {
+    const nextStep = step + 1;
+    savePartial(step, form);
+    setStep(nextStep);
+  };
+
   const canAdvance = () => {
     switch (step) {
       case 1: return form.nome.trim() && form.email.trim() && form.whatsapp.trim();
