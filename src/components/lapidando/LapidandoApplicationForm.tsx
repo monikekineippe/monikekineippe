@@ -227,7 +227,7 @@ const LapidandoApplicationForm = ({ open, onOpenChange }: Props) => {
               <div className="flex justify-between pt-2">
                 {step > 1 ? <Button variant="ghost" onClick={() => setStep(s => s - 1)} className="text-muted-foreground"><ArrowLeft className="w-4 h-4 mr-1" /> Voltar</Button> : <div />}
                 {step < TOTAL_STEPS ? (
-                  <Button onClick={() => setStep(s => s + 1)} disabled={!canAdvance()} className="bg-gradient-gold text-primary-foreground font-sans font-semibold">Próximo <ArrowRight className="w-4 h-4 ml-1" /></Button>
+                  <Button onClick={handleNext} disabled={!canAdvance()} className="bg-gradient-gold text-primary-foreground font-sans font-semibold">Próximo <ArrowRight className="w-4 h-4 ml-1" /></Button>
                 ) : (
                   <Button onClick={handleSubmit} disabled={!canAdvance() || sending} className="bg-gradient-gold text-primary-foreground font-sans font-semibold">
                     {sending ? <><Loader2 className="w-4 h-4 mr-1 animate-spin" /> Enviando...</> : "✅ Enviar aplicação"}
