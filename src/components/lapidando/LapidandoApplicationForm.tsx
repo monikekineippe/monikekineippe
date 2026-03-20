@@ -21,7 +21,7 @@ const paymentOptions = [
     value: "cartao-12x",
     icon: CreditCard,
     label: "Cartão de crédito",
-    detail: "até 12x de R$ 166,42",
+    detail: "até 12x de R$ 205,32",
   },
   {
     value: "pix",
@@ -33,7 +33,7 @@ const paymentOptions = [
     value: "boleto-3x",
     icon: FileText,
     label: "Boleto parcelado",
-    detail: "até 3x de R$ 665,67",
+    detail: "até 3x de R$ 711,30",
   },
 ];
 
