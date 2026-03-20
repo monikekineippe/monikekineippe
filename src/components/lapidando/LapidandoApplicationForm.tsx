@@ -21,19 +21,19 @@ const paymentOptions = [
     value: "cartao-12x",
     icon: CreditCard,
     label: "Cartão de crédito",
-    detail: "até 12x de R$ 205,32",
+    detail: "até 12x de R$ 166,42",
   },
   {
     value: "pix",
     icon: QrCode,
     label: "PIX à vista",
-    detail: "R$ 1.497,00",
+    detail: "R$ 1.997,00",
   },
   {
     value: "boleto-3x",
     icon: FileText,
     label: "Boleto parcelado",
-    detail: "até 3x de R$ 711,30",
+    detail: "até 3x de R$ 665,67",
   },
 ];
 
