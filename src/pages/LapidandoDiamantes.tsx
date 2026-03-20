@@ -6,6 +6,7 @@ import LapidandoHowItWorks from "@/components/lapidando/LapidandoHowItWorks";
 import LapidandoSixSteps from "@/components/lapidando/LapidandoSixSteps";
 import LapidandoDeliverables from "@/components/lapidando/LapidandoDeliverables";
 import LapidandoWhyGroup from "@/components/lapidando/LapidandoWhyGroup";
+import LapidandoMentor from "@/components/lapidando/LapidandoMentor";
 import LapidandoApplication from "@/components/lapidando/LapidandoApplication";
 import LapidandoFAQ from "@/components/lapidando/LapidandoFAQ";
 import LapidandoFinalCTA from "@/components/lapidando/LapidandoFinalCTA";
@@ -21,6 +22,7 @@ const LapidandoDiamantes = () => {
       <LapidandoSixSteps />
       <LapidandoDeliverables />
       <LapidandoWhyGroup />
+      <LapidandoMentor />
       <LapidandoApplication />
       <LapidandoFAQ />
       <LapidandoFinalCTA />
