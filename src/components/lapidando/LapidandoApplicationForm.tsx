@@ -57,6 +57,23 @@ const LapidandoApplicationForm = ({ open, onOpenChange }: Props) => {
 
   const update = (field: string, value: string) => setForm(prev => ({ ...prev, [field]: value }));
 
+  const savePartial = async (currentStep: number, currentForm: typeof form) => {
+    try {
+      await supabase.rpc('insert_form_submission', {
+        p_form_type: 'lapidando-diamantes-parcial',
+        p_page_source: '/lapidando-diamantes',
+        p_data: { ...currentForm, passoCompleto: currentStep, status: 'parcial' } as any,
+        p_user_agent: navigator.userAgent
+      });
+    } catch (err) { console.error("Partial save error:", err); }
+  };
+
+  const handleNext = () => {
+    const nextStep = step + 1;
+    savePartial(step, form);
+    setStep(nextStep);
+  };
+
   const canAdvance = () => {
     switch (step) {
       case 1: return form.nome.trim() && form.email.trim() && form.whatsapp.trim();
@@ -210,7 +227,7 @@ const LapidandoApplicationForm = ({ open, onOpenChange }: Props) => {
               <div className="flex justify-between pt-2">
                 {step > 1 ? <Button variant="ghost" onClick={() => setStep(s => s - 1)} className="text-muted-foreground"><ArrowLeft className="w-4 h-4 mr-1" /> Voltar</Button> : <div />}
                 {step < TOTAL_STEPS ? (
-                  <Button onClick={() => setStep(s => s + 1)} disabled={!canAdvance()} className="bg-gradient-gold text-primary-foreground font-sans font-semibold">Próximo <ArrowRight className="w-4 h-4 ml-1" /></Button>
+                  <Button onClick={handleNext} disabled={!canAdvance()} className="bg-gradient-gold text-primary-foreground font-sans font-semibold">Próximo <ArrowRight className="w-4 h-4 ml-1" /></Button>
                 ) : (
                   <Button onClick={handleSubmit} disabled={!canAdvance() || sending} className="bg-gradient-gold text-primary-foreground font-sans font-semibold">
                     {sending ? <><Loader2 className="w-4 h-4 mr-1 animate-spin" /> Enviando...</> : "✅ Enviar aplicação"}
