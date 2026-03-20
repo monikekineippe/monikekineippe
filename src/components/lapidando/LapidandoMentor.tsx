@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Diamond, Award, Users, Briefcase, Brain, Heart } from "lucide-react";
+import sobre8 from "@/assets/sobre-8.jpg";
 
 const milestones = [
   { icon: Briefcase, text: "Empresária desde os 18 anos" },
