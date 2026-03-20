@@ -22,8 +22,8 @@ const LapidandoDiamantes = () => {
       <LapidandoSixSteps />
       <LapidandoDeliverables />
       <LapidandoWhyGroup />
-      <LapidandoMentor />
       <LapidandoApplication />
+      <LapidandoMentor />
       <LapidandoFAQ />
       <LapidandoFinalCTA />
     </main>
