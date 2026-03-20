@@ -21,7 +21,7 @@ const paymentOptions = [
     value: "cartao-12x",
     icon: CreditCard,
     label: "Cartão de crédito",
-    detail: "até 12x de R$ 166,42",
+    detail: "até 12x de R$ 205,32",
   },
   {
     value: "pix",
