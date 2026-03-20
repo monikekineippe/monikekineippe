@@ -33,7 +33,7 @@ const paymentOptions = [
     value: "boleto-3x",
     icon: FileText,
     label: "Boleto parcelado",
-    detail: "até 3x de R$ 665,67",
+    detail: "até 3x de R$ 711,30",
   },
 ];
 
