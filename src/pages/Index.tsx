@@ -86,9 +86,9 @@ const Index = () => {
             },
             {
               icon: BarChart3,
-              title: "Mentorias Estratégicas",
-              text: "Posicionamento, oferta e sistema de vendas com previsibilidade — individual ou em grupo.",
-              cta: "Ver mentorias",
+              title: "Mentoria & Comunidade",
+              text: "Mentoria individual para alinhar negócio, estratégia e vida. Comunidade com networking e ecossistema para quem não quer mais crescer sozinha.",
+              cta: "Conhecer as opções",
               link: "/mentorias",
             },
             {
