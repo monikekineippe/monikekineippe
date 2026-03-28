@@ -1,6 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
+import { Settings, Zap, Target, Layers, Bot, Crown } from "lucide-react";
 
 const IAHumanizada = () => {
   return (
@@ -16,13 +17,14 @@ const IAHumanizada = () => {
           <h2 className="text-xl font-serif mb-8 text-center">O que eu implemento</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
-              "IA para conteúdo e produtos digitais",
-              "IA para atendimento (Instagram/WhatsApp)",
-              "Automação de processos (captação, e-mail, onboarding, follow-up)",
-              "Organização de operação (templates, fluxos e documentos)",
+              { icon: Bot, text: "IA para conteúdo e produtos digitais" },
+              { icon: Zap, text: "IA para atendimento (Instagram/WhatsApp)" },
+              { icon: Settings, text: "Automação de processos (captação, e-mail, onboarding, follow-up)" },
+              { icon: Layers, text: "Organização de operação (templates, fluxos e documentos)" },
             ].map((item, i) => (
-              <div key={i} className="p-8 gold-border rounded-lg bg-card text-center">
-                <p className="font-sans text-sm text-muted-foreground">{item}</p>
+              <div key={i} className="p-8 gold-border rounded-lg bg-card text-center flex flex-col items-center gap-3">
+                <item.icon className="w-6 h-6 text-secondary" />
+                <p className="font-sans text-sm text-muted-foreground">{item.text}</p>
               </div>
             ))}
           </div>
@@ -49,29 +51,88 @@ const IAHumanizada = () => {
         </div>
       </Section>
 
+      {/* DOIS PROGRAMAS */}
       <Section>
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-xl font-serif mb-6 text-center">Pra quem é</h2>
-          <ul className="space-y-3 text-sm font-sans text-muted-foreground text-center">
-            {[
-              "Quem quer escala com leveza",
-              "Quem quer consistência sem virar refém",
-              'Quem precisa de processo, não de mais "dica"',
-            ].map((t, i) => (
-              <li key={i}>{t}</li>
-            ))}
-          </ul>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-4">Programas</span>
+            <h2 className="text-2xl md:text-3xl font-serif">Dois caminhos. Execução real.</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Programa 1 */}
+            <div className="p-8 rounded-lg gold-border bg-card flex flex-col">
+              <Target className="w-8 h-8 text-secondary mb-4" />
+              <span className="text-xs font-sans tracking-widest uppercase text-secondary mb-2">45 dias</span>
+              <h3 className="text-lg font-serif mb-3">Implementação IA com Alma™</h3>
+              <p className="text-sm text-muted-foreground font-sans mb-6">
+                Organização estratégica + automação inteligente para acabar com a sobrecarga e colocar sua operação no piloto automático.
+              </p>
+              <div className="space-y-2 mb-8 text-sm text-muted-foreground font-sans">
+                <p>→ Processos organizados e documentados</p>
+                <p>→ Automações implementadas com IA</p>
+                <p>→ Funil ajustado e otimizado</p>
+                <p>→ Redução drástica de sobrecarga</p>
+              </div>
+              <div className="mt-auto">
+                <Button variant="gold" size="lg" asChild>
+                  <a href="/diagnostico">Quero saber mais</a>
+                </Button>
+              </div>
+            </div>
+
+            {/* Programa 2 */}
+            <div className="p-8 rounded-lg gold-border bg-card flex flex-col">
+              <Crown className="w-8 h-8 text-secondary mb-4" />
+              <span className="text-xs font-sans tracking-widest uppercase text-secondary mb-2">3 meses</span>
+              <h3 className="text-lg font-serif mb-3">Sistema de Escala com IA Humanizada™</h3>
+              <p className="text-sm text-muted-foreground font-sans mb-6">
+                Reconstrua sua máquina de vendas. Escale com estrutura previsível, posicionamento premium e IA estratégica.
+              </p>
+              <div className="space-y-2 mb-8 text-sm text-muted-foreground font-sans">
+                <p>→ Máquina de vendas estruturada</p>
+                <p>→ Automações inteligentes rodando</p>
+                <p>→ Posicionamento premium definido</p>
+                <p>→ Escala com previsibilidade</p>
+              </div>
+              <div className="mt-auto">
+                <Button variant="gold" size="lg" asChild>
+                  <a href="/diagnostico">Quero saber mais</a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section variant="accent">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-xl font-serif mb-6">Pra quem é</h2>
+          <div className="space-y-3 text-sm font-sans text-muted-foreground">
+            <p>Empreendedoras que querem escala com leveza.</p>
+            <p>Que querem consistência sem virar refém da própria operação.</p>
+            <p>Que precisam de processo, não de mais "dica".</p>
+          </div>
+          <p className="mt-8 text-xs font-sans text-muted-foreground italic">
+            Você não precisa saber de tecnologia. Eu traduzo o complexo em aplicável.
+          </p>
         </div>
       </Section>
 
       <Section variant="card">
-        <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="hero" size="xl" asChild>
-            <a href="https://programaiahumanizada.lovable.app/" target="_blank" rel="noopener noreferrer">Ver página completa</a>
-          </Button>
-          <Button variant="heroOutline" size="xl" asChild>
-            <a href="/diagnostico">Agendar conversa</a>
-          </Button>
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-xl font-serif mb-4">Não sabe qual programa é para você?</h2>
+          <p className="text-sm text-muted-foreground font-sans mb-8">
+            O diagnóstico gratuito identifica o gargalo do seu negócio e indica o caminho mais inteligente.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="hero" size="xl" asChild>
+              <a href="/diagnostico">Fazer diagnóstico gratuito</a>
+            </Button>
+            <Button variant="heroOutline" size="xl" asChild>
+              <a href="/contato">Agendar conversa</a>
+            </Button>
+          </div>
         </div>
       </Section>
     </>
