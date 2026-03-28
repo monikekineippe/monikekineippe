@@ -5,6 +5,8 @@ import logoMk from "@/assets/logo-mk.png";
 
 const navItems = [
   { label: "Início", path: "/" },
+  { label: "Sobre", path: "/sobre" },
+  { label: "IA & Automação", path: "/ia-humanizada" },
   { label: "Palestras", path: "/palestras" },
   { label: "Livros", path: "/livros" },
   { label: "Contato", path: "/contato" },
