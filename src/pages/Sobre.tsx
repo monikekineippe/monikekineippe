@@ -38,7 +38,7 @@ const Sobre = () => {
       <PageHero
         tag="Sobre"
         title="Sobre a Monike"
-        subtitle="Especialista em IA aplicada a negócios femininos. Empresária há 12 anos. Autora. Estrategista."
+        subtitle="Especialista em IA aplicada a negócios femininos. Empresária há 18 anos. Autora. Estrategista."
       />
 
       <Section>
@@ -49,7 +49,7 @@ const Sobre = () => {
           </p>
 
           <p>
-            Doze anos construindo, vendendo e reconstruindo negócios reais. Essa combinação é o meu diferencial: eu não falo de IA como quem leu sobre o assunto. Falo como quem implementa, usa e entrega resultado com ela.
+            Mais de dezoito anos construindo, vendendo e reconstruindo negócios reais. Essa combinação é o meu diferencial: eu não falo de IA como quem leu sobre o assunto. Falo como quem implementa, usa e entrega resultado com ela.
           </p>
 
           <p>
