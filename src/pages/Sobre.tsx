@@ -38,30 +38,22 @@ const Sobre = () => {
       <PageHero
         tag="Sobre"
         title="Sobre a Monike"
-        subtitle="Empresária desde os 18 anos. Autora. Colunista. Estrategista de negócios com alma."
+        subtitle="Especialista em IA aplicada a negócios femininos. Empresária há 12 anos. Autora. Estrategista."
       />
 
       <Section>
         <div className="max-w-3xl mx-auto space-y-6 font-sans text-muted-foreground leading-relaxed text-base md:text-lg">
           <p className="text-foreground font-serif text-xl md:text-2xl text-center italic">
-            Eu não aprendi negócios em teoria.<br />
-            Aprendi na prática.<br />
-            E, algumas vezes, na dor.
+            Sou especialista em IA aplicada a negócios femininos.<br />
+            Antes disso, fui (e ainda sou) empresária.
           </p>
 
           <p>
-            Abri meu primeiro CNPJ aos 18 anos. Enquanto muitas pessoas ainda buscavam um caminho, eu já estava contratando, liderando e tomando decisões que exigiam maturidade antes da idade.
+            Doze anos construindo, vendendo e reconstruindo negócios reais. Essa combinação é o meu diferencial: eu não falo de IA como quem leu sobre o assunto. Falo como quem implementa, usa e entrega resultado com ela.
           </p>
 
           <p>
-            Cresci vendo meu pai empreender.<br />
-            Mas também ouvi que negócios não eram lugar para mulheres.
-          </p>
-
-          <p className="text-foreground font-serif text-lg md:text-xl text-center italic">
-            Foi ali que decidi algo definitivo:<br />
-            eu não seria apenas empreendedora.<br />
-            Eu seria empresária.
+            Meu trabalho é traduzir o que parece complexo — automações, assistentes inteligentes, fluxos de atendimento e vendas — em soluções acessíveis, aplicáveis e lucrativas para mulheres que lideram negócios reais.
           </p>
         </div>
       </Section>
@@ -89,46 +81,8 @@ const Sobre = () => {
 
       <Section>
         <div className="max-w-3xl mx-auto space-y-6 font-sans text-muted-foreground leading-relaxed text-base md:text-lg">
-          <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-4">O que eu faço hoje</h2>
-          <p>
-            Hoje atuo como estrategista de negócios digitais femininos com alma.
-          </p>
-          <p>
-            Ajudo mulheres — principalmente mães e prestadoras de serviço — a transformarem conhecimento em produtos digitais estruturados, capazes de gerar renda com previsibilidade e lucro.
-          </p>
-          <p className="text-foreground font-serif italic">Meu trabalho não é ensinar a postar mais.</p>
-          <p>Meu trabalho é:</p>
-          <ul className="space-y-2 list-none text-center">
-            <li>• organizar o caos</li>
-            <li>• estruturar ofertas</li>
-            <li>• sustentar posicionamento</li>
-            <li>• construir base sólida para crescer com consistência</li>
-          </ul>
-        </div>
-      </Section>
-
-      <Section variant="accent">
-        <div className="max-w-3xl mx-auto space-y-6 font-sans text-muted-foreground leading-relaxed text-base md:text-lg">
-          <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-4">Método próprio</h2>
-          <p>Minha abordagem vai além da mentoria tradicional.</p>
-          <p>Desenvolvi métodos como:</p>
-          <p className="text-foreground font-serif text-lg text-center">
-            <strong>ALMA DIGITAL™</strong><br />
-            e o <strong>Método Mulher no Poder</strong>
-          </p>
-          <p className="text-center">Unindo três pilares:</p>
-          <ul className="space-y-1 text-center text-foreground font-serif">
-            <li>Estratégia</li>
-            <li>Identidade</li>
-            <li>Execução</li>
-          </ul>
-        </div>
-      </Section>
-
-      <Section>
-        <div className="max-w-3xl mx-auto space-y-6 font-sans text-muted-foreground leading-relaxed text-base md:text-lg">
-          <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-4">IA com essência</h2>
-          <p>Também encontrei na inteligência artificial uma aliada poderosa.</p>
+          <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-4">IA como ferramenta central</h2>
+          <p>A virada aconteceu quando entendi que inteligência artificial não era coisa de programador. Era a ferramenta que faltava para empreendedoras ganharem escala sem perder humanidade.</p>
           <p className="text-foreground font-serif italic text-center">Mas não qualquer IA.</p>
           <p>
             Eu desenvolvo e implemento IA humanizada: assistentes personalizados que não substituem a essência da empreendedora — amplificam sua capacidade estratégica.
@@ -149,26 +103,28 @@ const Sobre = () => {
 
       <Section variant="accent">
         <div className="max-w-3xl mx-auto space-y-6 font-sans text-muted-foreground leading-relaxed text-base md:text-lg">
-          <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-4">Minha forma de pensar negócios</h2>
-          <p className="text-center">Minha abordagem une três forças:</p>
+          <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-4">Método próprio</h2>
+          <p>Minha abordagem vai além da mentoria tradicional.</p>
+          <p>Desenvolvi métodos como:</p>
+          <p className="text-foreground font-serif text-lg text-center">
+            <strong>ALMA DIGITAL™</strong><br />
+            e o <strong>Método Mulher no Poder</strong>
+          </p>
+          <p className="text-center">Unindo três pilares:</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-4">
             <div className="text-center">
-              <p className="text-foreground font-serif text-lg font-medium">Governante</p>
+              <p className="text-foreground font-serif text-lg font-medium">Estratégia</p>
               <p className="text-sm">Estrutura e direção.</p>
             </div>
             <div className="text-center">
-              <p className="text-foreground font-serif text-lg font-medium">Sábio</p>
-              <p className="text-sm">Clareza estratégica.</p>
+              <p className="text-foreground font-serif text-lg font-medium">Inteligência Artificial</p>
+              <p className="text-sm">Automação com essência.</p>
             </div>
             <div className="text-center">
-              <p className="text-foreground font-serif text-lg font-medium">Criador</p>
-              <p className="text-sm">Inovação e visão.</p>
+              <p className="text-foreground font-serif text-lg font-medium">Execução</p>
+              <p className="text-sm">Implementação real.</p>
             </div>
           </div>
-          <p className="text-foreground font-serif text-center italic">
-            Eu não vendo atalhos.<br />
-            Eu construo sistemas.
-          </p>
         </div>
       </Section>
 
@@ -177,10 +133,10 @@ const Sobre = () => {
           <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-4">O ecossistema</h2>
           <p>Hoje lidero um ecossistema que inclui:</p>
           <ul className="space-y-2 text-center text-foreground font-serif">
+            <li>Implementação de IA e automações</li>
             <li>Mentorias estratégicas</li>
-            <li>Plataforma educacional</li>
-            <li>Implementação de IA</li>
-            <li>Automações inteligentes</li>
+            <li>Palestras e treinamentos</li>
+            <li>Livro e conteúdo</li>
           </ul>
           <p className="text-center">Tudo com um único propósito:</p>
           <p className="text-foreground font-serif text-center italic">
@@ -188,10 +144,8 @@ const Sobre = () => {
             e passarem a viver com previsibilidade, liberdade e autoridade.
           </p>
           <p className="text-foreground font-serif text-center text-xl md:text-2xl pt-4 italic">
-            Porque sem estrutura<br />
-            não existe liberdade.<br /><br />
-            E você nunca conquistará o que a sua imaginação<br />
-            não conquistou primeiro. 💎🍀✨
+            Você já tem valor.<br />
+            Só falta estrutura pra transformar isso em previsibilidade.
           </p>
         </div>
       </Section>
