@@ -51,10 +51,9 @@ const Index = () => {
           <div className="mt-16 pt-10 border-t border-primary-foreground/10">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {[
-                { num: "12+", label: "anos empreendendo" },
-                { num: "3", label: "empresas ativas" },
+                { num: "18+", label: "anos empreendendo" },
                 { num: "1", label: "livro publicado" },
-                { num: "500+", label: "mulheres impactadas" },
+                { num: "1.000+", label: "mulheres impactadas" },
               ].map((item) => (
                 <div key={item.label}>
                   <p className="font-serif text-2xl md:text-3xl text-secondary">{item.num}</p>
