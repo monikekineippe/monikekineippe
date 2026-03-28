@@ -75,7 +75,7 @@ const IAHumanizada = () => {
                 <li>→ Redução drástica de sobrecarga</li>
               </ul>
               <Button variant="gold" size="lg" className="w-full" asChild>
-                <a href="https://wa.me/5511972313181?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20programa%20Implementa%C3%A7%C3%A3o%20IA%20com%20Alma" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5511972313181?text=Oi%20Carine%2C%20quero%20saber%20mais%20sobre%20o%20programa%20IA%20com%20Alma" target="_blank" rel="noopener noreferrer">
                   Quero saber mais
                 </a>
               </Button>
@@ -96,7 +96,7 @@ const IAHumanizada = () => {
                 <li>→ Escala com previsibilidade</li>
               </ul>
               <Button variant="gold" size="lg" className="w-full" asChild>
-                <a href="https://wa.me/5511972313181?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Sistema%20de%20Escala%20com%20IA%20Humanizada" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5511972313181?text=Oi%20Carine%2C%20quero%20saber%20mais%20sobre%20o%20Sistema%20de%20Escala" target="_blank" rel="noopener noreferrer">
                   Quero saber mais
                 </a>
               </Button>
