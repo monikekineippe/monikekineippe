@@ -1,166 +1,149 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Section from "@/components/Section";
-import EmailPopup from "@/components/EmailPopup";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
-import { useState } from "react";
+import { Bot, Sparkles, BarChart3, Mic } from "lucide-react";
 import monike1 from "@/assets/monike-1.jpg";
 import monike2 from "@/assets/monike-2.jpg";
 
-type ModalKey = "diagnostico" | "corujah" | "mentorias" | "autoridade" | null;
-
 const Index = () => {
-  const [modal, setModal] = useState<ModalKey>(null);
-
   return (
     <>
-      <EmailPopup />
+      {/* ═══════════════════════════════════════════
+          HERO SECTION
+          ═══════════════════════════════════════════ */}
+      <section className="bg-primary text-primary-foreground section-padding pt-28 md:pt-36">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left">
+              <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-6">
+                IA aplicada a negócios femininos
+              </span>
+              <h1 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6">
+                Eu transformo inteligência artificial em estratégia real para o seu negócio.
+              </h1>
+              <p className="text-base md:text-lg text-primary-foreground/75 font-sans leading-relaxed mb-10 max-w-lg">
+                Consultoria, treinamento e implementação de IA para empreendedoras que querem escalar com estrutura — não com esgotamento.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <Button variant="gold" size="xl" asChild>
+                  <Link to="/ia-humanizada">Conhecer os programas de IA</Link>
+                </Button>
+                <Button variant="heroOutline" size="lg" asChild>
+                  <Link to="/sobre">Minha história</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="relative flex justify-center md:justify-end">
+              <img
+                src={monike1}
+                alt="Monike Kineippe — Estrategista de IA para negócios femininos"
+                className="rounded-lg w-full max-w-sm object-cover aspect-[3/4] premium-shadow"
+              />
+              <img
+                src={monike2}
+                alt="Monike Kineippe"
+                className="absolute -bottom-6 -left-6 w-36 h-36 object-cover object-top rounded-lg gold-border shadow-xl hidden md:block"
+              />
+            </div>
+          </div>
 
-      {/* CAMINHOS — 4 CARDS */}
+          {/* Micro-provas */}
+          <div className="mt-16 pt-10 border-t border-primary-foreground/10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              {[
+                { num: "12+", label: "anos empreendendo" },
+                { num: "3", label: "empresas ativas" },
+                { num: "1", label: "livro publicado" },
+                { num: "500+", label: "mulheres impactadas" },
+              ].map((item) => (
+                <div key={item.label}>
+                  <p className="font-serif text-2xl md:text-3xl text-secondary">{item.num}</p>
+                  <p className="font-sans text-xs tracking-wide uppercase text-primary-foreground/50 mt-1">{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          O QUE EU FAÇO — 4 pilares
+          ═══════════════════════════════════════════ */}
       <Section>
         <div className="text-center mb-16">
-          <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Caminhos</span>
-          <h2 className="text-2xl md:text-4xl font-serif mt-4">Por onde começar?</h2>
+          <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Como posso te ajudar</span>
+          <h2 className="text-2xl md:text-4xl font-serif mt-4">Estratégia de verdade. IA que funciona.</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {[
-            { key: "diagnostico" as ModalKey, title: "Diagnóstico de Negócio", text: "Clareza em vez de tentativa. Direção em vez de ansiedade.", tag: "Começar com clareza" },
-            { key: "corujah" as ModalKey, title: "CoruJah IA 💎", text: "Transforme seu conhecimento em infoproduto com estrutura, copy e direção.", tag: "Criar produto com IA" },
-            { key: "mentorias" as ModalKey, title: "Mentorias", text: "Estrutura, vendas e previsibilidade sem esgotamento.", tag: "Crescer com direção" },
-            { key: "autoridade" as ModalKey, title: "Autoridade 🍀", text: "Conteúdo, palco e livros. A base do seu próximo nível.", tag: "Fortalecer autoridade" },
+            {
+              icon: Bot,
+              title: "Implementação de IA",
+              text: "Automações, assistentes e fluxos inteligentes instalados no seu negócio — em 45 dias ou 3 meses.",
+              cta: "Ver programas de IA",
+              link: "/ia-humanizada",
+            },
+            {
+              icon: Sparkles,
+              title: "CoruJah IA",
+              text: "Uma IA estratégica que transforma seu conhecimento em produto digital estruturado em 20 minutos.",
+              cta: "Conhecer a CoruJah",
+              link: "/corujah",
+            },
+            {
+              icon: BarChart3,
+              title: "Mentorias Estratégicas",
+              text: "Posicionamento, oferta e sistema de vendas com previsibilidade — individual ou em grupo.",
+              cta: "Ver mentorias",
+              link: "/mentorias",
+            },
+            {
+              icon: Mic,
+              title: "Palestras e Treinamentos",
+              text: "IA aplicada, vendas, posicionamento e estrutura. Para eventos, equipes e comunidades.",
+              cta: "Solicitar proposta",
+              link: "/palestras",
+            },
           ].map((card) => (
-            <button
-              key={card.key}
-              onClick={() => setModal(card.key)}
-              className="group text-left p-8 md:p-10 bg-card gold-border rounded-lg hover:border-secondary/60 transition-all duration-300 premium-shadow hover:shadow-lg cursor-pointer"
+            <Link
+              key={card.title}
+              to={card.link}
+              className="group p-8 md:p-10 bg-card gold-border rounded-lg hover:border-secondary/60 transition-all duration-300 premium-shadow hover:shadow-lg"
             >
-              <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-secondary">{card.tag}</span>
-              <h3 className="text-xl md:text-2xl font-serif mt-3 mb-3 group-hover:text-primary transition-colors">{card.title}</h3>
-              <p className="text-muted-foreground font-sans text-sm leading-relaxed">{card.text}</p>
-            </button>
+              <card.icon className="w-8 h-8 text-secondary mb-4" />
+              <h3 className="text-xl md:text-2xl font-serif mb-3 group-hover:text-primary transition-colors">{card.title}</h3>
+              <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">{card.text}</p>
+              <span className="font-sans text-xs tracking-[0.15em] uppercase text-secondary group-hover:text-primary transition-colors">
+                {card.cta} →
+              </span>
+            </Link>
           ))}
         </div>
       </Section>
 
-      {/* MODALS */}
-      <Dialog open={modal === "diagnostico"} onOpenChange={() => setModal(null)}>
-        <DialogContent className="max-w-lg gold-border">
-          <DialogHeader>
-            <DialogTitle className="font-serif text-xl">Diagnóstico de Negócio</DialogTitle>
-            <DialogDescription className="sr-only">Detalhes do diagnóstico</DialogDescription>
-          </DialogHeader>
-          <div className="space-y-4 text-sm font-sans text-muted-foreground">
-            <div>
-              <h4 className="font-semibold text-foreground mb-2">O que você recebe:</h4>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>Leitura do cenário</li>
-                <li>Gargalo principal identificado</li>
-                <li>Próximos passos práticos</li>
-                <li>Recomendação do caminho mais inteligente</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-foreground mb-2">Para quem:</h4>
-              <p>Mulheres prestadoras de serviço, mentoras, infoprodutoras e empresárias que querem organizar oferta, conteúdo e vendas.</p>
-            </div>
-          </div>
-          <Button variant="hero" size="lg" className="mt-4 w-full" asChild>
-            <Link to="/diagnostico">Preencher Diagnóstico</Link>
-          </Button>
-        </DialogContent>
-      </Dialog>
-
-      <Dialog open={modal === "corujah"} onOpenChange={() => setModal(null)}>
-        <DialogContent className="max-w-lg gold-border">
-          <DialogHeader>
-            <DialogTitle className="font-serif text-xl">CoruJah IA 💎</DialogTitle>
-            <DialogDescription className="sr-only">Detalhes da CoruJah</DialogDescription>
-          </DialogHeader>
-          <div className="space-y-4 text-sm font-sans text-muted-foreground">
-            <div>
-              <h4 className="font-semibold text-foreground mb-2">Resultado:</h4>
-              <p>Você sai com produto estruturado, oferta clara e conteúdo pronto para vender.</p>
-            </div>
-            <div>
-              <h4 className="font-semibold text-foreground mb-2">O que a CoruJah faz:</h4>
-              <p>Nome, módulos, bônus, preço sugerido, copy e ideias de criativos.</p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-3 mt-4">
-            <Button variant="hero" size="lg" asChild>
-              <a href="/corujah">Saber mais sobre a CoruJah</a>
-            </Button>
-            <Button variant="heroOutline" size="lg" asChild>
-              <a href="https://payfast.greenn.com.br/redirect/212761" target="_blank" rel="noopener noreferrer">Comprar agora</a>
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
-
-      <Dialog open={modal === "mentorias"} onOpenChange={() => setModal(null)}>
-        <DialogContent className="max-w-lg gold-border">
-          <DialogHeader>
-            <DialogTitle className="font-serif text-xl">Mentorias</DialogTitle>
-            <DialogDescription className="sr-only">Detalhes das mentorias</DialogDescription>
-          </DialogHeader>
-          <div className="space-y-3 text-sm font-sans text-muted-foreground">
-            <p><strong className="text-foreground">Lapidando Diamante$ (Grupo):</strong> para organizar posicionamento, oferta e execução com direção.</p>
-            <p><strong className="text-foreground">Dona de $i (Individual):</strong> para alinhar negócio + vida, com limites, consistência e decisões maduras.</p>
-            <p><strong className="text-foreground">Comunidade Empresária 4.0:</strong> ecossistema e networking para quem carrega tudo e não quer mais "sobreviver".</p>
-          </div>
-          <div className="flex flex-col gap-3 mt-4">
-            <Button variant="hero" size="lg" asChild>
-              <Link to="/lapidando-diamantes">APLICAR PARA LAPIDANDO DIAMANTE$</Link>
-            </Button>
-            <Button variant="heroOutline" size="lg" asChild>
-              <Link to="/dona-de-si">LISTA DE ESPERA DONA DE $I</Link>
-            </Button>
-            <Button variant="ghost" size="lg" asChild>
-              <Link to="/empresaria-40">Participe da Comunidade Empresária 4.0</Link>
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
-
-      <Dialog open={modal === "autoridade"} onOpenChange={() => setModal(null)}>
-        <DialogContent className="max-w-lg gold-border">
-          <DialogHeader>
-            <DialogTitle className="font-serif text-xl">Autoridade 🍀</DialogTitle>
-            <DialogDescription className="sr-only">Autoridade</DialogDescription>
-          </DialogHeader>
-          <div className="flex flex-col gap-3 mt-2">
-            <Button variant="hero" size="lg" asChild>
-              <Link to="/palestras">Palestras & Treinamentos</Link>
-            </Button>
-            <Button variant="heroOutline" size="lg" asChild>
-              <Link to="/livros">Livros</Link>
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
-
-      {/* IMPLEMENTAÇÃO IA — destaque */}
+      {/* ═══════════════════════════════════════════
+          IA EM AÇÃO — destaque
+          ═══════════════════════════════════════════ */}
       <section className="bg-primary text-primary-foreground section-padding">
         <div className="container mx-auto max-w-4xl text-center">
-          <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Escala com estrutura</span>
-          <h2 className="text-2xl md:text-3xl font-serif mt-4 mb-4">Programas de Implementação</h2>
-          <p className="text-primary-foreground/80 font-sans text-sm leading-relaxed max-w-2xl mx-auto mb-8">
-            IA e automações humanizadas para você parar de fazer tudo sozinha e começar a operar com inteligência, processo e leveza.
+          <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">IA aplicada</span>
+          <h2 className="text-2xl md:text-3xl font-serif mt-4 mb-4">Implementação de IA e Automação para o seu negócio</h2>
+          <p className="text-primary-foreground/80 font-sans text-sm leading-relaxed max-w-2xl mx-auto mb-4">
+            Dois programas com execução real: organização operacional com IA em 45 dias ou reconstrução completa da máquina de vendas em 3 meses. Eu implemento com você — não apenas ensino.
+          </p>
+          <p className="text-primary-foreground/60 font-sans text-xs mb-8">
+            Você não precisa saber de tecnologia. Eu traduzo o complexo em aplicável.
           </p>
           <Button variant="gold" size="xl" asChild>
-            <a href="https://programaiahumanizada.lovable.app/" target="_blank" rel="noopener noreferrer">Conhecer o Programa</a>
+            <Link to="/ia-humanizada">Ver os programas de IA</Link>
           </Button>
         </div>
       </section>
 
-      {/* SOBRE — com fotos */}
+      {/* ═══════════════════════════════════════════
+          SOBRE — com fotos
+          ═══════════════════════════════════════════ */}
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
           <div className="relative">
@@ -169,17 +152,17 @@ const Index = () => {
               alt="Monike Kineippe"
               className="rounded-lg w-full object-cover aspect-[3/4] premium-shadow"
             />
-            <img
-              src={monike2}
-              alt="Monike Kineippe com diamante"
-              className="absolute -bottom-6 -right-6 w-40 h-40 object-cover object-top rounded-lg gold-border shadow-xl hidden md:block"
-            />
           </div>
           <div className="text-center md:text-left">
-            <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Sobre</span>
-            <h2 className="text-2xl md:text-3xl font-serif mt-3 mb-6">Eu não ensino fórmula.<br />Eu te devolvo direção.</h2>
+            <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Quem é Monike</span>
+            <h2 className="text-2xl md:text-3xl font-serif mt-3 mb-6">
+              Estratégia de verdade.<br />IA que funciona.<br />Sem programês.
+            </h2>
+            <p className="text-muted-foreground font-sans leading-relaxed mb-4">
+              Empresária há 12 anos, autora e estrategista de IA para negócios femininos. Meu trabalho é pegar o que parece complicado — automações, assistentes inteligentes, fluxos de atendimento e vendas — e transformar em soluções aplicáveis para empreendedoras reais.
+            </p>
             <p className="text-muted-foreground font-sans leading-relaxed mb-8">
-              Sou empresária desde os 18 anos. Já falhei, recomecei e reconstruí. Hoje guio mulheres a transformarem conhecimento em renda digital sólida, com previsibilidade e verdade, usando IA com intenção.
+              Nada de teoria. Nada de fórmula mágica. Estrutura que funciona.
             </p>
             <div className="flex justify-center md:justify-start">
               <Button variant="heroOutline" size="lg" asChild>
@@ -190,13 +173,21 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* CTA FINAL */}
+      {/* ═══════════════════════════════════════════
+          CTA FINAL
+          ═══════════════════════════════════════════ */}
       <section className="bg-primary text-primary-foreground section-padding text-center">
         <div className="container mx-auto max-w-2xl px-6">
-          <h2 className="text-2xl md:text-4xl font-serif mb-8">Chega de improviso. Escolha estrutura.</h2>
-          <div className="flex justify-center">
-            <Button variant="gold" size="xl" className="w-full sm:w-auto" asChild>
-              <Link to="/diagnostico">Quero meu Diagnóstico</Link>
+          <h2 className="text-2xl md:text-4xl font-serif mb-4">Não sabe por onde começar?</h2>
+          <p className="text-primary-foreground/70 font-sans text-sm mb-8 max-w-lg mx-auto">
+            O diagnóstico gratuito identifica o gargalo do seu negócio e indica o caminho mais inteligente para você.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="gold" size="xl" asChild>
+              <Link to="/diagnostico">Fazer meu diagnóstico gratuito</Link>
+            </Button>
+            <Button variant="heroOutline" size="lg" asChild>
+              <Link to="/contato">Agendar conversa</Link>
             </Button>
           </div>
         </div>
