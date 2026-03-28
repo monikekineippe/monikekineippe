@@ -7,14 +7,6 @@ import logoIcon from "@/assets/logo-icon.png";
 const Mentorias = () => {
   const programs = [
     {
-      title: "Lapidando Diamante$",
-      label: "Grupo",
-      text: "Mentoria para destravar estrutura e execução: posicionamento, oferta, conteúdo e vendas com direção.",
-      cta: "Aplicar agora",
-      link: "/lapidando-diamantes",
-      external: false,
-    },
-    {
       title: "Dona de $i",
       label: "Individual",
       text: "Mentoria individual para mulheres que querem resultado sem perder a vida. Limites, consistência, estratégia e decisões maduras.",
