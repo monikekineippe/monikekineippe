@@ -8,9 +8,7 @@ import monike2 from "@/assets/monike-2.jpg";
 const Index = () => {
   return (
     <>
-      {/* ═══════════════════════════════════════════
-          HERO SECTION
-          ═══════════════════════════════════════════ */}
+      {/* HERO SECTION */}
       <section className="bg-primary text-primary-foreground section-padding pt-28 md:pt-36">
         <div className="container mx-auto max-w-5xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -66,9 +64,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          O QUE EU FAÇO — 4 pilares
-          ═══════════════════════════════════════════ */}
+      {/* O QUE EU FAÇO — 4 pilares */}
       <Section>
         <div className="text-center mb-16">
           <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Como posso te ajudar</span>
@@ -122,9 +118,7 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* ═══════════════════════════════════════════
-          IA EM AÇÃO — destaque
-          ═══════════════════════════════════════════ */}
+      {/* IA EM AÇÃO — destaque */}
       <section className="bg-primary text-primary-foreground section-padding">
         <div className="container mx-auto max-w-4xl text-center">
           <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">IA aplicada</span>
@@ -141,9 +135,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          SOBRE — com fotos
-          ═══════════════════════════════════════════ */}
+      {/* SOBRE — com fotos */}
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
           <div className="relative">
@@ -173,9 +165,7 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* ═══════════════════════════════════════════
-          CTA FINAL
-          ═══════════════════════════════════════════ */}
+      {/* CTA FINAL */}
       <section className="bg-primary text-primary-foreground section-padding text-center">
         <div className="container mx-auto max-w-2xl px-6">
           <h2 className="text-2xl md:text-4xl font-serif mb-4">Não sabe por onde começar?</h2>
