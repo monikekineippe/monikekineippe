@@ -74,11 +74,14 @@ const IAHumanizada = () => {
                 <li>→ Funil ajustado e otimizado</li>
                 <li>→ Redução drástica de sobrecarga</li>
               </ul>
-              <Button variant="gold" size="lg" className="w-full" asChild>
-                <a href="https://wa.me/5511972313181?text=Oi%20Carine%2C%20quero%20saber%20mais%20sobre%20o%20programa%20IA%20com%20Alma" target="_blank" rel="noopener noreferrer">
-                  Quero saber mais
-                </a>
-              </Button>
+              <a
+                href="https://wa.me/5511972313181?text=Oi%20Carine%2C%20quero%20saber%20mais%20sobre%20o%20programa%20IA%20com%20Alma"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center h-12 leading-[3rem] rounded-md bg-secondary text-secondary-foreground font-sans tracking-wide uppercase text-xs hover:bg-secondary/90 transition-all duration-300"
+              >
+                Quero saber mais
+              </a>
             </div>
 
             {/* Programa 2 */}
@@ -95,11 +98,14 @@ const IAHumanizada = () => {
                 <li>→ Posicionamento premium definido</li>
                 <li>→ Escala com previsibilidade</li>
               </ul>
-              <Button variant="gold" size="lg" className="w-full" asChild>
-                <a href="https://wa.me/5511972313181?text=Oi%20Carine%2C%20quero%20saber%20mais%20sobre%20o%20Sistema%20de%20Escala" target="_blank" rel="noopener noreferrer">
-                  Quero saber mais
-                </a>
-              </Button>
+              <a
+                href="https://wa.me/5511972313181?text=Oi%20Carine%2C%20quero%20saber%20mais%20sobre%20o%20Sistema%20de%20Escala"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center h-12 leading-[3rem] rounded-md bg-secondary text-secondary-foreground font-sans tracking-wide uppercase text-xs hover:bg-secondary/90 transition-all duration-300"
+              >
+                Quero saber mais
+              </a>
             </div>
           </div>
         </div>
