@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import Section from "@/components/Section";
 import { Bot, Sparkles, BarChart3, Mic } from "lucide-react";
 import monike1 from "@/assets/monike-1.jpg";
-import monike2 from "@/assets/monike-2.jpg";
 
 const Index = () => {
   return (
@@ -24,32 +23,27 @@ const Index = () => {
               <p className="text-base md:text-lg text-primary-foreground/75 font-sans leading-relaxed mb-10 max-w-lg">
                 Consultoria, treinamento e implementação de IA para empreendedoras que querem escalar com estrutura — não com esgotamento.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                <Button variant="gold" size="lg" asChild className="w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <Button variant="gold" size="xl" asChild>
                   <Link to="/ia-humanizada">Conhecer os programas de IA</Link>
                 </Button>
-                <Button variant="heroOutline" size="lg" asChild className="w-full sm:w-auto">
+                <Button variant="heroOutline" size="lg" asChild>
                   <Link to="/sobre">Minha história</Link>
                 </Button>
               </div>
             </div>
-            <div className="relative flex justify-center md:justify-end order-first md:order-last mb-8 md:mb-0">
+            <div className="flex justify-center md:justify-end order-first md:order-last mb-8 md:mb-0">
               <img
                 src={monike1}
                 alt="Monike Kineippe — Estrategista de IA para negócios femininos"
                 className="rounded-lg w-full max-w-xs md:max-w-sm object-cover aspect-[3/4] premium-shadow"
-              />
-              <img
-                src={monike2}
-                alt="Monike Kineippe"
-                className="absolute -bottom-4 -left-4 w-32 h-32 object-cover object-top rounded-lg gold-border shadow-xl hidden md:block"
               />
             </div>
           </div>
 
           {/* Micro-provas */}
           <div className="mt-16 pt-10 border-t border-primary-foreground/10">
-            <div className="grid grid-cols-3 gap-6 text-center">
+            <div className="flex justify-center gap-12 md:gap-20 text-center">
               {[
                 { num: "18+", label: "anos empreendendo" },
                 { num: "1.000+", label: "mulheres impactadas" },
@@ -57,7 +51,7 @@ const Index = () => {
               ].map((item) => (
                 <div key={item.label}>
                   <p className="font-serif text-2xl md:text-3xl text-secondary">{item.num}</p>
-                  <p className="font-sans text-xs tracking-wide uppercase text-primary-foreground/50 mt-1">{item.label}</p>
+                  <p className="font-sans text-[10px] md:text-xs tracking-wide uppercase text-primary-foreground/50 mt-1">{item.label}</p>
                 </div>
               ))}
             </div>
