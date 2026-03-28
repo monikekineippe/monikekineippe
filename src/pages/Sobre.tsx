@@ -60,20 +60,20 @@ const Sobre = () => {
 
       <Section variant="accent">
         <div className="max-w-3xl mx-auto space-y-6 font-sans text-muted-foreground leading-relaxed text-base md:text-lg">
-          <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-4">A jornada que ninguém romantiza</h2>
-          <p className="text-center">Ao longo de mais de 17 anos:</p>
-          <p className="text-center text-foreground font-serif">
-            Construí negócios. Vendi empresas. Fali. Recomecei.
-          </p>
+          <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-4">A jornada que me trouxe até aqui</h2>
+
           <p>
-            Vendi uma agência valorizada. Passei por dois episódios de burnout. Enfrentei cinco perdas gestacionais.
+            Abri meu primeiro CNPJ aos 18 anos. Enquanto muitas pessoas ainda buscavam um caminho, eu já estava contratando, liderando e tomando decisões que exigiam maturidade antes da idade.
           </p>
-          <p>Mesmo assim, continuei construindo.</p>
-          <p>Porque uma coisa ficou clara para mim:</p>
+
+          <p>
+            Ao longo de mais de 17 anos: construí negócios, vendi empresas, fali e recomecei. Vendi uma agência valorizada. Passei por dois episódios de burnout. Enfrentei cinco perdas gestacionais.
+          </p>
+
           <p className="text-foreground font-serif text-lg text-center italic">
-            Talento não sustenta negócio.<br />
-            Força não sustenta negócio.<br />
-            Motivação não sustenta negócio.<br /><br />
+            Mesmo assim, continuei construindo.<br />
+            Porque uma coisa ficou clara para mim:<br /><br />
+            Talento não sustenta negócio. Força não sustenta negócio.<br />
             <strong>Estrutura sustenta.</strong>
           </p>
         </div>
@@ -82,10 +82,11 @@ const Sobre = () => {
       <Section>
         <div className="max-w-3xl mx-auto space-y-6 font-sans text-muted-foreground leading-relaxed text-base md:text-lg">
           <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-4">IA como ferramenta central</h2>
-          <p>A virada aconteceu quando entendi que inteligência artificial não era coisa de programador. Era a ferramenta que faltava para empreendedoras ganharem escala sem perder humanidade.</p>
-          <p className="text-foreground font-serif italic text-center">Mas não qualquer IA.</p>
           <p>
-            Eu desenvolvo e implemento IA humanizada: assistentes personalizados que não substituem a essência da empreendedora — amplificam sua capacidade estratégica.
+            A virada aconteceu quando entendi que inteligência artificial não era coisa de programador. Era a ferramenta que faltava para empreendedoras ganharem escala sem perder humanidade.
+          </p>
+          <p>
+            Hoje desenvolvo e implemento IA humanizada: assistentes personalizados, automações estratégicas e fluxos inteligentes que não substituem a essência da empreendedora — amplificam sua capacidade.
           </p>
           <p>Tecnologia, quando bem direcionada:</p>
           <ul className="space-y-1 text-center">
@@ -94,18 +95,13 @@ const Sobre = () => {
             <li>aumenta clareza</li>
             <li>protege a essência do negócio</li>
           </ul>
-          <p className="text-foreground font-serif text-center italic">
-            Ela não tira a alma do negócio.<br />
-            Ela protege.
-          </p>
         </div>
       </Section>
 
       <Section variant="accent">
         <div className="max-w-3xl mx-auto space-y-6 font-sans text-muted-foreground leading-relaxed text-base md:text-lg">
           <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-4">Método próprio</h2>
-          <p>Minha abordagem vai além da mentoria tradicional.</p>
-          <p>Desenvolvi métodos como:</p>
+          <p>Minha abordagem vai além da mentoria tradicional. Desenvolvi métodos como:</p>
           <p className="text-foreground font-serif text-lg text-center">
             <strong>ALMA DIGITAL™</strong><br />
             e o <strong>Método Mulher no Poder</strong>
@@ -145,7 +141,8 @@ const Sobre = () => {
           </p>
           <p className="text-foreground font-serif text-center text-xl md:text-2xl pt-4 italic">
             Você já tem valor.<br />
-            Só falta estrutura pra transformar isso em previsibilidade.
+            Só falta estrutura pra transformar isso<br />
+            em previsibilidade.
           </p>
         </div>
       </Section>
