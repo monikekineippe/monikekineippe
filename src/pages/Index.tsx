@@ -33,27 +33,27 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-            <div className="relative flex justify-center md:justify-end">
+            <div className="relative flex justify-center md:justify-end order-first md:order-last mb-8 md:mb-0">
               <img
                 src={monike1}
                 alt="Monike Kineippe — Estrategista de IA para negócios femininos"
-                className="rounded-lg w-full max-w-sm object-cover aspect-[3/4] premium-shadow"
+                className="rounded-lg w-full max-w-xs md:max-w-sm object-cover aspect-[3/4] premium-shadow"
               />
               <img
                 src={monike2}
                 alt="Monike Kineippe"
-                className="absolute -bottom-6 -left-6 w-36 h-36 object-cover object-top rounded-lg gold-border shadow-xl hidden md:block"
+                className="absolute -bottom-4 -right-4 w-32 h-32 object-cover object-top rounded-lg gold-border shadow-xl hidden md:block"
               />
             </div>
           </div>
 
           {/* Micro-provas */}
           <div className="mt-16 pt-10 border-t border-primary-foreground/10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="grid grid-cols-3 gap-6 text-center">
               {[
                 { num: "18+", label: "anos empreendendo" },
-                { num: "1", label: "livro publicado" },
                 { num: "1.000+", label: "mulheres impactadas" },
+                { num: "1", label: "livro publicado" },
               ].map((item) => (
                 <div key={item.label}>
                   <p className="font-serif text-2xl md:text-3xl text-secondary">{item.num}</p>
@@ -158,7 +158,7 @@ const Index = () => {
               Estratégia de verdade.<br />IA que funciona.<br />Sem programês.
             </h2>
             <p className="text-muted-foreground font-sans leading-relaxed mb-4">
-              Empresária há 12 anos, autora e estrategista de IA para negócios femininos. Meu trabalho é pegar o que parece complicado — automações, assistentes inteligentes, fluxos de atendimento e vendas — e transformar em soluções aplicáveis para empreendedoras reais.
+              Empresária há 18 anos, autora e estrategista de IA para negócios femininos. Meu trabalho é pegar o que parece complicado — automações, assistentes inteligentes, fluxos de atendimento e vendas — e transformar em soluções aplicáveis para empreendedoras reais.
             </p>
             <p className="text-muted-foreground font-sans leading-relaxed mb-8">
               Nada de teoria. Nada de fórmula mágica. Estrutura que funciona.
