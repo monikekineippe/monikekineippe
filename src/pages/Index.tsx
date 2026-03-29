@@ -128,7 +128,7 @@ const Index = () => {
               <img
                 src={precifica3dLogo}
                 alt="Precifica3D — Plataforma de precificação para impressão 3D"
-                className="h-16 object-contain mb-4"
+                className="h-28 md:h-36 object-contain mb-6"
               />
               <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
                 Profissionais de impressão 3D no Brasil não tinham uma ferramenta confiável para precificar peças. Calculavam no achismo — e perdiam dinheiro.
