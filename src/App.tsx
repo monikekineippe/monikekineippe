@@ -2,13 +2,12 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import Diagnostico from "./pages/Diagnostico";
 import CoruJah from "./pages/CoruJah";
 import Mentorias from "./pages/Mentorias";
-import LapidandoDiamantes from "./pages/LapidandoDiamantes";
 import DonaDeSi from "./pages/DonaDeSi";
 
 import Empresaria40 from "./pages/Empresaria40";
@@ -33,7 +32,7 @@ const App = () => (
           {/* Standalone landing page — sem Layout */}
           <Route path="/empresaria-40" element={<Empresaria40 />} />
           <Route path="/corujah" element={<CoruJah />} />
-          <Route path="/lapidando-diamantes" element={<LapidandoDiamantes />} />
+          <Route path="/lapidando-diamantes" element={<Navigate to="/mentorias" replace />} />
 
           {/* Páginas com Header/Footer */}
           <Route element={<Layout />}>
