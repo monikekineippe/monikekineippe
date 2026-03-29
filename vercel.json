@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "escoladenegociosfemininos.com.br"
+        }
+      ],
+      "destination": "https://monikekineippe.com.br/empresaria-40",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.escoladenegociosfemininos.com.br"
+        }
+      ],
+      "destination": "https://monikekineippe.com.br/empresaria-40",
+      "permanent": true
+    }
+  ]
+}
