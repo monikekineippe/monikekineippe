@@ -2,6 +2,7 @@ import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import { Settings, Zap, Target, Layers, Bot, Crown } from "lucide-react";
+import sobre8 from "@/assets/sobre-8.jpg";
 
 const IAHumanizada = () => {
   return (
@@ -122,6 +123,29 @@ const IAHumanizada = () => {
           <p className="mt-6 text-xs text-muted-foreground font-sans">
             Você não precisa saber de tecnologia. Eu traduzo o complexo em aplicável.
           </p>
+        </div>
+      </Section>
+
+      {/* QUEM IMPLEMENTA */}
+      <Section>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+          <div>
+            <img
+              src={sobre8}
+              alt="Monike Kineippe — Estrategista de IA"
+              className="rounded-lg w-full object-cover aspect-[3/4] premium-shadow"
+            />
+          </div>
+          <div className="text-center md:text-left">
+            <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Quem implementa</span>
+            <h2 className="text-2xl font-serif mt-3 mb-6">Monike Kineippe</h2>
+            <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+              Estrategista de IA para negócios femininos. Mais de 18 anos empreendendo, autora e criadora de ferramentas com IA — incluindo a CoruJah e o Precifica3D (SaaS com usuários pagantes).
+            </p>
+            <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4 italic">
+              "Eu não ensino IA como teoria. Eu sento com você, entendo sua operação e implemento o que faz sentido. Sem programês. Sem complicação."
+            </p>
+          </div>
         </div>
       </Section>
 
