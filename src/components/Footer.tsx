@@ -1,118 +1,75 @@
-import PageHero from "@/components/PageHero";
-import Section from "@/components/Section";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import { Link } from "react-router-dom";
+import { Instagram, Linkedin, Youtube } from "lucide-react";
+import logoMkGold from "@/assets/logo-mk-gold.png";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwfrHybNG4ArAMsp0goPl8qBWhv871v1cNNTiTRwJkH2vSwp8ryxAUkLdd_J50SHaJw/exec";
-
-const Contato = () => {
-  const [form, setForm] = useState({ nome: "", whatsapp: "", email: "", objetivo: "", instagram: "", mensagem: "" });
-  const [loading, setLoading] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-
-    // Save to Google Sheets
-    try {
-      await fetch(GOOGLE_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ form_type: "contato", ...form }),
-      });
-    } catch (err) {
-      console.error("Erro ao enviar para planilha:", err);
-    }
-
-    // Save to database
-    try {
-      await supabase.rpc("insert_form_submission", {
-        p_form_type: "contato",
-        p_page_source: "/contato",
-        p_data: form as any,
-        p_user_agent: navigator.userAgent,
-      });
-    } catch (err) {
-      console.error("Erro ao salvar no banco:", err);
-    }
-
-    toast({ title: "Mensagem enviada!", description: "Entraremos em contato em breve." });
-    setForm({ nome: "", whatsapp: "", email: "", objetivo: "", instagram: "", mensagem: "" });
-    setLoading(false);
-  };
+const Footer = () => {
+  const socials = [
+    { icon: Instagram, href: "https://www.instagram.com/monikekineippe", label: "Instagram" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/monikekineippe/", label: "LinkedIn" },
+    { icon: Youtube, href: "https://www.youtube.com/@monikekineippe", label: "YouTube" },
+  ];
 
   return (
-    <>
-      <PageHero
-        tag="Contato"
-        title="Contato"
-        subtitle="Para palestras, parcerias, projetos de IA ou qualquer conversa estratégica."
-      />
+    <footer className="bg-foreground text-primary-foreground">
+      <div className="container mx-auto px-6 py-16">
+        {/* Quote */}
+        <p className="font-serif text-lg md:text-xl text-center mb-12 text-primary-foreground/80 italic max-w-2xl mx-auto">
+          "Você já tem valor. Só falta estrutura pra transformar isso em previsibilidade."
+        </p>
 
-      <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <div className="gold-line mb-12 opacity-20" />
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+          {/* Links */}
           <div>
-            <h2 className="text-xl font-serif mb-6">Fale conosco</h2>
-            <div className="space-y-4 text-sm font-sans text-muted-foreground">
-              <div>
-                <span className="text-[10px] tracking-widest uppercase text-secondary block mb-1">WhatsApp</span>
-                <a href="https://wa.me/5511972313181" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                  (11) 97231-3181 (Carine)
-                </a>
-              </div>
-              <div>
-                <span className="text-[10px] tracking-widest uppercase text-secondary block mb-1">E-mail</span>
-                <span>contato@monikekineippe.com.br</span>
-              </div>
-              <div>
-                <span className="text-[10px] tracking-widest uppercase text-secondary block mb-1">Palestras</span>
-                <a href="https://wa.me/5511972313181" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                  WhatsApp Carine
-                </a>
-              </div>
+            <h4 className="font-sans text-xs tracking-widest uppercase text-secondary mb-4">Links Rápidos</h4>
+            <div className="flex flex-col gap-2">
+              <Link to="/diagnostico" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">Diagnóstico</Link>
+              <Link to="/ia-humanizada" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">IA & Automação</Link>
+              <Link to="/corujah" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">CoruJah</Link>
+              <Link to="/mentorias" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">Mentoria & Comunidade</Link>
+              <Link to="/palestras" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">Palestras</Link>
+              <Link to="/livros" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">Livros</Link>
+              <Link to="/sobre" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">Sobre</Link>
+              <Link to="/contato" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">Contato</Link>
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {[
-              { key: "nome", label: "Nome", type: "text" },
-              { key: "whatsapp", label: "WhatsApp (com DDD)", type: "tel" },
-              { key: "email", label: "E-mail", type: "email" },
-              { key: "objetivo", label: "Objetivo", type: "text" },
-              { key: "instagram", label: "Instagram", type: "text" },
-            ].map((field) => (
-              <div key={field.key}>
-                <label className="text-[10px] tracking-widest uppercase text-secondary font-sans block mb-1.5">{field.label}</label>
-                <input
-                  type={field.type}
-                  value={form[field.key as keyof typeof form]}
-                  onChange={(e) => setForm(prev => ({ ...prev, [field.key]: e.target.value }))}
-                  className="w-full px-4 py-3 bg-background border border-border rounded-md text-sm font-sans focus:outline-none focus:ring-1 focus:ring-secondary transition-all"
-                  required={field.key === "nome" || field.key === "email"}
-                />
-              </div>
-            ))}
-            <div>
-              <label className="text-[10px] tracking-widest uppercase text-secondary font-sans block mb-1.5">Mensagem</label>
-              <textarea
-                value={form.mensagem}
-                onChange={(e) => setForm(prev => ({ ...prev, mensagem: e.target.value }))}
-                rows={4}
-                className="w-full px-4 py-3 bg-background border border-border rounded-md text-sm font-sans focus:outline-none focus:ring-1 focus:ring-secondary transition-all resize-none"
-              />
+          {/* Contact + Socials */}
+          <div>
+            <h4 className="font-sans text-xs tracking-widest uppercase text-secondary mb-4">Contato</h4>
+            <div className="flex flex-col gap-2 text-primary-foreground/60 mb-6">
+              <a href="https://wa.me/5511972313181" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">
+                WhatsApp (Carine)
+              </a>
+              <span>contato@monikekineippe.com.br</span>
             </div>
-            <Button variant="hero" size="lg" type="submit" className="w-full" disabled={loading}>
-              {loading ? "Enviando..." : "Enviar mensagem"}
-            </Button>
-          </form>
+            <h4 className="font-sans text-xs tracking-widest uppercase text-secondary mb-4">Redes Sociais</h4>
+            <div className="flex items-center gap-4">
+              {socials.map((s) => (
+                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="text-primary-foreground/60 hover:text-secondary transition-colors">
+                  <s.icon size={20} />
+                </a>
+              ))}
+              <a href="https://www.tiktok.com/@monikekineippe" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-primary-foreground/60 hover:text-secondary transition-colors">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Brand */}
+          <div className="flex flex-col items-start md:items-end justify-between">
+            <Link to="/" className="mb-4">
+              <img src={logoMkGold} alt="Monike Kineippe" className="h-14 w-auto" />
+            </Link>
+            <p className="text-primary-foreground/40 text-xs">© MK Company. Todos os direitos reservados.</p>
+          </div>
         </div>
-      </Section>
-    </>
+      </div>
+    </footer>
   );
 };
 
-export default Contato;
+export default Footer;
