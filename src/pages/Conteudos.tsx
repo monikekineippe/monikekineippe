@@ -1,13 +1,13 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
-import { Button } from "@/components/ui/button";
+import { Instagram, Linkedin, Youtube } from "lucide-react";
 
 const Conteudos = () => {
   const channels = [
-    { title: "Instagram", link: "#", icon: "📸" },
-    { title: "YouTube", link: "#", icon: "🎬" },
-    { title: "Newsletter / Substack", link: "#", icon: "✉️" },
-    { title: "LinkedIn", link: "#", icon: "💼" },
+    { title: "Instagram", link: "https://www.instagram.com/monikekineippe", icon: Instagram, desc: "Conteúdo diário sobre IA, negócios e bastidores" },
+    { title: "YouTube", link: "https://www.youtube.com/@monikekineippe", icon: Youtube, desc: "Aulas, entrevistas e tutoriais práticos" },
+    { title: "LinkedIn", link: "https://www.linkedin.com/in/monikekineippe/", icon: Linkedin, desc: "Artigos e reflexões sobre estratégia e IA" },
+    { title: "TikTok", link: "https://www.tiktok.com/@monikekineippe", icon: null, desc: "Conteúdo rápido sobre IA e empreendedorismo" },
   ];
 
   return (
@@ -15,7 +15,7 @@ const Conteudos = () => {
       <PageHero
         tag="Conteúdos"
         title="Conteúdos"
-        subtitle="Eu escrevo e ensino para você pensar melhor e decidir melhor."
+        subtitle="IA aplicada, estratégia e bastidores de quem empreende de verdade."
       />
 
       <Section>
@@ -26,20 +26,21 @@ const Conteudos = () => {
               href={ch.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-8 gold-border rounded-lg bg-card text-center hover:border-secondary/60 transition-all group"
+              className="p-8 gold-border rounded-lg bg-card hover:border-secondary/60 transition-all group"
             >
-              <span className="text-2xl">{ch.icon}</span>
-              <h3 className="font-serif text-lg mt-3 group-hover:text-primary transition-colors">{ch.title}</h3>
+              <div className="flex items-center gap-3 mb-3">
+                {ch.icon ? (
+                  <ch.icon className="w-6 h-6 text-secondary" />
+                ) : (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-secondary">
+                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                  </svg>
+                )}
+                <h3 className="font-serif text-lg group-hover:text-primary transition-colors">{ch.title}</h3>
+              </div>
+              <p className="text-sm text-muted-foreground font-sans">{ch.desc}</p>
             </a>
           ))}
-        </div>
-      </Section>
-
-      <Section variant="accent">
-        <div className="text-center">
-          <Button variant="hero" size="xl" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer">Assinar a newsletter</a>
-          </Button>
         </div>
       </Section>
     </>
