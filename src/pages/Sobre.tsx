@@ -95,6 +95,9 @@ const Sobre = () => {
             <li>aumenta clareza</li>
             <li>protege a essência do negócio</li>
           </ul>
+          <p className="text-foreground font-serif text-center italic pt-4">
+            Eu não só ensino — eu construo. O Precifica3D, por exemplo, é um SaaS de precificação inteligente para impressão 3D que criei com IA e ferramentas no-code, sem escrever uma linha de código. Hoje tem usuários pagantes.
+          </p>
         </div>
       </Section>
 
