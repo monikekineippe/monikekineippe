@@ -2,7 +2,7 @@ import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import logoIcon from "@/assets/logo-icon.png";
+import sobre8 from "@/assets/sobre-8.jpg";
 
 const Mentorias = () => {
   const programs = [
@@ -28,9 +28,9 @@ const Mentorias = () => {
     <>
       <div className="section-padding bg-primary text-primary-foreground text-center">
         <div className="container mx-auto max-w-3xl">
-          <img src={logoIcon} alt="Monike Kineippe" className="w-20 h-20 mx-auto mb-6 object-contain" />
-          <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-6">Mentorias</span>
-          <h1 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6">Mentorias</h1>
+          <img src={sobre8} alt="Monike Kineippe" className="w-32 h-32 mx-auto mb-6 object-cover object-top rounded-full gold-border" />
+          <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-6">Mentoria & Comunidade</span>
+          <h1 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6">Mentoria & Comunidade</h1>
           <p className="text-base md:text-lg text-primary-foreground/70 font-sans leading-relaxed max-w-2xl mx-auto">
             Para quem cansou do "tenta mais um pouco" e decidiu construir um negócio com sistema.
           </p>
