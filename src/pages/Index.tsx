@@ -27,6 +27,9 @@ const Index = () => {
                 <Button variant="gold" size="xl" asChild>
                   <Link to="/ia-humanizada">Conhecer os programas de IA</Link>
                 </Button>
+                <Button variant="heroOutline" size="lg" asChild>
+                  <Link to="/sobre">Minha história</Link>
+                </Button>
               </div>
             </div>
             <div className="flex justify-center md:justify-end order-first md:order-last mb-8 md:mb-0">
@@ -44,7 +47,7 @@ const Index = () => {
               {[
                 { num: "18+", label: "anos empreendendo" },
                 { num: "1.000+", label: "mulheres impactadas" },
-                { num: "2", label: "livros publicados" },
+                { num: "1", label: "livro publicado" },
               ].map((item) => (
                 <div key={item.label}>
                   <p className="font-serif text-2xl md:text-3xl text-secondary">{item.num}</p>
@@ -113,6 +116,61 @@ const Index = () => {
       </Section>
 
       {/* ═══════════════════════════════════════════
+          CASE — Precifica3D
+          ═══════════════════════════════════════════ */}
+      <Section variant="accent">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Case real</span>
+            <h2 className="text-2xl md:text-3xl font-serif mt-4">Eu não só ensino IA. Eu construo com ela.</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h3 className="text-xl font-serif mb-4">Precifica3D</h3>
+              <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+                Profissionais de impressão 3D no Brasil não tinham uma ferramenta confiável para precificar peças. Calculavam no achismo — e perdiam dinheiro.
+              </p>
+              <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+                Eu construí o Precifica3D: uma plataforma SaaS que calcula custos de impressão 3D com precisão — filamento, energia, depreciação, impostos, embalagem — e usa IA para sugerir margens de lucro por categoria de peça.
+              </p>
+              <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-6">
+                Construído com IA e ferramentas no-code. Sem escrever uma linha de código manualmente. Com usuários pagantes desde o lançamento.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="text-center">
+                  <p className="font-serif text-xl text-secondary">SaaS</p>
+                  <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">produto real</p>
+                </div>
+                <div className="text-center">
+                  <p className="font-serif text-xl text-secondary">IA</p>
+                  <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">margem inteligente</p>
+                </div>
+                <div className="text-center">
+                  <p className="font-serif text-xl text-secondary">No-code</p>
+                  <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">sem programação</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-8 bg-primary text-primary-foreground rounded-lg border border-secondary/20">
+              <p className="font-sans text-xs tracking-[0.2em] uppercase text-secondary mb-4">O que o Precifica3D faz</p>
+              <ul className="space-y-3 text-sm font-sans text-primary-foreground/80">
+                <li>→ Calcula custo real por peça (filamento, energia, depreciação)</li>
+                <li>→ IA sugere margem de lucro por categoria</li>
+                <li>→ Gestão de impressoras e histórico de orçamentos</li>
+                <li>→ Relatórios e exportação de dados</li>
+                <li>→ Planos Free e Pro com pagamento integrado</li>
+              </ul>
+              <p className="mt-6 text-xs text-primary-foreground/50 font-sans italic">
+                "Se eu consegui construir um SaaS funcional com IA e no-code, imagine o que a IA pode fazer pelo seu negócio."
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* ═══════════════════════════════════════════
           IA EM AÇÃO — destaque
           ═══════════════════════════════════════════ */}
       <section className="bg-primary text-primary-foreground section-padding">
@@ -175,6 +233,9 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="gold" size="xl" asChild>
               <Link to="/diagnostico">Fazer meu diagnóstico gratuito</Link>
+            </Button>
+            <Button variant="heroOutline" size="lg" asChild>
+              <Link to="/contato">Agendar conversa</Link>
             </Button>
           </div>
         </div>
