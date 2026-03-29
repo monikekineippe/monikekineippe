@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import sobre3 from "@/assets/sobre-3.jpg";
 
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwfrHybNG4ArAMsp0goPl8qBWhv871v1cNNTiTRwJkH2vSwp8ryxAUkLdd_J50SHaJw/exec";
 
@@ -56,6 +57,11 @@ const Contato = () => {
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           <div>
+            <img
+              src={sobre3}
+              alt="Monike Kineippe em evento"
+              className="rounded-lg w-full object-cover aspect-[16/9] premium-shadow mb-8"
+            />
             <h2 className="text-xl font-serif mb-6">Fale conosco</h2>
             <div className="space-y-4 text-sm font-sans text-muted-foreground">
               <div>
