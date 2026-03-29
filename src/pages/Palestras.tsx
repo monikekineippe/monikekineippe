@@ -1,21 +1,21 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
-import { Mic, Zap, DollarSign } from "lucide-react";
+import { Mic, Zap, DollarSign, Bot } from "lucide-react";
 
 const featured = [
-  {
-    icon: DollarSign,
-    title: "Trabalhar muito e ganhar pouco não é virtude. É alerta.",
-    desc: "Por que esforço sem estrutura não gera resultado — e o que fazer em vez disso.",
-  },
   {
     icon: Zap,
     title: "IA não resolve caos. Primeiro estrutura, depois acelera.",
     desc: "Como usar inteligência artificial sem pular a etapa que realmente importa.",
   },
   {
-    icon: Mic,
+    icon: Bot,
+    title: "IA para quem não é de tecnologia: o que toda empreendedora precisa saber agora.",
+    desc: "Como usar inteligência artificial no dia a dia do negócio — sem programar, sem complicar.",
+  },
+  {
+    icon: DollarSign,
     title: "Se esforço desse dinheiro, você já estaria rica.",
     desc: "A verdade sobre vendas, sistema e previsibilidade que ninguém conta no palco.",
   },
@@ -28,7 +28,7 @@ const Palestras = () => {
       <PageHero
         tag="Palco"
         title="Palestras e Treinamentos"
-        subtitle="Menos motivacional vazio. Mais direção prática."
+        subtitle="IA aplicada, estratégia real e provocações que ficam. Sem motivacional vazio."
       />
 
       {/* PALESTRAS EM DESTAQUE */}
@@ -64,13 +64,13 @@ const Palestras = () => {
           <h2 className="text-2xl font-serif mb-10 text-center">Workshops, Aulas e Treinamentos</h2>
           <div className="space-y-4">
             {[
+              { tag: "Imersão", title: "IA com intenção: automação sem perder humanidade" },
+              { tag: "Aula prática", title: "Conteúdo com intenção em 30 min (com IA aplicada)" },
+              { tag: "Workshop", title: "Como montar um assistente de IA para seu negócio (sem saber programar)" },
               { tag: "Workshop", title: "Oferta em 1 Tela (em 60 min)" },
               { tag: "Workshop", title: "Script de Direct/WhatsApp que fecha (sem ser chata)" },
-              { tag: "Aula prática", title: "Conteúdo com intenção em 30 min (com IA aplicada)" },
-              { tag: "Treinamento", title: "Rotina comercial mínima para mães (3x30 min/semana)" },
+              { tag: "Treinamento", title: "Rotina comercial mínima para empreendedoras (3x30 min/semana)" },
               { tag: "Imersão curta", title: "Do off-line ao digital: seu funil simples em 90 min" },
-              { tag: "Imersão", title: "IA com intenção: automação sem perder humanidade" },
-              
               { tag: "Palestra", title: "Vendas com verdade: vender sem se violentar" },
               { tag: "Palestra", title: "Posicionamento e previsibilidade: estrutura que sustenta" },
             ].map((item, i) => (
@@ -102,6 +102,16 @@ const Palestras = () => {
               </div>
             ))}
           </div>
+        </div>
+      </Section>
+
+      {/* SOBRE A PALESTRANTE */}
+      <Section>
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-4 block">Sobre a palestrante</span>
+          <p className="text-muted-foreground font-sans text-sm leading-relaxed max-w-2xl mx-auto">
+            Monike Kineippe é estrategista de IA para negócios femininos, autora e palestrante. Leva ao palco o que aplica no dia a dia: inteligência artificial acessível, vendas com estrutura e posicionamento com verdade. Mais de 18 anos empreendendo e mais de 150 horas de palco.
+          </p>
         </div>
       </Section>
 
