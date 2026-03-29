@@ -196,7 +196,7 @@ const WhatItDoes = () => {
       <div className="max-w-5xl mx-auto text-center">
         <Reveal>
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            Conheça a CoruJah — sua nova melhor amiga
+            Conheça a CoruJah — IA estratégica para empreendedoras
           </h2>
           <p className="text-lg mb-14 text-muted-foreground font-sans">
             A inteligência estratégica que transforma seu conhecimento em produto digital.
@@ -591,13 +591,13 @@ const Mentor = () => (
 
         <div className="space-y-4 font-sans text-muted-foreground">
           <p className="text-base leading-relaxed">
-            Estrategista de negócios femininos, mentora, palestrante, autora e criadora do Método Mulhere$ no Poder e Venda $em Vender.
+            Estrategista de IA para negócios femininos, autora, palestrante e criadora do ALMA DIGITAL™ e dos programas de implementação de IA — incluindo a própria CoruJah.
           </p>
           <p className="text-base leading-relaxed">
-            Empresária desde os 18 anos. Já sentiu na pele a sobrecarga, a frustração com fórmulas que não funcionam e o desafio de equilibrar negócios, maternidade e vida pessoal.
+            Empresária há mais de 18 anos. Já sentiu na pele a sobrecarga, a frustração com fórmulas que não funcionam e o desafio de transformar conhecimento em produto sem travar.
           </p>
           <p className="text-base leading-relaxed italic text-secondary">
-            "Eu criei a CoruJah porque sei como é ter muito conhecimento e não saber por onde começar. Agora, você não precisa mais ficar travada."
+            "Eu criei a CoruJah porque acredito que IA bem feita não substitui a empreendedora — amplifica o que ela já sabe. E foi exatamente isso que construí."
           </p>
         </div>
       </Reveal>
