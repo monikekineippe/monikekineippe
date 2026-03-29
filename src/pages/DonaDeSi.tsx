@@ -23,7 +23,7 @@ const DonaDeSi = () => {
       <div className="section-padding bg-primary text-primary-foreground text-center">
         <div className="container mx-auto max-w-3xl">
           <img src={logoIcon} alt="Monike Kineippe" className="w-20 h-20 mx-auto mb-6 object-contain" />
-          <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-4">Aceleração Individual</span>
+          <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-4">Mentoria Individual</span>
           <h1 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-4">
             💎 Dona de $i
           </h1>
@@ -69,7 +69,7 @@ const DonaDeSi = () => {
             </h2>
             <ul className="space-y-4 text-sm font-sans text-muted-foreground">
               {[
-                "Você quer \"ir no seu tempo\" (aí é a Mentoria em Grupo)",
+                "Você quer ir devagar — a Dona de $i é sprint, não caminhada",
                 "Você está começando do zero absoluto",
                 "Você não vai executar o que for combinado",
               ].map((t, i) => (
@@ -123,7 +123,7 @@ const DonaDeSi = () => {
               "Seu processo de vendas (CTA → conversa → script → follow-up → fechamento)",
               "Sua rotina comercial mínima (pra não voltar pro improviso)",
               "Um modelo repetível pra vender toda semana com leveza",
-              "(se fizer sentido) IA aplicada pra acelerar conteúdo, atendimento e execução",
+              "IA aplicada para acelerar conteúdo, atendimento e execução",
             ].map((t, i) => (
               <li key={i} className="flex gap-3 items-start">
                 <ArrowRight className="w-4 h-4 text-secondary mt-0.5 shrink-0" />
@@ -171,8 +171,8 @@ const DonaDeSi = () => {
           </div>
 
           <div className="mt-8 p-4 bg-primary/5 rounded-lg text-sm font-sans text-muted-foreground italic">
-            No grupo, você evolui com cadência semanal e comunidade.<br />
-            Na Dona de $i, eu acelero com você no foco e na correção.
+            Na Comunidade, você evolui com rede e suporte contínuo.<br />
+            Na Dona de $i, eu acelero com você — foco, correção e resultado em dias.
           </div>
         </div>
       </Section>
@@ -234,10 +234,10 @@ const DonaDeSi = () => {
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="faq-1">
               <AccordionTrigger className="font-serif text-base text-left">
-                "Isso é igual à mentoria em grupo?"
+                "Qual a diferença entre a Dona de $i e a Comunidade?"
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground font-sans">
-                Não. O grupo é construção com cadência semanal. A Dona de $i é sprint com correção próxima e resultado em dias.
+                A Comunidade é um ecossistema com conteúdo, networking e suporte contínuo. A Dona de $i é sprint individual com execução guiada e correção próxima — resultado em dias, não em semanas.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="faq-2">
@@ -264,10 +264,10 @@ const DonaDeSi = () => {
       <Section variant="wine">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-sm font-sans text-primary-foreground/70 mb-2">
-            Se você quer previsibilidade em semanas, vai pro grupo.
+            Se você quer estrutura com rede e suporte, conheça a Comunidade.
           </p>
           <p className="text-lg font-serif text-primary-foreground mb-8">
-            Se você quer previsibilidade em <strong className="text-secondary">dias</strong>, aplica pra Dona de $i.
+            Se você quer resultado em <strong className="text-secondary">dias</strong>, aplica pra Dona de $i.
           </p>
           <CtaButton>✅ Quero aplicar para a Dona de $i</CtaButton>
         </div>
