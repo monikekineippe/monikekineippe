@@ -27,9 +27,6 @@ const Index = () => {
                 <Button variant="gold" size="xl" asChild>
                   <Link to="/ia-humanizada">Conhecer os programas de IA</Link>
                 </Button>
-                <Button variant="heroOutline" size="lg" asChild>
-                  <Link to="/sobre">Minha história</Link>
-                </Button>
               </div>
             </div>
             <div className="flex justify-center md:justify-end order-first md:order-last mb-8 md:mb-0">
@@ -178,9 +175,6 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="gold" size="xl" asChild>
               <Link to="/diagnostico">Fazer meu diagnóstico gratuito</Link>
-            </Button>
-            <Button variant="heroOutline" size="lg" asChild>
-              <Link to="/contato">Agendar conversa</Link>
             </Button>
           </div>
         </div>
