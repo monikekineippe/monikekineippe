@@ -50,6 +50,7 @@ const Contato = () => {
       <PageHero
         tag="Contato"
         title="Contato"
+        subtitle="Para palestras, parcerias, projetos de IA ou qualquer conversa estratégica."
       />
 
       <Section>
