@@ -23,12 +23,9 @@ const Index = () => {
               <p className="text-base md:text-lg text-primary-foreground/75 font-sans leading-relaxed mb-10 max-w-lg">
                 Consultoria, treinamento e implementação de IA para empreendedoras que querem escalar com estrutura — não com esgotamento.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <div className="flex justify-center md:justify-start">
                 <Button variant="gold" size="xl" asChild>
                   <Link to="/ia-humanizada">Conhecer os programas de IA</Link>
-                </Button>
-                <Button variant="heroOutline" size="lg" asChild>
-                  <Link to="/sobre">Minha história</Link>
                 </Button>
               </div>
             </div>
