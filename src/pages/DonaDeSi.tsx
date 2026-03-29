@@ -2,6 +2,7 @@ import { useState } from "react";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import logoIcon from "@/assets/logo-icon.png";
+import sobre9 from "@/assets/sobre-9.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, X, ArrowRight, Target, Zap, ClipboardList, Calendar } from "lucide-react";
 import DonaDeSiForm from "@/components/DonaDeSiForm";
@@ -41,6 +42,17 @@ const DonaDeSi = () => {
           <div className="mt-10 w-16 h-px bg-secondary mx-auto" />
         </div>
       </div>
+
+      {/* FOTO */}
+      <Section>
+        <div className="max-w-xs mx-auto">
+          <img
+            src={sobre9}
+            alt="Monike Kineippe"
+            className="rounded-lg w-full object-cover aspect-square premium-shadow"
+          />
+        </div>
+      </Section>
 
       {/* PARA QUEM É / NÃO É */}
       <Section>
