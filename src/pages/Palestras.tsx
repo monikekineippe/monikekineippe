@@ -2,6 +2,7 @@ import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import { Mic, Zap, DollarSign, Bot } from "lucide-react";
+import sobre4 from "@/assets/sobre-4.jpg";
 
 const featured = [
   {
@@ -107,11 +108,31 @@ const Palestras = () => {
 
       {/* SOBRE A PALESTRANTE */}
       <Section>
-        <div className="max-w-3xl mx-auto text-center">
-          <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-4 block">Sobre a palestrante</span>
-          <p className="text-muted-foreground font-sans text-sm leading-relaxed max-w-2xl mx-auto">
-            Monike Kineippe é estrategista de IA para negócios femininos, autora e palestrante. Leva ao palco o que aplica no dia a dia: inteligência artificial acessível, vendas com estrutura e posicionamento com verdade. Mais de 18 anos empreendendo e mais de 150 horas de palco.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+          <div>
+            <img
+              src={sobre4}
+              alt="Monike Kineippe palestrando em evento"
+              className="rounded-lg w-full object-cover aspect-[4/3] premium-shadow"
+            />
+          </div>
+          <div className="text-center md:text-left">
+            <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-4 block">Sobre a palestrante</span>
+            <h2 className="text-xl font-serif mb-4">Monike Kineippe</h2>
+            <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+              Estrategista de IA para negócios femininos, autora e palestrante. Leva ao palco o que aplica no dia a dia: inteligência artificial acessível, vendas com estrutura e posicionamento com verdade.
+            </p>
+            <div className="flex gap-6">
+              <div>
+                <p className="font-serif text-xl text-secondary">18+</p>
+                <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">anos empreendendo</p>
+              </div>
+              <div>
+                <p className="font-serif text-xl text-secondary">150h+</p>
+                <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">de palco</p>
+              </div>
+            </div>
+          </div>
         </div>
       </Section>
 
