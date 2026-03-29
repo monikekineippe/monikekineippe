@@ -18,14 +18,17 @@ const Index = () => {
                 IA aplicada a negócios femininos
               </span>
               <h1 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6">
-                Eu transformo inteligência artificial em estratégia real para o seu negócio.
+                Seu negócio não precisa de mais esforço. Precisa de inteligência artificial bem aplicada.
               </h1>
               <p className="text-base md:text-lg text-primary-foreground/75 font-sans leading-relaxed mb-10 max-w-lg">
-                Consultoria, treinamento e implementação de IA para empreendedoras que querem escalar com estrutura — não com esgotamento.
+                Eu traduzo o que parece complexo — automações, assistentes, fluxos inteligentes — em soluções que funcionam na rotina real do seu negócio.
               </p>
-              <div className="flex justify-center md:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Button variant="gold" size="xl" asChild>
                   <Link to="/ia-humanizada">Conhecer os programas de IA</Link>
+                </Button>
+                <Button variant="heroOutline" size="lg" asChild>
+                  <Link to="/sobre">Minha história</Link>
                 </Button>
               </div>
             </div>
@@ -44,7 +47,7 @@ const Index = () => {
               {[
                 { num: "18+", label: "anos empreendendo" },
                 { num: "1.000+", label: "mulheres impactadas" },
-                { num: "1", label: "livro publicado" },
+                { num: "2", label: "livros publicados" },
               ].map((item) => (
                 <div key={item.label}>
                   <p className="font-serif text-2xl md:text-3xl text-secondary">{item.num}</p>
