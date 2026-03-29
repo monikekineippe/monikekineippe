@@ -103,22 +103,22 @@ const Hero = () => (
           className="inline-block text-xs font-medium tracking-widest uppercase mb-6 px-4 py-2 rounded-full"
           style={{ backgroundColor: `${C.gold}18`, color: C.gold }}
         >
-          ✦ Mais de 650 mulheres já transformaram seus negócios
+          ✦ Mais de 1.000 mulheres já transformaram seus negócios
         </span>
 
         <h1
           className="font-serif text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.15] mb-6"
           style={{ color: C.black, fontFamily: "'Playfair Display', serif" }}
         >
-          Pare de carregar o mundo sozinha.
+          Estrutura, estratégia e IA
           <br />
           <span style={{ color: C.gold }}>
-            Existe um lugar onde mulheres como você constroem negócios reais.
+            para empreendedoras que não querem mais crescer sozinhas.
           </span>
         </h1>
 
         <p className="text-lg leading-relaxed mb-8" style={{ color: "#555", fontFamily: "'Inter', sans-serif" }}>
-          A Comunidade Empresária 4.0 reúne método, suporte e rede para você crescer — mesmo com apenas 15 minutos por dia.
+          A Comunidade Empresária 4.0 reúne método, networking e ferramentas de IA para você construir um negócio com previsibilidade — mesmo com pouco tempo por dia.
         </p>
 
         <a
@@ -150,9 +150,9 @@ const Hero = () => (
    ════════════════════════════════════════════════════════ */
 const EmotionalBridge = () => {
   const cards = [
-    { icon: Clock, text: "Você acorda cansada antes mesmo de começar o dia — e ainda assim precisa dar conta de tudo." },
-    { icon: BarChart3, text: "Seu negócio cresce devagar e você não consegue identificar o que está faltando." },
-    { icon: Scale, text: "Você sente que para ter sucesso teria que abrir mão de ser mãe, esposa ou de cuidar de você mesma." },
+    { icon: Clock, text: "Seu negócio depende 100% de você. Sem processo repetível, sem automação — tudo na sua mão, o tempo todo." },
+    { icon: BarChart3, text: "Você sabe que precisa de tecnologia e IA, mas não sabe por onde começar — e as soluções que encontra parecem feitas para programadores." },
+    { icon: Scale, text: "Cresce devagar porque faz tudo no manual: atendimento, conteúdo, vendas, financeiro. E sente que para escalar teria que abrir mão de tudo." },
   ];
 
   return (
@@ -185,7 +185,7 @@ const EmotionalBridge = () => {
             className="font-serif text-2xl md:text-3xl italic"
             style={{ color: C.gold, fontFamily: "'Playfair Display', serif" }}
           >
-            "E se nada disso precisasse ser verdade?"
+            "E se existisse um lugar com método, rede e IA — feito para resolver exatamente isso?"
           </p>
         </Reveal>
       </div>
@@ -200,10 +200,10 @@ const Product = () => {
   const benefits = [
     { icon: GraduationCap, title: "Aprenda no seu tempo", desc: "+20h de conteúdo em aulas de até 15 minutos. Funciona offline, do celular, quando você puder." },
     { icon: Users, title: "Nunca mais sozinha", desc: "Uma rede real de empresárias que entendem seus desafios e te impulsionam a chegar mais longe." },
-    { icon: Wrench, title: "Templates prontos para usar", desc: "Estratégias validadas em mais de 20 segmentos. Copie, cole e aplique no seu negócio hoje." },
+    { icon: Wrench, title: "IA na prática", desc: "Aulas e templates de inteligência artificial aplicada ao seu negócio: conteúdo, atendimento, automações e produtividade." },
     { icon: Radio, title: "Hotseat ao vivo toda semana", desc: "Traga seu problema atual e receba insights personalizados de empresárias experientes." },
     { icon: BookOpen, title: "Masterclass mensal", desc: "Uma aula aprofundada por mês, escolhida com base nas necessidades reais da comunidade." },
-    { icon: Gift, title: "Clube de vantagens", desc: "Condições especiais com parceiros para seu crescimento, saúde e autocuidado." },
+    { icon: Gift, title: "Templates prontos para usar", desc: "Estratégias validadas em mais de 20 segmentos. Copie, cole e aplique no seu negócio hoje." },
   ];
 
   return (
@@ -217,7 +217,7 @@ const Product = () => {
             A Comunidade Empresária 4.0 é um ecossistema completo para a mulher que quer mais
           </h2>
           <p className="text-lg mb-14" style={{ color: "#666", fontFamily: "'Inter', sans-serif" }}>
-            Não é um curso que você abandona. É um método com suporte real, ao vivo, toda semana.
+            Não é um curso que você abandona. É um ecossistema com método, IA aplicada e suporte real toda semana.
           </p>
         </Reveal>
 
@@ -342,9 +342,9 @@ const SocialProof = () => {
    ════════════════════════════════════════════════════════ */
 const Method = () => {
   const pillars = [
-    { num: "01", title: "Mentalidade & Posicionamento", desc: "Desenvolva uma visão clara, resiliência real e a confiança para ocupar o espaço que você merece no mercado." },
-    { num: "02", title: "Estratégia & Ferramentas de Negócio", desc: "Aprenda a criar posicionamento de autoridade, liderar times e atrair clientes com marketing e vendas que funcionam." },
-    { num: "03", title: "Gestão de Rotina & Equilíbrio", desc: "Organize sua vida para ser produtiva sem se destruir — priorizando o que importa de verdade." },
+    { num: "01", title: "Mentalidade & Posicionamento", desc: "Desenvolva clareza, resiliência e a confiança para ocupar o espaço que você merece no mercado." },
+    { num: "02", title: "Estratégia, Ferramentas & IA", desc: "Crie posicionamento de autoridade, use IA para acelerar processos e atraia clientes com marketing e vendas que funcionam." },
+    { num: "03", title: "Gestão de Rotina & Execução", desc: "Organize sua vida para ser produtiva sem se destruir — com automações e processos que liberam seu tempo." },
   ];
 
   return (
@@ -413,7 +413,7 @@ const Comparison = () => {
   ];
   const good = [
     "Método com trilhas organizadas para sua rotina",
-    "Estratégias testadas em +20 segmentos reais",
+    "IA aplicada na prática: conteúdo, atendimento e automação",
     "Suporte ao vivo toda semana, não só conteúdo",
     "Comunidade ativa que te acompanha de verdade",
     "Resultados mensuráveis no seu negócio",
@@ -507,10 +507,10 @@ const Mentor = () => (
 
         <div className="space-y-4 mb-8" style={{ fontFamily: "'Inter', sans-serif", color: "#555" }}>
           <p className="text-base leading-relaxed">
-            Monike não ensina teoria de manual. Ela é CEO de 3 CNPJs, mãe atípica, neurodivergente e já teve dois burnouts tentando dar conta de tudo.
+            Estrategista de IA para negócios femininos, autora e palestrante. Empresária há mais de 18 anos, já construiu, vendeu e reconstruiu negócios do zero — mais de uma vez.
           </p>
           <p className="text-base leading-relaxed">
-            O Método Mulher no Poder nasceu da experiência real de quem errou, aprendeu e construiu negócios sólidos do zero — mais de uma vez.
+            O Método Mulher no Poder nasceu da experiência real de quem viveu cada desafio do empreendedorismo feminino. Hoje, une estratégia de negócios com inteligência artificial aplicada.
           </p>
           <p className="text-base leading-relaxed">
             Ela entende seus desafios porque já viveu cada um deles.
@@ -519,8 +519,8 @@ const Mentor = () => (
 
         <div className="flex flex-wrap gap-6">
           {[
-            { num: "3", label: "CNPJs ativos" },
-            { num: "+650", label: "alunas" },
+            { num: "18+", label: "anos empreendendo" },
+            { num: "+1.000", label: "mulheres impactadas" },
             { num: "+150h", label: "de palco" },
             { num: "+20", label: "segmentos" },
           ].map((s, i) => (
@@ -544,10 +544,10 @@ const Pricing = () => {
   const included = [
     "+20h de conteúdo em aulas de até 15min",
     "+15 cursos especializados",
+    "Aulas de IA aplicada ao negócio",
     "Hotseat ao vivo toda semana",
     "Masterclass mensal",
     "Templates e ferramentas práticas",
-    "Clube de vantagens exclusivo",
     "Comunidade ativa de empresárias",
   ];
 
@@ -728,7 +728,7 @@ const FinalCTA = () => (
           A única coisa que muda entre hoje e daqui a 6 meses é a decisão que você toma agora.
         </h2>
         <p className="text-lg text-white/90 mb-10" style={{ fontFamily: "'Inter', sans-serif" }}>
-          Pare de adiar. Pare de tentar sozinha. Entre para uma comunidade de mulheres que estão crescendo juntas — com método, apoio e resultados reais.
+          Método, networking e IA aplicada para empreendedoras que querem crescer com estrutura, não com esgotamento.
         </p>
         <a
           href={buyLink}
@@ -751,7 +751,7 @@ const LPFooter = () => (
   <footer className="py-10 px-6 text-center" style={{ backgroundColor: C.black }}>
     
     <p className="text-sm" style={{ color: "#777", fontFamily: "'Inter', sans-serif" }}>
-      © 2025 Comunidade Empresária 4.0 · Monike Kineippe
+      © 2026 Comunidade Empresária 4.0 · Monike Kineippe
     </p>
     <p className="text-xs mt-1" style={{ color: "#555", fontFamily: "'Inter', sans-serif" }}>
       Todos os direitos reservados
