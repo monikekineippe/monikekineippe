@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Section from "@/components/Section";
 import { Bot, Sparkles, BarChart3, Mic } from "lucide-react";
 import monike1 from "@/assets/monike-1.jpg";
+import precifica3dLogo from "@/assets/precifica3d-logo.png";
 
 const Index = () => {
   return (
@@ -26,9 +27,6 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Button variant="gold" size="xl" asChild>
                   <Link to="/ia-humanizada">Conhecer os programas de IA</Link>
-                </Button>
-                <Button variant="heroOutline" size="lg" asChild>
-                  <Link to="/sobre">Minha história</Link>
                 </Button>
               </div>
             </div>
@@ -127,7 +125,11 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
-              <h3 className="text-xl font-serif mb-4">Precifica3D</h3>
+              <img
+                src={precifica3dLogo}
+                alt="Precifica3D — Plataforma de precificação para impressão 3D"
+                className="h-16 object-contain mb-4"
+              />
               <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
                 Profissionais de impressão 3D no Brasil não tinham uma ferramenta confiável para precificar peças. Calculavam no achismo — e perdiam dinheiro.
               </p>
@@ -233,9 +235,6 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="gold" size="xl" asChild>
               <Link to="/diagnostico">Fazer meu diagnóstico gratuito</Link>
-            </Button>
-            <Button variant="heroOutline" size="lg" asChild>
-              <Link to="/contato">Agendar conversa</Link>
             </Button>
           </div>
         </div>
