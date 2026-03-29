@@ -18,7 +18,7 @@ const Livros = () => {
       <PageHero
         tag="Livros"
         title="Livros"
-        subtitle="Palavra boa não é a que emociona. É a que te move."
+        subtitle="Livros que nasceram da prática. Não da teoria."
       />
 
       <Section>
@@ -40,8 +40,7 @@ const Livros = () => {
               <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-secondary">Livro principal</span>
               <h2 className="text-3xl md:text-4xl font-serif mt-4 mb-6">Empreender nunca foi sorte</h2>
               <p className="text-lg text-muted-foreground font-sans leading-relaxed mb-8">
-                Descubra os segredos para transformar sua carreira e tornar-se uma líder de sucesso no mundo dos negócios. 
-                Um guia completo para mulheres que desejam conquistar seu espaço e prosperar no empreendedorismo brasileiro.
+                O mapa que eu queria ter recebido quando abri meu primeiro CNPJ aos 18 anos. Mais de 18 anos de acertos, erros e recomeços reunidos em um guia prático sobre como estruturar um negócio de verdade — com estratégia, posicionamento e a mentalidade que sustenta crescimento real.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button variant="heroOutline" size="lg" onClick={() => setSinopse(true)}>
@@ -80,7 +79,7 @@ const Livros = () => {
                 </p>
                 <Button variant="hero" className="w-full" asChild>
                   <a href="https://payfast.greenn.com.br/41713/offer/yH4WSu?b_id_1=109226&b_offer_1=sqfaxL&b_id_2=60609&b_offer_2=DX35IQ" target="_blank" rel="noopener noreferrer">
-                    QUERO O AUTOGRAFADO
+                    GARANTIR VERSÃO AUTOGRAFADA
                   </a>
                 </Button>
               </CardContent>
@@ -106,7 +105,7 @@ const Livros = () => {
                 </p>
                 <Button variant="heroOutline" className="w-full" asChild>
                   <a href="https://payfast.greenn.com.br/redirect/203943" target="_blank" rel="noopener noreferrer">
-                    QUERO E-BOOK
+                    COMPRAR E-BOOK
                   </a>
                 </Button>
               </CardContent>
@@ -134,7 +133,7 @@ const Livros = () => {
                 </p>
                 <Button variant="hero" className="w-full" asChild>
                   <a href="https://empreender.monikekineippe.com.br/empreender" target="_blank" rel="noopener noreferrer">
-                    QUERO O COMBO
+                    QUERO O COMBO COMPLETO
                   </a>
                 </Button>
               </CardContent>
@@ -150,8 +149,7 @@ const Livros = () => {
             <span className="font-sans text-sm tracking-[0.2em] uppercase text-secondary font-semibold">E-book gratuito</span>
             <h2 className="text-4xl md:text-5xl font-serif mt-4 mb-6">Quanto Cobrar?</h2>
             <p className="text-xl md:text-2xl text-muted-foreground font-sans mb-8 max-w-3xl mx-auto leading-relaxed">
-              Descubra como precificar seus serviços de forma estratégica e aumentar seus lucros. 
-              Um guia completo para empreendedoras que querem valorizar seu trabalho.
+              Um guia prático de precificação para prestadoras de serviço que querem parar de cobrar por hora e começar a cobrar por valor.
             </p>
           </div>
           
@@ -165,7 +163,7 @@ const Livros = () => {
             </div>
             <Button variant="hero" size="lg" asChild>
               <a href="https://ebookquantocobrar.lovable.app/" target="_blank" rel="noopener noreferrer">
-                QUERO MEU E-BOOK GRATUITO
+                BAIXAR E-BOOK GRATUITO
               </a>
             </Button>
           </div>
@@ -209,10 +207,10 @@ const Livros = () => {
             </div>
 
             <div className="pt-4 border-t">
-              <h4 className="font-serif text-lg mb-2">Torne-se Protagonista da sua jornada!</h4>
+              <h4 className="font-serif text-lg mb-2">Este livro é sobre verdade</h4>
               <p className="text-sm text-muted-foreground">
                 Empreender nunca foi sorte é sobre assumir o controle. É sobre transformar bagagem em negócio, 
-                e negócio em legado. Sem fantasia. Sem fórmula. Com verdade.
+                e negócio em legado. Sem fantasia. Sem fórmula. Com estrutura e com verdade.
               </p>
             </div>
           </div>
@@ -221,10 +219,9 @@ const Livros = () => {
 
       <Section>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-serif mb-4">Transforme sua Carreira</h2>
+          <h2 className="text-2xl font-serif mb-4">O que você vai encontrar</h2>
           <p className="text-lg text-muted-foreground font-sans mb-8 max-w-2xl mx-auto">
-            Mais do que um livro, é um guia completo para mulheres que desejam conquistar 
-            seu espaço e prosperar no empreendedorismo brasileiro.
+            Para mulheres que querem empreender com estrutura, não com sorte. Da fundação do negócio à escala — passando por vendas, liderança, finanças e posicionamento.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 bg-card gold-border rounded-lg">
