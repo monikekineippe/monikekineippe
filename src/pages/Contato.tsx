@@ -92,7 +92,7 @@ const Contato = () => {
               { key: "instagram", label: "Instagram", type: "text" },
             ].map((field) => (
               <div key={field.key}>
-                <label className="text-[10px] tracking-widest uppercase text-secondary font-sans block mb-1.5">{field.label}</label>
+                <label className="text-xs tracking-widest uppercase text-secondary font-sans block mb-1.5">{field.label}</label>
                 <input
                   type={field.type}
                   value={form[field.key as keyof typeof form]}
