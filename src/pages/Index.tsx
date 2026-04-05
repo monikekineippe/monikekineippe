@@ -43,8 +43,8 @@ const Index = () => {
           <div className="mt-16 pt-10 border-t border-primary-foreground/10">
             <div className="flex justify-center gap-12 md:gap-20 text-center">
               {[
-                { num: "18+", label: "anos empreendendo" },
-                { num: "1.000+", label: "mulheres impactadas" },
+                { num: "+18", label: "anos empreendendo" },
+                { num: "+1.000", label: "mulheres impactadas" },
                 { num: "1", label: "livro publicado" },
               ].map((item) => (
                 <div key={item.label}>
