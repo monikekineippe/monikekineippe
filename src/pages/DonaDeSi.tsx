@@ -182,7 +182,7 @@ const DonaDeSi = () => {
             <p><strong className="text-foreground">Entregáveis finais:</strong> oferta, scripts, rotina, CTA e funil de conversa</p>
           </div>
 
-          <div className="mt-8 p-4 bg-primary/5 rounded-lg text-sm font-sans text-muted-foreground italic">
+          <div className="mt-8 p-4 bg-primary/5 rounded-lg text-base font-sans text-muted-foreground italic">
             Na Comunidade, você evolui com rede e suporte contínuo.<br />
             Na Dona de $i, eu acelero com você — foco, correção e resultado em dias.
           </div>
