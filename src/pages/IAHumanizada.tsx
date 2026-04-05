@@ -115,7 +115,7 @@ const IAHumanizada = () => {
       <Section variant="accent">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-xl font-serif mb-6">Pra quem é</h2>
-          <div className="space-y-3 text-sm font-sans text-muted-foreground">
+          <div className="space-y-3 text-base font-sans text-muted-foreground">
             <p>Empreendedoras que querem escala com leveza.</p>
             <p>Que querem consistência sem virar refém da própria operação.</p>
             <p>Que precisam de processo, não de mais "dica".</p>
