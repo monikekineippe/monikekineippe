@@ -179,7 +179,7 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">IA aplicada</span>
           <h2 className="text-2xl md:text-3xl font-serif mt-4 mb-4">Implementação de IA e Automação para o seu negócio</h2>
-          <p className="text-primary-foreground/80 font-sans text-sm leading-relaxed max-w-2xl mx-auto mb-4">
+          <p className="text-primary-foreground/80 font-sans text-base leading-relaxed max-w-2xl mx-auto mb-4">
             Dois programas com execução real: organização operacional com IA em 45 dias ou reconstrução completa da máquina de vendas em 3 meses. Eu implemento com você — não apenas ensino.
           </p>
           <p className="text-primary-foreground/60 font-sans text-xs mb-8">
