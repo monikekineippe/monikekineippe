@@ -65,7 +65,7 @@ const Contato = () => {
             <h2 className="text-xl font-serif mb-6">Fale conosco</h2>
             <div className="space-y-4 text-sm font-sans text-muted-foreground">
               <div>
-                <span className="text-[10px] tracking-widest uppercase text-secondary block mb-1">WhatsApp</span>
+                <span className="text-xs tracking-widest uppercase text-secondary block mb-1">WhatsApp</span>
                 <a href="https://wa.me/5511972313181" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                   (11) 97231-3181 (Carine)
                 </a>
