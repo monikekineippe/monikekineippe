@@ -90,7 +90,7 @@ const IAHumanizada = () => {
               <Crown className="w-8 h-8 text-secondary mb-4" />
               <span className="font-sans text-xs tracking-[0.2em] uppercase text-secondary mb-2">3 meses</span>
               <h3 className="font-serif text-xl md:text-2xl mb-3">Sistema de Escala com IA Humanizada™</h3>
-              <p className="text-sm text-primary-foreground/70 font-sans leading-relaxed mb-6 flex-1">
+              <p className="text-base text-primary-foreground/70 font-sans leading-relaxed mb-6 flex-1">
                 Reconstrua sua máquina de vendas. Escale com estrutura previsível, posicionamento premium e IA estratégica.
               </p>
               <ul className="space-y-2 text-sm text-primary-foreground/60 font-sans mb-6">
