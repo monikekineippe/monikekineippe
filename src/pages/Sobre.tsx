@@ -117,7 +117,7 @@ const Sobre = () => {
             </div>
             <div className="text-center">
               <p className="text-foreground font-serif text-lg font-medium">Inteligência Artificial</p>
-              <p className="text-sm">Automação com essência.</p>
+              <p className="text-base">Automação com essência.</p>
             </div>
             <div className="text-center">
               <p className="text-foreground font-serif text-lg font-medium">Execução</p>
