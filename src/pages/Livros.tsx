@@ -226,7 +226,7 @@ const Livros = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 bg-card gold-border rounded-lg">
               <h3 className="font-serif text-base mb-2">Fundamentos</h3>
-              <p className="text-xs text-muted-foreground font-sans">Base sólida para empreender</p>
+              <p className="text-sm text-muted-foreground font-sans">Base sólida para empreender</p>
             </div>
             <div className="p-6 bg-card gold-border rounded-lg">
               <h3 className="font-serif text-base mb-2">Estratégias</h3>
