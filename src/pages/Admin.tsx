@@ -21,6 +21,8 @@ interface FormSubmission {
 
 const Admin = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isCheckingAuth, setIsCheckingAuth] = useState(true);
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submissions, setSubmissions] = useState<FormSubmission[]>([]);
   const [loading, setLoading] = useState(false);
@@ -28,17 +30,59 @@ const Admin = () => {
   const [selectedType, setSelectedType] = useState("all");
   const { toast } = useToast();
 
-  const handleLogin = () => {
-    if (password === "Milionariaem2026$") {
-      setIsAuthenticated(true);
-      fetchSubmissions();
-    } else {
-      toast({
-        title: "Senha incorreta",
-        description: "Tente novamente.",
-        variant: "destructive"
-      });
+  useEffect(() => {
+    const checkSession = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        const { data } = await supabase.rpc("is_admin", { _user_id: session.user.id });
+        if (data) {
+          setIsAuthenticated(true);
+          fetchSubmissions();
+        } else {
+          await supabase.auth.signOut();
+          toast({ title: "Acesso negado", description: "Você não é administradora.", variant: "destructive" });
+        }
+      }
+      setIsCheckingAuth(false);
+    };
+    checkSession();
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (event === "SIGNED_OUT") {
+        setIsAuthenticated(false);
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleLogin = async () => {
+    if (!email || !password) {
+      toast({ title: "Preencha e-mail e senha", variant: "destructive" });
+      return;
     }
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error) {
+      toast({ title: "Erro ao entrar", description: error.message, variant: "destructive" });
+      return;
+    }
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session) {
+      const { data } = await supabase.rpc("is_admin", { _user_id: session.user.id });
+      if (data) {
+        setIsAuthenticated(true);
+        fetchSubmissions();
+      } else {
+        await supabase.auth.signOut();
+        toast({ title: "Acesso negado", description: "Você não é administradora.", variant: "destructive" });
+      }
+    }
+  };
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    setIsAuthenticated(false);
+    setSubmissions([]);
   };
 
   const fetchSubmissions = async () => {
