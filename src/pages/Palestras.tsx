@@ -98,8 +98,8 @@ const Palestras = () => {
               { label: "Imersão", detail: "1 dia" },
             ].map((f, i) => (
               <div key={i} className="p-6 bg-card gold-border rounded-lg text-center">
-                <h3 className="font-serif text-sm mb-1">{f.label}</h3>
-                <p className="text-xs text-muted-foreground font-sans">{f.detail}</p>
+                <h3 className="font-serif text-base mb-1">{f.label}</h3>
+                <p className="text-sm text-muted-foreground font-sans">{f.detail}</p>
               </div>
             ))}
           </div>
