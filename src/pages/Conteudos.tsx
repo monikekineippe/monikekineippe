@@ -38,7 +38,7 @@ const Conteudos = () => {
                 )}
                 <h3 className="font-serif text-lg group-hover:text-primary transition-colors">{ch.title}</h3>
               </div>
-              <p className="text-sm text-muted-foreground font-sans">{ch.desc}</p>
+              <p className="text-base text-muted-foreground font-sans">{ch.desc}</p>
             </a>
           ))}
         </div>

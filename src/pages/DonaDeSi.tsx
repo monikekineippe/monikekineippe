@@ -223,7 +223,7 @@ const DonaDeSi = () => {
           <CtaButton>✅ Aplicar agora</CtaButton>
           <div className="mt-8 text-left max-w-md mx-auto">
             <p className="text-xs font-sans tracking-[0.2em] uppercase text-secondary mb-4">Na aplicação eu avalio:</p>
-            <ul className="space-y-2 text-sm font-sans text-muted-foreground">
+            <ul className="space-y-2 text-base font-sans text-muted-foreground">
               {[
                 "Se você já tem entrega validada",
                 "Se seu gargalo é de aceleração (não de \"começar do zero\")",
