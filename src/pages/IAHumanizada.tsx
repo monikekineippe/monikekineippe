@@ -120,7 +120,7 @@ const IAHumanizada = () => {
             <p>Que querem consistência sem virar refém da própria operação.</p>
             <p>Que precisam de processo, não de mais "dica".</p>
           </div>
-          <p className="mt-6 text-xs text-muted-foreground font-sans">
+          <p className="mt-6 text-sm text-muted-foreground font-sans">
             Você não precisa saber de tecnologia. Eu traduzo o complexo em aplicável.
           </p>
         </div>
