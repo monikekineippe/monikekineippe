@@ -171,7 +171,7 @@ const DonaDeSi = () => {
                 <div className="w-px bg-border self-stretch" />
                 <div>
                   <h3 className="font-serif text-base mb-1">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground font-sans">{step.desc}</p>
+                  <p className="text-base text-muted-foreground font-sans">{step.desc}</p>
                 </div>
               </div>
             ))}
