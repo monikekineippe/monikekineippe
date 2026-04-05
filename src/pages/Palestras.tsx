@@ -125,11 +125,11 @@ const Palestras = () => {
             <div className="flex gap-6">
               <div>
                 <p className="font-serif text-xl text-secondary">18+</p>
-                <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">anos empreendendo</p>
+                <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">anos empreendendo</p>
               </div>
               <div>
                 <p className="font-serif text-xl text-secondary">150h+</p>
-                <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">de palco</p>
+                <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">de palco</p>
               </div>
             </div>
           </div>
