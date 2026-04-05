@@ -130,13 +130,13 @@ const Index = () => {
                 alt="Precifica3D — Plataforma de precificação para impressão 3D"
                 className="h-28 md:h-36 object-contain mb-6"
               />
-              <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+              <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">
                 Profissionais de impressão 3D no Brasil não tinham uma ferramenta confiável para precificar peças. Calculavam no achismo — e perdiam dinheiro.
               </p>
-              <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+              <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">
                 Eu construí o Precifica3D: uma plataforma SaaS que calcula custos de impressão 3D com precisão — filamento, energia, depreciação, impostos, embalagem — e usa IA para sugerir margens de lucro por categoria de peça.
               </p>
-              <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-6">
+              <p className="text-muted-foreground font-sans text-base leading-relaxed mb-6">
                 Construído com IA e ferramentas no-code. Sem escrever uma linha de código manualmente. Com usuários pagantes desde o lançamento.
               </p>
               <div className="flex flex-wrap gap-4">
