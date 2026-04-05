@@ -104,7 +104,7 @@ const Index = () => {
             >
               <card.icon className="w-8 h-8 text-secondary mb-4" />
               <h3 className="text-xl md:text-2xl font-serif mb-3 group-hover:text-primary transition-colors">{card.title}</h3>
-              <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">{card.text}</p>
+              <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">{card.text}</p>
               <span className="font-sans text-xs tracking-[0.15em] uppercase text-secondary group-hover:text-primary transition-colors">
                 {card.cta} →
               </span>
