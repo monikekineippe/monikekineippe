@@ -102,8 +102,8 @@ const DonaDeSi = () => {
             <Zap className="w-6 h-6 text-secondary" />
             <h2 className="text-2xl font-serif">O que acontece em 7 dias</h2>
           </div>
-          <p className="text-sm text-muted-foreground font-sans mb-6">Em 7 dias, você sai com:</p>
-          <ul className="space-y-3 text-sm font-sans text-foreground">
+          <p className="text-base text-muted-foreground font-sans mb-6">Em 7 dias, você sai com:</p>
+          <ul className="space-y-3 text-base font-sans text-foreground">
             {[
               "Oferta em 1 frase + Oferta em 1 tela (aprovadas por mim)",
               "Script de convite + follow-up (copie e cole)",
