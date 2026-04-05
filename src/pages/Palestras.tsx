@@ -76,7 +76,7 @@ const Palestras = () => {
               { tag: "Palestra", title: "Posicionamento e previsibilidade: estrutura que sustenta" },
             ].map((item, i) => (
               <div key={i} className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 p-6 gold-border rounded-lg bg-card">
-                <span className="shrink-0 inline-block font-sans text-[10px] tracking-[0.2em] uppercase text-secondary font-semibold bg-secondary/10 px-3 py-1 rounded-full w-fit">
+                <span className="shrink-0 inline-block font-sans text-xs tracking-[0.2em] uppercase text-secondary font-semibold bg-secondary/10 px-3 py-1 rounded-full w-fit">
                   {item.tag}
                 </span>
                 <p className="font-serif text-base leading-snug">{item.title}</p>
