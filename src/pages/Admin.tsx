@@ -21,6 +21,8 @@ interface FormSubmission {
 
 const Admin = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isCheckingAuth, setIsCheckingAuth] = useState(true);
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submissions, setSubmissions] = useState<FormSubmission[]>([]);
   const [loading, setLoading] = useState(false);
@@ -28,17 +30,59 @@ const Admin = () => {
   const [selectedType, setSelectedType] = useState("all");
   const { toast } = useToast();
 
-  const handleLogin = () => {
-    if (password === "Milionariaem2026$") {
-      setIsAuthenticated(true);
-      fetchSubmissions();
-    } else {
-      toast({
-        title: "Senha incorreta",
-        description: "Tente novamente.",
-        variant: "destructive"
-      });
+  useEffect(() => {
+    const checkSession = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        const { data } = await supabase.rpc("is_admin", { _user_id: session.user.id });
+        if (data) {
+          setIsAuthenticated(true);
+          fetchSubmissions();
+        } else {
+          await supabase.auth.signOut();
+          toast({ title: "Acesso negado", description: "Você não é administradora.", variant: "destructive" });
+        }
+      }
+      setIsCheckingAuth(false);
+    };
+    checkSession();
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (event === "SIGNED_OUT") {
+        setIsAuthenticated(false);
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleLogin = async () => {
+    if (!email || !password) {
+      toast({ title: "Preencha e-mail e senha", variant: "destructive" });
+      return;
     }
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error) {
+      toast({ title: "Erro ao entrar", description: error.message, variant: "destructive" });
+      return;
+    }
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session) {
+      const { data } = await supabase.rpc("is_admin", { _user_id: session.user.id });
+      if (data) {
+        setIsAuthenticated(true);
+        fetchSubmissions();
+      } else {
+        await supabase.auth.signOut();
+        toast({ title: "Acesso negado", description: "Você não é administradora.", variant: "destructive" });
+      }
+    }
+  };
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    setIsAuthenticated(false);
+    setSubmissions([]);
   };
 
   const fetchSubmissions = async () => {
@@ -95,18 +139,32 @@ const Admin = () => {
     return types;
   };
 
+  if (isCheckingAuth) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <p className="text-muted-foreground">Verificando acesso...</p>
+      </div>
+    );
+  }
+
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
             <CardTitle>Central Administrativo</CardTitle>
-            <CardDescription>Digite a senha para acessar</CardDescription>
+            <CardDescription>Faça login com sua conta de administradora</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <Input
+              type="email"
+              placeholder="E-mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Input
               type="password"
-              placeholder="Senha de acesso"
+              placeholder="Senha"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               onKeyPress={(e) => e.key === "Enter" && handleLogin()}
@@ -126,11 +184,14 @@ const Admin = () => {
   return (
     <div className="min-h-screen bg-background p-6">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">Central Administrativo</h1>
-          <p className="text-muted-foreground">
-            Gerencie formulários e conteúdo do site
-          </p>
+        <div className="mb-8 flex justify-between items-start">
+          <div>
+            <h1 className="text-3xl font-bold mb-2">Central Administrativo</h1>
+            <p className="text-muted-foreground">
+              Gerencie formulários e conteúdo do site
+            </p>
+          </div>
+          <Button variant="outline" size="sm" onClick={handleLogout}>Sair</Button>
         </div>
 
         <Tabs defaultValue="leads" className="space-y-6">
