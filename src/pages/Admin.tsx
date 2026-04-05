@@ -129,163 +129,178 @@ const Admin = () => {
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">Central Administrativo</h1>
           <p className="text-muted-foreground">
-            Gerencie todas as submissões de formulários do site
+            Gerencie formulários e conteúdo do site
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium">Total de Leads</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-2xl font-bold">{submissions.length}</p>
-            </CardContent>
-          </Card>
-          
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium">Lapidando Diamantes</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-2xl font-bold">
-                {submissions.filter(s => s.form_type === "lapidando-diamantes").length}
-              </p>
-            </CardContent>
-          </Card>
+        <Tabs defaultValue="leads" className="space-y-6">
+          <TabsList>
+            <TabsTrigger value="leads">Leads</TabsTrigger>
+            <TabsTrigger value="blog" className="flex items-center gap-1">
+              <FileText className="w-4 h-4" /> Blog
+            </TabsTrigger>
+          </TabsList>
 
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium">Dona de $i</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-2xl font-bold">
-                {submissions.filter(s => s.form_type === "dona-de-si-aplicacao").length}
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+          <TabsContent value="leads">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-sm font-medium">Total de Leads</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-2xl font-bold">{submissions.length}</p>
+                </CardContent>
+              </Card>
+              
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-sm font-medium">Lapidando Diamantes</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-2xl font-bold">
+                    {submissions.filter(s => s.form_type === "lapidando-diamantes").length}
+                  </p>
+                </CardContent>
+              </Card>
 
-        <Card>
-          <CardHeader>
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-              <div>
-                <CardTitle>Submissões de Formulários</CardTitle>
-                <CardDescription>
-                  {filteredSubmissions.length} registros encontrados
-                </CardDescription>
-              </div>
-              
-              <div className="flex flex-wrap gap-2">
-                <Button 
-                  variant="outline" 
-                  size="sm"
-                  onClick={fetchSubmissions}
-                  disabled={loading}
-                >
-                  <Eye className="w-4 h-4 mr-1" />
-                  {loading ? "Carregando..." : "Atualizar"}
-                </Button>
-                
-                <Button 
-                  variant="outline" 
-                  size="sm"
-                  onClick={exportToCSV}
-                  disabled={filteredSubmissions.length === 0}
-                >
-                  <Download className="w-4 h-4 mr-1" />
-                  Exportar CSV
-                </Button>
-              </div>
-            </div>
-          </CardHeader>
-          
-          <CardContent>
-            <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                <Input
-                  placeholder="Pesquisar por nome, email ou conteúdo..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10"
-                />
-              </div>
-              
-              <select
-                value={selectedType}
-                onChange={(e) => setSelectedType(e.target.value)}
-                className="px-3 py-2 border rounded-md bg-background"
-              >
-                <option value="all">Todos os formulários</option>
-                {formTypes.map(type => (
-                  <option key={type} value={type}>{type}</option>
-                ))}
-              </select>
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-sm font-medium">Dona de $i</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-2xl font-bold">
+                    {submissions.filter(s => s.form_type === "dona-de-si-aplicacao").length}
+                  </p>
+                </CardContent>
+              </Card>
             </div>
 
-            <div className="rounded-md border overflow-hidden">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Data/Hora</TableHead>
-                    <TableHead>Tipo</TableHead>
-                    <TableHead>Página</TableHead>
-                    <TableHead>Dados do Lead</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {filteredSubmissions.map((submission) => (
-                    <TableRow key={submission.id}>
-                      <TableCell>
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4 text-muted-foreground" />
-                          <span className="text-sm">
-                            {new Date(submission.submitted_at).toLocaleString("pt-BR")}
-                          </span>
-                        </div>
-                      </TableCell>
-                      <TableCell>
-                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-primary/10 text-primary">
-                          {submission.form_type}
-                        </span>
-                      </TableCell>
-                      <TableCell className="font-mono text-xs">
-                        {submission.page_source}
-                      </TableCell>
-                      <TableCell>
-                        <div className="max-w-xs">
-                          {submission.data && (
-                            <div className="space-y-1 text-sm">
-                              {Object.entries(submission.data).map(([key, value]) => (
-                                <div key={key} className="flex gap-2">
-                                  <span className="font-semibold text-muted-foreground">
-                                    {key}:
-                                  </span>
-                                  <span className="break-all">{String(value)}</span>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      </TableCell>
-                    </TableRow>
-                  ))}
+            <Card>
+              <CardHeader>
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                  <div>
+                    <CardTitle>Submissões de Formulários</CardTitle>
+                    <CardDescription>
+                      {filteredSubmissions.length} registros encontrados
+                    </CardDescription>
+                  </div>
                   
-                  {filteredSubmissions.length === 0 && (
-                    <TableRow>
-                      <TableCell colSpan={4} className="text-center py-8">
-                        <div className="text-muted-foreground">
-                          {loading ? "Carregando..." : "Nenhuma submissão encontrada"}
-                        </div>
-                      </TableCell>
-                    </TableRow>
-                  )}
-                </TableBody>
-              </Table>
-            </div>
-          </CardContent>
-        </Card>
+                  <div className="flex flex-wrap gap-2">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={fetchSubmissions}
+                      disabled={loading}
+                    >
+                      <Eye className="w-4 h-4 mr-1" />
+                      {loading ? "Carregando..." : "Atualizar"}
+                    </Button>
+                    
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={exportToCSV}
+                      disabled={filteredSubmissions.length === 0}
+                    >
+                      <Download className="w-4 h-4 mr-1" />
+                      Exportar CSV
+                    </Button>
+                  </div>
+                </div>
+              </CardHeader>
+              
+              <CardContent>
+                <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                  <div className="relative flex-1">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                    <Input
+                      placeholder="Pesquisar por nome, email ou conteúdo..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="pl-10"
+                    />
+                  </div>
+                  
+                  <select
+                    value={selectedType}
+                    onChange={(e) => setSelectedType(e.target.value)}
+                    className="px-3 py-2 border rounded-md bg-background"
+                  >
+                    <option value="all">Todos os formulários</option>
+                    {formTypes.map(type => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="rounded-md border overflow-hidden">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Data/Hora</TableHead>
+                        <TableHead>Tipo</TableHead>
+                        <TableHead>Página</TableHead>
+                        <TableHead>Dados do Lead</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {filteredSubmissions.map((submission) => (
+                        <TableRow key={submission.id}>
+                          <TableCell>
+                            <div className="flex items-center gap-2">
+                              <Calendar className="w-4 h-4 text-muted-foreground" />
+                              <span className="text-sm">
+                                {new Date(submission.submitted_at).toLocaleString("pt-BR")}
+                              </span>
+                            </div>
+                          </TableCell>
+                          <TableCell>
+                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-primary/10 text-primary">
+                              {submission.form_type}
+                            </span>
+                          </TableCell>
+                          <TableCell className="font-mono text-xs">
+                            {submission.page_source}
+                          </TableCell>
+                          <TableCell>
+                            <div className="max-w-xs">
+                              {submission.data && (
+                                <div className="space-y-1 text-sm">
+                                  {Object.entries(submission.data).map(([key, value]) => (
+                                    <div key={key} className="flex gap-2">
+                                      <span className="font-semibold text-muted-foreground">
+                                        {key}:
+                                      </span>
+                                      <span className="break-all">{String(value)}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                      
+                      {filteredSubmissions.length === 0 && (
+                        <TableRow>
+                          <TableCell colSpan={4} className="text-center py-8">
+                            <div className="text-muted-foreground">
+                              {loading ? "Carregando..." : "Nenhuma submissão encontrada"}
+                            </div>
+                          </TableCell>
+                        </TableRow>
+                      )}
+                    </TableBody>
+                  </Table>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="blog">
+            <BlogAdmin />
+          </TabsContent>
+        </Tabs>
       </div>
     </div>
   );
