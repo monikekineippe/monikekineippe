@@ -177,7 +177,7 @@ const DonaDeSi = () => {
             ))}
           </div>
 
-          <div className="mt-8 p-4 gold-border rounded-lg bg-card text-sm font-sans text-muted-foreground space-y-1">
+          <div className="mt-8 p-4 gold-border rounded-lg bg-card text-base font-sans text-muted-foreground space-y-1">
             <p><strong className="text-foreground">Suporte:</strong> WhatsApp com prioridade (janelas combinadas)</p>
             <p><strong className="text-foreground">Entregáveis finais:</strong> oferta, scripts, rotina, CTA e funil de conversa</p>
           </div>
