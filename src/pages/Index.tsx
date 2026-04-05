@@ -157,7 +157,7 @@ const Index = () => {
 
             <div className="p-8 bg-primary text-primary-foreground rounded-lg border border-secondary/20">
               <p className="font-sans text-xs tracking-[0.2em] uppercase text-secondary mb-4">O que o Precifica3D faz</p>
-              <ul className="space-y-3 text-sm font-sans text-primary-foreground/80">
+              <ul className="space-y-3 text-base font-sans text-primary-foreground/80">
                 <li>→ Calcula custo real por peça (filamento, energia, depreciação)</li>
                 <li>→ IA sugere margem de lucro por categoria</li>
                 <li>→ Gestão de impressoras e histórico de orçamentos</li>
