@@ -71,7 +71,7 @@ const Contato = () => {
                 </a>
               </div>
               <div>
-                <span className="text-[10px] tracking-widest uppercase text-secondary block mb-1">E-mail</span>
+                <span className="text-xs tracking-widest uppercase text-secondary block mb-1">E-mail</span>
                 <span>contato@monikekineippe.com.br</span>
               </div>
               <div>
