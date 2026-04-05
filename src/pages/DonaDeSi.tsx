@@ -61,7 +61,7 @@ const DonaDeSi = () => {
             <h2 className="text-xl font-serif mb-6 flex items-center gap-2">
               <Check className="w-5 h-5 text-secondary" /> É pra você se:
             </h2>
-            <ul className="space-y-4 text-sm font-sans text-muted-foreground">
+            <ul className="space-y-4 text-base font-sans text-muted-foreground">
               {[
                 "Você já tem entrega validada (clientes ou histórico de venda)",
                 "Seu negócio está \"funcionando no improviso\" e você quer previsibilidade",
