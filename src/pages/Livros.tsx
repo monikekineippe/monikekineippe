@@ -238,7 +238,7 @@ const Livros = () => {
             </div>
             <div className="p-6 bg-card gold-border rounded-lg">
               <h3 className="font-serif text-base mb-2">Finanças</h3>
-              <p className="text-xs text-muted-foreground font-sans">Captação de recursos</p>
+              <p className="text-sm text-muted-foreground font-sans">Captação de recursos</p>
             </div>
           </div>
         </div>

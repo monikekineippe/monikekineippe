@@ -140,7 +140,7 @@ const Palestras = () => {
       <Section variant="card">
         <div className="max-w-xl mx-auto text-center">
           <h2 className="text-xl font-serif mb-4">Para contratar</h2>
-          <p className="text-sm text-muted-foreground font-sans mb-8">
+          <p className="text-base text-muted-foreground font-sans mb-8">
             Para convites e proposta, fale direto com a Carine.
           </p>
           <Button variant="gold" size="xl" asChild>

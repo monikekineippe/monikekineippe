@@ -103,7 +103,7 @@ const Contato = () => {
               </div>
             ))}
             <div>
-              <label className="text-[10px] tracking-widest uppercase text-secondary font-sans block mb-1.5">Mensagem</label>
+              <label className="text-xs tracking-widest uppercase text-secondary font-sans block mb-1.5">Mensagem</label>
               <textarea
                 value={form.mensagem}
                 onChange={(e) => setForm(prev => ({ ...prev, mensagem: e.target.value }))}

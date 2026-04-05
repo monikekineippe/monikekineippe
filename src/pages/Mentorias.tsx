@@ -42,9 +42,9 @@ const Mentorias = () => {
         <div className="space-y-8 max-w-3xl mx-auto">
           {programs.map((p, i) => (
             <div key={i} className="p-8 md:p-10 gold-border rounded-lg bg-card">
-              <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-secondary">{p.label}</span>
+              <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">{p.label}</span>
               <h3 className="text-xl md:text-2xl font-serif mt-2 mb-4">{p.title}</h3>
-              <p className="text-sm text-muted-foreground font-sans leading-relaxed mb-6">{p.text}</p>
+              <p className="text-base text-muted-foreground font-sans leading-relaxed mb-6">{p.text}</p>
               <Button variant="hero" size="lg" asChild>
                 {p.external ? (
                   <a href={p.link} target="_blank" rel="noopener noreferrer">{p.cta}</a>
