@@ -164,7 +164,7 @@ const Index = () => {
                 <li>→ Relatórios e exportação de dados</li>
                 <li>→ Planos Free e Pro com pagamento integrado</li>
               </ul>
-              <p className="mt-6 text-xs text-primary-foreground/50 font-sans italic">
+              <p className="mt-6 text-sm text-primary-foreground/50 font-sans italic">
                 "Se eu consegui construir um SaaS funcional com IA e no-code, imagine o que a IA pode fazer pelo seu negócio."
               </p>
             </div>
