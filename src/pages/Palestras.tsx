@@ -119,7 +119,7 @@ const Palestras = () => {
           <div className="text-center md:text-left">
             <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-4 block">Sobre a palestrante</span>
             <h2 className="text-xl font-serif mb-4">Monike Kineippe</h2>
-            <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+            <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">
               Estrategista de IA para negócios femininos, autora e palestrante. Leva ao palco o que aplica no dia a dia: inteligência artificial acessível, vendas com estrutura e posicionamento com verdade.
             </p>
             <div className="flex gap-6">
