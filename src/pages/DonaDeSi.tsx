@@ -116,7 +116,7 @@ const DonaDeSi = () => {
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-sm font-sans text-secondary font-semibold">
+          <p className="mt-6 text-base font-sans text-secondary font-semibold">
             Dinheiro em movimento. Sem perfeccionismo. Sem "postar e rezar".
           </p>
         </div>
