@@ -37,7 +37,7 @@ const Livros = () => {
 
             {/* Book info */}
             <div className="text-center lg:text-left">
-              <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-secondary">Livro principal</span>
+              <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Livro principal</span>
               <h2 className="text-3xl md:text-4xl font-serif mt-4 mb-6">Empreender nunca foi sorte</h2>
               <p className="text-lg text-muted-foreground font-sans leading-relaxed mb-8">
                 O mapa que eu queria ter recebido quando abri meu primeiro CNPJ aos 18 anos. Mais de 18 anos de acertos, erros e recomeços reunidos em um guia prático sobre como estruturar um negócio de verdade — com estratégia, posicionamento e a mentalidade que sustenta crescimento real.
