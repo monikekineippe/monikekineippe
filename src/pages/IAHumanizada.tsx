@@ -93,7 +93,7 @@ const IAHumanizada = () => {
               <p className="text-base text-primary-foreground/70 font-sans leading-relaxed mb-6 flex-1">
                 Reconstrua sua máquina de vendas. Escale com estrutura previsível, posicionamento premium e IA estratégica.
               </p>
-              <ul className="space-y-2 text-sm text-primary-foreground/60 font-sans mb-6">
+              <ul className="space-y-2 text-base text-primary-foreground/60 font-sans mb-6">
                 <li>→ Máquina de vendas estruturada</li>
                 <li>→ Automações inteligentes rodando</li>
                 <li>→ Posicionamento premium definido</li>
