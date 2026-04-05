@@ -61,7 +61,7 @@ const DonaDeSi = () => {
             <h2 className="text-xl font-serif mb-6 flex items-center gap-2">
               <Check className="w-5 h-5 text-secondary" /> É pra você se:
             </h2>
-            <ul className="space-y-4 text-sm font-sans text-muted-foreground">
+            <ul className="space-y-4 text-base font-sans text-muted-foreground">
               {[
                 "Você já tem entrega validada (clientes ou histórico de venda)",
                 "Seu negócio está \"funcionando no improviso\" e você quer previsibilidade",
@@ -79,7 +79,7 @@ const DonaDeSi = () => {
             <h2 className="text-xl font-serif mb-6 flex items-center gap-2">
               <X className="w-5 h-5 text-destructive" /> Não é pra você se:
             </h2>
-            <ul className="space-y-4 text-sm font-sans text-muted-foreground">
+            <ul className="space-y-4 text-base font-sans text-muted-foreground">
               {[
                 "Você quer ir devagar — a Dona de $i é sprint, não caminhada",
                 "Você está começando do zero absoluto",
@@ -102,8 +102,8 @@ const DonaDeSi = () => {
             <Zap className="w-6 h-6 text-secondary" />
             <h2 className="text-2xl font-serif">O que acontece em 7 dias</h2>
           </div>
-          <p className="text-sm text-muted-foreground font-sans mb-6">Em 7 dias, você sai com:</p>
-          <ul className="space-y-3 text-sm font-sans text-foreground">
+          <p className="text-base text-muted-foreground font-sans mb-6">Em 7 dias, você sai com:</p>
+          <ul className="space-y-3 text-base font-sans text-foreground">
             {[
               "Oferta em 1 frase + Oferta em 1 tela (aprovadas por mim)",
               "Script de convite + follow-up (copie e cole)",
@@ -116,7 +116,7 @@ const DonaDeSi = () => {
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-sm font-sans text-secondary font-semibold">
+          <p className="mt-6 text-base font-sans text-secondary font-semibold">
             Dinheiro em movimento. Sem perfeccionismo. Sem "postar e rezar".
           </p>
         </div>
@@ -129,8 +129,8 @@ const DonaDeSi = () => {
             <Target className="w-6 h-6 text-secondary" />
             <h2 className="text-2xl font-serif">O que acontece em 14 dias</h2>
           </div>
-          <p className="text-sm text-muted-foreground font-sans mb-6">Em 14 dias, você instala:</p>
-          <ul className="space-y-3 text-sm font-sans text-foreground">
+          <p className="text-base text-muted-foreground font-sans mb-6">Em 14 dias, você instala:</p>
+          <ul className="space-y-3 text-base font-sans text-foreground">
             {[
               "Seu processo de vendas (CTA → conversa → script → follow-up → fechamento)",
               "Sua rotina comercial mínima (pra não voltar pro improviso)",
@@ -171,18 +171,18 @@ const DonaDeSi = () => {
                 <div className="w-px bg-border self-stretch" />
                 <div>
                   <h3 className="font-serif text-base mb-1">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground font-sans">{step.desc}</p>
+                  <p className="text-base text-muted-foreground font-sans">{step.desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 p-4 gold-border rounded-lg bg-card text-sm font-sans text-muted-foreground space-y-1">
+          <div className="mt-8 p-4 gold-border rounded-lg bg-card text-base font-sans text-muted-foreground space-y-1">
             <p><strong className="text-foreground">Suporte:</strong> WhatsApp com prioridade (janelas combinadas)</p>
             <p><strong className="text-foreground">Entregáveis finais:</strong> oferta, scripts, rotina, CTA e funil de conversa</p>
           </div>
 
-          <div className="mt-8 p-4 bg-primary/5 rounded-lg text-sm font-sans text-muted-foreground italic">
+          <div className="mt-8 p-4 bg-primary/5 rounded-lg text-base font-sans text-muted-foreground italic">
             Na Comunidade, você evolui com rede e suporte contínuo.<br />
             Na Dona de $i, eu acelero com você — foco, correção e resultado em dias.
           </div>
@@ -196,7 +196,7 @@ const DonaDeSi = () => {
             <ClipboardList className="w-6 h-6 text-secondary" />
             <h2 className="text-2xl font-serif">O que você leva</h2>
           </div>
-          <ul className="space-y-3 text-sm font-sans text-foreground">
+          <ul className="space-y-3 text-base font-sans text-foreground">
             {[
               "Oferta em 1 frase + Oferta em 1 tela (versão final)",
               "Script de convite + objeções + follow-up 3 dias",
@@ -217,13 +217,13 @@ const DonaDeSi = () => {
       <Section variant="card">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl font-serif mb-4">Aplicação</h2>
-          <p className="text-sm text-muted-foreground font-sans mb-8">
+          <p className="text-base text-muted-foreground font-sans mb-8">
             A Dona de $i é limitada porque exige acompanhamento real.
           </p>
           <CtaButton>✅ Aplicar agora</CtaButton>
           <div className="mt-8 text-left max-w-md mx-auto">
             <p className="text-xs font-sans tracking-[0.2em] uppercase text-secondary mb-4">Na aplicação eu avalio:</p>
-            <ul className="space-y-2 text-sm font-sans text-muted-foreground">
+            <ul className="space-y-2 text-base font-sans text-muted-foreground">
               {[
                 "Se você já tem entrega validada",
                 "Se seu gargalo é de aceleração (não de \"começar do zero\")",

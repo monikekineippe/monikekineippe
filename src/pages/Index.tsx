@@ -49,7 +49,7 @@ const Index = () => {
               ].map((item) => (
                 <div key={item.label}>
                   <p className="font-serif text-2xl md:text-3xl text-secondary">{item.num}</p>
-                  <p className="font-sans text-[10px] md:text-xs tracking-wide uppercase text-primary-foreground/50 mt-1">{item.label}</p>
+                  <p className="font-sans text-xs md:text-sm tracking-wide uppercase text-primary-foreground/50 mt-1">{item.label}</p>
                 </div>
               ))}
             </div>
@@ -104,7 +104,7 @@ const Index = () => {
             >
               <card.icon className="w-8 h-8 text-secondary mb-4" />
               <h3 className="text-xl md:text-2xl font-serif mb-3 group-hover:text-primary transition-colors">{card.title}</h3>
-              <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">{card.text}</p>
+              <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">{card.text}</p>
               <span className="font-sans text-xs tracking-[0.15em] uppercase text-secondary group-hover:text-primary transition-colors">
                 {card.cta} →
               </span>
@@ -130,41 +130,41 @@ const Index = () => {
                 alt="Precifica3D — Plataforma de precificação para impressão 3D"
                 className="h-28 md:h-36 object-contain mb-6"
               />
-              <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+              <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">
                 Profissionais de impressão 3D no Brasil não tinham uma ferramenta confiável para precificar peças. Calculavam no achismo — e perdiam dinheiro.
               </p>
-              <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+              <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">
                 Eu construí o Precifica3D: uma plataforma SaaS que calcula custos de impressão 3D com precisão — filamento, energia, depreciação, impostos, embalagem — e usa IA para sugerir margens de lucro por categoria de peça.
               </p>
-              <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-6">
+              <p className="text-muted-foreground font-sans text-base leading-relaxed mb-6">
                 Construído com IA e ferramentas no-code. Sem escrever uma linha de código manualmente. Com usuários pagantes desde o lançamento.
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="text-center">
                   <p className="font-serif text-xl text-secondary">SaaS</p>
-                  <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">produto real</p>
+                  <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">produto real</p>
                 </div>
                 <div className="text-center">
                   <p className="font-serif text-xl text-secondary">IA</p>
-                  <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">margem inteligente</p>
+                  <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">margem inteligente</p>
                 </div>
                 <div className="text-center">
                   <p className="font-serif text-xl text-secondary">No-code</p>
-                  <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">sem programação</p>
+                  <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">sem programação</p>
                 </div>
               </div>
             </div>
 
             <div className="p-8 bg-primary text-primary-foreground rounded-lg border border-secondary/20">
               <p className="font-sans text-xs tracking-[0.2em] uppercase text-secondary mb-4">O que o Precifica3D faz</p>
-              <ul className="space-y-3 text-sm font-sans text-primary-foreground/80">
+              <ul className="space-y-3 text-base font-sans text-primary-foreground/80">
                 <li>→ Calcula custo real por peça (filamento, energia, depreciação)</li>
                 <li>→ IA sugere margem de lucro por categoria</li>
                 <li>→ Gestão de impressoras e histórico de orçamentos</li>
                 <li>→ Relatórios e exportação de dados</li>
                 <li>→ Planos Free e Pro com pagamento integrado</li>
               </ul>
-              <p className="mt-6 text-xs text-primary-foreground/50 font-sans italic">
+              <p className="mt-6 text-sm text-primary-foreground/50 font-sans italic">
                 "Se eu consegui construir um SaaS funcional com IA e no-code, imagine o que a IA pode fazer pelo seu negócio."
               </p>
             </div>
@@ -179,10 +179,10 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">IA aplicada</span>
           <h2 className="text-2xl md:text-3xl font-serif mt-4 mb-4">Implementação de IA e Automação para o seu negócio</h2>
-          <p className="text-primary-foreground/80 font-sans text-sm leading-relaxed max-w-2xl mx-auto mb-4">
+          <p className="text-primary-foreground/80 font-sans text-base leading-relaxed max-w-2xl mx-auto mb-4">
             Dois programas com execução real: organização operacional com IA em 45 dias ou reconstrução completa da máquina de vendas em 3 meses. Eu implemento com você — não apenas ensino.
           </p>
-          <p className="text-primary-foreground/60 font-sans text-xs mb-8">
+          <p className="text-primary-foreground/60 font-sans text-sm mb-8">
             Você não precisa saber de tecnologia. Eu traduzo o complexo em aplicável.
           </p>
           <Button variant="gold" size="xl" asChild>
@@ -229,7 +229,7 @@ const Index = () => {
       <section className="bg-primary text-primary-foreground section-padding text-center">
         <div className="container mx-auto max-w-2xl px-6">
           <h2 className="text-2xl md:text-4xl font-serif mb-4">Não sabe por onde começar?</h2>
-          <p className="text-primary-foreground/70 font-sans text-sm mb-8 max-w-lg mx-auto">
+          <p className="text-primary-foreground/70 font-sans text-base mb-8 max-w-lg mx-auto">
             O diagnóstico gratuito identifica o gargalo do seu negócio e indica o caminho mais inteligente para você.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

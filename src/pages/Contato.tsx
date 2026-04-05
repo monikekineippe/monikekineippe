@@ -65,17 +65,17 @@ const Contato = () => {
             <h2 className="text-xl font-serif mb-6">Fale conosco</h2>
             <div className="space-y-4 text-sm font-sans text-muted-foreground">
               <div>
-                <span className="text-[10px] tracking-widest uppercase text-secondary block mb-1">WhatsApp</span>
+                <span className="text-xs tracking-widest uppercase text-secondary block mb-1">WhatsApp</span>
                 <a href="https://wa.me/5511972313181" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                   (11) 97231-3181 (Carine)
                 </a>
               </div>
               <div>
-                <span className="text-[10px] tracking-widest uppercase text-secondary block mb-1">E-mail</span>
+                <span className="text-xs tracking-widest uppercase text-secondary block mb-1">E-mail</span>
                 <span>contato@monikekineippe.com.br</span>
               </div>
               <div>
-                <span className="text-[10px] tracking-widest uppercase text-secondary block mb-1">Palestras</span>
+                <span className="text-xs tracking-widest uppercase text-secondary block mb-1">Palestras</span>
                 <a href="https://wa.me/5511972313181" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                   WhatsApp Carine
                 </a>
@@ -92,7 +92,7 @@ const Contato = () => {
               { key: "instagram", label: "Instagram", type: "text" },
             ].map((field) => (
               <div key={field.key}>
-                <label className="text-[10px] tracking-widest uppercase text-secondary font-sans block mb-1.5">{field.label}</label>
+                <label className="text-xs tracking-widest uppercase text-secondary font-sans block mb-1.5">{field.label}</label>
                 <input
                   type={field.type}
                   value={form[field.key as keyof typeof form]}
@@ -103,7 +103,7 @@ const Contato = () => {
               </div>
             ))}
             <div>
-              <label className="text-[10px] tracking-widest uppercase text-secondary font-sans block mb-1.5">Mensagem</label>
+              <label className="text-xs tracking-widest uppercase text-secondary font-sans block mb-1.5">Mensagem</label>
               <textarea
                 value={form.mensagem}
                 onChange={(e) => setForm(prev => ({ ...prev, mensagem: e.target.value }))}

@@ -37,7 +37,7 @@ const Livros = () => {
 
             {/* Book info */}
             <div className="text-center lg:text-left">
-              <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-secondary">Livro principal</span>
+              <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Livro principal</span>
               <h2 className="text-3xl md:text-4xl font-serif mt-4 mb-6">Empreender nunca foi sorte</h2>
               <p className="text-lg text-muted-foreground font-sans leading-relaxed mb-8">
                 O mapa que eu queria ter recebido quando abri meu primeiro CNPJ aos 18 anos. Mais de 18 anos de acertos, erros e recomeços reunidos em um guia prático sobre como estruturar um negócio de verdade — com estratégia, posicionamento e a mentalidade que sustenta crescimento real.
@@ -226,19 +226,19 @@ const Livros = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 bg-card gold-border rounded-lg">
               <h3 className="font-serif text-base mb-2">Fundamentos</h3>
-              <p className="text-xs text-muted-foreground font-sans">Base sólida para empreender</p>
+              <p className="text-sm text-muted-foreground font-sans">Base sólida para empreender</p>
             </div>
             <div className="p-6 bg-card gold-border rounded-lg">
               <h3 className="font-serif text-base mb-2">Estratégias</h3>
-              <p className="text-xs text-muted-foreground font-sans">Crescimento sustentável</p>
+              <p className="text-sm text-muted-foreground font-sans">Crescimento sustentável</p>
             </div>
             <div className="p-6 bg-card gold-border rounded-lg">
               <h3 className="font-serif text-base mb-2">Liderança</h3>
-              <p className="text-xs text-muted-foreground font-sans">Gestão de equipes</p>
+              <p className="text-sm text-muted-foreground font-sans">Gestão de equipes</p>
             </div>
             <div className="p-6 bg-card gold-border rounded-lg">
               <h3 className="font-serif text-base mb-2">Finanças</h3>
-              <p className="text-xs text-muted-foreground font-sans">Captação de recursos</p>
+              <p className="text-sm text-muted-foreground font-sans">Captação de recursos</p>
             </div>
           </div>
         </div>

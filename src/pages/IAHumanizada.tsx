@@ -25,7 +25,7 @@ const IAHumanizada = () => {
             ].map((item, i) => (
               <div key={i} className="p-8 gold-border rounded-lg bg-card flex items-start gap-4">
                 <item.icon className="w-6 h-6 text-secondary mt-0.5 shrink-0" />
-                <p className="font-sans text-sm text-muted-foreground">{item.text}</p>
+                <p className="font-sans text-base text-muted-foreground">{item.text}</p>
               </div>
             ))}
           </div>
@@ -44,8 +44,8 @@ const IAHumanizada = () => {
             ].map((s) => (
               <div key={s.step} className="text-center">
                 <span className="text-2xl font-serif text-secondary">{s.step}</span>
-                <h3 className="font-serif text-sm mt-2 mb-1">{s.title}</h3>
-                <p className="text-xs text-muted-foreground font-sans">{s.text}</p>
+               <h3 className="font-serif text-base mt-2 mb-1">{s.title}</h3>
+                <p className="text-sm text-muted-foreground font-sans">{s.text}</p>
               </div>
             ))}
           </div>
@@ -64,12 +64,12 @@ const IAHumanizada = () => {
             {/* Programa 1 */}
             <div className="p-8 md:p-10 bg-primary text-primary-foreground rounded-lg border border-secondary/20 flex flex-col">
               <Settings className="w-8 h-8 text-secondary mb-4" />
-              <span className="font-sans text-[10px] tracking-[0.2em] uppercase text-secondary mb-2">45 dias</span>
+              <span className="font-sans text-xs tracking-[0.2em] uppercase text-secondary mb-2">45 dias</span>
               <h3 className="font-serif text-xl md:text-2xl mb-3">Implementação IA com Alma™</h3>
-              <p className="text-sm text-primary-foreground/70 font-sans leading-relaxed mb-6 flex-1">
+              <p className="text-base text-primary-foreground/70 font-sans leading-relaxed mb-6 flex-1">
                 Organização estratégica + automação inteligente para acabar com a sobrecarga e colocar sua operação no piloto automático.
               </p>
-              <ul className="space-y-2 text-sm text-primary-foreground/60 font-sans mb-6">
+              <ul className="space-y-2 text-base text-primary-foreground/60 font-sans mb-6">
                 <li>→ Processos organizados e documentados</li>
                 <li>→ Automações implementadas com IA</li>
                 <li>→ Funil ajustado e otimizado</li>
@@ -88,12 +88,12 @@ const IAHumanizada = () => {
             {/* Programa 2 */}
             <div className="p-8 md:p-10 bg-primary text-primary-foreground rounded-lg border border-secondary/20 flex flex-col">
               <Crown className="w-8 h-8 text-secondary mb-4" />
-              <span className="font-sans text-[10px] tracking-[0.2em] uppercase text-secondary mb-2">3 meses</span>
+              <span className="font-sans text-xs tracking-[0.2em] uppercase text-secondary mb-2">3 meses</span>
               <h3 className="font-serif text-xl md:text-2xl mb-3">Sistema de Escala com IA Humanizada™</h3>
-              <p className="text-sm text-primary-foreground/70 font-sans leading-relaxed mb-6 flex-1">
+              <p className="text-base text-primary-foreground/70 font-sans leading-relaxed mb-6 flex-1">
                 Reconstrua sua máquina de vendas. Escale com estrutura previsível, posicionamento premium e IA estratégica.
               </p>
-              <ul className="space-y-2 text-sm text-primary-foreground/60 font-sans mb-6">
+              <ul className="space-y-2 text-base text-primary-foreground/60 font-sans mb-6">
                 <li>→ Máquina de vendas estruturada</li>
                 <li>→ Automações inteligentes rodando</li>
                 <li>→ Posicionamento premium definido</li>
@@ -115,12 +115,12 @@ const IAHumanizada = () => {
       <Section variant="accent">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-xl font-serif mb-6">Pra quem é</h2>
-          <div className="space-y-3 text-sm font-sans text-muted-foreground">
+          <div className="space-y-3 text-base font-sans text-muted-foreground">
             <p>Empreendedoras que querem escala com leveza.</p>
             <p>Que querem consistência sem virar refém da própria operação.</p>
             <p>Que precisam de processo, não de mais "dica".</p>
           </div>
-          <p className="mt-6 text-xs text-muted-foreground font-sans">
+          <p className="mt-6 text-sm text-muted-foreground font-sans">
             Você não precisa saber de tecnologia. Eu traduzo o complexo em aplicável.
           </p>
         </div>
@@ -139,10 +139,10 @@ const IAHumanizada = () => {
           <div className="text-center md:text-left">
             <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Quem implementa</span>
             <h2 className="text-2xl font-serif mt-3 mb-6">Monike Kineippe</h2>
-            <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+            <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">
               Estrategista de IA para negócios femininos. Mais de 18 anos empreendendo, autora e criadora de ferramentas com IA — incluindo a CoruJah e o Precifica3D (SaaS com usuários pagantes).
             </p>
-            <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4 italic">
+            <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4 italic">
               "Eu não ensino IA como teoria. Eu sento com você, entendo sua operação e implemento o que faz sentido. Sem programês. Sem complicação."
             </p>
           </div>
@@ -152,7 +152,7 @@ const IAHumanizada = () => {
       <Section>
         <div className="text-center">
           <h2 className="text-xl font-serif mb-4">Não sabe qual programa é para você?</h2>
-          <p className="text-sm text-muted-foreground font-sans mb-8 max-w-lg mx-auto">
+          <p className="text-base text-muted-foreground font-sans mb-8 max-w-lg mx-auto">
             O diagnóstico gratuito identifica o gargalo do seu negócio e indica o caminho mais inteligente.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

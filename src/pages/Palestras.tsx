@@ -50,7 +50,7 @@ const Palestras = () => {
                 <h3 className="font-serif text-lg md:text-xl leading-snug mb-4">
                   {p.title}
                 </h3>
-                <p className="text-sm font-sans text-primary-foreground/60 leading-relaxed mt-auto">
+                <p className="text-base font-sans text-primary-foreground/60 leading-relaxed mt-auto">
                   {p.desc}
                 </p>
               </div>
@@ -76,7 +76,7 @@ const Palestras = () => {
               { tag: "Palestra", title: "Posicionamento e previsibilidade: estrutura que sustenta" },
             ].map((item, i) => (
               <div key={i} className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 p-6 gold-border rounded-lg bg-card">
-                <span className="shrink-0 inline-block font-sans text-[10px] tracking-[0.2em] uppercase text-secondary font-semibold bg-secondary/10 px-3 py-1 rounded-full w-fit">
+                <span className="shrink-0 inline-block font-sans text-xs tracking-[0.2em] uppercase text-secondary font-semibold bg-secondary/10 px-3 py-1 rounded-full w-fit">
                   {item.tag}
                 </span>
                 <p className="font-serif text-base leading-snug">{item.title}</p>
@@ -98,8 +98,8 @@ const Palestras = () => {
               { label: "Imersão", detail: "1 dia" },
             ].map((f, i) => (
               <div key={i} className="p-6 bg-card gold-border rounded-lg text-center">
-                <h3 className="font-serif text-sm mb-1">{f.label}</h3>
-                <p className="text-xs text-muted-foreground font-sans">{f.detail}</p>
+                <h3 className="font-serif text-base mb-1">{f.label}</h3>
+                <p className="text-sm text-muted-foreground font-sans">{f.detail}</p>
               </div>
             ))}
           </div>
@@ -119,17 +119,17 @@ const Palestras = () => {
           <div className="text-center md:text-left">
             <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-4 block">Sobre a palestrante</span>
             <h2 className="text-xl font-serif mb-4">Monike Kineippe</h2>
-            <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+            <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">
               Estrategista de IA para negócios femininos, autora e palestrante. Leva ao palco o que aplica no dia a dia: inteligência artificial acessível, vendas com estrutura e posicionamento com verdade.
             </p>
             <div className="flex gap-6">
               <div>
                 <p className="font-serif text-xl text-secondary">18+</p>
-                <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">anos empreendendo</p>
+                <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">anos empreendendo</p>
               </div>
               <div>
                 <p className="font-serif text-xl text-secondary">150h+</p>
-                <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">de palco</p>
+                <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">de palco</p>
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@ const Palestras = () => {
       <Section variant="card">
         <div className="max-w-xl mx-auto text-center">
           <h2 className="text-xl font-serif mb-4">Para contratar</h2>
-          <p className="text-sm text-muted-foreground font-sans mb-8">
+          <p className="text-base text-muted-foreground font-sans mb-8">
             Para convites e proposta, fale direto com a Carine.
           </p>
           <Button variant="gold" size="xl" asChild>

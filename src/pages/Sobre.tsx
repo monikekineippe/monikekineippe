@@ -113,15 +113,15 @@ const Sobre = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-4">
             <div className="text-center">
               <p className="text-foreground font-serif text-lg font-medium">Estratégia</p>
-              <p className="text-sm">Estrutura e direção.</p>
+              <p className="text-base">Estrutura e direção.</p>
             </div>
             <div className="text-center">
               <p className="text-foreground font-serif text-lg font-medium">Inteligência Artificial</p>
-              <p className="text-sm">Automação com essência.</p>
+              <p className="text-base">Automação com essência.</p>
             </div>
             <div className="text-center">
               <p className="text-foreground font-serif text-lg font-medium">Execução</p>
-              <p className="text-sm">Implementação real.</p>
+              <p className="text-base">Implementação real.</p>
             </div>
           </div>
         </div>
