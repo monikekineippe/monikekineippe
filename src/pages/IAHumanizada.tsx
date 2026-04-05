@@ -69,7 +69,7 @@ const IAHumanizada = () => {
               <p className="text-base text-primary-foreground/70 font-sans leading-relaxed mb-6 flex-1">
                 Organização estratégica + automação inteligente para acabar com a sobrecarga e colocar sua operação no piloto automático.
               </p>
-              <ul className="space-y-2 text-sm text-primary-foreground/60 font-sans mb-6">
+              <ul className="space-y-2 text-base text-primary-foreground/60 font-sans mb-6">
                 <li>→ Processos organizados e documentados</li>
                 <li>→ Automações implementadas com IA</li>
                 <li>→ Funil ajustado e otimizado</li>
