@@ -129,8 +129,8 @@ const DonaDeSi = () => {
             <Target className="w-6 h-6 text-secondary" />
             <h2 className="text-2xl font-serif">O que acontece em 14 dias</h2>
           </div>
-          <p className="text-sm text-muted-foreground font-sans mb-6">Em 14 dias, você instala:</p>
-          <ul className="space-y-3 text-sm font-sans text-foreground">
+          <p className="text-base text-muted-foreground font-sans mb-6">Em 14 dias, você instala:</p>
+          <ul className="space-y-3 text-base font-sans text-foreground">
             {[
               "Seu processo de vendas (CTA → conversa → script → follow-up → fechamento)",
               "Sua rotina comercial mínima (pra não voltar pro improviso)",
