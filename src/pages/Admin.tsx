@@ -139,18 +139,32 @@ const Admin = () => {
     return types;
   };
 
+  if (isCheckingAuth) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <p className="text-muted-foreground">Verificando acesso...</p>
+      </div>
+    );
+  }
+
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
             <CardTitle>Central Administrativo</CardTitle>
-            <CardDescription>Digite a senha para acessar</CardDescription>
+            <CardDescription>Faça login com sua conta de administradora</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <Input
+              type="email"
+              placeholder="E-mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Input
               type="password"
-              placeholder="Senha de acesso"
+              placeholder="Senha"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               onKeyPress={(e) => e.key === "Enter" && handleLogin()}
