@@ -142,15 +142,15 @@ const Index = () => {
               <div className="flex flex-wrap gap-4">
                 <div className="text-center">
                   <p className="font-serif text-xl text-secondary">SaaS</p>
-                  <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">produto real</p>
+                  <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">produto real</p>
                 </div>
                 <div className="text-center">
                   <p className="font-serif text-xl text-secondary">IA</p>
-                  <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">margem inteligente</p>
+                  <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">margem inteligente</p>
                 </div>
                 <div className="text-center">
                   <p className="font-serif text-xl text-secondary">No-code</p>
-                  <p className="font-sans text-[10px] tracking-wide uppercase text-muted-foreground">sem programação</p>
+                  <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">sem programação</p>
                 </div>
               </div>
             </div>
