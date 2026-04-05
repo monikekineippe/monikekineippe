@@ -152,7 +152,7 @@ const IAHumanizada = () => {
       <Section>
         <div className="text-center">
           <h2 className="text-xl font-serif mb-4">Não sabe qual programa é para você?</h2>
-          <p className="text-sm text-muted-foreground font-sans mb-8 max-w-lg mx-auto">
+          <p className="text-base text-muted-foreground font-sans mb-8 max-w-lg mx-auto">
             O diagnóstico gratuito identifica o gargalo do seu negócio e indica o caminho mais inteligente.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

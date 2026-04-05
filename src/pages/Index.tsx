@@ -182,7 +182,7 @@ const Index = () => {
           <p className="text-primary-foreground/80 font-sans text-base leading-relaxed max-w-2xl mx-auto mb-4">
             Dois programas com execução real: organização operacional com IA em 45 dias ou reconstrução completa da máquina de vendas em 3 meses. Eu implemento com você — não apenas ensino.
           </p>
-          <p className="text-primary-foreground/60 font-sans text-xs mb-8">
+          <p className="text-primary-foreground/60 font-sans text-sm mb-8">
             Você não precisa saber de tecnologia. Eu traduzo o complexo em aplicável.
           </p>
           <Button variant="gold" size="xl" asChild>
