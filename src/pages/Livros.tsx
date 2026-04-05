@@ -7,7 +7,7 @@ import { useState } from "react";
 import livroTablet1 from "@/assets/livro-tablet-1.png";
 import livroTablet2 from "@/assets/livro-tablet-2.png";
 import livroFisicoAutora from "@/assets/livro-fisico-autora.png";
-import livroCombo from "@/assets/livro-combo.png";
+
 import ebookQuantoCobrar from "@/assets/ebook-quanto-cobrar-2.png";
 
 const Livros = () => {
