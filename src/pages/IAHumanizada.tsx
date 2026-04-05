@@ -139,7 +139,7 @@ const IAHumanizada = () => {
           <div className="text-center md:text-left">
             <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Quem implementa</span>
             <h2 className="text-2xl font-serif mt-3 mb-6">Monike Kineippe</h2>
-            <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+            <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">
               Estrategista de IA para negócios femininos. Mais de 18 anos empreendendo, autora e criadora de ferramentas com IA — incluindo a CoruJah e o Precifica3D (SaaS com usuários pagantes).
             </p>
             <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4 italic">
