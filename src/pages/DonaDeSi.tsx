@@ -196,7 +196,7 @@ const DonaDeSi = () => {
             <ClipboardList className="w-6 h-6 text-secondary" />
             <h2 className="text-2xl font-serif">O que você leva</h2>
           </div>
-          <ul className="space-y-3 text-sm font-sans text-foreground">
+          <ul className="space-y-3 text-base font-sans text-foreground">
             {[
               "Oferta em 1 frase + Oferta em 1 tela (versão final)",
               "Script de convite + objeções + follow-up 3 dias",
