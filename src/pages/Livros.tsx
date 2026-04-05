@@ -56,11 +56,11 @@ const Livros = () => {
             <p className="text-muted-foreground font-sans">Comece sua jornada empreendedora hoje mesmo</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Versão Física */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {/* Combo Autografado */}
             <Card className="gold-border">
               <CardHeader className="text-center">
-                <CardTitle className="font-serif text-xl">Versão Física</CardTitle>
+                <CardTitle className="font-serif text-xl">Combo Autografado</CardTitle>
                 <CardDescription>Exemplar autografado pela autora</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
@@ -71,15 +71,15 @@ const Livros = () => {
                     className="w-48 h-48 mx-auto rounded-lg shadow-lg object-cover"
                   />
                 </div>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-base text-muted-foreground mb-4">
                   Receba seu exemplar autografado pela autora, em sua residência em até 10 dias úteis.
                 </p>
-                <p className="text-sm font-semibold text-secondary mb-6">
-                  Bônus: Marca Página Exclusivo
+                <p className="text-base font-semibold text-secondary mb-6">
+                  Bônus: Marca Página Exclusivo + Grupo de Networking Valio$o no WhatsApp
                 </p>
                 <Button variant="hero" className="w-full" asChild>
                   <a href="https://payfast.greenn.com.br/41713/offer/yH4WSu?b_id_1=109226&b_offer_1=sqfaxL&b_id_2=60609&b_offer_2=DX35IQ" target="_blank" rel="noopener noreferrer">
-                    GARANTIR VERSÃO AUTOGRAFADA
+                    GARANTIR COMBO AUTOGRAFADO
                   </a>
                 </Button>
               </CardContent>
@@ -99,41 +99,13 @@ const Livros = () => {
                     className="w-48 h-48 mx-auto rounded-lg shadow-lg object-cover"
                   />
                 </div>
-                <p className="text-sm text-muted-foreground mb-6">
+                <p className="text-base text-muted-foreground mb-6">
                   Acesso imediato ao conteúdo completo digital. Leia em qualquer dispositivo e aproveite recursos 
                   interativos exclusivos da versão digital.
                 </p>
                 <Button variant="heroOutline" className="w-full" asChild>
                   <a href="https://payfast.greenn.com.br/redirect/203943" target="_blank" rel="noopener noreferrer">
                     COMPRAR E-BOOK
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Combo */}
-            <Card className="gold-border bg-secondary/10">
-              <CardHeader className="text-center">
-                <CardTitle className="font-serif text-xl">COMBO</CardTitle>
-                <CardDescription>Melhor opção</CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <div className="mb-4">
-                  <img
-                    src={livroCombo}
-                    alt="Combo Livro Físico + Digital"
-                    className="w-48 h-48 mx-auto rounded-lg shadow-lg object-cover"
-                  />
-                </div>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Comece a ler imediatamente enquanto aguarda seu exemplar autografado chegar.
-                </p>
-                <p className="text-sm font-semibold text-secondary mb-6">
-                  Ambas Versões + acesso ao Grupo de Networking Valio$o
-                </p>
-                <Button variant="hero" className="w-full" asChild>
-                  <a href="https://payfast.greenn.com.br/41713/offer/yH4WSu" target="_blank" rel="noopener noreferrer">
-                    QUERO O COMBO COMPLETO
                   </a>
                 </Button>
               </CardContent>
