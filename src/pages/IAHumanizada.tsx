@@ -142,7 +142,7 @@ const IAHumanizada = () => {
             <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">
               Estrategista de IA para negócios femininos. Mais de 18 anos empreendendo, autora e criadora de ferramentas com IA — incluindo a CoruJah e o Precifica3D (SaaS com usuários pagantes).
             </p>
-            <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4 italic">
+            <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4 italic">
               "Eu não ensino IA como teoria. Eu sento com você, entendo sua operação e implemento o que faz sentido. Sem programês. Sem complicação."
             </p>
           </div>
