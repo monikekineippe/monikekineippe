@@ -217,7 +217,7 @@ const DonaDeSi = () => {
       <Section variant="card">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl font-serif mb-4">Aplicação</h2>
-          <p className="text-sm text-muted-foreground font-sans mb-8">
+          <p className="text-base text-muted-foreground font-sans mb-8">
             A Dona de $i é limitada porque exige acompanhamento real.
           </p>
           <CtaButton>✅ Aplicar agora</CtaButton>
