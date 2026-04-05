@@ -9,6 +9,7 @@ const navItems = [
   { label: "IA & Automação", path: "/ia-humanizada" },
   { label: "Palestras", path: "/palestras" },
   { label: "Livros", path: "/livros" },
+  { label: "Blog", path: "/blog" },
   { label: "Contato", path: "/contato" },
 ];
 
