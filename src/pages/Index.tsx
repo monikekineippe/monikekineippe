@@ -229,7 +229,7 @@ const Index = () => {
       <section className="bg-primary text-primary-foreground section-padding text-center">
         <div className="container mx-auto max-w-2xl px-6">
           <h2 className="text-2xl md:text-4xl font-serif mb-4">Não sabe por onde começar?</h2>
-          <p className="text-primary-foreground/70 font-sans text-sm mb-8 max-w-lg mx-auto">
+          <p className="text-primary-foreground/70 font-sans text-base mb-8 max-w-lg mx-auto">
             O diagnóstico gratuito identifica o gargalo do seu negócio e indica o caminho mais inteligente para você.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
