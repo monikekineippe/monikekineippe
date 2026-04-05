@@ -121,7 +121,7 @@ const Sobre = () => {
             </div>
             <div className="text-center">
               <p className="text-foreground font-serif text-lg font-medium">Execução</p>
-              <p className="text-sm">Implementação real.</p>
+              <p className="text-base">Implementação real.</p>
             </div>
           </div>
         </div>
