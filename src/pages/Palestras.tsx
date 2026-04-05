@@ -50,7 +50,7 @@ const Palestras = () => {
                 <h3 className="font-serif text-lg md:text-xl leading-snug mb-4">
                   {p.title}
                 </h3>
-                <p className="text-sm font-sans text-primary-foreground/60 leading-relaxed mt-auto">
+                <p className="text-base font-sans text-primary-foreground/60 leading-relaxed mt-auto">
                   {p.desc}
                 </p>
               </div>
