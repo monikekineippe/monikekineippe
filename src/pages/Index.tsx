@@ -49,7 +49,7 @@ const Index = () => {
               ].map((item) => (
                 <div key={item.label}>
                   <p className="font-serif text-2xl md:text-3xl text-secondary">{item.num}</p>
-                  <p className="font-sans text-[10px] md:text-xs tracking-wide uppercase text-primary-foreground/50 mt-1">{item.label}</p>
+                  <p className="font-sans text-xs md:text-sm tracking-wide uppercase text-primary-foreground/50 mt-1">{item.label}</p>
                 </div>
               ))}
             </div>
