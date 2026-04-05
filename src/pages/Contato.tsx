@@ -75,7 +75,7 @@ const Contato = () => {
                 <span>contato@monikekineippe.com.br</span>
               </div>
               <div>
-                <span className="text-[10px] tracking-widest uppercase text-secondary block mb-1">Palestras</span>
+                <span className="text-xs tracking-widest uppercase text-secondary block mb-1">Palestras</span>
                 <a href="https://wa.me/5511972313181" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                   WhatsApp Carine
                 </a>
