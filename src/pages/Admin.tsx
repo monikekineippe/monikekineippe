@@ -184,11 +184,14 @@ const Admin = () => {
   return (
     <div className="min-h-screen bg-background p-6">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">Central Administrativo</h1>
-          <p className="text-muted-foreground">
-            Gerencie formulários e conteúdo do site
-          </p>
+        <div className="mb-8 flex justify-between items-start">
+          <div>
+            <h1 className="text-3xl font-bold mb-2">Central Administrativo</h1>
+            <p className="text-muted-foreground">
+              Gerencie formulários e conteúdo do site
+            </p>
+          </div>
+          <Button variant="outline" size="sm" onClick={handleLogout}>Sair</Button>
         </div>
 
         <Tabs defaultValue="leads" className="space-y-6">
