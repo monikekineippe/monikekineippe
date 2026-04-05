@@ -44,8 +44,8 @@ const IAHumanizada = () => {
             ].map((s) => (
               <div key={s.step} className="text-center">
                 <span className="text-2xl font-serif text-secondary">{s.step}</span>
-                <h3 className="font-serif text-sm mt-2 mb-1">{s.title}</h3>
-                <p className="text-xs text-muted-foreground font-sans">{s.text}</p>
+               <h3 className="font-serif text-base mt-2 mb-1">{s.title}</h3>
+                <p className="text-sm text-muted-foreground font-sans">{s.text}</p>
               </div>
             ))}
           </div>
