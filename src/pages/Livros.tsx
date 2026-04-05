@@ -132,7 +132,7 @@ const Livros = () => {
                   Ambas Versões + acesso ao Grupo de Networking Valio$o
                 </p>
                 <Button variant="hero" className="w-full" asChild>
-                  <a href="https://empreender.monikekineippe.com.br/empreender" target="_blank" rel="noopener noreferrer">
+                  <a href="https://payfast.greenn.com.br/41713/offer/yH4WSu" target="_blank" rel="noopener noreferrer">
                     QUERO O COMBO COMPLETO
                   </a>
                 </Button>
