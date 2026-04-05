@@ -66,7 +66,7 @@ const IAHumanizada = () => {
               <Settings className="w-8 h-8 text-secondary mb-4" />
               <span className="font-sans text-xs tracking-[0.2em] uppercase text-secondary mb-2">45 dias</span>
               <h3 className="font-serif text-xl md:text-2xl mb-3">Implementação IA com Alma™</h3>
-              <p className="text-sm text-primary-foreground/70 font-sans leading-relaxed mb-6 flex-1">
+              <p className="text-base text-primary-foreground/70 font-sans leading-relaxed mb-6 flex-1">
                 Organização estratégica + automação inteligente para acabar com a sobrecarga e colocar sua operação no piloto automático.
               </p>
               <ul className="space-y-2 text-sm text-primary-foreground/60 font-sans mb-6">
