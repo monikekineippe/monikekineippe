@@ -139,7 +139,7 @@ const Index = () => {
               <p className="text-muted-foreground font-sans text-base leading-relaxed mb-6">
                 Construído com IA e ferramentas no-code. Sem escrever uma linha de código manualmente. Com usuários pagantes desde o lançamento.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mb-6">
                 <div className="text-center">
                   <p className="font-serif text-xl text-secondary">SaaS</p>
                   <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">produto real</p>
@@ -153,6 +153,9 @@ const Index = () => {
                   <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">sem programação</p>
                 </div>
               </div>
+              <Button variant="gold" size="lg" asChild>
+                <a href="https://precifica3d.lovable.app/" target="_blank" rel="noopener noreferrer">Conhecer o Precifica3D →</a>
+              </Button>
             </div>
 
             <div className="p-8 bg-primary text-primary-foreground rounded-lg border border-secondary/20">
