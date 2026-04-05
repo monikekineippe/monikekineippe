@@ -25,7 +25,7 @@ const IAHumanizada = () => {
             ].map((item, i) => (
               <div key={i} className="p-8 gold-border rounded-lg bg-card flex items-start gap-4">
                 <item.icon className="w-6 h-6 text-secondary mt-0.5 shrink-0" />
-                <p className="font-sans text-sm text-muted-foreground">{item.text}</p>
+                <p className="font-sans text-base text-muted-foreground">{item.text}</p>
               </div>
             ))}
           </div>
