@@ -4,8 +4,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
-import { Download, Eye, Search, Calendar } from "lucide-react";
+import { Download, Eye, Search, Calendar, FileText } from "lucide-react";
+import BlogAdmin from "@/components/admin/BlogAdmin";
 
 interface FormSubmission {
   id: string;
