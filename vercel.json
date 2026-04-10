@@ -22,5 +22,11 @@
       "destination": "https://monikekineippe.com.br/empresaria-40",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!assets/).*)",
+      "destination": "/index.html"
+    }
   ]
 }
