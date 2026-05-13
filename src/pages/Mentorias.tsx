@@ -15,6 +15,14 @@ const Mentorias = () => {
       external: false,
     },
     {
+      title: "Venda $em Vender",
+      label: "Individual",
+      text: "Mentoria focada em vendas naturais e autênticas. Aprenda a vender sem parecer que está vendendo, com técnicas de persuasão elegante e alinhadas ao seu estilo.",
+      cta: "Conhecer o programa",
+      link: "/venda-sem-vender",
+      external: false,
+    },
+    {
       title: "Comunidade Empresária 4.0",
       label: "Ecossistema",
       text: "Ecossistema e networking para quem carrega tudo e não quer mais 'sobreviver'.",

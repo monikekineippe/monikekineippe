@@ -10,6 +10,7 @@ import Diagnostico from "./pages/Diagnostico";
 import CoruJah from "./pages/CoruJah";
 import Mentorias from "./pages/Mentorias";
 import DonaDeSi from "./pages/DonaDeSi";
+import VendaSemVender from "./pages/VendaSemVender";
 
 import Empresaria40 from "./pages/Empresaria40";
 import IAHumanizada from "./pages/IAHumanizada";
@@ -44,6 +45,7 @@ const App = () => (
               <Route path="/diagnostico" element={<Diagnostico />} />
               <Route path="/mentorias" element={<Mentorias />} />
               <Route path="/dona-de-si" element={<DonaDeSi />} />
+              <Route path="/venda-sem-vender" element={<VendaSemVender />} />
               
               <Route path="/ia-humanizada" element={<IAHumanizada />} />
               <Route path="/palestras" element={<Palestras />} />
