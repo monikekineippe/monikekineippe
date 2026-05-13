@@ -33,7 +33,7 @@ const Palestras = () => {
       />
 
       {/* PALESTRAS EM DESTAQUE */}
-      <Section>
+      <Section id="palestras">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-serif mb-12 text-center">
             Palestras em destaque
@@ -60,7 +60,7 @@ const Palestras = () => {
       </Section>
 
       {/* WORKSHOPS, AULAS E TREINAMENTOS */}
-      <Section variant="accent">
+      <Section variant="accent" id="treinamentos">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-serif mb-10 text-center">Workshops, Aulas e Treinamentos</h2>
           <div className="space-y-4">
