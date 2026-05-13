@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Section from "@/components/Section";
-import { Bot, Sparkles, BarChart3, Mic } from "lucide-react";
+import { Bot, Sparkles, BarChart3, Mic, Gem, Users } from "lucide-react";
 import monike1 from "@/assets/monike-1.jpg";
 import precifica3dLogo from "@/assets/precifica3d-logo.png";
 
@@ -83,9 +83,16 @@ const Index = () => {
               link: "/corujah",
             },
             {
-              icon: BarChart3,
-              title: "Mentorias & Workshop",
-              text: "Aceleração individual (Dona de $i), Workshop de Vendas (Venda $em Vender) e Comunidade com networking para quem não quer crescer sozinha.",
+              icon: Gem,
+              title: "Mentoria e Aceleração",
+              text: "Dona de $i: aceleração individual de 14 dias para colocar dinheiro em movimento e instalar um sistema real de vendas no seu negócio.",
+              cta: "Conhecer a Dona de $i",
+              link: "/dona-de-si",
+            },
+            {
+              icon: Users,
+              title: "Método$ e Comunidade",
+              text: "Workshop Venda $em Vender e a Comunidade Empresária 4.0 — método, networking e ecossistema para quem não quer crescer sozinha.",
               cta: "Conhecer as opções",
               link: "/mentorias",
             },
