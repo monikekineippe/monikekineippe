@@ -60,7 +60,7 @@ const Palestras = () => {
       </Section>
 
       {/* WORKSHOPS, AULAS E TREINAMENTOS */}
-      <Section variant="accent">
+      <Section variant="accent" id="treinamentos">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-serif mb-10 text-center">Workshops, Aulas e Treinamentos</h2>
           <div className="space-y-4">

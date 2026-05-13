@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Section from "@/components/Section";
-import { Bot, Sparkles, BarChart3, Mic, Gem, Users } from "lucide-react";
+import { Bot, Sparkles, Mic, Gem, Users, GraduationCap } from "lucide-react";
 import monike1 from "@/assets/monike-1.jpg";
 import precifica3dLogo from "@/assets/precifica3d-logo.png";
 
@@ -98,10 +98,17 @@ const Index = () => {
             },
             {
               icon: Mic,
-              title: "Palestras e Treinamentos",
-              text: "IA aplicada, vendas, posicionamento e estrutura. Para eventos, equipes e comunidades.",
-              cta: "Solicitar proposta",
-              link: "/palestras",
+              title: "Palestras",
+              text: "Provocações que ficam: IA aplicada, vendas com verdade e posicionamento com estrutura. Para eventos e congressos.",
+              cta: "Ver palestras",
+              link: "/palestras#palestras",
+            },
+            {
+              icon: GraduationCap,
+              title: "Treinamentos",
+              text: "Workshops, aulas práticas e imersões para equipes e comunidades. Conteúdo aplicável, com execução real.",
+              cta: "Ver treinamentos",
+              link: "/palestras#treinamentos",
             },
           ].map((card) => (
             <Link
