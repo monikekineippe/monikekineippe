@@ -1,259 +1,397 @@
-import { useState } from "react";
-import Section from "@/components/Section";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import logoIcon from "@/assets/logo-icon.png";
-import sobre9 from "@/assets/sobre-9.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, X, ArrowRight, Heart, MessageCircle, Calendar, ClipboardList } from "lucide-react";
-import DonaDeSiForm from "@/components/DonaDeSiForm";
+import monikeProfile from "@/assets/monike-1.jpg";
+
+const CTA_LINK = "https://payfast.greenn.com.br/102443/offer/cX9FFF?b_id_1=120590&b_offer_1=IAzycE";
 
 const VendaSemVender = () => {
-  const [formOpen, setFormOpen] = useState(false);
-
-  const CtaButton = ({ children }: { children: React.ReactNode }) => (
-    <Button variant="gold" size="xl" className="whitespace-normal px-6 md:px-12" onClick={() => setFormOpen(true)}>
-      {children}
-    </Button>
-  );
+  const handleCTAClick = () => {
+    // Tracking Pixel/GA
+    if (typeof window !== "undefined") {
+      // @ts-ignore
+      if (window.fbq) window.fbq('track', 'InitiateCheckout');
+      // @ts-ignore
+      if (window.gtag) window.gtag('event', 'begin_checkout');
+    }
+  };
 
   return (
-    <>
-      <DonaDeSiForm open={formOpen} onOpenChange={setFormOpen} />
+    <div className="min-h-screen bg-[#F5F0E8] font-sans selection:bg-[#B8973A] selection:text-[#1A1A1A]">
+      <Helmet>
+        <title>Venda $em Vender, domine a venda invisível, Monike Kineippe</title>
+        <meta name="description" content="Método para mentoras, consultoras, assistentes virtuais e terapeutas fecharem clientes em conversas casuais sem nunca parecer que estão vendendo. R$147 no lançamento." />
+        <meta property="og:title" content="Venda $em Vender, domine a venda invisível, Monike Kineippe" />
+        <meta property="og:description" content="Domine a venda invisível e feche clientes em conversas casuais. Método exclusivo por R$147." />
+        {/* Adicione outras tags de Pixel/GA conforme necessário */}
+      </Helmet>
 
-      {/* HERO */}
-      <div className="section-padding bg-primary text-primary-foreground text-center">
-        <div className="container mx-auto max-w-3xl">
-          <img src={logoIcon} alt="Monike Kineippe" className="w-20 h-20 mx-auto mb-6 object-contain" />
-          <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-4">Mentoria Individual</span>
-          <h1 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-4">
-            Venda $em Vender
+      {/* 1. HERO SECTION */}
+      <section className="min-h-[90vh] flex items-center bg-[#1A1A1A] text-[#F5F0E8] py-24 md:py-32 relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-[1100px] text-center z-10">
+          <span className="inline-block text-[#B8973A] text-xs tracking-[0.3em] uppercase mb-8 font-medium animate-fade-in">
+            PARA MENTORAS, CONSULTORAS, ASSISTENTES VIRTUAIS E TERAPEUTAS
+          </span>
+          <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-8 max-w-4xl mx-auto animate-fade-up">
+            Domine a venda invisível.
           </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/90 font-serif leading-relaxed max-w-2xl mx-auto mb-2">
-            Aprenda a vender com leveza e autenticidade.<br />
-            Sem pressão. Sem manipulação. Sem parecer vendedora.
+          <p className="font-serif italic text-2xl md:text-3xl text-[#F5F0E8]/90 mb-10 max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            Feche clientes em conversas casuais sem nunca parecer que está vendendo.
           </p>
-          <p className="text-sm md:text-base text-primary-foreground/60 font-sans leading-relaxed max-w-xl mx-auto mt-6">
-            Uma mentoria para mulheres que querem vender mais sem perder sua essência.<br />
-            Estratégia + prática + ajustes em tempo real.
+          <p className="text-lg md:text-xl text-[#F5F0E8]/70 leading-relaxed mb-12 max-w-[720px] mx-auto animate-fade-up" style={{ animationDelay: "0.4s" }}>
+            O método que transforma cafés, eventos e conversas de bastidor em fonte real de novos clientes. Sem script forçado, sem pressão, sem aquela sensação de estar empurrando algo.
           </p>
-          <div className="mt-10">
-            <CtaButton>Quero aplicar para o Venda $em Vender</CtaButton>
+          <div className="animate-fade-up" style={{ animationDelay: "0.6s" }}>
+            <Button 
+              className="bg-[#B8973A] hover:bg-[#6B1C2A] text-[#1A1A1A] hover:text-[#F5F0E8] text-lg px-12 py-8 h-auto rounded-sm transition-all duration-300 font-semibold"
+              onClick={handleCTAClick}
+              asChild
+            >
+              <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
+                Quero dominar a venda invisível, R$147
+              </a>
+            </Button>
+            <p className="mt-4 text-[#F5F0E8]/70 text-sm">
+              De R$297 por R$147 no lançamento, pagamento único, acesso vitalício
+            </p>
           </div>
-          <div className="mt-10 w-16 h-px bg-secondary mx-auto" />
         </div>
-      </div>
+        {/* Linha dourada sutil no fundo */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] h-24 bg-[#B8973A]/30"></div>
+      </section>
 
-      {/* FOTO */}
-      <Section>
-        <div className="max-w-xs mx-auto">
-          <img
-            src={sobre9}
-            alt="Monike Kineippe"
-            className="rounded-lg w-full object-cover aspect-square premium-shadow"
-          />
-        </div>
-      </Section>
-
-      {/* PARA QUEM É / NÃO É */}
-      <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-          <div>
-            <h2 className="text-xl font-serif mb-6 flex items-center gap-2">
-              <Check className="w-5 h-5 text-secondary" /> É pra você se:
-            </h2>
-            <ul className="space-y-4 text-base font-sans text-muted-foreground">
-              {[
-                "Você tem um bom produto/serviço mas sente dificuldade em vender",
-                "Você evita fazer ofertas porque teme parecer 'chata' ou 'insistente'",
-                "Você quer vender de forma alinhada aos seus valores",
-                "Você está pronta para praticar e receber feedback direto",
-              ].map((t, i) => (
-                <li key={i} className="flex gap-3 items-start">
-                  <Check className="w-4 h-4 text-secondary mt-0.5 shrink-0" />
-                  <span>{t}</span>
+      {/* 2. O PROBLEMA REAL */}
+      <section className="bg-[#F5F0E8] text-[#1A1A1A] py-24 md:py-32">
+        <div className="container mx-auto px-6 max-w-[720px]">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-12 leading-tight">
+            Você não tem problema de venda. Você tem um problema de método.
+          </h2>
+          <div className="space-y-8 text-lg text-[#4A4A4A] leading-[1.7]">
+            <p>Você já percebeu que o jeito tradicional de vender não combina com o que você faz?</p>
+            <p>
+              Uma terapeuta não pode fechar venda como quem vende curso. Uma mentora perde autoridade se pressiona. Uma consultora vira inconveniente quando insiste. Uma assistente virtual desaparece no meio de propostas frias que ninguém responde.
+            </p>
+            <p>
+              Você vende relação, confiança, transformação. E o marketing tradicional te ensina a vender como se fosse produto de prateleira.
+            </p>
+            
+            <div className="pt-8">
+              <h3 className="text-[#1A1A1A] font-serif text-2xl mb-6">O resultado é o que você já vive:</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-[#B8973A] mt-2.5 shrink-0 rounded-full"></span>
+                  <span>Conversas boas que não viram cliente.</span>
                 </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className="text-xl font-serif mb-6 flex items-center gap-2">
-              <X className="w-5 h-5 text-destructive" /> Não é pra você se:
-            </h2>
-            <ul className="space-y-4 text-base font-sans text-muted-foreground">
-              {[
-                "Você quer fórmulas mágicas de persuasão agressiva",
-                "Você não está disposta a praticar conversas de venda",
-                "Você acredita que vender é sinônimo de enganar",
-              ].map((t, i) => (
-                <li key={i} className="flex gap-3 items-start">
-                  <X className="w-4 h-4 text-destructive mt-0.5 shrink-0" />
-                  <span>{t}</span>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-[#B8973A] mt-2.5 shrink-0 rounded-full"></span>
+                  <span>Eventos cheios que rendem zero proposta.</span>
                 </li>
-              ))}
-            </ul>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-[#B8973A] mt-2.5 shrink-0 rounded-full"></span>
+                  <span>Cafés inspiradores que terminam num "depois a gente se fala".</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-[#B8973A] mt-2.5 shrink-0 rounded-full"></span>
+                  <span>A sensação de que vender bem é pra outro tipo de pessoa.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <p className="font-serif italic text-2xl pt-8 text-[#1A1A1A]">
+              Não é. O problema nunca foi você. Foi o método.
+            </p>
           </div>
         </div>
-      </Section>
+      </section>
 
-      {/* O QUE VOCÊ VAI APRENDER */}
-      <Section variant="accent">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <Heart className="w-6 h-6 text-secondary" />
-            <h2 className="text-2xl font-serif">O que você vai aprender</h2>
+      {/* 3. A VIRADA DE CHAVE */}
+      <section className="bg-[#1A1A1A] text-[#F5F0E8] py-24 md:py-32">
+        <div className="container mx-auto px-6 max-w-[720px]">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-12 leading-tight">
+            Existe um jeito de vender onde o cliente decide comprar antes de você pedir.
+          </h2>
+          <div className="space-y-8 text-lg text-[#F5F0E8]/80 leading-[1.7]">
+            <p className="text-2xl text-[#F5F0E8] font-serif">Chama-se venda invisível.</p>
+            <p>Não é técnica de manipulação. Não é gatilho mental decorado. Não é script de closer agressivo.</p>
+            <p>
+              É o oposto. É a arte de conduzirmos uma conversa de tal forma que a pessoa do outro lado chega na decisão de comprar sozinha, sentindo que foi escolha dela, porque foi mesmo.
+            </p>
+            <p className="text-[#B8973A] font-medium">Você não vende. Você cria o contexto onde a venda acontece.</p>
+            
+            <div className="pt-8">
+              <h3 className="text-[#F5F0E8] font-serif text-2xl mb-6">E quando você domina isso, três coisas mudam:</h3>
+              <ul className="space-y-6">
+                <li className="flex items-start gap-4">
+                  <span className="text-[#B8973A] font-serif text-2xl">01</span>
+                  <span>Você para de depender de lançamentos, campanhas e exaustão pra vender.</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="text-[#B8973A] font-serif text-2xl">02</span>
+                  <span>Suas conversas casuais passam a render clientes de verdade.</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="text-[#B8973A] font-serif text-2xl">03</span>
+                  <span>Você cobra mais e ouve sim mais vezes, porque o valor fica óbvio antes do preço aparecer.</span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <p className="text-base text-muted-foreground font-sans mb-6">Durante a mentoria, você desenvolve:</p>
-          <ul className="space-y-3 text-base font-sans text-foreground">
-            {[
-              "Mentalidade de abundância e merecimento (vender é servir)",
-              "Técnicas de conversa natural que conduzem à venda sem forçar",
-              "Como lidar com objeções de forma elegante e efetiva",
-              "Script de oferta que soa como conversa, não como pitch",
-              "Estratégias de follow-up que mantêm relacionamento (não incomodam)",
-            ].map((t, i) => (
-              <li key={i} className="flex gap-3 items-start">
-                <ArrowRight className="w-4 h-4 text-secondary mt-0.5 shrink-0" />
-                <span>{t}</span>
-              </li>
-            ))}
-          </ul>
         </div>
-      </Section>
+      </section>
 
-      {/* COMO FUNCIONA */}
-      <Section>
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-8">
-            <Calendar className="w-6 h-6 text-secondary" />
-            <h2 className="text-2xl font-serif">Como funciona</h2>
+      {/* 4. O MÉTODO (3 PILARES) */}
+      <section className="bg-[#F5F0E8] text-[#1A1A1A] py-24 md:py-32">
+        <div className="container mx-auto px-6 max-w-[1100px]">
+          <div className="text-center mb-20">
+            <span className="inline-block text-[#B8973A] text-xs tracking-[0.3em] uppercase mb-4 font-medium">
+              O MÉTODO
+            </span>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Venda $em Vender</h2>
+            <p className="text-xl text-[#4A4A4A] max-w-2xl mx-auto">Três pilares para transformar qualquer conversa em oportunidade real de venda.</p>
           </div>
-          <p className="text-xs font-sans tracking-[0.2em] uppercase text-secondary mb-8">
-            Formato: encontros individuais, online + suporte por WhatsApp
-          </p>
 
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { num: "01", title: "Diagnóstico da sua relação com vendas", desc: "Identificamos crenças limitantes, padrões que te sabotam e oportunidades imediatas." },
-              { num: "02", title: "Construção da sua oferta conversacional", desc: "Criamos juntas a forma de apresentar seu produto de modo natural e alinhado." },
-              { num: "03", title: "Prática com feedback em tempo real", desc: "Você vende, eu observo, corrijo e refinamos na hora." },
-              { num: "04", title: "Sistema de vendas leve e repetível", desc: "Você sai com um processo que pode usar todos os dias sem desconforto." },
-            ].map((step, i) => (
-              <div key={i} className="flex gap-4 items-start">
-                <div className="w-12 shrink-0 text-right">
-                  <span className="text-xs font-sans font-semibold text-secondary">{step.num}</span>
-                </div>
-                <div className="w-px bg-border self-stretch" />
-                <div>
-                  <h3 className="font-serif text-base mb-1">{step.title}</h3>
-                  <p className="text-base text-muted-foreground font-sans">{step.desc}</p>
-                </div>
+              {
+                title: "Posicionamento Estratégico",
+                desc: "Como ser percebida como autoridade antes mesmo de abrir a boca pra falar do seu serviço. A construção de credibilidade que faz o cliente querer comprar de você."
+              },
+              {
+                title: "Neurovendas com Verdade",
+                desc: "Os gatilhos reais de decisão de compra, explicados sem manipulação. A linguagem que ativa desejo sem soar comercial. Como o cérebro decide comprar, e como você se alinha com isso de forma ética."
+              },
+              {
+                title: "Fechamento Invisível",
+                desc: "A técnica de levar a pessoa ao sim sem pressão, sem insistência, sem a sensação de agora vai pedir o dinheiro. O fechamento que parece continuação natural da conversa."
+              }
+            ].map((pilar, idx) => (
+              <div key={idx} className="bg-white/50 p-10 border border-[#B8973A]/20 flex flex-col items-center text-center transition-all hover:border-[#B8973A]/50">
+                <span className="text-[#B8973A] font-serif text-3xl mb-6">0{idx + 1}</span>
+                <h3 className="font-serif text-2xl mb-4">{pilar.title}</h3>
+                <div className="w-12 h-px bg-[#B8973A] mb-6"></div>
+                <p className="text-[#4A4A4A] leading-relaxed">{pilar.desc}</p>
               </div>
             ))}
           </div>
-
-          <div className="mt-8 p-4 gold-border rounded-lg bg-card text-base font-sans text-muted-foreground space-y-1">
-            <p><strong className="text-foreground">Suporte:</strong> WhatsApp com prioridade entre sessões</p>
-            <p><strong className="text-foreground">Entregáveis finais:</strong> script personalizado, roteiro de conversa, plano de ação</p>
-          </div>
         </div>
-      </Section>
+      </section>
 
-      {/* ENTREGÁVEIS */}
-      <Section variant="accent">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <ClipboardList className="w-6 h-6 text-secondary" />
-            <h2 className="text-2xl font-serif">O que você leva</h2>
-          </div>
-          <ul className="space-y-3 text-base font-sans text-foreground">
-            {[
-              "Script de abordagem e oferta personalizado para seu negócio",
-              "Roteiro de conversa para WhatsApp e reuniões",
-              "Técnicas de handling de objeções adaptadas ao seu estilo",
-              "Checklist de follow-up que mantém o relacionamento",
-              "Plano de ação de 30 dias para implementar sozinha",
-            ].map((t, i) => (
-              <li key={i} className="flex gap-3 items-start">
-                <Check className="w-4 h-4 text-secondary mt-0.5 shrink-0" />
-                <span>{t}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Section>
-
-      {/* APLICAÇÃO */}
-      <Section variant="card">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl font-serif mb-4">Aplicação</h2>
-          <p className="text-base text-muted-foreground font-sans mb-8">
-            O Venda $em Vender é limitado para garantir atenção individual de qualidade.
-          </p>
-          <CtaButton>Quero aplicar agora</CtaButton>
-          <div className="mt-8 text-left max-w-md mx-auto">
-            <p className="text-xs font-sans tracking-[0.2em] uppercase text-secondary mb-4">Na aplicação eu avalio:</p>
-            <ul className="space-y-2 text-base font-sans text-muted-foreground">
-              {[
-                "Se você já tem um produto ou serviço para vender",
-                "Se está disposta a praticar e receber feedback direto",
-                "Se tem disponibilidade para as sessões e execução entre elas",
-              ].map((t, i) => (
-                <li key={i} className="flex gap-2 items-start">
-                  <span className="text-secondary">—</span>
-                  <span>{t}</span>
+      {/* 5. O QUE VOCÊ RECEBE */}
+      <section className="bg-[#1A1A1A] text-[#F5F0E8] py-24 md:py-32">
+        <div className="container mx-auto px-6 max-w-[800px]">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-16 text-center">Tudo que está incluído</h2>
+          
+          <div className="space-y-16">
+            <div className="bg-white/5 p-8 md:p-12 border border-[#B8973A]/20">
+              <h3 className="text-[#B8973A] font-serif text-2xl mb-8 flex items-center gap-4">
+                <span className="w-8 h-px bg-[#B8973A]"></span>
+                Workshop Venda $em Vender — 6 aulas
+              </h3>
+              <p className="text-[#F5F0E8]/70 mb-8 italic">Formato workshop, não curso enlatado. Energia de evento ao vivo, com dinâmica prática para aplicação imediata.</p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
+                <li className="flex gap-3">
+                  <span className="text-[#B8973A]">→</span> Aula 1, Apresentação
                 </li>
-              ))}
-            </ul>
+                <li className="flex gap-3">
+                  <span className="text-[#B8973A]">→</span> Aula 2, Por que vender parece difícil
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-[#B8973A]">→</span> Aula 3, O Método
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-[#B8973A]">→</span> Aula 4, Perguntas e Respostas
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-[#B8973A]">→</span> Aula 5, Dinâmica, aprenda na prática
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-[#B8973A]">→</span> Aula 6, Encerramento
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-8">
+              <h3 className="text-[#B8973A] font-serif text-2xl text-center mb-10">Bônus exclusivos de implementação</h3>
+              <div className="grid grid-cols-1 gap-6">
+                {[
+                  { title: "Kit Conversas que Convertem", desc: "Banco de frases de abertura, perguntas de qualificação e frases de virada de objeção." },
+                  { title: "Mapa da Venda Invisível", desc: "PDF visual com o passo a passo de uma conversa do zero ao sim, adaptado pra cada perfil." },
+                  { title: "Templates Pós-Conversa", desc: "Modelos prontos de mensagem, áudio de WhatsApp e proposta que se sustenta sozinha." }
+                ].map((bonus, i) => (
+                  <div key={i} className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 border-b border-white/10 pb-6">
+                    <span className="text-[#B8973A] font-serif text-xl shrink-0">Bônus 0{i+1}</span>
+                    <div>
+                      <h4 className="font-serif text-xl mb-1">{bonus.title}</h4>
+                      <p className="text-[#F5F0E8]/60">{bonus.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-center pt-8 border-t border-white/10">
+              <h3 className="font-serif text-2xl mb-2">Acesso vitalício</h3>
+              <p className="text-[#F5F0E8]/60 italic">Estude no seu ritmo. Revise quando quiser. Aplique quando fizer sentido.</p>
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
 
-      {/* FAQ */}
-      <Section>
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-2xl font-serif mb-8 text-center">Perguntas frequentes</h2>
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="faq-1">
-              <AccordionTrigger className="font-serif text-base text-left">
-                "Qual a diferença entre Venda $em Vender e a Dona de $i?"
-              </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground font-sans">
-                A Dona de $i é uma aceleração completa de negócio em 14 dias (oferta + vendas + sistema). O Venda $em Vender foca especificamente na habilidade de vender de forma natural e autêntica — é para quem já tem negócio mas sente dificuldade na conversa de venda.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="faq-2">
-              <AccordionTrigger className="font-serif text-base text-left">
-                "E se eu tiver muito medo de vender?"
-              </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground font-sans">
-                Esse é exatamente o público do programa. Trabalhamos crenças limitantes na primeira sessão e você pratica em ambiente seguro comigo antes de ir para o mercado.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="faq-3">
-              <AccordionTrigger className="font-serif text-base text-left">
-                "Quanto tempo dura a mentoria?"
-              </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground font-sans">
-                O programa tem duração de 4 semanas, com encontros semanais de 60 minutos + suporte por WhatsApp entre sessões.
-              </AccordionContent>
-            </AccordionItem>
+      {/* 6. PARA QUEM É */}
+      <section className="bg-[#F5F0E8] text-[#1A1A1A] py-24 md:py-32">
+        <div className="container mx-auto px-6 max-w-[1100px]">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-20 text-center">Este método é pra você?</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="bg-white/40 p-12 border-l-4 border-[#B8973A]">
+              <h3 className="font-serif text-3xl mb-8">Sim, se você...</h3>
+              <ul className="space-y-6 text-lg">
+                {[
+                  "É mentora, consultora, assistente virtual, terapeuta ou presta serviço com a sua própria voz.",
+                  "Sente que vende pelo boca a boca e pela sorte, e quer trocar isso por método.",
+                  "Quer cobrar mais sem se sentir gananciosa.",
+                  "Acredita que vender bem não precisa custar sua essência."
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-4">
+                    <span className="text-[#B8973A] font-bold">✓</span>
+                    <span className="text-[#4A4A4A]">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-[#1A1A1A]/5 p-12 border-l-4 border-[#1A1A1A]/30">
+              <h3 className="font-serif text-3xl mb-8">Não, se você...</h3>
+              <ul className="space-y-6 text-lg">
+                {[
+                  "Procura fórmula mágica, atalho ou promessa de ficar rica em 30 dias.",
+                  "Quer técnicas de pressão e manipulação.",
+                  "Não está disposta a aplicar o que aprender."
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-4">
+                    <span className="text-[#6B1C2A] font-bold">✕</span>
+                    <span className="text-[#4A4A4A]">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. SOBRE MONIKE */}
+      <section className="bg-[#1A1A1A] text-[#F5F0E8] py-24 md:py-32">
+        <div className="container mx-auto px-6 max-w-[1100px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div className="relative group">
+              <img 
+                src={monikeProfile} 
+                alt="Monike Kineippe" 
+                className="grayscale contrast-125 transition-all duration-700 group-hover:grayscale-0 w-full max-w-md mx-auto md:ml-0"
+              />
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 border-r-2 border-b-2 border-[#B8973A] hidden md:block"></div>
+            </div>
+            <div className="space-y-8">
+              <span className="inline-block text-[#B8973A] text-xs tracking-[0.3em] uppercase font-medium">QUEM TE ENSINA</span>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold">Monike Kineippe</h2>
+              <div className="space-y-6 text-lg text-[#F5F0E8]/70 leading-[1.7]">
+                <p>Há mais de 18 anos ajudo mulheres empreendedoras a transformarem conhecimento em renda previsível, com estrutura e verdade.</p>
+                <p>Já impactei mais de 5.000 mulheres, escrevi 2 livros, e construí um ecossistema completo de soluções para empreendedoras que querem crescer sem se perder.</p>
+                <p>O método Venda $em Vender nasceu da prática. Foi testado, ajustado e validado em workshops presenciais antes de virar este programa.</p>
+                <p>Você está aprendendo com alguém que vende, ensina a vender, e construiu um negócio que se sustenta exatamente do que ensina aqui.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. OPORTUNIDADE DO LANÇAMENTO */}
+      <section className="bg-[#F5F0E8] text-[#1A1A1A] py-24 md:py-32">
+        <div className="container mx-auto px-6 max-w-[720px] text-center">
+          <span className="inline-block text-[#B8973A] text-xs tracking-[0.3em] uppercase mb-4 font-medium">LANÇAMENTO</span>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8">Você está entre as primeiras</h2>
+          <div className="space-y-8 text-lg text-[#4A4A4A] mb-12">
+            <p>Este é o primeiro lançamento aberto do Venda $em Vender fora do formato presencial.</p>
+            <p>As alunas desta turma vão construir os primeiros depoimentos públicos do método. É uma oportunidade rara de entrar antes que o preço suba, antes da página ficar cheia de prova social, antes do método virar referência.</p>
+          </div>
+          <div className="bg-white p-12 border-2 border-[#B8973A] relative">
+            <p className="font-serif text-2xl mb-2">Quem entra agora paga <span className="text-[#B8973A] font-bold">R$147</span>.</p>
+            <p className="text-[#4A4A4A] italic text-lg opacity-70">Nas próximas turmas, o investimento será R$297.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. FECHAMENTO E CTA FINAL */}
+      <section className="bg-[#1A1A1A] text-[#F5F0E8] py-24 md:py-32">
+        <div className="container mx-auto px-6 max-w-[800px] text-center">
+          <h2 className="font-serif text-4xl md:text-6xl font-bold mb-10 leading-tight">
+            Você já tem valor. Só falta dominar a venda invisível.
+          </h2>
+          <div className="space-y-8 text-lg text-[#F5F0E8]/70 leading-relaxed mb-16">
+            <p>Vender não é sobre falar mais. É sobre conduzir melhor.</p>
+            <p>Se você chegou até aqui, é porque sabe que precisa de método, não de mais conteúdo gratuito perdido por aí. R$147 é menos do que você cobra em uma sessão, em um atendimento, em uma proposta. E pode ser a virada que destrava todas as próximas.</p>
+          </div>
+          
+          <div>
+            <Button 
+              className="bg-[#B8973A] hover:bg-[#6B1C2A] text-[#1A1A1A] hover:text-[#F5F0E8] text-xl px-12 py-8 h-auto rounded-sm transition-all duration-300 font-semibold mb-6 w-full md:w-auto"
+              onClick={handleCTAClick}
+              asChild
+            >
+              <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
+                Quero acessar o Venda $em Vender por R$147
+              </a>
+            </Button>
+            <p className="text-[#F5F0E8]/50 text-sm">
+              Acesso imediato, pagamento único, 7 dias de garantia incondicional
+            </p>
+          </div>
+
+          <div className="mt-20 p-8 border border-[#B8973A]/40 max-w-lg mx-auto">
+            <h4 className="font-serif text-xl mb-4 text-[#B8973A]">Garantia Incondicional</h4>
+            <p className="text-[#F5F0E8]/60 leading-relaxed">Se nos primeiros 7 dias você sentir que o método não é pra você, devolvemos 100% do valor. Sem perguntas, sem burocracia.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 10. FAQ */}
+      <section className="bg-[#F5F0E8] text-[#1A1A1A] py-24 md:py-32">
+        <div className="container mx-auto px-6 max-w-[720px]">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-16 text-center">Perguntas que talvez você esteja se fazendo</h2>
+          
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {[
+              { q: "1. Funciona pra quem ainda não tem audiência grande?", a: "Sim. Venda invisível é justamente o método pra quem vende em conversas reais, não em massa." },
+              { q: "2. Quanto tempo leva pra aplicar?", a: "Você pode aplicar na próxima conversa. O método é prático, não teórico." },
+              { q: "3. E se eu não conseguir aplicar?", a: "Você tem 7 dias de garantia. Risco zero." },
+              { q: "4. As aulas têm prazo?", a: "Não. Acesso vitalício, no seu ritmo." },
+              { q: "5. Funciona pra vender serviço de ticket alto?", a: "Funciona ainda melhor. Ticket alto exige confiança, e confiança é exatamente o que a venda invisível constrói." }
+            ].map((faq, i) => (
+              <AccordionItem key={i} value={`faq-${i}`} className="border-b border-[#E5E0D5] px-4">
+                <AccordionTrigger className="font-serif text-xl text-left hover:no-underline py-6">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-[#4A4A4A] text-lg leading-relaxed pb-6">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
-      </Section>
+      </section>
 
-      {/* CTA FINAL */}
-      <Section variant="wine">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="text-sm font-sans text-primary-foreground/70 mb-2">
-            Se você quer estrutura completa de negócio, conheça a Dona de $i.
-          </p>
-          <p className="text-lg font-serif text-primary-foreground mb-8">
-            Se você quer vender com <strong className="text-secondary">leveza e resultado</strong>, aplica pra Venda $em Vender.
-          </p>
-          <CtaButton>Quero aplicar para o Venda $em Vender</CtaButton>
+      {/* Footer Minimalista */}
+      <footer className="bg-[#1A1A1A] py-20 text-[#F5F0E8]/40 text-center border-t border-white/5">
+        <div className="container mx-auto px-6">
+          <p className="font-serif text-2xl text-[#F5F0E8]/80 mb-8">Monike Kineippe</p>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 text-sm uppercase tracking-widest mb-12">
+            <a href="mailto:contato@monikekineippe.com" className="hover:text-[#B8973A] transition-colors">contato@monikekineippe.com</a>
+            <a href="#" className="hover:text-[#B8973A] transition-colors">Política de Privacidade</a>
+            <a href="#" className="hover:text-[#B8973A] transition-colors">Termos de Uso</a>
+          </div>
+          <p className="text-xs">© {new Date().getFullYear()} Monike Kineippe. Todos os direitos reservados.</p>
         </div>
-      </Section>
-    </>
+      </footer>
+    </div>
   );
 };
 
