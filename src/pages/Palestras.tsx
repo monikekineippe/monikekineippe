@@ -33,7 +33,7 @@ const Palestras = () => {
       />
 
       {/* PALESTRAS EM DESTAQUE */}
-      <Section>
+      <Section id="palestras">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-serif mb-12 text-center">
             Palestras em destaque
