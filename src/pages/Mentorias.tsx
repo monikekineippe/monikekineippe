@@ -16,9 +16,9 @@ const Mentorias = () => {
     },
     {
       title: "Venda $em Vender",
-      label: "Individual",
-      text: "Mentoria focada em vendas naturais e autênticas. Aprenda a vender sem parecer que está vendendo, com técnicas de persuasão elegante e alinhadas ao seu estilo.",
-      cta: "Conhecer o programa",
+      label: "Workshop",
+      text: "Domine a venda invisível. Aprenda a fechar clientes em conversas casuais sem nunca parecer que está vendendo. Método prático para mentoras e consultoras.",
+      cta: "Acessar o Workshop",
       link: "/venda-sem-vender",
       external: false,
     },
