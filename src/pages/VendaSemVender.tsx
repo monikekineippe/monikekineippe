@@ -6,6 +6,16 @@ import monikeProfile from "@/assets/monike-1.jpg";
 const CTA_LINK = "https://payfast.greenn.com.br/102443/offer/cX9FFF?b_id_1=120590&b_offer_1=IAzycE";
 
 const VendaSemVender = () => {
+  const handleCTAClick = () => {
+    // Tracking Pixel/GA
+    if (typeof window !== "undefined") {
+      // @ts-ignore
+      if (window.fbq) window.fbq('track', 'InitiateCheckout');
+      // @ts-ignore
+      if (window.gtag) window.gtag('event', 'begin_checkout');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#F5F0E8] font-sans selection:bg-[#B8973A] selection:text-[#1A1A1A]">
       <Helmet>
@@ -34,6 +44,7 @@ const VendaSemVender = () => {
           <div className="animate-fade-up" style={{ animationDelay: "0.6s" }}>
             <Button 
               className="bg-[#B8973A] hover:bg-[#6B1C2A] text-[#1A1A1A] hover:text-[#F5F0E8] text-lg px-12 py-8 h-auto rounded-sm transition-all duration-300 font-semibold"
+              onClick={handleCTAClick}
               asChild
             >
               <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
@@ -323,6 +334,7 @@ const VendaSemVender = () => {
           <div>
             <Button 
               className="bg-[#B8973A] hover:bg-[#6B1C2A] text-[#1A1A1A] hover:text-[#F5F0E8] text-xl px-12 py-8 h-auto rounded-sm transition-all duration-300 font-semibold mb-6 w-full md:w-auto"
+              onClick={handleCTAClick}
               asChild
             >
               <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
