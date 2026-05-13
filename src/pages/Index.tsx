@@ -84,8 +84,8 @@ const Index = () => {
             },
             {
               icon: BarChart3,
-              title: "Mentoria & Comunidade",
-              text: "Mentoria individual para alinhar negócio, estratégia e vida. Comunidade com networking e ecossistema para quem não quer mais crescer sozinha.",
+              title: "Mentorias & Workshop",
+              text: "Aceleração individual (Dona de $i), Workshop de Vendas (Venda $em Vender) e Comunidade com networking para quem não quer crescer sozinha.",
               cta: "Conhecer as opções",
               link: "/mentorias",
             },
