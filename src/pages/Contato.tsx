@@ -72,8 +72,11 @@ const Contato = () => {
           <div>
             <img
               src={sobre3}
-              alt="Monike Kineippe em evento"
+              alt="Monike Kineippe em palestra corporativa — Agende sua data"
               className="rounded-lg w-full object-cover aspect-[16/9] premium-shadow mb-8"
+              loading="lazy"
+              width={448}
+              height={252}
             />
             <h2 className="text-xl font-serif mb-6">Fale conosco</h2>
             <div className="space-y-4 text-sm font-sans text-muted-foreground">

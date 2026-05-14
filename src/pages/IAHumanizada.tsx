@@ -28,7 +28,7 @@ const IAHumanizada = () => {
       />
       <PageHero
         tag="IA Aplicada"
-        title="Implementação de IA e Automações"
+        title="Consultoria e Implementação de IA Humanizada"
         subtitle="Tecnologia não precisa ser fria. Ela só precisa ser bem pensada. Eu implemento com você — não apenas ensino."
       />
 
@@ -94,14 +94,16 @@ const IAHumanizada = () => {
                 <li>→ Funil ajustado e otimizado</li>
                 <li>→ Redução drástica de sobrecarga</li>
               </ul>
-              <a
-                href="https://wa.me/5511972313181?text=Oi%20Carine%2C%20quero%20saber%20mais%20sobre%20o%20programa%20IA%20com%20Alma"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full text-center h-12 leading-[3rem] rounded-md bg-secondary text-secondary-foreground font-sans tracking-wide uppercase text-xs hover:bg-secondary/90 transition-all duration-300"
-              >
-                Quero saber mais
-              </a>
+              <div className="space-y-3">
+                <a
+                  href="https://wa.me/5511972313181?text=Oi%20Carine%2C%20quero%20saber%20mais%20sobre%20o%20programa%20IA%20com%20Alma"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center h-12 leading-[3rem] rounded-md bg-secondary text-secondary-foreground font-sans tracking-wide uppercase text-xs hover:bg-secondary/90 transition-all duration-300"
+                >
+                  Quero saber mais
+                </a>
+              </div>
             </div>
 
             {/* Programa 2 */}
@@ -118,14 +120,19 @@ const IAHumanizada = () => {
                 <li>→ Posicionamento premium definido</li>
                 <li>→ Escala com previsibilidade</li>
               </ul>
-              <a
-                href="https://wa.me/5511972313181?text=Oi%20Carine%2C%20quero%20saber%20mais%20sobre%20o%20Sistema%20de%20Escala"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full text-center h-12 leading-[3rem] rounded-md bg-secondary text-secondary-foreground font-sans tracking-wide uppercase text-xs hover:bg-secondary/90 transition-all duration-300"
-              >
-                Quero saber mais
-              </a>
+              <div className="space-y-3">
+                <a
+                  href="https://wa.me/5511972313181?text=Oi%20Carine%2C%20quero%20saber%20mais%20sobre%20o%20Sistema%20de%20Escala"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center h-12 leading-[3rem] rounded-md bg-secondary text-secondary-foreground font-sans tracking-wide uppercase text-xs hover:bg-secondary/90 transition-all duration-300"
+                >
+                  Quero saber mais
+                </a>
+                <p className="text-[10px] text-center text-primary-foreground/40 font-sans">
+                  Complemento ideal para quem já usa a <a href="/corujah" className="underline hover:text-secondary transition-colors">CoruJah IA</a>.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -151,8 +158,11 @@ const IAHumanizada = () => {
           <div>
             <img
               src={sobre8}
-              alt="Monike Kineippe — Estrategista de IA"
+              alt="Monike Kineippe — Estrategista de IA para Negócios Femininos"
               className="rounded-lg w-full object-cover aspect-[3/4] premium-shadow"
+              loading="lazy"
+              width={400}
+              height={533}
             />
           </div>
           <div className="text-center md:text-left">
