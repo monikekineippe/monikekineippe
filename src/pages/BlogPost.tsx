@@ -148,7 +148,12 @@ const BlogPost = () => {
               prose-ul:text-muted-foreground prose-ul:font-sans prose-ul:text-lg prose-li:font-medium
               prose-ol:text-muted-foreground prose-ol:font-sans prose-ol:text-lg prose-li:font-medium
               prose-blockquote:border-secondary prose-blockquote:text-muted-foreground"
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            dangerouslySetInnerHTML={{ 
+              __html: DOMPurify.sanitize(post.content, {
+                ALLOWED_TAGS: ['p', 'h1', 'h2', 'h3', 'h4', 'strong', 'em', 'a', 'ul', 'ol', 'li', 'blockquote', 'img', 'br'],
+                ALLOWED_ATTR: ['href', 'src', 'alt', 'title']
+              })
+            }}
           />
 
           {/* Tags */}
