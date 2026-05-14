@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import Section from "@/components/Section";
+import SEO from "@/components/SEO";
+import { breadcrumb, article } from "@/lib/schemas";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowLeft, User } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 
 interface BlogPostData {
   id: string;
@@ -75,27 +76,28 @@ const BlogPost = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{seoTitle} | Monike Kineippe</title>
-        <meta name="description" content={seoDescription} />
-        <meta property="og:title" content={seoTitle} />
-        <meta property="og:description" content={seoDescription} />
-        {post.cover_image_url && <meta property="og:image" content={post.cover_image_url} />}
-        <meta property="og:type" content="article" />
-        <link rel="canonical" href={`https://monikekineippe.lovable.app/blog/${post.slug}`} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: post.title,
+      <SEO
+        title={`${seoTitle} | Monike Kineippe`}
+        description={seoDescription}
+        canonical={`/blog/${post.slug}`}
+        ogImage={post.cover_image_url || undefined}
+        ogType="article"
+        schema={[
+          article({
+            title: post.title,
             description: seoDescription,
-            image: post.cover_image_url,
-            author: { "@type": "Person", name: post.author },
+            url: `/blog/${post.slug}`,
+            image: post.cover_image_url || undefined,
             datePublished: post.published_at || post.created_at,
-            publisher: { "@type": "Person", name: "Monike Kineippe" },
-          })}
-        </script>
-      </Helmet>
+            author: post.author,
+          }),
+          breadcrumb([
+            { name: "Início", path: "/" },
+            { name: "Blog", path: "/blog" },
+            { name: post.title, path: `/blog/${post.slug}` },
+          ]),
+        ]}
+      />
 
       {/* Hero com imagem de capa */}
       {post.cover_image_url && (
@@ -161,11 +163,14 @@ const BlogPost = () => {
             </div>
           )}
 
-          {/* CTA */}
-          <div className="mt-12 p-8 bg-primary/5 rounded-lg text-center">
-            <p className="font-serif text-xl mb-4">Quer saber como a IA pode transformar seu negócio?</p>
-            <Button variant="hero" size="lg" asChild>
-              <Link to="/contato">Fale comigo</Link>
+          {/* CTA de Diagnóstico */}
+          <div className="mt-16 p-8 bg-primary text-primary-foreground rounded-lg text-center gold-border">
+            <h3 className="font-serif text-2xl mb-4">Onde a IA pode destravar seu negócio hoje?</h3>
+            <p className="text-primary-foreground/70 font-sans mb-8 max-w-md mx-auto">
+              Em 3 minutos, descubra qual automação ou estratégia com IA faz sentido para o seu momento atual.
+            </p>
+            <Button variant="secondary" size="xl" className="font-bold" asChild>
+              <Link to="/diagnostico">Fazer Diagnóstico Gratuito</Link>
             </Button>
           </div>
         </article>
