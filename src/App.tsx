@@ -15,6 +15,7 @@ import VendaSemVender from "./pages/VendaSemVender";
 import Empresaria40 from "./pages/Empresaria40";
 import IAHumanizada from "./pages/IAHumanizada";
 import Palestras from "./pages/Palestras";
+import Treinamentos from "./pages/Treinamentos";
 import Livros from "./pages/Livros";
 import Conteudos from "./pages/Conteudos";
 import Sobre from "./pages/Sobre";
