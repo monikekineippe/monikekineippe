@@ -15,6 +15,7 @@ import VendaSemVender from "./pages/VendaSemVender";
 import Empresaria40 from "./pages/Empresaria40";
 import IAHumanizada from "./pages/IAHumanizada";
 import Palestras from "./pages/Palestras";
+import Treinamentos from "./pages/Treinamentos";
 import Livros from "./pages/Livros";
 import Conteudos from "./pages/Conteudos";
 import Sobre from "./pages/Sobre";
@@ -49,6 +50,7 @@ const App = () => (
               
               <Route path="/ia-humanizada" element={<IAHumanizada />} />
               <Route path="/palestras" element={<Palestras />} />
+              <Route path="/treinamentos" element={<Treinamentos />} />
               <Route path="/livros" element={<Livros />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
