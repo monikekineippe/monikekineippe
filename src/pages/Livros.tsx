@@ -47,8 +47,11 @@ const Livros = () => {
               <div className="relative">
                 <img
                   src={livroTablet1}
-                  alt="Livro Empreender Nunca Foi Sorte - Tablet"
+                  alt="Livro Empreender Nunca Foi Sorte - Versão Digital no Tablet"
                   className="w-80 md:w-96 rounded-lg shadow-2xl"
+                  loading="eager"
+                  width={384}
+                  height={500}
                 />
               </div>
             </div>
@@ -85,8 +88,11 @@ const Livros = () => {
                 <div className="mb-4">
                   <img
                     src={livroFisicoAutora}
-                    alt="Monike com o livro físico"
+                    alt="Monike Kineippe com o exemplar físico autografado do livro Empreender Nunca Foi Sorte"
                     className="w-48 h-48 mx-auto rounded-lg shadow-lg object-cover"
+                    loading="lazy"
+                    width={192}
+                    height={192}
                   />
                 </div>
                 <p className="text-base text-muted-foreground mb-4">
@@ -113,8 +119,11 @@ const Livros = () => {
                 <div className="mb-4">
                   <img
                     src={livroTablet2}
-                    alt="Mulher lendo no tablet"
+                    alt="Leitura digital do livro Empreender Nunca Foi Sorte"
                     className="w-48 h-48 mx-auto rounded-lg shadow-lg object-cover"
+                    loading="lazy"
+                    width={192}
+                    height={192}
                   />
                 </div>
                 <p className="text-base text-muted-foreground mb-6">
@@ -147,8 +156,11 @@ const Livros = () => {
             <div className="w-48 h-48 mx-auto">
               <img
                 src={ebookQuantoCobrar}
-                alt="E-book Quanto Cobrar"
+                alt="E-book Gratuito Quanto Cobrar - Guia de Precificação para Empreendedoras"
                 className="w-full h-full rounded-lg shadow-2xl object-cover"
+                loading="lazy"
+                width={192}
+                height={192}
               />
             </div>
             <Button variant="hero" size="lg" asChild>

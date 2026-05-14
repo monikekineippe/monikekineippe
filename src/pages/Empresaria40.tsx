@@ -60,7 +60,7 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="/" className="flex items-center gap-3">
-          <img src={logoMk} alt="MK" className="h-10 w-auto" />
+          <img src={logoMk} alt="Logo Monike Kineippe" className="h-10 w-auto" width={120} height={40} />
           <span className="text-sm font-normal hidden sm:inline font-serif" style={{ color: C.black }}>Comunidade Empresária 4.0</span>
         </a>
 
@@ -140,7 +140,7 @@ const Hero = () => (
         <div
           className="w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
         >
-          <img src={monike1} alt="Monike Kineippe" className="w-full h-full object-cover" />
+          <img src={monike1} alt="Monike Kineippe — Mentora da Comunidade Empresária 4.0" className="w-full h-full object-cover" loading="eager" width={384} height={512} />
         </div>
       </Reveal>
     </div>

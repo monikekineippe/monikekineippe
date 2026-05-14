@@ -295,8 +295,11 @@ const VendaSemVender = () => {
             <div className="relative group">
               <img 
                 src={monikeProfile} 
-                alt="Monike Kineippe" 
+                alt="Monike Kineippe — Criadora do método Venda $em Vender" 
                 className="grayscale contrast-125 transition-all duration-700 group-hover:grayscale-0 w-full max-w-md mx-auto md:ml-0"
+                loading="lazy"
+                width={448}
+                height={597}
               />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 border-r-2 border-b-2 border-[#B8973A] hidden md:block"></div>
             </div>
