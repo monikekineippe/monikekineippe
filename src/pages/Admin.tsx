@@ -35,7 +35,7 @@ const Admin = () => {
     const checkSession = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (session) {
-        const { data } = await supabase.rpc("is_admin", { _user_id: session.user.id });
+        const { data } = await supabase.rpc("is_admin", { user_id: session.user.id });
         if (data) {
           setIsAuthenticated(true);
           fetchSubmissions();
@@ -69,7 +69,7 @@ const Admin = () => {
     }
     const { data: { session } } = await supabase.auth.getSession();
     if (session) {
-      const { data } = await supabase.rpc("is_admin", { _user_id: session.user.id });
+      const { data } = await supabase.rpc("is_admin", { user_id: session.user.id });
       if (data) {
         setIsAuthenticated(true);
         fetchSubmissions();
