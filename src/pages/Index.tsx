@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Section from "@/components/Section";
 import SEO from "@/components/SEO";
-import { personSchema, organizationSchema, websiteSchema } from "@/lib/schemas";
+import { personSchema, organizationSchema, websiteSchema, faqPage } from "@/lib/schemas";
 import { Bot, Sparkles, Mic, Gem, Users, GraduationCap } from "lucide-react";
 import monike1 from "@/assets/monike-1.jpg";
 import precifica3dLogo from "@/assets/precifica3d-logo.png";
@@ -14,7 +14,25 @@ const Index = () => {
         title="Monike Kineippe | IA e Automação para Negócios Femininos"
         description="IA aplicada a negócios femininos com estratégia, estrutura e linguagem humana. Consultoria, palestras, treinamentos e programas de implementação de IA."
         canonical="/"
-        schema={[personSchema, organizationSchema, websiteSchema]}
+        schema={[
+          personSchema, 
+          organizationSchema, 
+          websiteSchema,
+          faqPage([
+            {
+              question: "O que é estratégia de IA para negócios?",
+              answer: "É o uso de ferramentas de Inteligência Artificial para automatizar processos, criar assistentes personalizados e otimizar vendas, sempre com foco em resultados reais e linguagem humana, sem complicações técnicas.",
+            },
+            {
+              question: "Preciso saber programar para usar IA?",
+              answer: "Não. Meu foco é traduzir a tecnologia para empreendedoras. Implementamos soluções que você e sua equipe conseguem operar facilmente, sem necessidade de conhecimentos técnicos profundos.",
+            },
+            {
+              question: "Como funciona a consultoria de implementação?",
+              answer: "Trabalhamos em ciclos (45 dias ou 3 meses) onde mapeamos seus processos, identificamos gargalos e instalamos as automações e assistentes necessários diretamente na sua operação.",
+            },
+          ])
+        ]}
       />
       {/* ═══════════════════════════════════════════
           HERO SECTION
@@ -253,6 +271,41 @@ const Index = () => {
                 <Link to="/sobre">Conhecer minha história</Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* FAQ Visual na Home */}
+      <Section id="faq" className="bg-muted/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">FAQ</span>
+            <h2 className="text-2xl md:text-3xl font-serif mt-4">Perguntas Frequentes</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                q: "O que é estratégia de IA para negócios?",
+                a: "É o uso de ferramentas de Inteligência Artificial para automatizar processos, criar assistentes personalizados e otimizar vendas, sempre com foco em resultados reais e linguagem humana, sem complicações técnicas.",
+              },
+              {
+                q: "Preciso saber programar para usar IA?",
+                a: "Não. Meu foco é traduzir a tecnologia para empreendedoras. Implementamos soluções que você e sua equipe conseguem operar facilmente, sem necessidade de conhecimentos técnicos profundos.",
+              },
+              {
+                q: "Como funciona a consultoria de implementação?",
+                a: "Trabalhamos em ciclos (45 dias ou 3 meses) onde mapeamos seus processos, identificamos gargalos e instalamos as automações e assistentes necessários diretamente na sua operação.",
+              },
+              {
+                q: "A IA vai tirar a humanidade do meu negócio?",
+                a: "Pelo contrário. O objetivo é automatizar o que é mecânico para que você tenha mais tempo para a conexão humana, que é o que realmente diferencia negócios femininos.",
+              },
+            ].map((faq, i) => (
+              <div key={i} className="p-6 bg-card gold-border rounded-lg">
+                <h3 className="font-serif text-lg mb-3">{faq.q}</h3>
+                <p className="text-muted-foreground font-sans leading-relaxed text-sm">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </Section>

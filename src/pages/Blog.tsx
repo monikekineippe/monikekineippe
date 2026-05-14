@@ -7,6 +7,7 @@ import SEO from "@/components/SEO";
 import { breadcrumb } from "@/lib/schemas";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
 
 interface BlogPost {
@@ -68,8 +69,23 @@ const Blog = () => {
         subtitle="Artigos sobre negócios femininos, IA aplicada e estratégia para empreendedoras."
       />
 
-      <Section>
+      <Section className="pb-0">
         <div className="max-w-6xl mx-auto">
+          {/* Featured Pillar CTA */}
+          <div className="mb-16 p-8 md:p-12 gold-border rounded-xl bg-primary text-primary-foreground relative overflow-hidden group">
+            <div className="relative z-10 max-w-2xl">
+              <Badge variant="secondary" className="mb-4">Destaque</Badge>
+              <h2 className="text-2xl md:text-4xl font-serif mb-4">Descubra como a IA pode acelerar seu negócio</h2>
+              <p className="text-primary-foreground/70 font-sans text-lg mb-8 leading-relaxed">
+                Pare de tentar adivinhar qual ferramenta usar. Faça o diagnóstico gratuito e receba uma recomendação personalizada para o seu momento atual.
+              </p>
+              <Button variant="secondary" size="xl" className="font-bold" asChild>
+                <Link to="/diagnostico">Fazer Diagnóstico Gratuito</Link>
+              </Button>
+            </div>
+            <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/10 skew-x-[-20deg] translate-x-1/2 group-hover:bg-secondary/20 transition-colors" />
+          </div>
+
           {/* Category filter */}
           <div className="flex flex-wrap gap-2 mb-10 justify-center">
             {categories.map((cat) => (

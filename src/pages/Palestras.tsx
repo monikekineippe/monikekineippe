@@ -1,7 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import SEO from "@/components/SEO";
-import { service, breadcrumb } from "@/lib/schemas";
+import { service, breadcrumb, faqPage } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
 import { Mic, Zap, DollarSign, Bot, Target, MessageSquare, Heart } from "lucide-react";
 import sobre4 from "@/assets/sobre-4.jpg";
@@ -38,6 +38,16 @@ const Palestras = () => {
             url: "/palestras",
             serviceType: "Palestras",
           }),
+          faqPage([
+            {
+              question: "Monike Kineippe palestra em todo o Brasil?",
+              answer: "Sim, Monike realiza palestras em eventos, congressos e empresas em todo o território nacional e também para audiências internacionais de forma remota.",
+            },
+            {
+              question: "As palestras são personalizadas?",
+              answer: "Sim, cada palestra é adaptada ao contexto do evento e ao perfil da audiência, garantindo que o conteúdo sobre IA e estratégia seja relevante para o público específico.",
+            },
+          ]),
           breadcrumb([
             { name: "Início", path: "/" },
             { name: "Palestras", path: "/palestras" },
@@ -137,6 +147,30 @@ const Palestras = () => {
                 <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">de palco</p>
               </div>
             </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* FAQ Visual */}
+      <Section id="faq" className="bg-muted/30">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-serif mb-10 text-center">Perguntas Frequentes</h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: "Monike Kineippe palestra em todo o Brasil?",
+                a: "Sim, Monike realiza palestras em eventos, congressos e empresas em todo o território nacional e também para audiências internacionais de forma remota.",
+              },
+              {
+                q: "As palestras são personalizadas?",
+                a: "Sim, cada palestra é adaptada ao contexto do evento e ao perfil da audiência, garantindo que o conteúdo sobre IA e estratégia seja relevante para o público específico.",
+              },
+            ].map((faq, i) => (
+              <div key={i} className="border-b border-border pb-6">
+                <h3 className="font-serif text-lg mb-3">{faq.q}</h3>
+                <p className="text-muted-foreground font-sans leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </Section>

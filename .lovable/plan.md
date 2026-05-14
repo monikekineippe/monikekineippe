@@ -79,6 +79,6 @@ Sem isso, todo o resto trabalha contra o site.
 
 - **Fase 1**: 1 ciclo grande (componente SEO + schemas + sitemap + robots + aplicação em todas as ~18 páginas + GA4 placeholder).
 - **Fase 2**: 1 ciclo médio (revisão de H1, ALT, internal links).
-- **Fase 3**: contínuo, conforme produção de conteúdo.
+- **Fase 3**: Concluída (estruturação comercial do blog, CTAs otimizados, esquemas FAQPage em massa).
 
 Posso começar pela **Fase 1 inteira em uma única entrega**. Confirma que sigo?

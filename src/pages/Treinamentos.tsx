@@ -1,7 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import SEO from "@/components/SEO";
-import { course, breadcrumb } from "@/lib/schemas";
+import { course, breadcrumb, faqPage } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GraduationCap, Zap, Bot, Target, Settings, MessageSquare, LineChart, Globe, Sparkles, BookOpen, Presentation } from "lucide-react";
@@ -20,6 +20,20 @@ const Treinamentos = () => {
             description: "Treinamentos práticos sobre IA aplicada, vendas, conteúdo e estrutura comercial para empresas e comunidades.",
             url: "/treinamentos",
           }),
+          faqPage([
+            {
+              question: "Os treinamentos são presenciais ou online?",
+              answer: "Oferecemos ambos os formatos. Podem ser realizados in-company (presencial) ou via plataformas de videoconferência para equipes remotas.",
+            },
+            {
+              question: "Qual a duração média dos workshops?",
+              answer: "Os workshops costumam durar meio período (3 a 4 horas), enquanto imersões podem levar de 1 a 2 dias inteiros.",
+            },
+            {
+              question: "Os treinamentos incluem material de apoio?",
+              answer: "Sim, todos os treinamentos e workshops incluem material digital de apoio, guias práticos e, em alguns casos, acesso a bibliotecas de prompts específicos.",
+            },
+          ]),
           breadcrumb([
             { name: "Início", path: "/" },
             { name: "Treinamentos", path: "/treinamentos" },
@@ -172,6 +186,34 @@ const Treinamentos = () => {
                 <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">alunas impactadas</p>
               </div>
             </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* FAQ Visual */}
+      <Section id="faq" className="bg-muted/30">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-serif mb-10 text-center">Perguntas Frequentes</h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: "Os treinamentos são presenciais ou online?",
+                a: "Oferecemos ambos os formatos. Podem ser realizados in-company (presencial) ou via plataformas de videoconferência para equipes remotas.",
+              },
+              {
+                q: "Qual a duração média dos workshops?",
+                a: "Os workshops costumam durar meio período (3 a 4 horas), enquanto imersões podem levar de 1 a 2 dias inteiros.",
+              },
+              {
+                q: "Os treinamentos incluem material de apoio?",
+                a: "Sim, todos os treinamentos e workshops incluem material digital de apoio, guias práticos e, em alguns casos, acesso a bibliotecas de prompts específicos.",
+              },
+            ].map((faq, i) => (
+              <div key={i} className="border-b border-border pb-6">
+                <h3 className="font-serif text-lg mb-3">{faq.q}</h3>
+                <p className="text-muted-foreground font-sans leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
