@@ -9,7 +9,7 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwfrHybNG4ArA
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import SEO from "@/components/SEO";
-import { breadcrumb } from "@/lib/schemas";
+import { breadcrumb, faqPage } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -175,6 +175,16 @@ const Diagnostico = () => {
           breadcrumb([
             { name: "Início", path: "/" },
             { name: "Diagnóstico", path: "/diagnostico" },
+          ]),
+          faqPage([
+            {
+              question: "Como funciona o diagnóstico de IA?",
+              answer: "Você responde a algumas perguntas sobre o momento atual do seu negócio, faturamento e objetivos. Com base nisso, o sistema identifica se você precisa de estrutura, escala ou automação imediata.",
+            },
+            {
+              question: "O diagnóstico é realmente gratuito?",
+              answer: "Sim, o objetivo do diagnóstico é dar clareza sobre o próximo passo mais inteligente para o seu negócio sem custo inicial.",
+            },
           ]),
         ]}
       />
