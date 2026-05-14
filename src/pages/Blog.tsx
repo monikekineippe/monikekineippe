@@ -7,6 +7,7 @@ import SEO from "@/components/SEO";
 import { breadcrumb } from "@/lib/schemas";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
 
 interface BlogPost {
