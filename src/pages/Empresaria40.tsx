@@ -488,7 +488,7 @@ const Mentor = () => (
     <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
       <Reveal className="flex justify-center">
         <div className="w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
-          <img src={monike2} alt="Monike Kineippe" className="w-full h-full object-cover" />
+          <img src={monike2} alt="Monike Kineippe — Mentora e Estrategista de IA" className="w-full h-full object-cover" loading="lazy" width={384} height={512} />
         </div>
       </Reveal>
 
