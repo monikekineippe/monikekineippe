@@ -1,5 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import SEO from "@/components/SEO";
+import { service, breadcrumb } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
 import { Mic, Zap, DollarSign, Bot, Target, MessageSquare, Heart } from "lucide-react";
 import sobre4 from "@/assets/sobre-4.jpg";
@@ -25,6 +27,23 @@ const featured = [
 const Palestras = () => {
   return (
     <>
+      <SEO
+        title="Palestras com Monike Kineippe — IA, Vendas e Posicionamento Real"
+        description="Palestras sobre IA aplicada, vendas com verdade e posicionamento com estrutura. Para eventos, congressos e empresas no Brasil."
+        canonical="/palestras"
+        schema={[
+          service({
+            name: "Palestras Monike Kineippe",
+            description: "Palestras corporativas e para eventos sobre IA aplicada, vendas e posicionamento.",
+            url: "/palestras",
+            serviceType: "Palestras",
+          }),
+          breadcrumb([
+            { name: "Início", path: "/" },
+            { name: "Palestras", path: "/palestras" },
+          ]),
+        ]}
+      />
       <PageHero
         tag="Palco"
         title="Palestras"

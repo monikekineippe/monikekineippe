@@ -1,5 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import SEO from "@/components/SEO";
+import { service, breadcrumb } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
 import { Settings, Zap, Target, Layers, Bot, Crown } from "lucide-react";
 import sobre8 from "@/assets/sobre-8.jpg";
@@ -7,6 +9,23 @@ import sobre8 from "@/assets/sobre-8.jpg";
 const IAHumanizada = () => {
   return (
     <>
+      <SEO
+        title="IA Humanizada para Empreendedoras — Estrutura, Implementação e Escala"
+        description="Implementação de IA e automações para negócios femininos: assistentes, fluxos, atendimento, conteúdo e vendas. Programas de 45 dias ou 3 meses."
+        canonical="/ia-humanizada"
+        schema={[
+          service({
+            name: "Implementação de IA Humanizada",
+            description: "Programas de implementação de IA e automação para empreendedoras: 45 dias (estrutura) ou 3 meses (escala).",
+            url: "/ia-humanizada",
+            serviceType: "Consultoria de IA",
+          }),
+          breadcrumb([
+            { name: "Início", path: "/" },
+            { name: "IA Humanizada", path: "/ia-humanizada" },
+          ]),
+        ]}
+      />
       <PageHero
         tag="IA Aplicada"
         title="Implementação de IA e Automações"

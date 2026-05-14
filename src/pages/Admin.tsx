@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import { Download, Eye, Search, Calendar, FileText } from "lucide-react";
 import BlogAdmin from "@/components/admin/BlogAdmin";
+import SEO from "@/components/SEO";
 
 interface FormSubmission {
   id: string;
@@ -183,6 +184,7 @@ const Admin = () => {
 
   return (
     <div className="min-h-screen bg-background p-6">
+      <SEO title="Admin" description="Painel administrativo." canonical="/admin" noindex />
       <div className="max-w-7xl mx-auto">
         <div className="mb-8 flex justify-between items-start">
           <div>

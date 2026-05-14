@@ -19,11 +19,21 @@ const VendaSemVender = () => {
   return (
     <div className="min-h-screen bg-[#F5F0E8] font-sans selection:bg-[#B8973A] selection:text-[#1A1A1A]">
       <Helmet>
-        <title>Venda $em Vender, domine a venda invisível, Monike Kineippe</title>
-        <meta name="description" content="Método para mentoras, consultoras, assistentes virtuais e terapeutas fecharem clientes em conversas casuais sem nunca parecer que estão vendendo. R$147 no lançamento." />
-        <meta property="og:title" content="Venda $em Vender, domine a venda invisível, Monike Kineippe" />
-        <meta property="og:description" content="Domine a venda invisível e feche clientes em conversas casuais. Método exclusivo por R$147." />
-        {/* Adicione outras tags de Pixel/GA conforme necessário */}
+        <title>Venda $em Vender — Domine a Venda Invisível | Monike Kineippe</title>
+        <meta name="description" content="Método para mentoras, consultoras, assistentes virtuais e terapeutas fecharem clientes em conversas casuais sem nunca parecer que estão vendendo." />
+        <link rel="canonical" href="https://monikekineippe.lovable.app/venda-sem-vender" />
+        <meta property="og:title" content="Venda $em Vender — Domine a Venda Invisível" />
+        <meta property="og:description" content="Domine a venda invisível e feche clientes em conversas casuais. Método exclusivo." />
+        <meta property="og:url" content="https://monikekineippe.lovable.app/venda-sem-vender" />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Venda $em Vender",
+          description: "Método para vender em conversas casuais sem parecer que está vendendo.",
+          url: "https://monikekineippe.lovable.app/venda-sem-vender",
+          brand: { "@type": "Brand", name: "Monike Kineippe" },
+        })}</script>
       </Helmet>
 
       {/* 1. HERO SECTION */}

@@ -1,5 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import SEO from "@/components/SEO";
+import { breadcrumb } from "@/lib/schemas";
 import { Instagram, Linkedin, Youtube } from "lucide-react";
 
 const Conteudos = () => {
@@ -12,6 +14,17 @@ const Conteudos = () => {
 
   return (
     <>
+      <SEO
+        title="Conteúdos — Monike Kineippe no Instagram, YouTube e LinkedIn"
+        description="Conteúdo gratuito de Monike Kineippe sobre IA aplicada, vendas e empreendedorismo feminino. Instagram, YouTube, LinkedIn e TikTok."
+        canonical="/conteudos"
+        schema={[
+          breadcrumb([
+            { name: "Início", path: "/" },
+            { name: "Conteúdos", path: "/conteudos" },
+          ]),
+        ]}
+      />
       <PageHero
         tag="Conteúdos"
         title="Conteúdos"

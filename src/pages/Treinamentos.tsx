@@ -1,5 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import SEO from "@/components/SEO";
+import { course, breadcrumb } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GraduationCap, Zap, Bot, Target, Settings, MessageSquare, LineChart, Globe, Sparkles, BookOpen, Presentation } from "lucide-react";
@@ -8,6 +10,22 @@ import sobre4 from "@/assets/sobre-4.jpg";
 const Treinamentos = () => {
   return (
     <>
+      <SEO
+        title="Treinamentos e Workshops — IA, Vendas e Operação para Equipes"
+        description="Workshops, aulas práticas e imersões para equipes e comunidades. Conteúdo aplicável sobre IA, vendas e estrutura comercial."
+        canonical="/treinamentos"
+        schema={[
+          course({
+            name: "Treinamentos e Workshops Monike Kineippe",
+            description: "Treinamentos práticos sobre IA aplicada, vendas, conteúdo e estrutura comercial para empresas e comunidades.",
+            url: "/treinamentos",
+          }),
+          breadcrumb([
+            { name: "Início", path: "/" },
+            { name: "Treinamentos", path: "/treinamentos" },
+          ]),
+        ]}
+      />
       <PageHero
         tag="Capacitação"
         title="Treinamentos e Workshops"

@@ -1,5 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import SEO from "@/components/SEO";
+import { breadcrumb } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -48,6 +50,17 @@ const Contato = () => {
 
   return (
     <>
+      <SEO
+        title="Contato — Fale com Monike Kineippe"
+        description="Para palestras, parcerias, projetos de IA ou conversa estratégica. Fale direto pelo WhatsApp ou e-mail."
+        canonical="/contato"
+        schema={[
+          breadcrumb([
+            { name: "Início", path: "/" },
+            { name: "Contato", path: "/contato" },
+          ]),
+        ]}
+      />
       <PageHero
         tag="Contato"
         title="Contato"
