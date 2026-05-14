@@ -101,14 +101,14 @@ const Index = () => {
               title: "Palestras",
               text: "Provocações que ficam: IA aplicada, vendas com verdade e posicionamento com estrutura. Para eventos e congressos.",
               cta: "Ver palestras",
-              link: "/palestras#palestras",
+              link: "/palestras",
             },
             {
               icon: GraduationCap,
               title: "Treinamentos",
               text: "Workshops, aulas práticas e imersões para equipes e comunidades. Conteúdo aplicável, com execução real.",
               cta: "Ver treinamentos",
-              link: "/palestras#treinamentos",
+              link: "/treinamentos",
             },
           ].map((card) => (
             <Link
