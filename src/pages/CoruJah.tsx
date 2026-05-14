@@ -44,7 +44,7 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="/" className="flex items-center gap-3">
-          <img src={logoMk} alt="MK" className="h-10 w-auto" />
+          <img src={logoMk} alt="Logo Monike Kineippe" className="h-10 w-auto" width={120} height={40} />
           <span className="text-sm font-normal font-serif hidden sm:inline text-foreground">CoruJah IA</span>
         </a>
         <a
@@ -65,7 +65,7 @@ const Hero = () => (
   <section className="pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-background">
     <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
       <Reveal className="flex justify-center">
-        <img src={corujahMockup} alt="CoruJah IA - Plataforma" className="w-full max-w-md" />
+        <img src={corujahMockup} alt="Mockup da Plataforma CoruJah IA" className="w-full max-w-md" width={448} height={448} loading="eager" />
       </Reveal>
 
       <Reveal>

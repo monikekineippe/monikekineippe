@@ -42,10 +42,10 @@ const DonaDeSi = () => {
       {/* HERO */}
       <div className="section-padding bg-primary text-primary-foreground text-center">
         <div className="container mx-auto max-w-3xl">
-          <img src={logoIcon} alt="Monike Kineippe" className="w-20 h-20 mx-auto mb-6 object-contain" />
+          <img src={logoIcon} alt="Logo Monike Kineippe" className="w-20 h-20 mx-auto mb-6 object-contain" width={80} height={80} />
           <span className="inline-block font-sans text-xs tracking-[0.3em] uppercase text-secondary mb-4">Mentoria Individual</span>
           <h1 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-4">
-            💎 Dona de $i
+            Mentoria Individual Dona de $i
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/90 font-serif leading-relaxed max-w-2xl mx-auto mb-2">
             7 dias para colocar dinheiro em movimento.<br />
@@ -67,8 +67,11 @@ const DonaDeSi = () => {
         <div className="max-w-xs mx-auto">
           <img
             src={sobre9}
-            alt="Monike Kineippe"
+            alt="Monike Kineippe — Mentoria Individual Dona de $i"
             className="rounded-lg w-full object-cover aspect-square premium-shadow"
+            loading="lazy"
+            width={320}
+            height={320}
           />
         </div>
       </Section>

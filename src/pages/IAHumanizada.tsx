@@ -28,7 +28,7 @@ const IAHumanizada = () => {
       />
       <PageHero
         tag="IA Aplicada"
-        title="Implementação de IA e Automações"
+        title="Consultoria e Implementação de IA Humanizada"
         subtitle="Tecnologia não precisa ser fria. Ela só precisa ser bem pensada. Eu implemento com você — não apenas ensino."
       />
 
@@ -151,8 +151,11 @@ const IAHumanizada = () => {
           <div>
             <img
               src={sobre8}
-              alt="Monike Kineippe — Estrategista de IA"
+              alt="Monike Kineippe — Estrategista de IA para Negócios Femininos"
               className="rounded-lg w-full object-cover aspect-[3/4] premium-shadow"
+              loading="lazy"
+              width={400}
+              height={533}
             />
           </div>
           <div className="text-center md:text-left">

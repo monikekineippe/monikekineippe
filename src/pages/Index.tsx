@@ -27,7 +27,7 @@ const Index = () => {
                 IA aplicada a negócios femininos
               </span>
               <h1 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6">
-                Seu negócio não precisa de mais esforço. Precisa de inteligência artificial bem aplicada.
+                Consultoria e Estratégia de IA para Negócios Femininos
               </h1>
               <p className="text-base md:text-lg text-primary-foreground/75 font-sans leading-relaxed mb-10 max-w-lg">
                 Eu traduzo o que parece complexo — automações, assistentes, fluxos inteligentes — em soluções que funcionam na rotina real do seu negócio.
@@ -43,6 +43,9 @@ const Index = () => {
                 src={monike1}
                 alt="Monike Kineippe — Estrategista de IA para negócios femininos"
                 className="rounded-lg w-full max-w-xs md:max-w-sm object-cover aspect-[3/4] premium-shadow"
+                loading="eager"
+                width={400}
+                height={533}
               />
             </div>
           </div>
@@ -149,8 +152,11 @@ const Index = () => {
             <div>
               <img
                 src={precifica3dLogo}
-                alt="Precifica3D — Plataforma de precificação para impressão 3D"
+                alt="Logo do Precifica3D — Ferramenta de precificação inteligente para impressão 3D"
                 className="h-28 md:h-36 object-contain mb-6"
+                loading="lazy"
+                width={200}
+                height={120}
               />
               <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">
                 Profissionais de impressão 3D no Brasil não tinham uma ferramenta confiável para precificar peças. Calculavam no achismo — e perdiam dinheiro.
@@ -224,8 +230,11 @@ const Index = () => {
           <div className="relative">
             <img
               src={monike1}
-              alt="Monike Kineippe"
+              alt="Monike Kineippe — Autora e Estrategista de IA"
               className="rounded-lg w-full object-cover aspect-[3/4] premium-shadow"
+              loading="lazy"
+              width={400}
+              height={533}
             />
           </div>
           <div className="text-center md:text-left">
