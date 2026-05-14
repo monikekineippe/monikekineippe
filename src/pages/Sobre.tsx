@@ -53,6 +53,7 @@ const carouselImages = [
 const Sobre = () => {
   return (
     <>
+      {sobreSEO}
       <PageHero
         tag="Sobre"
         title="Sobre a Monike"
