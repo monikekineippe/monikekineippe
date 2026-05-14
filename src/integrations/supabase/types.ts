@@ -155,7 +155,11 @@ export type Database = {
         }
         Returns: string
       }
-      is_admin: { Args: { user_id: string }; Returns: boolean }
+      is_admin: { Args: { p_user_id: string }; Returns: boolean }
+      validate_submission_data: {
+        Args: { p_data: Json; p_form_type: string }
+        Returns: boolean
+      }
     }
     Enums: {
       [_ in never]: never
