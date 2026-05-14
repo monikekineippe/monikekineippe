@@ -145,7 +145,8 @@ const BlogPost = () => {
               prose-p:text-muted-foreground prose-p:leading-relaxed
               prose-a:text-secondary prose-a:underline
               prose-strong:text-foreground
-              prose-ul:text-muted-foreground prose-ol:text-muted-foreground
+              prose-ul:text-muted-foreground prose-ul:font-serif prose-li:font-serif
+              prose-ol:text-muted-foreground prose-ol:font-serif
               prose-blockquote:border-secondary prose-blockquote:text-muted-foreground"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
