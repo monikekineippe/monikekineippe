@@ -7,6 +7,8 @@ import { breadcrumb, article } from "@/lib/schemas";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowLeft, User } from "lucide-react";
+import DOMPurify from "dompurify";
+
 
 interface BlogPostData {
   id: string;
