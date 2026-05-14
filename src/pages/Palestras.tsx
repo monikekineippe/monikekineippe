@@ -1,7 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
-import { Mic, Zap, DollarSign, Bot, Target, MessageSquare } from "lucide-react";
+import { Mic, Zap, DollarSign, Bot, Target, MessageSquare, Heart } from "lucide-react";
 import sobre4 from "@/assets/sobre-4.jpg";
 
 const featured = [
