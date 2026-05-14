@@ -1,7 +1,8 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Zap, Bot, Target, Settings, MessageSquare, LineChart, Globe } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { GraduationCap, Zap, Bot, Target, Settings, MessageSquare, LineChart, Globe, Sparkles, BookOpen, Presentation } from "lucide-react";
 import sobre4 from "@/assets/sobre-4.jpg";
 
 const Treinamentos = () => {
