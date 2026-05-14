@@ -149,8 +149,11 @@ const Treinamentos = () => {
           <div>
             <img
               src={sobre4}
-              alt="Monike Kineippe em treinamento"
+              alt="Monike Kineippe liderando treinamento corporativo de IA"
               className="rounded-lg w-full object-cover aspect-[4/3] premium-shadow"
+              loading="lazy"
+              width={448}
+              height={336}
             />
           </div>
           <div className="text-center md:text-left">
