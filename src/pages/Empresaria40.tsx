@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import SEO from "@/components/SEO";
+import { service, breadcrumb } from "@/lib/schemas";
 import {
   GraduationCap, Users, Wrench, Radio, BookOpen, Gift,
   Shield, ChevronDown, Menu, X, Check, XIcon,
@@ -770,6 +772,23 @@ const Empresaria40 = () => {
 
   return (
     <div className="min-h-screen" style={{ fontFamily: "'Inter', sans-serif" }}>
+      <SEO
+        title="Comunidade Empresária 4.0 — Método, IA e Networking para Mulheres"
+        description="Comunidade que reúne método, networking e ferramentas de IA para empreendedoras construírem negócios com previsibilidade e estrutura."
+        canonical="/empresaria-40"
+        schema={[
+          service({
+            name: "Comunidade Empresária 4.0",
+            description: "Ecossistema de mentoria, networking e IA para mulheres empreendedoras.",
+            url: "/empresaria-40",
+            serviceType: "Comunidade e Mentoria",
+          }),
+          breadcrumb([
+            { name: "Início", path: "/" },
+            { name: "Empresária 4.0", path: "/empresaria-40" },
+          ]),
+        ]}
+      />
       <Navbar />
       <Hero />
       <EmotionalBridge />

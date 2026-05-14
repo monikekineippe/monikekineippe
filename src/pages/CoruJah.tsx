@@ -703,8 +703,28 @@ const LPFooter = () => (
 /* ════════════════════════════════════════════════════════
    PAGE
    ════════════════════════════════════════════════════════ */
+import SEO from "@/components/SEO";
+import { product, breadcrumb } from "@/lib/schemas";
+
 const CoruJah = () => (
   <div className="min-h-screen" style={{ backgroundColor: "#FAF7F2" }}>
+    <SEO
+      title="CoruJah IA — Crie Seu Produto Digital com IA em Minutos"
+      description="A CoruJah é uma IA estratégica que transforma seu conhecimento em produto digital estruturado — nome, módulos, preço, copy e criativos — em 20 minutos."
+      canonical="/corujah"
+      schema={[
+        product({
+          name: "CoruJah IA",
+          description: "IA estratégica que transforma conhecimento em produto digital estruturado em 20 minutos.",
+          url: "/corujah",
+          brand: "CoruJah",
+        }),
+        breadcrumb([
+          { name: "Início", path: "/" },
+          { name: "CoruJah IA", path: "/corujah" },
+        ]),
+      ]}
+    />
     <Navbar />
     <Hero />
     <VideoSection />

@@ -1,5 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import SEO from "@/components/SEO";
+import { personSchema, breadcrumb } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
@@ -19,6 +21,22 @@ import sobre6 from "@/assets/sobre-6.jpg";
 import sobre7 from "@/assets/sobre-7.jpg";
 import sobre8 from "@/assets/sobre-8.jpg";
 import sobre9 from "@/assets/sobre-9.jpg";
+
+const sobreSEO = (
+  <SEO
+    title="Sobre Monike Kineippe — Estrategista em IA para Mulheres Empreendedoras"
+    description="Empresária há 18 anos, autora e estrategista de IA para negócios femininos. Conheça a história, valores e missão de Monike Kineippe."
+    canonical="/sobre"
+    ogType="profile"
+    schema={[
+      personSchema,
+      breadcrumb([
+        { name: "Início", path: "/" },
+        { name: "Sobre", path: "/sobre" },
+      ]),
+    ]}
+  />
+);
 
 const carouselImages = [
   { src: sobre8, alt: "Monike em ensaio corporativo" },

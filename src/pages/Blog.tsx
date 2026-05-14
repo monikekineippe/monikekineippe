@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import SEO from "@/components/SEO";
+import { breadcrumb } from "@/lib/schemas";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, ArrowRight } from "lucide-react";
@@ -49,6 +51,17 @@ const Blog = () => {
 
   return (
     <>
+      <SEO
+        title="Blog Monike Kineippe — IA, Vendas e Negócios Femininos"
+        description="Artigos sobre IA aplicada, vendas, posicionamento e estratégia para mulheres empreendedoras. Conteúdo prático, sem fórmula mágica."
+        canonical="/blog"
+        schema={[
+          breadcrumb([
+            { name: "Início", path: "/" },
+            { name: "Blog", path: "/blog" },
+          ]),
+        ]}
+      />
       <PageHero
         tag="Blog"
         title="Blog"

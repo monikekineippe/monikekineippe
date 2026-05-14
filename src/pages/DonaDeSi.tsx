@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Section from "@/components/Section";
+import SEO from "@/components/SEO";
+import { service, breadcrumb } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
 import logoIcon from "@/assets/logo-icon.png";
 import sobre9 from "@/assets/sobre-9.jpg";
@@ -18,6 +20,23 @@ const DonaDeSi = () => {
 
   return (
     <>
+      <SEO
+        title="Dona de $i — Mentoria Individual para Mulheres Empreendedoras"
+        description="Aceleração individual de 14 dias para colocar dinheiro em movimento e instalar um sistema real de vendas no seu negócio."
+        canonical="/dona-de-si"
+        schema={[
+          service({
+            name: "Mentoria Dona de $i",
+            description: "Mentoria individual de 14 dias para empreendedoras instalarem um sistema real de vendas e previsibilidade.",
+            url: "/dona-de-si",
+            serviceType: "Mentoria",
+          }),
+          breadcrumb([
+            { name: "Início", path: "/" },
+            { name: "Dona de $i", path: "/dona-de-si" },
+          ]),
+        ]}
+      />
       <DonaDeSiForm open={formOpen} onOpenChange={setFormOpen} />
 
       {/* HERO */}

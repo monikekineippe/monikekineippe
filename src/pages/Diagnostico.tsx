@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwfrHybNG4ArAMsp0goPl8qBWhv871v1cNNTiTRwJkH2vSwp8ryxAUkLdd_J50SHaJw/exec";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import SEO from "@/components/SEO";
+import { breadcrumb } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -165,6 +167,17 @@ const Diagnostico = () => {
 
   return (
     <>
+      <SEO
+        title="Diagnóstico Gratuito de IA para seu Negócio"
+        description="Em 3 minutos, descubra qual automação ou estratégia com IA faz sentido para o seu momento — e qual o próximo passo mais inteligente."
+        canonical="/diagnostico"
+        schema={[
+          breadcrumb([
+            { name: "Início", path: "/" },
+            { name: "Diagnóstico", path: "/diagnostico" },
+          ]),
+        ]}
+      />
       <PageHero tag="Gratuito" title="Onde a IA pode destravar seu negócio" subtitle="Em 3 minutos, descubra qual automação ou estratégia com IA faz sentido para o seu momento — e qual é o próximo passo." />
       <Section>
         <div className="max-w-2xl mx-auto">

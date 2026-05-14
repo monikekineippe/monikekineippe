@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Section from "@/components/Section";
+import SEO from "@/components/SEO";
+import { personSchema, organizationSchema, websiteSchema } from "@/lib/schemas";
 import { Bot, Sparkles, Mic, Gem, Users, GraduationCap } from "lucide-react";
 import monike1 from "@/assets/monike-1.jpg";
 import precifica3dLogo from "@/assets/precifica3d-logo.png";
@@ -8,6 +10,12 @@ import precifica3dLogo from "@/assets/precifica3d-logo.png";
 const Index = () => {
   return (
     <>
+      <SEO
+        title="Monike Kineippe | IA e Automação para Negócios Femininos"
+        description="IA aplicada a negócios femininos com estratégia, estrutura e linguagem humana. Consultoria, palestras, treinamentos e programas de implementação de IA."
+        canonical="/"
+        schema={[personSchema, organizationSchema, websiteSchema]}
+      />
       {/* ═══════════════════════════════════════════
           HERO SECTION
           ═══════════════════════════════════════════ */}

@@ -1,5 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import SEO from "@/components/SEO";
+import { service, breadcrumb } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import sobre8 from "@/assets/sobre-8.jpg";
@@ -34,6 +36,23 @@ const Mentorias = () => {
 
   return (
     <>
+      <SEO
+        title="Mentoria & Comunidade — Métodos e Ecossistema para Empreendedoras"
+        description="Workshop Venda $em Vender e Comunidade Empresária 4.0. Método, networking e ecossistema para mulheres que não querem crescer sozinhas."
+        canonical="/mentorias"
+        schema={[
+          service({
+            name: "Mentoria & Comunidade Monike Kineippe",
+            description: "Programas de mentoria, workshops e comunidade para empreendedoras.",
+            url: "/mentorias",
+            serviceType: "Mentoria e Comunidade",
+          }),
+          breadcrumb([
+            { name: "Início", path: "/" },
+            { name: "Mentoria & Comunidade", path: "/mentorias" },
+          ]),
+        ]}
+      />
       <div className="section-padding bg-primary text-primary-foreground text-center">
         <div className="container mx-auto max-w-3xl">
           <img src={sobre8} alt="Monike Kineippe" className="w-32 h-32 mx-auto mb-6 object-cover object-top rounded-full gold-border" />

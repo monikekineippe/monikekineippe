@@ -1,5 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import SEO from "@/components/SEO";
+import { book, breadcrumb } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,6 +17,22 @@ const Livros = () => {
 
   return (
     <>
+      <SEO
+        title="Livros de Monike Kineippe — Empreender Nunca Foi Sorte"
+        description="Livros e ebooks de Monike Kineippe sobre empreendedorismo feminino, vendas e estrutura de negócio. Nascidos da prática, não da teoria."
+        canonical="/livros"
+        schema={[
+          book({
+            name: "Empreender Nunca Foi Sorte",
+            description: "Livro de Monike Kineippe sobre estratégia e estrutura para empreendedoras.",
+            url: "/livros",
+          }),
+          breadcrumb([
+            { name: "Início", path: "/" },
+            { name: "Livros", path: "/livros" },
+          ]),
+        ]}
+      />
       <PageHero
         tag="Livros"
         title="Livros"
