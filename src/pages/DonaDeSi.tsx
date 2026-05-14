@@ -205,7 +205,7 @@ const DonaDeSi = () => {
           </div>
 
           <div className="mt-8 p-4 bg-primary/5 rounded-lg text-base font-sans text-muted-foreground italic">
-            Na Comunidade, você evolui com rede e suporte contínuo.<br />
+            Na <a href="/empresaria-40" className="text-secondary hover:underline font-semibold">Comunidade</a>, você evolui com rede e suporte contínuo.<br />
             Na Dona de $i, eu acelero com você — foco, correção e resultado em dias.
           </div>
         </div>
@@ -298,7 +298,7 @@ const DonaDeSi = () => {
       <Section variant="wine">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-sm font-sans text-primary-foreground/70 mb-2">
-            Se você quer estrutura com rede e suporte, conheça a Comunidade.
+            Se você quer estrutura com rede e suporte, conheça a <a href="/empresaria-40" className="text-secondary hover:underline font-semibold">Comunidade Empresária 4.0</a>.
           </p>
           <p className="text-lg font-serif text-primary-foreground mb-8">
             Se você quer resultado em <strong className="text-secondary">dias</strong>, aplica pra Dona de $i.

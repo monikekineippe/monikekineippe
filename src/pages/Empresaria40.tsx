@@ -200,7 +200,7 @@ const EmotionalBridge = () => {
    ════════════════════════════════════════════════════════ */
 const Product = () => {
   const benefits = [
-    { icon: GraduationCap, title: "Aprenda no seu tempo", desc: "+20h de conteúdo em aulas de até 15 minutos. Funciona offline, do celular, quando você puder." },
+    { icon: GraduationCap, title: "Aprenda no seu tempo", desc: "+20h de conteúdo em aulas de até 15 minutos. Funciona offline, do celular, quando você puder. Conheça também nossos <a href='/treinamentos' class='text-gold hover:underline'>treinamentos presenciais</a>." },
     { icon: Users, title: "Nunca mais sozinha", desc: "Uma rede real de empresárias que entendem seus desafios e te impulsionam a chegar mais longe." },
     { icon: Wrench, title: "IA na prática", desc: "Aulas e templates de inteligência artificial aplicada ao seu negócio: conteúdo, atendimento, automações e produtividade." },
     { icon: Radio, title: "Hotseat ao vivo toda semana", desc: "Traga seu problema atual e receba insights personalizados de empresárias experientes." },
