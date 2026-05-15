@@ -215,13 +215,7 @@ const Index = () => {
                 ))}
               </div>
 
-              <div className="pt-4">
-                <Button variant="gold" size="xl" className="w-full sm:w-auto shadow-lg hover:shadow-secondary/20 transition-all" asChild>
-                  <a href="https://precifica3d.lovable.app/" target="_blank" rel="noopener noreferrer">
-                    Visitar o Precifica3D <ArrowLeft className="ml-2 w-4 h-4 rotate-180" />
-                  </a>
-                </Button>
-              </div>
+              {/* Botão removido daqui e movido para cima conforme solicitado */}
             </div>
 
             {/* Coluna da Direita: Card de Funcionalidades */}
