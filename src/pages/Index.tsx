@@ -182,12 +182,16 @@ const Index = () => {
                   height={80}
                 />
                 <div className="h-12 w-px bg-secondary/20" />
-                <span className="font-serif text-lg italic text-primary/80">O SaaS da impressão 3D</span>
+                <Button variant="outline" size="sm" className="border-secondary text-secondary hover:bg-secondary hover:text-white rounded-full transition-all" asChild>
+                  <a href="https://precifica3d.lovable.app/" target="_blank" rel="noopener noreferrer">
+                    VISITE O PRECIFICA3D
+                  </a>
+                </Button>
               </div>
 
               <div className="prose prose-slate font-sans text-muted-foreground leading-relaxed max-w-none space-y-6">
                 <p className="text-lg text-primary/90 font-medium">
-                  Identifiquei uma lacuna crítica: profissionais de impressão 3D calculavam preços no "achismo" e perdiam lucro.
+                  <strong>Identifiquei uma lacuna crítica:</strong> profissionais de impressão 3D calculavam preços no "achismo" e perdiam lucro.
                 </p>
                 <p>
                   Construí o <strong className="text-primary">Precifica3D</strong> como uma plataforma completa que automatiza o cálculo de custos — do filamento à depreciação da máquina — usando IA para sugerir margens estratégicas baseadas no mercado.
@@ -211,13 +215,7 @@ const Index = () => {
                 ))}
               </div>
 
-              <div className="pt-4">
-                <Button variant="gold" size="xl" className="w-full sm:w-auto shadow-lg hover:shadow-secondary/20 transition-all" asChild>
-                  <a href="https://precifica3d.lovable.app/" target="_blank" rel="noopener noreferrer">
-                    Visitar o Precifica3D <ArrowLeft className="ml-2 w-4 h-4 rotate-180" />
-                  </a>
-                </Button>
-              </div>
+              {/* Botão removido daqui e movido para cima conforme solicitado */}
             </div>
 
             {/* Coluna da Direita: Card de Funcionalidades */}
