@@ -185,13 +185,13 @@ const Admin = () => {
               onChange={(e) => setPassword(e.target.value)}
               onKeyPress={(e) => e.key === "Enter" && handleLogin()}
             />
-            <div className=\"space-y-2\">
-              <Button onClick={handleLogin} className=\"w-full\">
+            <div className="space-y-2">
+              <Button onClick={handleLogin} className="w-full">
                 Entrar
               </Button>
               <Button 
-                variant=\"link\" 
-                className=\"w-full text-sm text-muted-foreground\"
+                variant="link" 
+                className="w-full text-sm text-muted-foreground"
                 onClick={handleForgotPassword}
               >
                 Esqueci a senha
