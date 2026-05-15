@@ -193,31 +193,36 @@ const VendaSemVender = () => {
           
           <div className="space-y-16">
             <div className="bg-white/5 p-8 md:p-12 border border-[#B8973A]/20">
-              <h3 className="text-[#B8973A] font-serif text-2xl mb-8 flex items-center gap-4">
-                <span className="w-8 h-px bg-[#B8973A]"></span>
-                Workshop Venda $em Vender — 6 aulas
-              </h3>
-              <p className="text-[#F5F0E8]/70 mb-8 italic">Formato workshop, não curso enlatado. Energia de evento ao vivo, com dinâmica prática para aplicação imediata.</p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
-                <li className="flex gap-3">
-                  <span className="text-[#B8973A]">→</span> Aula 1, Apresentação
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#B8973A]">→</span> Aula 2, Por que vender parece difícil
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#B8973A]">→</span> Aula 3, O Método
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#B8973A]">→</span> Aula 4, Perguntas e Respostas
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#B8973A]">→</span> Aula 5, Dinâmica, aprenda na prática
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#B8973A]">→</span> Aula 6, Encerramento
-                </li>
-              </ul>
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                  <h3 className="text-[#B8973A] font-serif text-3xl mb-2">
+                    Workshop Venda $em Vender
+                  </h3>
+                  <p className="text-[#F5F0E8]/70 italic">Formato intensivo para aplicação imediata.</p>
+                </div>
+                <div className="text-right">
+                  <span className="text-5xl font-serif text-[#B8973A]/20">06 AULAS</span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                {[
+                  { title: "Apresentação", desc: "Abertura e mentalidade da venda invisível." },
+                  { title: "Por que vender parece difícil", desc: "Identificando e removendo as travas comerciais." },
+                  { title: "O Método", desc: "A estrutura técnica passo a passo do processo." },
+                  { title: "Perguntas e Respostas", desc: "Consultoria direta sobre casos reais das alunas." },
+                  { title: "Dinâmica Prática", desc: "Mão na massa para validar a sua nova abordagem." },
+                  { title: "Encerramento", desc: "Plano de ação e próximos passos na jornada." }
+                ].map((aula, idx) => (
+                  <div key={idx} className="flex gap-6 group">
+                    <span className="font-serif text-2xl text-[#B8973A] opacity-40 group-hover:opacity-100 transition-opacity">0{idx + 1}</span>
+                    <div>
+                      <h4 className="font-serif text-xl mb-1 text-[#F5F0E8]">{aula.title}</h4>
+                      <p className="text-[#F5F0E8]/50 text-sm leading-relaxed">{aula.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="space-y-8">
