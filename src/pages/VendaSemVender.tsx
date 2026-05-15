@@ -327,8 +327,23 @@ const VendaSemVender = () => {
             <p>As alunas desta turma vão construir os primeiros depoimentos públicos do método. É uma oportunidade rara de entrar antes que o preço suba, antes da página ficar cheia de prova social, antes do método virar referência.</p>
           </div>
           <div className="bg-white p-12 border-2 border-[#B8973A] relative">
-            <p className="font-serif text-2xl mb-2">Quem entra agora paga <span className="text-[#B8973A] font-bold">R$147</span>.</p>
-            <p className="text-[#4A4A4A] italic text-lg opacity-70">Nas próximas turmas, o investimento será R$297.</p>
+            <p className="text-[#4A4A4A] line-through italic text-lg opacity-70 mb-2">De R$ 297</p>
+            <p className="font-serif text-3xl mb-2">
+              por apenas <span className="text-[#B8973A] font-bold">12x de R$ 15,11</span>
+            </p>
+            <p className="text-xl text-[#4A4A4A]">ou à vista <span className="font-bold">R$ 147,00</span></p>
+            
+            <div className="mt-8">
+              <Button 
+                className="bg-[#B8973A] hover:bg-[#6B1C2A] text-[#1A1A1A] hover:text-[#F5F0E8] text-lg px-12 py-7 h-auto rounded-sm transition-all duration-300 font-semibold w-full md:w-auto"
+                onClick={handleCTAClick}
+                asChild
+              >
+                <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
+                  APROVEITAR ESTA OPORTUNIDADE
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
