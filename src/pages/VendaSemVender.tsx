@@ -246,7 +246,7 @@ const VendaSemVender = () => {
 
             <div className="text-center pt-12 border-t border-white/10 mt-8">
               <div className="inline-block bg-[#B8973A] text-[#1A1A1A] px-6 py-2 rounded-full text-sm font-bold tracking-widest uppercase mb-4 animate-pulse">
-                Destaque Especial
+                POR TEMPO LIMITADO
               </div>
               <h3 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-[#B8973A]">ACESSO VITALÍCIO</h3>
               <p className="text-[#F5F0E8]/80 text-lg md:text-xl italic max-w-2xl mx-auto">
