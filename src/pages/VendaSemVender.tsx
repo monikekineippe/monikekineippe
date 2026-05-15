@@ -244,9 +244,14 @@ const VendaSemVender = () => {
               </div>
             </div>
 
-            <div className="text-center pt-8 border-t border-white/10">
-              <h3 className="font-serif text-2xl mb-2">Acesso vitalício</h3>
-              <p className="text-[#F5F0E8]/60 italic">Estude no seu ritmo. Revise quando quiser. Aplique quando fizer sentido.</p>
+            <div className="text-center pt-12 border-t border-white/10 mt-8">
+              <div className="inline-block bg-[#B8973A] text-[#1A1A1A] px-6 py-2 rounded-full text-sm font-bold tracking-widest uppercase mb-4 animate-pulse">
+                Destaque Especial
+              </div>
+              <h3 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-[#B8973A]">ACESSO VITALÍCIO</h3>
+              <p className="text-[#F5F0E8]/80 text-lg md:text-xl italic max-w-2xl mx-auto">
+                Assista no seu tempo, revise quando precisar e tenha o método sempre à mão para cada nova conversa.
+              </p>
             </div>
           </div>
         </div>
