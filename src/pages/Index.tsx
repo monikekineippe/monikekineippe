@@ -172,7 +172,12 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Coluna da Esquerda: Texto e Contexto */}
             <div className="lg:col-span-7 space-y-8">
-              <div className="inline-flex items-center gap-4 p-4 bg-white/50 rounded-xl gold-border mb-4">
+              <a 
+                href="https://precifica3d.lovable.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-4 p-4 bg-white/50 rounded-xl gold-border mb-4 hover:bg-white/80 transition-all group"
+              >
                 <img
                   src={precifica3dLogo}
                   alt="Logo do Precifica3D"
@@ -182,12 +187,10 @@ const Index = () => {
                   height={80}
                 />
                 <div className="h-12 w-px bg-secondary/20" />
-                <Button variant="outline" size="sm" className="border-secondary text-secondary hover:bg-secondary hover:text-white rounded-full transition-all" asChild>
-                  <a href="https://precifica3d.lovable.app/" target="_blank" rel="noopener noreferrer">
-                    VISITE O PRECIFICA3D
-                  </a>
+                <Button variant="outline" size="sm" className="border-secondary text-secondary group-hover:bg-secondary group-hover:text-white rounded-full transition-all pointer-events-none">
+                  CONHEÇA O PRECIFICA3D
                 </Button>
-              </div>
+              </a>
 
               <div className="prose prose-slate font-sans text-muted-foreground leading-relaxed max-w-none space-y-6">
                 <p className="text-lg text-primary/90 font-medium">
