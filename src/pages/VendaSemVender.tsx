@@ -62,7 +62,7 @@ const VendaSemVender = () => {
               </a>
             </Button>
             <p className="mt-4 text-[#F5F0E8]/70 text-sm">
-              De R$297 por R$147 no lançamento, pagamento único, acesso vitalício
+              De R$297 por R$147 no lançamento, pagamento único, acesso por 1 ano
             </p>
           </div>
         </div>
