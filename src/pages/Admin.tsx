@@ -79,6 +79,21 @@ const Admin = () => {
       }
     }
   };
+  const handleForgotPassword = async () => {
+    if (!email) {
+      toast({ title: "Informe seu e-mail", description: "Precisamos do e-mail para enviar o link de recuperação.", variant: "destructive" });
+      return;
+    }
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/admin`,
+    });
+    if (error) {
+      toast({ title: "Erro ao enviar e-mail", description: error.message, variant: "destructive" });
+    } else {
+      toast({ title: "E-mail enviado", description: "Verifique sua caixa de entrada para redefinir a senha." });
+    }
+  };
+
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
@@ -170,9 +185,18 @@ const Admin = () => {
               onChange={(e) => setPassword(e.target.value)}
               onKeyPress={(e) => e.key === "Enter" && handleLogin()}
             />
-            <Button onClick={handleLogin} className="w-full">
-              Entrar
-            </Button>
+            <div className="space-y-2">
+              <Button onClick={handleLogin} className="w-full">
+                Entrar
+              </Button>
+              <Button 
+                variant="link" 
+                className="w-full text-sm text-muted-foreground"
+                onClick={handleForgotPassword}
+              >
+                Esqueci a senha
+              </Button>
+            </div>
           </CardContent>
         </Card>
       </div>
