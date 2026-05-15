@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Section from "@/components/Section";
 import SEO from "@/components/SEO";
 import { personSchema, organizationSchema, websiteSchema, faqPage } from "@/lib/schemas";
-import { Bot, Sparkles, Mic, Gem, Users, GraduationCap } from "lucide-react";
+import { Bot, Sparkles, Mic, Gem, Users, GraduationCap, ArrowLeft } from "lucide-react";
 import monike1 from "@/assets/monike-1.jpg";
 import precifica3dLogo from "@/assets/precifica3d-logo.png";
 
@@ -160,62 +160,97 @@ const Index = () => {
           CASE — Precifica3D
           ═══════════════════════════════════════════ */}
       <Section variant="accent">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
             <span className="font-sans text-xs tracking-[0.3em] uppercase text-secondary">Case real</span>
-            <h2 className="text-2xl md:text-3xl font-serif mt-4">Eu não só ensino IA. Eu construo com ela.</h2>
+            <h2 className="text-3xl md:text-4xl font-serif mt-4">Eu não só ensino IA. Eu construo com ela.</h2>
+            <p className="text-muted-foreground font-sans mt-4 max-w-2xl mx-auto">
+              O Precifica3D é a prova viva de que a IA, quando bem aplicada, cria soluções escaláveis e lucrativas em tempo recorde.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div>
-              <img
-                src={precifica3dLogo}
-                alt="Logo do Precifica3D — Ferramenta de precificação inteligente para impressão 3D"
-                className="h-28 md:h-36 object-contain mb-6"
-                loading="lazy"
-                width={200}
-                height={120}
-              />
-              <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">
-                Profissionais de impressão 3D no Brasil não tinham uma ferramenta confiável para precificar peças. Calculavam no achismo — e perdiam dinheiro.
-              </p>
-              <p className="text-muted-foreground font-sans text-base leading-relaxed mb-4">
-                Eu construí o Precifica3D: uma plataforma SaaS que calcula custos de impressão 3D com precisão — filamento, energia, depreciação, impostos, embalagem — e usa IA para sugerir margens de lucro por categoria de peça.
-              </p>
-              <p className="text-muted-foreground font-sans text-base leading-relaxed mb-6">
-                Construído com IA e ferramentas no-code. Sem escrever uma linha de código manualmente. Com usuários pagantes desde o lançamento.
-              </p>
-              <div className="flex flex-wrap gap-4 mb-6">
-                <div className="text-center">
-                  <p className="font-serif text-xl text-secondary">SaaS</p>
-                  <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">produto real</p>
-                </div>
-                <div className="text-center">
-                  <p className="font-serif text-xl text-secondary">IA</p>
-                  <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">margem inteligente</p>
-                </div>
-                <div className="text-center">
-                  <p className="font-serif text-xl text-secondary">No-code</p>
-                  <p className="font-sans text-xs tracking-wide uppercase text-muted-foreground">sem programação</p>
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            {/* Coluna da Esquerda: Texto e Contexto */}
+            <div className="lg:col-span-7 space-y-8">
+              <div className="inline-flex items-center gap-4 p-4 bg-white/50 rounded-xl gold-border mb-4">
+                <img
+                  src={precifica3dLogo}
+                  alt="Logo do Precifica3D"
+                  className="h-16 md:h-20 object-contain"
+                  loading="lazy"
+                  width={120}
+                  height={80}
+                />
+                <div className="h-12 w-px bg-secondary/20" />
+                <span className="font-serif text-lg italic text-primary/80">O SaaS da impressão 3D</span>
               </div>
-              <Button variant="gold" size="lg" asChild>
-                <a href="https://precifica3d.lovable.app/" target="_blank" rel="noopener noreferrer">Conhecer o Precifica3D →</a>
-              </Button>
+
+              <div className="prose prose-slate font-sans text-muted-foreground leading-relaxed max-w-none space-y-6">
+                <p className="text-lg text-primary/90 font-medium">
+                  Identifiquei uma lacuna crítica: profissionais de impressão 3D calculavam preços no "achismo" e perdiam lucro.
+                </p>
+                <p>
+                  Construí o <strong className="text-primary">Precifica3D</strong> como uma plataforma completa que automatiza o cálculo de custos — do filamento à depreciação da máquina — usando IA para sugerir margens estratégicas baseadas no mercado.
+                </p>
+                <p className="bg-secondary/10 p-4 rounded-lg border-l-4 border-secondary text-primary/80 italic">
+                  "Desenvolvido 100% com IA e no-code, sem uma única linha de código manual, e com usuários pagantes desde o primeiro dia."
+                </p>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4">
+                {[
+                  { label: "SaaS", sub: "Produto Real", icon: Bot },
+                  { label: "IA", sub: "Margem Inteligente", icon: Sparkles },
+                  { label: "No-code", sub: "Agilidade Total", icon: Gem }
+                ].map((item, idx) => (
+                  <div key={idx} className="p-4 bg-white/40 rounded-lg text-center gold-border">
+                    <item.icon className="w-5 h-5 text-secondary mx-auto mb-2 opacity-70" />
+                    <p className="font-serif text-lg text-secondary leading-none">{item.label}</p>
+                    <p className="font-sans text-[10px] tracking-wider uppercase text-muted-foreground mt-1">{item.sub}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-4">
+                <Button variant="gold" size="xl" className="w-full sm:w-auto shadow-lg hover:shadow-secondary/20 transition-all" asChild>
+                  <a href="https://precifica3d.lovable.app/" target="_blank" rel="noopener noreferrer">
+                    Visitar o Precifica3D <ArrowLeft className="ml-2 w-4 h-4 rotate-180" />
+                  </a>
+                </Button>
+              </div>
             </div>
 
-            <div className="p-8 bg-primary text-primary-foreground rounded-lg border border-secondary/20">
-              <p className="font-sans text-xs tracking-[0.2em] uppercase text-secondary mb-4">O que o Precifica3D faz</p>
-              <ul className="space-y-3 text-base font-sans text-primary-foreground/80">
-                <li>→ Calcula custo real por peça (filamento, energia, depreciação)</li>
-                <li>→ IA sugere margem de lucro por categoria</li>
-                <li>→ Gestão de impressoras e histórico de orçamentos</li>
-                <li>→ Relatórios e exportação de dados</li>
-                <li>→ Planos Free e Pro com pagamento integrado</li>
-              </ul>
-              <p className="mt-6 text-sm text-primary-foreground/50 font-sans italic">
-                "Se eu consegui construir um SaaS funcional com IA e no-code, imagine o que a IA pode fazer pelo seu negócio."
-              </p>
+            {/* Coluna da Direita: Card de Funcionalidades */}
+            <div className="lg:col-span-5">
+              <div className="relative p-8 bg-primary text-primary-foreground rounded-2xl premium-shadow overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full -mr-16 -mt-16 blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-secondary/5 rounded-full -ml-12 -mb-12 blur-2xl" />
+                
+                <h3 className="font-sans text-xs tracking-[0.2em] uppercase text-secondary mb-8 border-b border-secondary/20 pb-4">
+                  Diferenciais do Projeto
+                </h3>
+                
+                <ul className="space-y-6 relative z-10">
+                  {[
+                    "Cálculo automático de custo real (filamento, energia, desgaste)",
+                    "Sugestão de margem via IA por categoria de peça",
+                    "Dashboard de gestão de orçamentos e clientes",
+                    "Geração de orçamentos profissionais em PDF",
+                    "Fluxo de pagamento integrado com assinatura Pro"
+                  ].map((feature, i) => (
+                    <li key={i} className="flex items-start gap-3 group/item">
+                      <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary shrink-0 group-hover/item:scale-150 transition-transform" />
+                      <span className="text-base font-sans text-primary-foreground/90 leading-tight">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-12 p-4 bg-white/5 rounded-xl border border-white/10 italic text-sm text-primary-foreground/70 font-sans">
+                  "Este é o nível de solução que a IA permite entregar hoje: complexidade tecnológica com simplicidade de uso."
+                </div>
+              </div>
             </div>
           </div>
         </div>
