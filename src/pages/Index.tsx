@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Section from "@/components/Section";
 import SEO from "@/components/SEO";
 import { personSchema, organizationSchema, websiteSchema, faqPage } from "@/lib/schemas";
-import { Bot, Sparkles, Mic, Gem, Users, GraduationCap } from "lucide-react";
+import { Bot, Sparkles, Mic, Gem, Users, GraduationCap, ArrowLeft } from "lucide-react";
 import monike1 from "@/assets/monike-1.jpg";
 import precifica3dLogo from "@/assets/precifica3d-logo.png";
 
