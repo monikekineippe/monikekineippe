@@ -154,18 +154,22 @@
 
     .score-strip {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
       margin: 34px 0 10px;
     }
     .score {
+      min-height: 132px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,.065);
       border-radius: 22px;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-    .score .num { font-size: 36px; line-height: 1; font-weight: 900; color: var(--gold-2); letter-spacing: -.06em; }
-    .score .label { margin-top: 8px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+    .score .num { font-size: clamp(30px, 4vw, 42px); line-height: 1; font-weight: 900; color: var(--gold-2); letter-spacing: -.06em; white-space: nowrap; }
+    .score .label { margin-top: 10px; color: var(--muted); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; line-height: 1.25; }
 
     section { padding: 54px 0; }
     .section-title {
@@ -298,10 +302,10 @@
       </div>
 
       <div class="wrap score-strip" aria-label="Indicadores do projeto">
-        <div class="score"><div class="num">20-30</div><div class="label">leads/dia estimados</div></div>
-        <div class="score"><div class="num">5</div><div class="label">perguntas base</div></div>
-        <div class="score"><div class="num">2k</div><div class="label">leads/mês incluídos</div></div>
-        <div class="score"><div class="num">500</div><div class="label">leads para recuperação</div></div>
+        <div class="score"><div class="num">20–30</div><div class="label">Leads por dia estimados</div></div>
+        <div class="score"><div class="num">5</div><div class="label">Perguntas base de qualificação</div></div>
+        <div class="score"><div class="num">2.000</div><div class="label">Leads/mês incluídos na manutenção</div></div>
+        <div class="score"><div class="num">500</div><div class="label">Leads para recuperação opcional</div></div>
       </div>
     </section>
 
@@ -342,7 +346,7 @@
           </div>
           <div class="card">
             <h3>Cadência de retomada</h3>
-            <p>Mensagens estratégicas para leads que começam a conversa e param antes de concluir a qualificação.</p>
+            <p>Desenho da lógica de retomada para leads que começam a conversa e param antes de concluir a qualificação. A ativação operacional entra como adicional na primeira mensalidade.</p>
           </div>
           <div class="card">
             <h3>Repasse ao comercial</h3>
@@ -378,7 +382,7 @@
             <li>Desenho estratégico do fluxo de qualificação</li>
             <li>Configuração do agente SDR via WhatsApp</li>
             <li>Criação da conversa base de qualificação</li>
-            <li>Cadência inicial para leads que abandonam a conversa</li>
+            <li>Desenho da lógica de retomada para leads que abandonam a conversa</li>
             <li>Estrutura simples de repasse para o comercial</li>
             <li>Testes assistidos e ajustes iniciais</li>
             <li>Orientação sobre ferramentas necessárias</li>
@@ -419,6 +423,23 @@
             <div class="price-label">Manutenção mensal</div>
             <div class="price">R$ 890 <small>/ mês</small></div>
             <p>Até 2.000 leads/mês. Inclui acompanhamento técnico, suporte operacional, ajustes simples, monitoramento e estabilidade.</p>
+          </div>
+        </div>
+        <div class="card strong" style="margin-top:18px">
+          <h3>Condição de pagamento da implementação</h3>
+          <p>Pagamento em três etapas: <strong>50%</strong> na assinatura do contrato, <strong>20%</strong> no teste assistido e <strong>30%</strong> na entrega final.</p>
+        </div>
+        <div class="card strong" style="margin-top:18px">
+          <h3>Cadência de retomada</h3>
+          <p>A ativação operacional da cadência de retomada será adicionada à primeira mensalidade no valor de <strong>R$ 500,00</strong>. Assim, a primeira mensalidade será de <strong>R$ 1.390,00</strong> e, a partir do mês seguinte, retorna para <strong>R$ 890,00/mês</strong>.</p>
+        </div>
+        <div class="card" style="margin-top:18px">
+          <h3>Custos de ferramentas externas</h3>
+          <p>Custos de terceiros, como ManyChat, tokens de IA, WhatsApp/API oficial Meta, Google Workspace ou ferramentas equivalentes, são por conta do cliente e não estão incluídos na implementação nem na manutenção mensal.</p>
+          <div class="grid-3" style="margin-top:18px">
+            <div class="card"><h3>ManyChat</h3><p>Plano conforme contatos e uso.</p></div>
+            <div class="card"><h3>IA / tokens</h3><p>Custo variável conforme volume de conversas.</p></div>
+            <div class="card"><h3>WhatsApp/API</h3><p>Custo conforme provedor, janela e modelo oficial escolhido.</p></div>
           </div>
         </div>
       </div>
