@@ -154,22 +154,39 @@
 
     .score-strip {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(180px, 1fr));
       gap: 14px;
       margin: 34px 0 10px;
+      align-items: stretch;
     }
     .score {
-      min-height: 132px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,.065);
       border-radius: 22px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 14px;
+      align-items: center;
+      min-height: 92px;
     }
-    .score .num { font-size: clamp(30px, 4vw, 42px); line-height: 1; font-weight: 900; color: var(--gold-2); letter-spacing: -.06em; white-space: nowrap; }
-    .score .label { margin-top: 10px; color: var(--muted); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; line-height: 1.25; }
+    .score .num {
+      min-width: 74px;
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+      color: var(--gold-2);
+      letter-spacing: -.05em;
+      white-space: nowrap;
+    }
+    .score .label {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .055em;
+      line-height: 1.25;
+    }
 
     section { padding: 54px 0; }
     .section-title {
@@ -251,8 +268,11 @@
       .section-title { display: block; }
       .section-title p { margin-top: 14px; }
     }
-    @media (max-width: 520px) {
+    @media (max-width: 640px) {
       .score-strip { grid-template-columns: 1fr; }
+      .score { min-height: auto; padding: 16px 18px; }
+      .score .num { min-width: 72px; font-size: 28px; }
+      .score .label { font-size: 12px; }
       .hero { padding-top: 48px; }
       .card, .hero-card, .price-card, .highlight { padding: 22px; }
     }
