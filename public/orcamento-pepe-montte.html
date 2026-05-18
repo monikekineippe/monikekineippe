@@ -67,15 +67,21 @@
       letter-spacing: -.03em;
     }
     .mark {
-      width: 38px;
-      height: 38px;
+      width: 42px;
+      height: 42px;
       border-radius: 14px;
       display: grid;
       place-items: center;
-      background: linear-gradient(145deg, var(--gold), #8f6824);
-      color: #111;
-      font-weight: 900;
-      box-shadow: 0 12px 30px rgba(215,181,109,.22);
+      background: #fff;
+      border: 1px solid rgba(255,255,255,.20);
+      box-shadow: 0 12px 30px rgba(255,122,31,.18);
+      overflow: hidden;
+    }
+    .mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .navlinks { display: flex; gap: 18px; color: var(--muted); font-size: 13px; font-weight: 600; }
     .navlinks a:hover { color: var(--gold-2); }
@@ -252,8 +258,8 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Início">
-        <span class="mark">SDR</span>
-        <span>Proposta Comercial</span>
+        <span class="mark"><img src="/pepe-montte-logo.jpg" alt="Logo Pepe Montte"></span>
+        <span>Pepe Montte · Proposta Comercial</span>
       </a>
       <nav class="navlinks" aria-label="Navegação">
         <a href="#escopo">Escopo</a>
@@ -269,7 +275,7 @@
       <div class="wrap hero-grid">
         <div>
           <div class="badge-row">
-            <span class="badge ok">Proposta estruturada</span>
+            <span class="badge ok">Pepe Montte</span>
             <span class="badge">WhatsApp SDR</span>
             <span class="badge">Tráfego imobiliário</span>
           </div>
@@ -437,7 +443,7 @@
               <li>Cadência específica</li>
               <li>Cuidado com frequência e risco operacional</li>
             </ul>
-            <div class="price" style="font-size:36px">R$ 1.500 a R$ 2.500</div>
+            <div class="price" style="font-size:36px">R$ 1.800</div>
           </div>
           <div class="card strong">
             <h3>Ramificações por campanha/produto</h3>
@@ -448,7 +454,7 @@
               <li>Matriz de abordagem por intenção</li>
               <li>Segmentação e rastreamento mais detalhados</li>
             </ul>
-            <div class="price" style="font-size:36px">R$ 1.000 a R$ 2.000</div>
+            <div class="price" style="font-size:36px">A consultar</div>
           </div>
         </div>
       </div>
