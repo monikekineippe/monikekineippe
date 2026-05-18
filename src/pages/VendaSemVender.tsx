@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import monikeProfile from "@/assets/monike-1.jpg";
+import monikeVendaSemVender from "@/assets/monike-venda-sem-vender.jpg";
 
 const CTA_LINK =
   "https://payfast.greenn.com.br/102443/offer/cX9FFF?b_id_1=120590&b_offer_1=IAzycE";
@@ -169,8 +169,16 @@ const VendaSemVender = () => {
             </div>
             <p className="text-sm text-[#4A4A4A]">Acesso imediato. R$ 147 à vista ou parcelado.</p>
           </div>
-          {/* TODO: adicionar foto editorial da Monike */}
-          <div className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 w-80 h-[420px] bg-[#E5E0D5] rounded-sm" />
+          <div className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 w-80 overflow-hidden rounded-sm shadow-2xl shadow-[#6B1C2A]/10">
+            <img
+              src={monikeVendaSemVender}
+              alt="Monike Kineippe — método Venda $em Vender"
+              className="h-[420px] w-full object-cover object-top grayscale contrast-110 transition-all duration-700 hover:grayscale-0"
+              loading="eager"
+              width={320}
+              height={400}
+            />
+          </div>
         </div>
         <Divider />
       </section>
@@ -357,8 +365,7 @@ const VendaSemVender = () => {
         <div className="container mx-auto px-6 max-w-[1000px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div className="relative">
-              {/* TODO: adicionar foto editorial da Monike */}
-              <img src={monikeProfile} alt="Monike Kineippe — Criadora do método Venda $em Vender" className="grayscale contrast-125 transition-all duration-700 hover:grayscale-0 w-full max-w-md" loading="lazy" width={448} height={597} />
+              <img src={monikeVendaSemVender} alt="Monike Kineippe — Criadora do método Venda $em Vender" className="grayscale contrast-125 transition-all duration-700 hover:grayscale-0 w-full max-w-md" loading="lazy" width={448} height={560} />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 border-r-2 border-b-2 border-[#B8973A] hidden md:block" />
             </div>
             <div className="space-y-8">
