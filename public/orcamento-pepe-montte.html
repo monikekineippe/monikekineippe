@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orçamento — Agente SDR WhatsApp | Pepe Montte</title>
+  <meta name="description" content="Orçamento comercial para implementação de Agente SDR via WhatsApp para qualificação, cadência e repasse de leads imobiliários." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #071014;
+      --panel: rgba(255,255,255,.075);
+      --panel-strong: rgba(255,255,255,.115);
+      --line: rgba(255,255,255,.14);
+      --text: #f5f3ee;
+      --muted: rgba(245,243,238,.72);
+      --soft: rgba(245,243,238,.52);
+      --gold: #d7b56d;
+      --gold-2: #f0d68e;
+      --green: #5ee3a1;
+      --blue: #7cc6ff;
+      --red: #ff7a90;
+      --wine: #7d2534;
+      --shadow: 0 24px 80px rgba(0,0,0,.38);
+      --radius: 26px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(215,181,109,.20), transparent 28%),
+        radial-gradient(circle at 85% 5%, rgba(124,198,255,.16), transparent 30%),
+        radial-gradient(circle at 75% 70%, rgba(125,37,52,.28), transparent 35%),
+        linear-gradient(180deg, #081318 0%, #05090c 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(5,9,12,.72);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 72px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -.03em;
+    }
+    .mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, var(--gold), #8f6824);
+      color: #111;
+      font-weight: 900;
+      box-shadow: 0 12px 30px rgba(215,181,109,.22);
+    }
+    .navlinks { display: flex; gap: 18px; color: var(--muted); font-size: 13px; font-weight: 600; }
+    .navlinks a:hover { color: var(--gold-2); }
+
+    .hero { padding: 74px 0 42px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+    .badge-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+    .badge {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.07);
+      color: var(--muted);
+      padding: 8px 11px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .badge.ok { color: #10251a; background: var(--green); border-color: transparent; }
+    h1 {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: .96;
+      letter-spacing: -.055em;
+    }
+    .lead {
+      margin: 28px 0 0;
+      max-width: 690px;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 21px);
+    }
+    .hero-card {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.055));
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    .hero-card h2 { margin: 0 0 14px; font-size: 18px; letter-spacing: -.02em; }
+    .metric {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+    }
+    .metric:first-of-type { border-top: 0; }
+    .metric span { color: var(--muted); }
+    .metric strong { color: var(--gold-2); font-size: 20px; }
+    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 14px;
+      font-weight: 800;
+      font-size: 14px;
+      border: 1px solid var(--line);
+    }
+    .btn.primary { background: var(--gold); color: #111; border-color: transparent; }
+    .btn.secondary { background: rgba(255,255,255,.06); color: var(--text); }
+
+    .score-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin: 34px 0 10px;
+    }
+    .score {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.065);
+      border-radius: 22px;
+      padding: 20px;
+    }
+    .score .num { font-size: 36px; line-height: 1; font-weight: 900; color: var(--gold-2); letter-spacing: -.06em; }
+    .score .label { margin-top: 8px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+
+    section { padding: 54px 0; }
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .eyebrow { color: var(--gold-2); text-transform: uppercase; letter-spacing: .16em; font-size: 12px; font-weight: 900; }
+    h2 { margin: 8px 0 0; font-size: clamp(28px, 4vw, 48px); line-height: 1.05; letter-spacing: -.05em; }
+    .section-title p { max-width: 450px; color: var(--muted); margin: 0; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 14px 50px rgba(0,0,0,.18);
+    }
+    .card.strong { background: var(--panel-strong); }
+    .card h3 { margin: 0 0 12px; font-size: 21px; letter-spacing: -.035em; }
+    .card p { margin: 0; color: var(--muted); }
+    .list { display: grid; gap: 12px; margin: 16px 0 0; padding: 0; list-style: none; }
+    .list li { color: var(--muted); display: flex; gap: 10px; align-items: flex-start; }
+    .list li::before { content: "✓"; color: var(--green); font-weight: 900; }
+    .list.no li::before { content: "×"; color: var(--red); }
+
+    .investment {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .price-card {
+      border: 1px solid rgba(215,181,109,.35);
+      background: linear-gradient(180deg, rgba(215,181,109,.16), rgba(255,255,255,.065));
+      border-radius: 30px;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    .price-card::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -120px;
+      top: -110px;
+      background: radial-gradient(circle, rgba(240,214,142,.28), transparent 65%);
+    }
+    .price-label { color: var(--muted); font-weight: 800; text-transform: uppercase; letter-spacing: .12em; font-size: 12px; }
+    .price { margin: 10px 0 8px; font-size: clamp(38px, 5vw, 60px); font-weight: 900; letter-spacing: -.075em; color: var(--gold-2); }
+    .price small { font-size: 18px; color: var(--muted); letter-spacing: 0; }
+
+    .timeline { display: grid; gap: 14px; }
+    .step { display: grid; grid-template-columns: 58px 1fr; gap: 16px; align-items: start; }
+    .step-num {
+      width: 46px; height: 46px; border-radius: 16px; display: grid; place-items: center;
+      background: rgba(215,181,109,.16); color: var(--gold-2); font-weight: 900; border: 1px solid rgba(215,181,109,.28);
+    }
+    .step h3 { margin: 0 0 6px; font-size: 18px; }
+    .step p { margin: 0; color: var(--muted); }
+
+    .highlight {
+      border: 1px solid rgba(94,227,161,.28);
+      background: linear-gradient(135deg, rgba(94,227,161,.12), rgba(124,198,255,.08));
+      border-radius: 30px;
+      padding: 32px;
+    }
+    .footer { padding: 44px 0 70px; color: var(--soft); border-top: 1px solid var(--line); margin-top: 40px; }
+
+    @media (max-width: 860px) {
+      .hero-grid, .grid-2, .grid-3, .investment { grid-template-columns: 1fr; }
+      .score-strip { grid-template-columns: 1fr 1fr; }
+      .navlinks { display: none; }
+      section { padding: 38px 0; }
+      .section-title { display: block; }
+      .section-title p { margin-top: 14px; }
+    }
+    @media (max-width: 520px) {
+      .score-strip { grid-template-columns: 1fr; }
+      .hero { padding-top: 48px; }
+      .card, .hero-card, .price-card, .highlight { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Início">
+        <span class="mark">SDR</span>
+        <span>Proposta Comercial</span>
+      </a>
+      <nav class="navlinks" aria-label="Navegação">
+        <a href="#escopo">Escopo</a>
+        <a href="#investimento">Investimento</a>
+        <a href="#opcionais">Opcionais</a>
+        <a href="#inicio">Início</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="badge-row">
+            <span class="badge ok">Proposta estruturada</span>
+            <span class="badge">WhatsApp SDR</span>
+            <span class="badge">Tráfego imobiliário</span>
+          </div>
+          <h1>Agente SDR para transformar lead em conversa qualificada.</h1>
+          <p class="lead">Implementação de uma camada de inteligência comercial entre as campanhas da Meta e o time de vendas, com qualificação, cadência e repasse contextualizado via WhatsApp.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#investimento">Ver investimento</a>
+            <a class="btn secondary" href="#escopo">Ver escopo</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Resumo da proposta">
+          <h2>Resumo executivo</h2>
+          <div class="metric"><span>Cliente</span><strong>Pepe Montte</strong></div>
+          <div class="metric"><span>Responsável</span><strong>Pedro Monte</strong></div>
+          <div class="metric"><span>Implementação</span><strong>R$ 5.000</strong></div>
+          <div class="metric"><span>Manutenção</span><strong>R$ 890/mês</strong></div>
+          <div class="metric"><span>Prazo base</span><strong>20 dias</strong></div>
+        </aside>
+      </div>
+
+      <div class="wrap score-strip" aria-label="Indicadores do projeto">
+        <div class="score"><div class="num">20-30</div><div class="label">leads/dia estimados</div></div>
+        <div class="score"><div class="num">5</div><div class="label">perguntas base</div></div>
+        <div class="score"><div class="num">2k</div><div class="label">leads/mês incluídos</div></div>
+        <div class="score"><div class="num">500</div><div class="label">leads para recuperação</div></div>
+      </div>
+    </section>
+
+    <section id="diagnostico">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow">Diagnóstico</div>
+            <h2>O gargalo não é geração. É aproveitamento.</h2>
+          </div>
+          <p>A operação já recebe leads, mas perde força quando o contato não é qualificado no timing certo ou quando o vendedor recebe pouca informação para continuar a conversa.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card strong"><h3>Origem fragmentada</h3><p>Leads chegam por campanhas, produtos e criativos diferentes, mas precisam de abordagem alinhada ao interesse inicial.</p></div>
+          <div class="card strong"><h3>Abandono no meio</h3><p>Parte dos contatos responde uma ou duas perguntas e depois desengaja antes de concluir a qualificação.</p></div>
+          <div class="card strong"><h3>Comercial sem contexto</h3><p>O vendedor perde tempo retomando perguntas básicas ou deixa oportunidades esfriarem por falta de cadência.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="escopo">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow">Implementação base</div>
+            <h2>O que será construído</h2>
+          </div>
+          <p>Uma estrutura de pré-qualificação humanizada via WhatsApp, feita para preparar o lead antes do atendimento humano.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Agente SDR via WhatsApp</h3>
+            <p>Criação do agente de pré-qualificação, preferencialmente em número exclusivo para essa etapa, evitando ruído entre automação e vendedor.</p>
+          </div>
+          <div class="card">
+            <h3>Fluxo conversacional</h3>
+            <p>Organização das perguntas principais em formato de conversa natural, sem parecer formulário rígido.</p>
+          </div>
+          <div class="card">
+            <h3>Cadência de retomada</h3>
+            <p>Mensagens estratégicas para leads que começam a conversa e param antes de concluir a qualificação.</p>
+          </div>
+          <div class="card">
+            <h3>Repasse ao comercial</h3>
+            <p>Envio do lead qualificado ao responsável com dados essenciais: intenção, região, entrada, perfil de compra e observações úteis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="perguntas">
+      <div class="wrap">
+        <div class="highlight">
+          <div class="eyebrow">Qualificação</div>
+          <h2>Perguntas base do fluxo</h2>
+          <div class="grid-3" style="margin-top:22px">
+            <div class="card"><h3>1. Objetivo</h3><p>Moradia ou investimento?</p></div>
+            <div class="card"><h3>2. Região</h3><p>Zona, bairro ou localização de preferência.</p></div>
+            <div class="card"><h3>3. Produto</h3><p>Pronto, na planta ou aberto a opções.</p></div>
+            <div class="card"><h3>4. Entrada</h3><p>Faixa disponível para entrada.</p></div>
+            <div class="card"><h3>5. Compra</h3><p>À vista, financiamento ou indefinido.</p></div>
+            <div class="card"><h3>6. Repasse</h3><p>Quando qualificado, segue para atendimento humano.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="inclui">
+      <div class="wrap grid-2">
+        <div>
+          <div class="eyebrow">Incluído</div>
+          <h2>Dentro da implementação</h2>
+          <ul class="list">
+            <li>Desenho estratégico do fluxo de qualificação</li>
+            <li>Configuração do agente SDR via WhatsApp</li>
+            <li>Criação da conversa base de qualificação</li>
+            <li>Cadência inicial para leads que abandonam a conversa</li>
+            <li>Estrutura simples de repasse para o comercial</li>
+            <li>Testes assistidos e ajustes iniciais</li>
+            <li>Orientação sobre ferramentas necessárias</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="eyebrow">Fora do escopo base</div>
+          <h2 style="font-size:34px">Limites claros</h2>
+          <ul class="list no">
+            <li>Gestão de tráfego pago</li>
+            <li>Criação de campanhas ou criativos</li>
+            <li>Atendimento comercial humano</li>
+            <li>Custos de ferramentas externas</li>
+            <li>CRM completo ou sistema interno avançado</li>
+            <li>Recuperação ativa da base antiga</li>
+            <li>Fluxos avançados para muitos criativos/campanhas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="investimento">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow">Investimento</div>
+            <h2>Estrutura base</h2>
+          </div>
+          <p>Valores separados para proteger escopo, manutenção e expansões futuras.</p>
+        </div>
+        <div class="investment">
+          <div class="price-card">
+            <div class="price-label">Implementação base</div>
+            <div class="price">R$ 5.000</div>
+            <p>Desenho, configuração, implementação, testes e ajustes iniciais do agente SDR de qualificação.</p>
+          </div>
+          <div class="price-card">
+            <div class="price-label">Manutenção mensal</div>
+            <div class="price">R$ 890 <small>/ mês</small></div>
+            <p>Até 2.000 leads/mês. Inclui acompanhamento técnico, suporte operacional, ajustes simples, monitoramento e estabilidade.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="opcionais">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow">Módulos opcionais</div>
+            <h2>Expansões possíveis</h2>
+          </div>
+          <p>Esses módulos entram apenas se fizerem sentido depois da validação da estrutura base.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card strong">
+            <h3>Recuperação da base antiga</h3>
+            <p>Estratégia para reativar a base aproximada de 500 leads já captados.</p>
+            <ul class="list">
+              <li>Segmentação básica da base</li>
+              <li>Mensagens de reativação</li>
+              <li>Cadência específica</li>
+              <li>Cuidado com frequência e risco operacional</li>
+            </ul>
+            <div class="price" style="font-size:36px">R$ 1.500 a R$ 2.500</div>
+          </div>
+          <div class="card strong">
+            <h3>Ramificações por campanha/produto</h3>
+            <p>Fluxos mais específicos por produto, construtora, região, campanha ou criativo.</p>
+            <ul class="list">
+              <li>Mensagens por origem do lead</li>
+              <li>Personalização por campanha</li>
+              <li>Matriz de abordagem por intenção</li>
+              <li>Segmentação e rastreamento mais detalhados</li>
+            </ul>
+            <div class="price" style="font-size:36px">R$ 1.000 a R$ 2.000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prazo">
+      <div class="wrap grid-2">
+        <div>
+          <div class="eyebrow">Prazo</div>
+          <h2>Até 20 dias corridos</h2>
+          <p class="lead" style="font-size:18px">O prazo da estrutura base começa após aprovação, envio dos materiais, definição das ferramentas e confirmação do número de WhatsApp utilizado.</p>
+        </div>
+        <div class="timeline">
+          <div class="step"><div class="step-num">1</div><div><h3>Alinhamento técnico</h3><p>Definição de stack, número, acessos e fluxo base.</p></div></div>
+          <div class="step"><div class="step-num">2</div><div><h3>Construção do agente</h3><p>Configuração da conversa, perguntas, cadência e repasse.</p></div></div>
+          <div class="step"><div class="step-num">3</div><div><h3>Teste assistido</h3><p>Validação de naturalidade, gargalos e qualidade da qualificação.</p></div></div>
+          <div class="step"><div class="step-num">4</div><div><h3>Entrada em operação</h3><p>Ajustes iniciais e liberação para tráfego real.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="inicio">
+      <div class="wrap">
+        <div class="highlight">
+          <div class="eyebrow">Materiais necessários</div>
+          <h2>Para iniciar</h2>
+          <div class="grid-2" style="margin-top:22px">
+            <ul class="list">
+              <li>Criativos/anúncios ativos</li>
+              <li>Campanhas em tráfego</li>
+              <li>Produtos e construtoras trabalhados</li>
+              <li>Perguntas de qualificação atuais</li>
+            </ul>
+            <ul class="list">
+              <li>Critérios de lead quente ou qualificado</li>
+              <li>Responsável que recebe o lead</li>
+              <li>Número de WhatsApp dedicado ou novo número</li>
+              <li>Acessos às ferramentas necessárias</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <strong style="color:var(--text)">Monike Kineippe</strong><br>
+      Estratégia, IA e automação para negócios. Esta proposta posiciona o projeto como uma estrutura comercial entre marketing e vendas, não apenas como um bot de WhatsApp.
+    </div>
+  </footer>
+</body>
+</html>

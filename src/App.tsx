@@ -12,6 +12,7 @@ import CoruJah from "./pages/CoruJah";
 import Mentorias from "./pages/Mentorias";
 import DonaDeSi from "./pages/DonaDeSi";
 import VendaSemVender from "./pages/VendaSemVender";
+import OrcamentoPepeMontte from "./pages/OrcamentoPepeMontte";
 
 import Empresaria40 from "./pages/Empresaria40";
 import IAHumanizada from "./pages/IAHumanizada";
@@ -55,6 +56,7 @@ const App = () => (
             <Route path="/empresaria-40" element={<Empresaria40 />} />
             <Route path="/corujah" element={<CoruJah />} />
             <Route path="/venda-sem-vender" element={<VendaSemVender />} />
+            <Route path="/orcamento-pepe-montte" element={<OrcamentoPepeMontte />} />
             <Route path="/lapidando-diamantes" element={<Navigate to="/mentorias" replace />} />
 
             {/* Páginas com Header/Footer */}
