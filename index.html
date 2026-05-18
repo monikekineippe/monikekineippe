@@ -22,6 +22,19 @@
     <meta name="twitter:title" content="Monike Kineippe | IA e Automação para Negócios Femininos" />
     <meta name="twitter:description" content="IA aplicada a negócios femininos — com estratégia, estrutura e linguagem humana." />
 
+    <!-- Meta Pixel: base global. PageView é disparado por rota no React para SPA. -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1889631038500773');
+    </script>
+
     <!-- JSON-LD sitewide: Organization + Person -->
     <script type="application/ld+json">
       {
@@ -35,6 +48,9 @@
     </script>
   </head>
   <body>
+    <noscript>
+      <img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1889631038500773&ev=PageView&noscript=1" />
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

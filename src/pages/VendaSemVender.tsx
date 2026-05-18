@@ -121,6 +121,21 @@ const VendaSemVender = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // @ts-ignore
+      if (window.fbq) {
+        // @ts-ignore
+        window.fbq("track", "ViewContent", {
+          content_name: "Venda $em Vender",
+          content_category: "Curso",
+          value: 147,
+          currency: "BRL",
+        });
+      }
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#F5F0E8] font-sans selection:bg-[#B8973A] selection:text-[#1A1A1A]">
 
@@ -134,7 +149,7 @@ const VendaSemVender = () => {
         <meta property="og:url" content="https://monikekineippe.com/venda-sem-vender" />
         <meta property="og:type" content="website" />
         {/* TODO: og:image — adicionar imagem de compartilhamento */}
-        {/* TODO: Meta Pixel — adicionar script do pixel */}
+        {/* Meta Pixel instalado globalmente em index.html; eventos de rota em App.tsx */}
         {/* TODO: Google Analytics 4 — adicionar script do GA4 */}
       </Helmet>
 

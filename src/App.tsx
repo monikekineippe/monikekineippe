@@ -2,8 +2,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { useEffect } from "react";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import Diagnostico from "./pages/Diagnostico";
@@ -27,6 +28,20 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+const MetaPixelPageView = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // @ts-ignore
+      if (window.fbq) window.fbq("track", "PageView");
+    }
+  }, [location.pathname, location.search]);
+
+  return null;
+};
+
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
@@ -34,6 +49,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <MetaPixelPageView />
           <Routes>
             {/* Standalone landing page — sem Layout */}
             <Route path="/empresaria-40" element={<Empresaria40 />} />
