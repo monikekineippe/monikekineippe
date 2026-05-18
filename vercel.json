@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/orcamento-pepe-montte",
+      "destination": "/orcamento-pepe-montte.html",
+      "permanent": false
+    },
+    {
       "source": "/:path*",
       "has": [
         {
