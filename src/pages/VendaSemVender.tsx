@@ -456,13 +456,12 @@ const VendaSemVender = () => {
         <div className="container mx-auto px-6">
           <p className="font-serif text-2xl text-[#F5F0E8]/80 mb-8">Monike Kineippe</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-10 text-sm uppercase tracking-widest mb-10">
-            <a href="mailto:contato@monikekineippe.com" className="hover:text-[#B8973A] transition-colors">contato@monikekineippe.com</a>
-            <a href="#" className="hover:text-[#B8973A] transition-colors">Política de Privacidade</a>
-            <a href="#" className="hover:text-[#B8973A] transition-colors">Termos de Uso</a>
+            <a href="mailto:contato@monikekineippe.com.br" className="hover:text-[#B8973A] transition-colors">contato@monikekineippe.com.br</a>
+            <a href="/politica-de-privacidade" className="hover:text-[#B8973A] transition-colors">Política de Privacidade</a>
+            <a href="/termos-de-uso" className="hover:text-[#B8973A] transition-colors">Termos de Uso</a>
           </div>
           <p className="text-xs">
-            {/* TODO: CNPJ — Monike Kineippe Consultoria e Palestra LTDA */}
-            © {new Date().getFullYear()} Monike Kineippe. Todos os direitos reservados.
+            © {new Date().getFullYear()} Monike Kineippe Consultoria e Palestra LTDA. CNPJ: 19.911.204/0001-02. Todos os direitos reservados.
           </p>
         </div>
       </footer>
@@ -470,7 +469,7 @@ const VendaSemVender = () => {
       {/* ──── WhatsApp flutuante (placeholder) ──── */}
       {/* TODO: substituir link do WhatsApp */}
       <a
-        href="https://wa.me/5500000000000?text=Olá! Quero saber mais sobre o Venda $em Vender."
+        href="https://wa.me/5511972313181?text=Olá! Quero saber mais sobre o Venda $em Vender."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp"
