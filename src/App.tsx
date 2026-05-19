@@ -22,6 +22,8 @@ import Livros from "./pages/Livros";
 import Conteudos from "./pages/Conteudos";
 import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato";
+import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade";
+import TermosDeUso from "./pages/TermosDeUso";
 import Admin from "./pages/Admin";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -75,6 +77,8 @@ const App = () => (
               <Route path="/conteudos" element={<Conteudos />} />
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/contato" element={<Contato />} />
+              <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidade />} />
+              <Route path="/termos-de-uso" element={<TermosDeUso />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="*" element={<NotFound />} />
             </Route>
