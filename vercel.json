@@ -35,7 +35,11 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!assets/).*)",
+      "source": "/analise-bmad-monike-kineippe",
+      "destination": "/analise-bmad-monike-kineippe.html"
+    },
+    {
+      "source": "/((?!assets/|.*\\..*).*)",
       "destination": "/index.html"
     }
   ]
