@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/analise-bmad-monike-kineippe",
+      "destination": "/analise-bmad-monike-kineippe.html",
+      "permanent": false
+    },
+    {
       "source": "/orcamento-pepe-montte",
       "destination": "/orcamento-pepe-montte.html",
       "permanent": false
