@@ -1,96 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://monikekineippe.lovable.app/</loc>
+    <loc>https://monikekineippe.com.br/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/sobre</loc>
+    <loc>https://monikekineippe.com.br/sobre</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/ia-humanizada</loc>
+    <loc>https://monikekineippe.com.br/ia-humanizada</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/corujah</loc>
+    <loc>https://monikekineippe.com.br/corujah</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/dona-de-si</loc>
+    <loc>https://monikekineippe.com.br/dona-de-si</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/mentorias</loc>
+    <loc>https://monikekineippe.com.br/mentorias</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/venda-sem-vender</loc>
+    <loc>https://monikekineippe.com.br/venda-sem-vender</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/empresaria-40</loc>
+    <loc>https://monikekineippe.com.br/empresaria-40</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/palestras</loc>
+    <loc>https://monikekineippe.com.br/palestras</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/treinamentos</loc>
+    <loc>https://monikekineippe.com.br/treinamentos</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/livros</loc>
+    <loc>https://monikekineippe.com.br/livros</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/conteudos</loc>
+    <loc>https://monikekineippe.com.br/conteudos</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/blog</loc>
+    <loc>https://monikekineippe.com.br/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/diagnostico</loc>
+    <loc>https://monikekineippe.com.br/diagnostico</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://monikekineippe.lovable.app/contato</loc>
+    <loc>https://monikekineippe.com.br/contato</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://monikekineippe.lovable.app/blog/erros-uso-ia-negocios-femininos</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://monikekineippe.lovable.app/blog/como-melhorar-networking-2026-sinais-networking-fraco</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://monikekineippe.lovable.app/blog/perda-de-clientes-negocios-digitais</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>
