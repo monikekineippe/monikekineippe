@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/analise-bmad-mourao-contabilidade",
+      "destination": "/analise-bmad-mourao-contabilidade.html",
+      "permanent": false
+    },
+    {
       "source": "/analise-bmad-monike-kineippe",
       "destination": "/analise-bmad-monike-kineippe.html",
       "permanent": false
@@ -34,6 +39,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/analise-bmad-mourao-contabilidade",
+      "destination": "/analise-bmad-mourao-contabilidade.html"
+    },
     {
       "source": "/analise-bmad-monike-kineippe",
       "destination": "/analise-bmad-monike-kineippe.html"
