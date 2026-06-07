@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/bonus-vsv-plano-mensal-de-vendas",
+      "destination": "/bonus-vsv-plano-mensal-de-vendas-com-proposito.html",
+      "permanent": false
+    },
+    {
       "source": "/analise-bmad-mourao-contabilidade",
       "destination": "/analise-bmad-mourao-contabilidade.html",
       "permanent": false
@@ -39,6 +44,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/bonus-vsv-plano-mensal-de-vendas",
+      "destination": "/bonus-vsv-plano-mensal-de-vendas-com-proposito.html"
+    },
     {
       "source": "/analise-bmad-mourao-contabilidade",
       "destination": "/analise-bmad-mourao-contabilidade.html"
