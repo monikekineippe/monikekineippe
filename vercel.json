@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/prancha-visual-vsv-premium",
+      "destination": "/prancha-visual-vsv-premium.html",
+      "permanent": false
+    },
+    {
       "source": "/bonus-vsv-plano-mensal-de-vendas",
       "destination": "/bonus-vsv-plano-mensal-de-vendas-com-proposito.html",
       "permanent": false
@@ -44,6 +49,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/prancha-visual-vsv-premium",
+      "destination": "/prancha-visual-vsv-premium.html"
+    },
     {
       "source": "/bonus-vsv-plano-mensal-de-vendas",
       "destination": "/bonus-vsv-plano-mensal-de-vendas-com-proposito.html"
