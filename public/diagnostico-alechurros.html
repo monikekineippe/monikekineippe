@@ -145,6 +145,14 @@
     .step:before { counter-increment: step; content: counter(step); position: absolute; left: 20px; top: 18px; width: 36px; height: 36px; border-radius: 12px; background: var(--gold); color: #1a1006; display: grid; place-items: center; font-weight: 950; }
     .deliverables { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .deliverables div { padding: 16px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.05); font-weight: 750; }
+    .journey { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 20px; }
+    .journey-step { position: relative; padding: 18px 16px; border: 1px solid rgba(140,200,255,.32); border-radius: 20px; background: rgba(255,255,255,.052); min-height: 150px; }
+    .journey-step:after { content: "→"; position: absolute; right: -14px; top: 50%; transform: translateY(-50%); color: var(--gold); font-size: 24px; font-weight: 950; }
+    .journey-step:last-child:after { display: none; }
+    .journey-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 14px; background: rgba(255,193,90,.18); border: 1px solid rgba(255,193,90,.34); margin-bottom: 12px; font-size: 19px; }
+    .journey-step h3 { font-size: 17px; margin-bottom: 8px; color: #fff; }
+    .journey-step p { font-size: 14px; color: var(--muted); margin: 0; }
+    .journey-note { margin-top: 18px; padding: 18px; border-radius: 20px; background: linear-gradient(135deg, rgba(140,200,255,.12), rgba(255,193,90,.10)); border: 1px solid rgba(255,255,255,.13); font-weight: 760; }
     .close { background: linear-gradient(135deg, rgba(255,122,47,.26), rgba(255,193,90,.16)); }
     .footer { text-align: center; color: var(--muted); margin-top: 28px; font-size: 13px; }
 
@@ -159,6 +167,8 @@
       .nav { border-radius: 24px; align-items: flex-start; flex-direction: column; }
       .row { grid-template-columns: 1fr; }
       .deliverables { grid-template-columns: 1fr; }
+      .journey { grid-template-columns: 1fr; }
+      .journey-step:after { display: none; }
     }
     @media print {
       body { background: #090b10; }
@@ -342,17 +352,37 @@
         </ul>
       </div>
       <div class="card span-12 blue">
-        <span class="tag">Depois do diagnóstico</span>
-        <h2>Possíveis caminhos de execução</h2>
-        <p>O diagnóstico mostra onde o Ale Churros está perdendo oportunidade no digital. A execução pode começar pelo que faz mais sentido para o momento do negócio.</p>
-        <div class="deliverables">
-          <div>Stories e conteúdo de rotina para gerar desejo diariamente</div>
-          <div>Cardápio digital estratégico para facilitar pedidos antecipados</div>
-          <div>Combos, promoções e pratos destaque com lógica comercial</div>
-          <div>WhatsApp organizado como canal real de venda</div>
-          <div>Otimização ou entrada em iFood, Keeta, 99Food e outros apps</div>
-          <div>Instagram, WhatsApp e delivery conectados em uma jornada simples</div>
+        <span class="tag">Próximo movimento recomendado</span>
+        <h2>A jornada precisa ficar óbvia para quem quer comprar</h2>
+        <p>O ponto não é produzir mais conteúdo solto. É fazer cada pessoa que vê o Ale Churros entender rapidamente qual é o próximo passo: comprar agora, encontrar o trailer ou pedir orçamento para um evento.</p>
+        <div class="journey">
+          <div class="journey-step">
+            <div class="journey-icon">👀</div>
+            <h3>1. Viu o produto</h3>
+            <p>O cliente sente vontade ao ver o churros, o recheio, a textura e o movimento real do negócio.</p>
+          </div>
+          <div class="journey-step">
+            <div class="journey-icon">📍</div>
+            <h3>2. Entendeu onde está</h3>
+            <p>Ele identifica local, horário, agenda do trailer e pontos de atendimento sem precisar procurar.</p>
+          </div>
+          <div class="journey-step">
+            <div class="journey-icon">📋</div>
+            <h3>3. Acessou opções</h3>
+            <p>Cardápio, sabores, combos e possibilidades para festas ficam fáceis de consultar.</p>
+          </div>
+          <div class="journey-step">
+            <div class="journey-icon">💬</div>
+            <h3>4. Chamou no WhatsApp</h3>
+            <p>O caminho para pedir, tirar dúvida ou solicitar orçamento aparece sem atrito.</p>
+          </div>
+          <div class="journey-step">
+            <div class="journey-icon">🧾</div>
+            <h3>5. Comprou ou orçou</h3>
+            <p>A visualização vira pedido, visita ao trailer ou oportunidade de evento.</p>
+          </div>
         </div>
+        <div class="journey-note">A função do digital é encurtar a distância entre vontade e ação. Menos esforço para o cliente, mais chance de pedido para o Ale Churros.</div>
       </div>
     </section>
 
