@@ -26,6 +26,11 @@
       "permanent": false
     },
     {
+      "source": "/diagnostico-alechurros",
+      "destination": "/diagnostico-alechurros.html",
+      "permanent": false
+    },
+    {
       "source": "/:path*",
       "has": [
         {
@@ -64,6 +69,10 @@
     {
       "source": "/analise-bmad-monike-kineippe",
       "destination": "/analise-bmad-monike-kineippe.html"
+    },
+    {
+      "source": "/diagnostico-alechurros",
+      "destination": "/diagnostico-alechurros.html"
     },
     {
       "source": "/((?!assets/|.*\\..*).*)",

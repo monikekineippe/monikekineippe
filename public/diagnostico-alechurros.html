@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diagnóstico Comercial | Ale Churros</title>
+  <style>
+    :root {
+      --bg: #090b10;
+      --ink: #fff8ec;
+      --muted: #cdbfae;
+      --soft: rgba(255,255,255,.075);
+      --soft2: rgba(255,255,255,.045);
+      --line: rgba(255,255,255,.14);
+      --gold: #ffc15a;
+      --orange: #ff7a2f;
+      --brown: #9a5a28;
+      --cream: #fff2d4;
+      --green: #75e3a2;
+      --red: #ff7373;
+      --blue: #8cc8ff;
+      --shadow: 0 28px 90px rgba(0,0,0,.42);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(255,122,47,.38), transparent 30%),
+        radial-gradient(circle at 90% 4%, rgba(255,193,90,.28), transparent 28%),
+        radial-gradient(circle at 70% 70%, rgba(154,90,40,.25), transparent 34%),
+        linear-gradient(135deg, #080a0e 0%, #121722 50%, #090b10 100%);
+      line-height: 1.55;
+    }
+    body:before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.72), transparent 92%);
+      pointer-events: none;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 22px 86px; position: relative; }
+    .nav {
+      position: sticky;
+      top: 14px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 26px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(9,11,16,.72);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 14px 40px rgba(0,0,0,.22);
+    }
+    .brand { font-weight: 900; letter-spacing: -.03em; }
+    .navlinks { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+    .navlinks a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 750; padding: 8px 10px; border-radius: 999px; }
+    .navlinks a:hover { background: rgba(255,255,255,.08); color: #fff; }
+    .hero {
+      min-height: 560px;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .glass {
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(20px);
+      overflow: hidden;
+    }
+    .hero-main { padding: 54px; position: relative; }
+    .hero-main:after {
+      content: "";
+      position: absolute;
+      right: -100px;
+      bottom: -120px;
+      width: 360px;
+      height: 360px;
+      border-radius: 999px;
+      background: rgba(255,193,90,.18);
+      filter: blur(4px);
+    }
+    .eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: .18em; font-size: 12px; font-weight: 900; }
+    h1 { margin: 18px 0 22px; font-size: clamp(40px, 6.6vw, 82px); line-height: .92; letter-spacing: -.07em; max-width: 880px; }
+    .lead { font-size: 21px; color: var(--muted); max-width: 760px; }
+    .hero-side { padding: 28px; display: grid; gap: 14px; align-content: stretch; }
+    .metric {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255,255,255,.06);
+    }
+    .metric strong { display: block; font-size: 46px; line-height: 1; color: var(--gold); letter-spacing: -.04em; }
+    .metric span { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .12em; font-weight: 900; }
+    .pillrow { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; position: relative; z-index: 1; }
+    .pill { border: 1px solid var(--line); background: rgba(255,255,255,.07); color: #fff; padding: 10px 14px; border-radius: 999px; font-weight: 800; font-size: 14px; }
+    section { margin-top: 22px; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+    .card { border: 1px solid var(--line); background: var(--soft); border-radius: 28px; padding: 28px; box-shadow: 0 20px 60px rgba(0,0,0,.20); }
+    .card.soft { background: var(--soft2); }
+    .span-3 { grid-column: span 3; }
+    .span-4 { grid-column: span 4; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+    .span-7 { grid-column: span 7; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: span 12; }
+    h2 { margin: 0 0 14px; font-size: clamp(28px, 3.5vw, 46px); line-height: 1; letter-spacing: -.045em; }
+    h3 { margin: 0 0 10px; font-size: 21px; letter-spacing: -.02em; }
+    p { margin: 0 0 14px; }
+    ul { margin: 0; padding-left: 20px; }
+    li { margin: 8px 0; }
+    .muted { color: var(--muted); }
+    .quote { font-size: clamp(25px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -.045em; font-weight: 950; margin: 0; }
+    .accent { color: var(--gold); }
+    .problem { border-left: 5px solid var(--red); }
+    .opportunity { border-left: 5px solid var(--green); }
+    .blue { border-left: 5px solid var(--blue); }
+    .tag { display: inline-flex; align-items: center; gap: 8px; color: #17120b; background: var(--gold); padding: 7px 11px; border-radius: 999px; font-weight: 950; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 14px; }
+    .bio-box {
+      background: linear-gradient(135deg, rgba(255,193,90,.20), rgba(255,122,47,.10));
+      border: 1px solid rgba(255,193,90,.30);
+      border-radius: 22px;
+      padding: 24px;
+      font-size: 21px;
+      font-weight: 750;
+    }
+    .table { display: grid; gap: 10px; }
+    .row { display: grid; grid-template-columns: 170px 1fr; gap: 14px; padding: 14px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.045); }
+    .row b { color: var(--gold); }
+    .steps { counter-reset: step; display: grid; gap: 14px; }
+    .step { position: relative; padding: 20px 20px 20px 74px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,.055); }
+    .step:before { counter-increment: step; content: counter(step); position: absolute; left: 20px; top: 18px; width: 36px; height: 36px; border-radius: 12px; background: var(--gold); color: #1a1006; display: grid; place-items: center; font-weight: 950; }
+    .deliverables { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .deliverables div { padding: 16px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.05); font-weight: 750; }
+    .close { background: linear-gradient(135deg, rgba(255,122,47,.26), rgba(255,193,90,.16)); }
+    .footer { text-align: center; color: var(--muted); margin-top: 28px; font-size: 13px; }
+
+    .brand-wrap { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .brand-logo { width: 42px; height: 42px; border-radius: 999px; object-fit: cover; border: 1px solid rgba(255,193,90,.42); box-shadow: 0 8px 24px rgba(0,0,0,.24); background: #fff; }
+    .logo-card { display: grid; place-items: center; padding: 18px; border: 1px solid rgba(255,193,90,.30); border-radius: 26px; background: linear-gradient(135deg, rgba(255,242,212,.96), rgba(255,193,90,.22)); box-shadow: 0 18px 50px rgba(0,0,0,.18); }
+    .logo-card img { width: min(100%, 250px); border-radius: 28px; display: block; }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-main { padding: 34px; }
+      .span-3, .span-4, .span-5, .span-6, .span-7, .span-8 { grid-column: span 12; }
+      .nav { border-radius: 24px; align-items: flex-start; flex-direction: column; }
+      .row { grid-template-columns: 1fr; }
+      .deliverables { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { background: #090b10; }
+      .nav { display: none; }
+      .wrap { padding: 18px; }
+      .card, .glass, .metric { break-inside: avoid; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav">
+      <div class="brand-wrap"><img class="brand-logo" src="/ale-churros-logo.jpg" alt="Logo Ale Churros"><div class="brand">Ale Churros | Diagnóstico Comercial</div></div>
+      <div class="navlinks">
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="#ativos">Ativos</a>
+        <a href="#plano">Plano</a>
+        <a href="#proposta">Proposta</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="glass hero-main">
+        <div class="eyebrow">Análise de posicionamento digital</div>
+        <h1>O Ale Churros já tem presença no bairro. Agora precisa transformar essa presença em venda.</h1>
+        <p class="lead">O negócio tem produto visual, trailer próprio, presença em escolas, eventos e comunidade local. O Instagram, porém, ainda não está estruturado para converter visitantes em clientes.</p>
+        <div class="pillrow">
+          <span class="pill">Vila das Mercês</span>
+          <span class="pill">Produto de desejo</span>
+          <span class="pill">WhatsApp + geolocalização</span>
+          <span class="pill">Plano de 30 dias</span>
+        </div>
+      </div>
+      <aside class="glass hero-side">
+        <div class="logo-card"><img src="/ale-churros-logo.jpg" alt="Logo Ale Churros"></div>
+        <div class="metric"><strong>1.265</strong><span>seguidores atuais</span></div>
+        <div class="metric"><strong>94</strong><span>posts publicados</span></div>
+        <div class="metric"><strong>1.503</strong><span>contas seguindo</span></div>
+        <div class="metric"><strong>7</strong><span>destaques com material reaproveitável</span></div>
+      </aside>
+    </header>
+
+    <section id="diagnostico" class="grid">
+      <div class="card span-7">
+        <span class="tag">Diagnóstico central</span>
+        <h2>O perfil informa, mas ainda não vende.</h2>
+        <p>Hoje, o Instagram do Ale Churros mostra que o negócio existe, mas não conduz a pessoa até uma ação clara: pedir no WhatsApp, ver o cardápio, encontrar o trailer, salvar a localização ou visitar em um horário específico.</p>
+        <p>Para um produto como churros, isso é crítico. A compra nasce do desejo imediato. Se o cliente sente vontade e não encontra o caminho rápido, a venda esfria.</p>
+        <p><strong class="accent">O problema não é falta de produto. É falta de estrutura comercial digital.</strong></p>
+      </div>
+      <div class="card span-5 close">
+        <h2>Frase para abrir a conversa</h2>
+        <p class="quote">“Vocês já têm movimento físico. O que falta é fazer o Instagram trabalhar como vendedor todos os dias.”</p>
+      </div>
+
+      <div class="card span-12 problem">
+        <h2>O que está travando o crescimento</h2>
+        <div class="grid">
+          <div class="card soft span-6">
+            <h3>1. Seguindo mais do que é seguido</h3>
+            <p>A relação 1.503 seguindo para 1.265 seguidores sinaliza crescimento por follow-back, não por autoridade ou desejo. Para um negócio local, isso afeta a primeira percepção de valor.</p>
+          </div>
+          <div class="card soft span-6">
+            <h3>2. Bio sem proposta de valor</h3>
+            <p>A bio atual informa localização, mas não comunica produto, diferencial, horário, WhatsApp, cardápio ou Google Maps. Cada visitante sem orientação é um possível cliente perdido.</p>
+          </div>
+          <div class="card soft span-6">
+            <h3>3. Identidade visual fragmentada</h3>
+            <p>O feed mistura artes, emojis, fotos, eventos e datas sem uma linguagem reconhecível. A van/trailer tem marca física, mas o digital ainda não tem assinatura visual clara.</p>
+          </div>
+          <div class="card soft span-6">
+            <h3>4. Presença local subutilizada</h3>
+            <p>Escolas, paróquia, praça, eventos e comunidade já existem no negócio. O Instagram deveria transformar esses pontos em prova social, geolocalização e compartilhamento orgânico.</p>
+          </div>
+          <div class="card soft span-6">
+            <h3>5. Reels sem estratégia de alcance</h3>
+            <p>Reels precisam de gancho nos primeiros 3 segundos, desejo visual e CTA. Hoje o formato com maior alcance orgânico não parece estar sendo usado com intenção comercial.</p>
+          </div>
+          <div class="card soft span-6">
+            <h3>6. Jornada de compra interrompida</h3>
+            <p>Sem link de WhatsApp, cardápio digital ou rota no Google Maps, o cliente que quer comprar precisa procurar demais. E cliente com fome não procura, escolhe outro.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ativos" class="grid">
+      <div class="card span-5 opportunity">
+        <span class="tag">Ativos escondidos</span>
+        <h2>O negócio tem mais força do que o perfil mostra.</h2>
+        <p>O Ale Churros não está começando do zero. Ele já tem ativos comerciais que precisam ser transformados em conteúdo, autoridade local e conversão.</p>
+      </div>
+      <div class="card span-7">
+        <div class="table">
+          <div class="row"><b>Trailer próprio</b><span>A van adesivada é um ativo de reconhecimento físico no bairro. Precisa aparecer mais como símbolo da marca.</span></div>
+          <div class="row"><b>Portfólio acima da média</b><span>Churros salgado, Nutella, chocolate quente, sorvete e recheios variados aumentam ticket e desejo.</span></div>
+          <div class="row"><b>Território local</b><span>Praça André Nunes, escolas, paróquia e eventos comunitários já criam presença e confiança.</span></div>
+          <div class="row"><b>Clientes fiéis</b><span>Existe comunidade. Falta ativar depoimentos, reposts, reações e indicação orgânica.</span></div>
+          <div class="row"><b>Destaques existentes</b><span>Trailer Ale, Imperatriz, Festa Junina, Luterano, Boas, Nutella e Churros Salgado podem virar uma arquitetura comercial.</span></div>
+        </div>
+      </div>
+
+      <div class="card span-6 blue">
+        <h2>Bio recomendada</h2>
+        <div class="bio-box">
+          Churros recheado na Vila das Mercês<br>
+          Doce, salgado, Nutella, sorvete e chocolate quente<br>
+          📍 Praça André Nunes + eventos locais<br>
+          🕒 Veja onde estamos hoje nos stories<br>
+          👇 Peça ou consulte o cardápio no WhatsApp
+        </div>
+      </div>
+      <div class="card span-6">
+        <h2>Nova arquitetura de destaques</h2>
+        <ul>
+          <li><strong>Cardápio:</strong> sabores, combos, doces e salgados.</li>
+          <li><strong>Onde estamos:</strong> praça, escolas, eventos e agenda.</li>
+          <li><strong>Clientes:</strong> prova social e reposts.</li>
+          <li><strong>Eventos:</strong> festas juninas, escolas, paróquia e comunidade.</li>
+          <li><strong>Encomendas:</strong> festas, empresas e eventos.</li>
+          <li><strong>Mais pedidos:</strong> Nutella, salgado, chocolate quente e sorvete.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card span-12">
+        <span class="tag">Linha editorial</span>
+        <h2>Três pilares de conteúdo para vender sem depender só de promoção</h2>
+        <div class="grid">
+          <div class="card soft span-4">
+            <h3>1. Produto e desejo</h3>
+            <p>Close do recheio, churros saindo, crocância, Nutella, sorvete, chocolate quente e churros salgado. Conteúdo para dar fome.</p>
+          </div>
+          <div class="card soft span-4">
+            <h3>2. Rotina e proximidade</h3>
+            <p>Stories diários mostrando onde o trailer está, horário, bastidores e novidades do dia. Conteúdo para criar hábito.</p>
+          </div>
+          <div class="card soft span-4">
+            <h3>3. Prova social local</h3>
+            <p>Clientes do bairro comprando, depoimentos, reações, escola, praça e eventos. Conteúdo para gerar confiança.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="plano" class="grid">
+      <div class="card span-5">
+        <span class="tag">Prioridade imediata</span>
+        <h2>Primeiros 7 dias</h2>
+        <ul>
+          <li>Reformular bio com produto, localização, promessa e CTA.</li>
+          <li>Adicionar WhatsApp Business, cardápio ou Google Maps.</li>
+          <li>Ativar geolocalização em todos os posts.</li>
+          <li>Organizar destaques com função comercial.</li>
+          <li>Começar limpeza gradual de contas irrelevantes seguidas.</li>
+        </ul>
+      </div>
+      <div class="card span-7">
+        <span class="tag">Plano de 30 dias</span>
+        <h2>Da vitrine solta para um perfil vendedor</h2>
+        <div class="steps">
+          <div class="step"><h3>Semana 1: estrutura de conversão</h3><p>Bio, link, destaques, posts fixados e rota clara de compra.</p></div>
+          <div class="step"><h3>Semana 2: conteúdo de desejo</h3><p>Reels com recheio, preparo, produto sendo partido, chocolate quente, sorvete e churros salgado.</p></div>
+          <div class="step"><h3>Semana 3: comunidade local</h3><p>Conteúdo com escolas, praça, paróquia, eventos, clientes e localização marcada.</p></div>
+          <div class="step"><h3>Semana 4: ofertas e recorrência</h3><p>Combo da semana, cupom do Instagram, encomendas, incentivo de recompra e campanha local.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proposta" class="grid">
+      <div class="card span-12 close">
+        <h2>Como apresentar a proposta</h2>
+        <p class="quote">“A base já existe: produto, clientela, trailer e presença local. O próximo passo é estruturar o Instagram para gerar desejo, confiança e pedido. Hoje vocês aparecem. A proposta é fazer vocês venderem mais a partir dessa presença.”</p>
+      </div>
+      <div class="card span-6">
+        <h2>Entrega recomendada</h2>
+        <div class="deliverables">
+          <div>Otimização completa da bio</div>
+          <div>Link de WhatsApp/cardápio/mapa</div>
+          <div>Destaques comerciais</div>
+          <div>Posts fixados estratégicos</div>
+          <div>Calendário de 30 dias</div>
+          <div>Roteiros de reels semanais</div>
+          <div>Ofertas e combos</div>
+          <div>Funil Instagram para WhatsApp</div>
+        </div>
+      </div>
+      <div class="card span-6 opportunity">
+        <h2>Resultado esperado</h2>
+        <ul>
+          <li>Mais clareza para quem chega no perfil.</li>
+          <li>Mais pedidos via WhatsApp.</li>
+          <li>Mais reconhecimento local.</li>
+          <li>Mais recompra por rotina e stories.</li>
+          <li>Mais prova social a partir da clientela atual.</li>
+          <li>Base pronta para tráfego pago local quando fizer sentido.</li>
+        </ul>
+      </div>
+      <div class="card span-12 blue">
+        <span class="tag">Depois do diagnóstico</span>
+        <h2>Possíveis caminhos de execução</h2>
+        <p>O diagnóstico mostra onde o Ale Churros está perdendo oportunidade no digital. A execução pode começar pelo que faz mais sentido para o momento do negócio.</p>
+        <div class="deliverables">
+          <div>Stories e conteúdo de rotina para gerar desejo diariamente</div>
+          <div>Cardápio digital estratégico para facilitar pedidos antecipados</div>
+          <div>Combos, promoções e pratos destaque com lógica comercial</div>
+          <div>WhatsApp organizado como canal real de venda</div>
+          <div>Otimização ou entrada em iFood, Keeta, 99Food e outros apps</div>
+          <div>Instagram, WhatsApp e delivery conectados em uma jornada simples</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card span-12" style="margin-top:18px;">
+      <h2>Conclusão</h2>
+      <p>O Ale Churros tem um negócio real, com produto diferenciado e clientela local. O Instagram ainda não traduz essa força. Com uma estrutura simples de posicionamento, conteúdo e conversão, o perfil pode deixar de ser apenas um registro do negócio e passar a ser um vendedor ativo para a Vila das Mercês.</p>
+      <p><strong class="accent">O caminho não é postar mais por postar. É postar com função: gerar desejo, provar valor e levar para o pedido.</strong></p>
+    </section>
+
+    <div class="footer">Diagnóstico preparado para apresentação comercial | Monike Kineippe | Junho de 2026</div>
+  </main>
+</body>
+</html>
