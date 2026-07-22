@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { supabase } from "@/integrations/supabase/client";
+
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwfrHybNG4ArAMsp0goPl8qBWhv871v1cNNTiTRwJkH2vSwp8ryxAUkLdd_J50SHaJw/exec";
 import { z } from "zod";
 import { Calendar, Sparkles, Video, Users, PlayCircle, Loader2 } from "lucide-react";
 
@@ -76,21 +78,42 @@ const WebinarHeygen = () => {
     }
 
     setLoading(true);
-    const { error } = await supabase
-      .from("inscricoes_webinar_heygen")
-      .insert({
-        nome_completo: parsed.data.nome_completo,
-        email: parsed.data.email.toLowerCase(),
-        whatsapp: parsed.data.whatsapp,
-      });
-    setLoading(false);
 
-    // Trata duplicidade de e-mail como sucesso (já inscrito)
-    if (error && error.code !== "23505") {
-      console.error("Erro Supabase:", error);
+    const leadData = {
+      nome_completo: parsed.data.nome_completo,
+      email: parsed.data.email.toLowerCase(),
+      whatsapp: parsed.data.whatsapp,
+    };
+
+    // Google Sheets (mesmo padrão do DonaDeSiForm)
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ form_type: "webinar-heygen", ...leadData }),
+      });
+    } catch (err) {
+      console.error("Erro ao enviar para planilha:", err);
+    }
+
+    // Banco — mesmo sistema de leads do /admin
+    try {
+      const { error } = await supabase.rpc("insert_form_submission", {
+        p_form_type: "webinar-heygen",
+        p_page_source: "/webinar-heygen",
+        p_data: leadData as any,
+        p_user_agent: navigator.userAgent,
+      });
+      if (error) throw error;
+    } catch (err) {
+      console.error("Erro ao salvar no banco:", err);
+      setLoading(false);
       setErrors({ form: "Não foi possível concluir sua inscrição. Tente novamente." });
       return;
     }
+
+    setLoading(false);
     setSuccess(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
