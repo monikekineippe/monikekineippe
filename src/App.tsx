@@ -64,6 +64,7 @@ const App = () => (
             <Route path="/orcamento-pepe-montte" element={<OrcamentoPepeMontte />} />
             <Route path="/bonus-vsv-plano-mensal-de-vendas" element={<BonusVSVPlanner />} />
             <Route path="/prancha-visual-vsv-premium" element={<PranchaVisualVSV />} />
+            <Route path="/webinar-heygen" element={<WebinarHeygen />} />
             <Route path="/lapidando-diamantes" element={<Navigate to="/mentorias" replace />} />
 
             {/* Páginas com Header/Footer */}
