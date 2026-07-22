@@ -122,6 +122,33 @@ export type Database = {
         }
         Relationships: []
       }
+      inscricoes_webinar_heygen: {
+        Row: {
+          atualizado_em: string
+          criado_em: string
+          email: string
+          id: string
+          nome_completo: string
+          whatsapp: string
+        }
+        Insert: {
+          atualizado_em?: string
+          criado_em?: string
+          email: string
+          id?: string
+          nome_completo: string
+          whatsapp: string
+        }
+        Update: {
+          atualizado_em?: string
+          criado_em?: string
+          email?: string
+          id?: string
+          nome_completo?: string
+          whatsapp?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
