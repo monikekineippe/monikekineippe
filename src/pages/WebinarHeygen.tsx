@@ -78,18 +78,16 @@ const WebinarHeygen = () => {
     setLoading(true);
     const { error } = await supabase
       .from("inscricoes_webinar_heygen")
-      .upsert(
-        {
-          nome_completo: parsed.data.nome_completo,
-          email: parsed.data.email.toLowerCase(),
-          whatsapp: parsed.data.whatsapp,
-          atualizado_em: new Date().toISOString(),
-        },
-        { onConflict: "email" }
-      );
+      .insert({
+        nome_completo: parsed.data.nome_completo,
+        email: parsed.data.email.toLowerCase(),
+        whatsapp: parsed.data.whatsapp,
+      });
     setLoading(false);
 
-    if (error) {
+    // Trata duplicidade de e-mail como sucesso (já inscrito)
+    if (error && error.code !== "23505") {
+      console.error("Erro Supabase:", error);
       setErrors({ form: "Não foi possível concluir sua inscrição. Tente novamente." });
       return;
     }
