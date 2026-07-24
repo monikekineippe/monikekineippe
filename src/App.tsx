@@ -16,6 +16,7 @@ import OrcamentoPepeMontte from "./pages/OrcamentoPepeMontte";
 import BonusVSVPlanner from "./pages/BonusVSVPlanner";
 import PranchaVisualVSV from "./pages/PranchaVisualVSV";
 import WebinarHeygen from "./pages/WebinarHeygen";
+import Links from "./pages/Links";
 
 import Empresaria40 from "./pages/Empresaria40";
 import IAHumanizada from "./pages/IAHumanizada";
