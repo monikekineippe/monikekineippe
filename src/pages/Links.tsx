@@ -1,251 +1,486 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import {
-  Sparkles,
-  Gem,
-  Users,
-  Bot,
-  Mic,
-  GraduationCap,
-  BookOpen,
-  FileText,
-  Instagram,
-  Youtube,
-  Linkedin,
-  MessageCircle,
-  ArrowUpRight,
-} from "lucide-react";
+import { Instagram, Youtube, Linkedin, ArrowUpRight, MessageCircle } from "lucide-react";
 import monike from "@/assets/monike-1.jpg";
 
-type LinkItem = {
-  to: string;
-  external?: boolean;
-  label: string;
-  desc: string;
-  icon: React.ComponentType<{ className?: string }>;
-  featured?: boolean;
+/**
+ * Link na bio — hub "nave-mãe" da Monike Kineippe.
+ * Estética: old money CEO / luxo minimalista.
+ * Paleta: creme #F7F4EF, grafite #1C1C1C, verde #1E3A32, dourado #B8975A.
+ *
+ * Para editar links depois: procure a constante LINKS abaixo.
+ * Meta Pixel: já carregado globalmente no index.html (ID 1889631038500773).
+ */
+
+// ————————————————————————————————————————————————————————
+// LINKS — edite aqui
+// ————————————————————————————————————————————————————————
+const LINKS = {
+  // 3 Portas
+  nexura: "https://nexurasensorial.com.br",
+  blamai: "", // PREENCHER quando o site da BlamAI estiver no ar
+  mentorias: "https://www.monikekineippe.com/dona-de-si",
+
+  // CTA principal
+  diagnostico: "https://www.monikekineippe.com.br/diagnostico",
+
+  // WhatsApp — palestras & eventos
+  whatsapp: "https://wa.me/5511972313181?text=Oi%20Monike!%20Quero%20falar%20sobre%20uma%20palestra%2Fevento%20presencial",
+
+  // Links rápidos
+  vendaSemVender: "https://www.monikekineippe.com/venda-sem-vender",
+  corujah: "https://monikekineippe.com/corujah",
+  empresaria40: "https://www.monikekineippe.com/empresaria-40",
+  gestao3d: "https://gestao3d.agenciaai.com.br",
+  livro: "https://payfast.greenn.com.br/59094/offer/q1AC8f?b_id_1=109226&b_offer_1=sqfaxL&b_id_2=102443&b_offer_2=uc0dmn&utm_source=instagram",
+  substack: "https://monikekineippe.substack.com/",
+  site: "https://monikekineippe.com",
+
+  // Sociais
+  instagram: "https://instagram.com/monikekineippe",
+  youtube: "https://www.youtube.com/@monikekineippe",
+  linkedin: "https://www.linkedin.com/in/monikekineippe/",
 };
 
-const primary: LinkItem[] = [
-  {
-    to: "/diagnostico",
-    label: "Diagnóstico Gratuito",
-    desc: "Descubra o próximo passo estratégico do seu negócio",
-    icon: Sparkles,
-    featured: true,
-  },
-  {
-    to: "/venda-sem-vender",
-    label: "Venda $em Vender",
-    desc: "Workshop • 6 aulas • acesso por 1 ano",
-    icon: Gem,
-  },
-  {
-    to: "/dona-de-si",
-    label: "Mentoria Dona de $i",
-    desc: "Mentoria e aceleração 1:1 com a Monike",
-    icon: Users,
-  },
-  {
-    to: "/mentorias",
-    label: "Método$ & Comunidade",
-    desc: "Mentoria em grupo com estrutura e método",
-    icon: Users,
-  },
-  {
-    to: "/ia-humanizada",
-    label: "IA Humanizada",
-    desc: "Consultoria e estratégia de IA para o seu negócio",
-    icon: Bot,
-  },
-];
+// ————————————————————————————————————————————————————————
+// Preserva UTMs vindos da URL atual
+// ————————————————————————————————————————————————————————
+const useUtmForwarder = () => {
+  const [qs, setQs] = useState("");
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const utm = new URLSearchParams();
+    params.forEach((v, k) => {
+      if (k.toLowerCase().startsWith("utm_") || k === "gclid" || k === "fbclid") utm.set(k, v);
+    });
+    setQs(utm.toString());
+  }, []);
+  return (url: string) => {
+    if (!url || !qs) return url;
+    try {
+      const u = new URL(url);
+      const existing = u.searchParams;
+      new URLSearchParams(qs).forEach((v, k) => {
+        if (!existing.has(k)) existing.set(k, v);
+      });
+      return u.toString();
+    } catch {
+      return url;
+    }
+  };
+};
 
-const secondary: LinkItem[] = [
-  { to: "/palestras", label: "Palestras", desc: "Palcos, congressos e eventos", icon: Mic },
-  { to: "/treinamentos", label: "Treinamentos", desc: "Workshops, aulas e imersões in-company", icon: GraduationCap },
-  { to: "/livros", label: "Livros", desc: "Empreender Nunca Foi Sorte", icon: BookOpen },
-  { to: "/blog", label: "Blog", desc: "IA aplicada e negócios femininos", icon: FileText },
-];
-
-const ventures: LinkItem[] = [
-  {
-    to: "https://precifica3d.lovable.app/",
-    external: true,
-    label: "Precifica3D",
-    desc: "SaaS de precificação para impressão 3D",
-    icon: ArrowUpRight,
-  },
-];
-
-const socials = [
-  { href: "https://wa.me/5511972313181", label: "WhatsApp", icon: MessageCircle },
-  { href: "https://instagram.com/monikekineippe", label: "Instagram", icon: Instagram },
-  { href: "https://www.linkedin.com/in/monikekineippe/", label: "LinkedIn", icon: Linkedin },
-  { href: "https://youtube.com/@monikekineippe", label: "YouTube", icon: Youtube },
-];
-
-const LinkCard = ({ item }: { item: LinkItem }) => {
-  const Icon = item.icon;
-  const className = `group flex items-center gap-4 rounded-lg border p-5 transition-all ${
-    item.featured
-      ? "border-secondary bg-primary text-primary-foreground hover:bg-primary/90"
-      : "border-border bg-card hover:border-secondary hover:shadow-md"
-  }`;
-
-  const inner = (
-    <>
-      <div
-        className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center ${
-          item.featured ? "bg-secondary/20" : "bg-secondary/10"
-        }`}
-      >
-        <Icon className="w-5 h-5 text-secondary" />
-      </div>
-      <div className="flex-1 min-w-0">
-        <p className="font-serif text-base md:text-lg leading-tight">{item.label}</p>
-        <p
-          className={`font-sans text-xs md:text-sm mt-0.5 truncate ${
-            item.featured ? "text-primary-foreground/70" : "text-muted-foreground"
-          }`}
-        >
-          {item.desc}
-        </p>
-      </div>
-      <ArrowUpRight
-        className={`w-4 h-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 ${
-          item.featured ? "text-secondary" : "text-muted-foreground group-hover:text-secondary"
-        }`}
-      />
-    </>
-  );
-
-  if (item.external) {
+// ————————————————————————————————————————————————————————
+// UI helpers
+// ————————————————————————————————————————————————————————
+const ExtLink = ({
+  href,
+  className,
+  children,
+  ariaLabel,
+  disabled,
+}: {
+  href: string;
+  className?: string;
+  children: React.ReactNode;
+  ariaLabel?: string;
+  disabled?: boolean;
+}) => {
+  if (disabled || !href) {
     return (
-      <a href={item.to} target="_blank" rel="noopener noreferrer" className={className}>
-        {inner}
-      </a>
+      <div className={className} aria-disabled aria-label={ariaLabel}>
+        {children}
+      </div>
     );
   }
   return (
-    <Link to={item.to} className={className}>
-      {inner}
-    </Link>
+    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel} className={className}>
+      {children}
+    </a>
   );
 };
 
-const SectionLabel = ({ children }: { children: React.ReactNode }) => (
-  <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-secondary font-semibold text-center mb-3">
-    {children}
-  </p>
-);
-
 const Links = () => {
+  const withUtm = useUtmForwarder();
+
   return (
-    <div className="min-h-screen bg-background">
+    <div
+      className="min-h-screen antialiased"
+      style={{
+        backgroundColor: "#F7F4EF",
+        color: "#1C1C1C",
+        fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif",
+      }}
+    >
       <Helmet>
-        <title>Monike Kineippe — Links Oficiais</title>
+        <title>Monike Kineippe — Founder em série</title>
         <meta
           name="description"
-          content="Hub oficial de Monike Kineippe: mentorias, IA aplicada, palestras, livros e conteúdos para mulheres empreendedoras."
+          content="Hub oficial de Monike Kineippe. Negócios femininos com tecnologia, alma e estrutura: Nexura Sensorial, BlamAI e Mentorias."
         />
         <meta name="robots" content="index,follow" />
-        <meta property="og:title" content="Monike Kineippe — Links Oficiais" />
+        <meta property="og:title" content="Monike Kineippe — Founder em série" />
         <meta
           property="og:description"
-          content="Founder em série, estrategista de IA e autora. Acesse todas as frentes em um só lugar."
+          content="Construo negócios com tecnologia, alma e estrutura. Escolha por onde entrar."
         />
         <meta property="og:type" content="profile" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+          rel="stylesheet"
+        />
+        {/* Meta Pixel já carregado globalmente (ID 1889631038500773) */}
       </Helmet>
 
-      {/* subtle gold vignette */}
-      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_at_top,_hsl(var(--secondary)/0.08),transparent_55%)]" />
+      <style>{`
+        .serif { font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif; letter-spacing: -0.005em; }
+        .fade-up { opacity: 0; transform: translateY(12px); animation: fadeUp .8s ease forwards; }
+        .fade-up.d1 { animation-delay: .05s; }
+        .fade-up.d2 { animation-delay: .15s; }
+        .fade-up.d3 { animation-delay: .25s; }
+        .fade-up.d4 { animation-delay: .35s; }
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+        .card-lift { transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
+        .card-lift:hover { transform: translateY(-3px); box-shadow: 0 20px 40px -24px rgba(28,28,28,.18); }
+        .gold-rule { height:1px; background: linear-gradient(90deg, transparent, #B8975A66, transparent); }
+      `}</style>
 
-      <main className="relative mx-auto w-full max-w-md px-5 pt-14 pb-16">
-        {/* Header */}
-        <header className="flex flex-col items-center text-center">
-          <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-secondary/20 blur-2xl" aria-hidden />
+      <main className="mx-auto w-full max-w-xl px-6 pt-14 pb-16 md:max-w-3xl md:pt-20">
+        {/* 1. HERO */}
+        <header className="text-center fade-up">
+          <div className="relative mx-auto w-32 h-32 md:w-36 md:h-36">
+            <div
+              className="absolute inset-0 rounded-full blur-2xl opacity-40"
+              style={{ backgroundColor: "#B8975A" }}
+              aria-hidden
+            />
             <img
               src={monike}
               alt="Monike Kineippe"
-              width={120}
-              height={120}
-              className="relative w-28 h-28 md:w-32 md:h-32 rounded-full object-cover ring-2 ring-secondary/60 shadow-lg"
+              width={144}
+              height={144}
+              className="relative w-full h-full rounded-full object-cover"
+              style={{ boxShadow: "0 0 0 1px #B8975A, 0 0 0 6px #F7F4EF, 0 0 0 7px #B8975A55" }}
             />
           </div>
-          <h1 className="mt-5 font-serif text-2xl md:text-3xl">Monike Kineippe</h1>
-          <p className="mt-1 font-sans text-sm text-muted-foreground">
-            Founder em série • Estrategista de IA • Autora
-          </p>
-          <p className="mt-4 font-serif italic text-sm text-foreground/80 max-w-xs">
-            "Talento não sustenta negócio. Estrutura sustenta."
+
+          <h1 className="serif mt-8 text-3xl md:text-5xl font-medium" style={{ color: "#1C1C1C" }}>
+            Monike Kineippe
+          </h1>
+          <p
+            className="mt-3 text-sm md:text-base tracking-wide"
+            style={{ color: "#1C1C1C99" }}
+          >
+            Founder em série · Construo negócios com tecnologia, alma e estrutura
           </p>
 
-          {/* Socials */}
-          <nav aria-label="Redes sociais" className="mt-6 flex items-center gap-3">
-            {socials.map((s) => {
-              const Icon = s.icon;
-              return (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="w-10 h-10 rounded-full border border-border bg-card flex items-center justify-center text-foreground/70 hover:text-secondary hover:border-secondary transition-colors"
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              );
-            })}
-          </nav>
+          <div className="mx-auto mt-8 max-w-md">
+            <div className="gold-rule mb-6" />
+            <p
+              className="serif italic text-xl md:text-2xl leading-snug"
+              style={{ color: "#1E3A32" }}
+            >
+              Mulher empreende diferente.
+              <br />
+              Eu construo o mundo que faltava. <span aria-hidden>💎</span>
+            </p>
+            <div className="gold-rule mt-6" />
+          </div>
+
+          <p
+            className="mt-8 text-xs md:text-sm uppercase tracking-[0.28em]"
+            style={{ color: "#B8975A" }}
+          >
+            Escolha por onde entrar ↓
+          </p>
         </header>
 
-        {/* Primary links */}
-        <section className="mt-10">
-          <SectionLabel>Comece por aqui</SectionLabel>
-          <div className="space-y-3">
-            {primary.map((item) => (
-              <LinkCard key={item.to} item={item} />
-            ))}
+        {/* 2. AS 3 PORTAS */}
+        <section className="mt-14 fade-up d1" aria-label="As três frentes">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Nexura */}
+            <ExtLink
+              href={withUtm(LINKS.nexura)}
+              className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px]"
+              ariaLabel="Nexura Sensorial"
+            >
+              <div
+                className="absolute inset-0 rounded-lg border pointer-events-none"
+                style={{ borderColor: "#1C1C1C14" }}
+              />
+              <div className="relative">
+                <p
+                  className="text-[10px] tracking-[0.3em] uppercase mb-3"
+                  style={{ color: "#B8975A" }}
+                >
+                  Frente 01
+                </p>
+                <h2 className="serif text-2xl md:text-[1.6rem] leading-tight" style={{ color: "#1C1C1C" }}>
+                  Nexura Sensorial
+                </h2>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#1C1C1C99" }}>
+                  Produtos sensoriais 3D para crianças atípicas. Desenvolvimento com afeto.
+                </p>
+              </div>
+              <div
+                className="relative mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase"
+                style={{ color: "#1E3A32" }}
+              >
+                Visitar <ArrowUpRight className="w-3.5 h-3.5" />
+              </div>
+            </ExtLink>
+
+            {/* BlamAI */}
+            <ExtLink
+              href={withUtm(LINKS.blamai)}
+              disabled={!LINKS.blamai}
+              className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px] cursor-default"
+              ariaLabel="BlamAI — em breve"
+            >
+              <div
+                className="absolute inset-0 rounded-lg border pointer-events-none"
+                style={{ borderColor: "#1C1C1C14" }}
+              />
+              <span
+                className="absolute top-4 right-4 text-[9px] tracking-[0.25em] uppercase px-2 py-1 rounded-sm"
+                style={{ backgroundColor: "#1E3A32", color: "#F7F4EF" }}
+              >
+                Em breve
+              </span>
+              <div className="relative">
+                <p
+                  className="text-[10px] tracking-[0.3em] uppercase mb-3"
+                  style={{ color: "#B8975A" }}
+                >
+                  Frente 02
+                </p>
+                <h2 className="serif text-2xl md:text-[1.6rem] leading-tight" style={{ color: "#1C1C1C" }}>
+                  BlamAI<sup className="text-xs">®</sup>
+                </h2>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#1C1C1C99" }}>
+                  Agência de IA e automação para negócios.
+                </p>
+              </div>
+              <div
+                className="relative mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase opacity-60"
+                style={{ color: "#1E3A32" }}
+              >
+                Em construção
+              </div>
+            </ExtLink>
+
+            {/* Mentorias */}
+            <ExtLink
+              href={withUtm(LINKS.mentorias)}
+              className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px]"
+              ariaLabel="Mentorias & Palestras"
+            >
+              <div
+                className="absolute inset-0 rounded-lg border pointer-events-none"
+                style={{ borderColor: "#1C1C1C14" }}
+              />
+              <div className="relative">
+                <p
+                  className="text-[10px] tracking-[0.3em] uppercase mb-3"
+                  style={{ color: "#B8975A" }}
+                >
+                  Frente 03
+                </p>
+                <h2 className="serif text-2xl md:text-[1.6rem] leading-tight" style={{ color: "#1C1C1C" }}>
+                  Mentorias & Palestras
+                </h2>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#1C1C1C99" }}>
+                  Transforme conhecimento em negócio previsível.
+                </p>
+              </div>
+              <div
+                className="relative mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase"
+                style={{ color: "#1E3A32" }}
+              >
+                Conhecer <ArrowUpRight className="w-3.5 h-3.5" />
+              </div>
+            </ExtLink>
           </div>
         </section>
 
-        {/* Secondary */}
-        <section className="mt-8">
-          <SectionLabel>Marca & Conteúdo</SectionLabel>
-          <div className="space-y-3">
-            {secondary.map((item) => (
-              <LinkCard key={item.to} item={item} />
-            ))}
-          </div>
-        </section>
-
-        {/* Ventures */}
-        <section className="mt-8">
-          <SectionLabel>Founder em série</SectionLabel>
-          <div className="space-y-3">
-            {ventures.map((item) => (
-              <LinkCard key={item.to} item={item} />
-            ))}
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="mt-12 text-center">
-          <Link
-            to="/"
-            className="font-sans text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-secondary transition-colors"
+        {/* 3. DESTAQUE — DIAGNÓSTICO */}
+        <section className="mt-14 fade-up d2">
+          <div
+            className="rounded-lg p-8 md:p-10 text-center relative overflow-hidden"
+            style={{ backgroundColor: "#1E3A32", color: "#F7F4EF" }}
           >
-            Visitar site oficial
-          </Link>
-          <p className="mt-4 font-sans text-[11px] text-muted-foreground/70">
-            © {new Date().getFullYear()} Monike Kineippe
+            <div
+              className="absolute inset-x-8 top-4 h-px opacity-40"
+              style={{ background: "linear-gradient(90deg, transparent, #B8975A, transparent)" }}
+              aria-hidden
+            />
+            <p
+              className="text-[10px] tracking-[0.35em] uppercase mb-4"
+              style={{ color: "#B8975A" }}
+            >
+              Porta principal
+            </p>
+            <h3 className="serif text-2xl md:text-4xl leading-tight">
+              Não sabe por onde começar?
+            </h3>
+            <p className="mt-3 text-sm md:text-base opacity-80 max-w-md mx-auto">
+              Faça o diagnóstico gratuito do seu negócio.
+            </p>
+            <a
+              href={withUtm(LINKS.diagnostico)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 mt-7 px-8 py-3.5 text-sm tracking-[0.2em] uppercase transition-all hover:opacity-90"
+              style={{
+                backgroundColor: "#B8975A",
+                color: "#1C1C1C",
+                fontWeight: 500,
+              }}
+            >
+              Fazer meu diagnóstico
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+
+            {/* 3b — WhatsApp palestras */}
+            <div className="mt-5">
+              <a
+                href={LINKS.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3 text-xs md:text-sm tracking-[0.18em] uppercase transition-all"
+                style={{
+                  border: "1px solid #B8975A",
+                  color: "#F7F4EF",
+                  backgroundColor: "transparent",
+                }}
+              >
+                <MessageCircle className="w-4 h-4" />
+                Palestras & eventos presenciais — WhatsApp
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* 4. LINKS RÁPIDOS */}
+        <section className="mt-14 fade-up d3">
+          <QuickGroup label="Comece por aqui">
+            <QuickLink href={withUtm(LINKS.vendaSemVender)} title="Venda $em Vender" desc="Workshop para vender sem forçar" />
+            <QuickLink href={withUtm(LINKS.corujah)} title="CoruJah" desc="IA que cria seu produto digital" />
+            <QuickLink href={withUtm(LINKS.empresaria40)} title="Comunidade Empresária 4.0" desc="Rede de mulheres empreendedoras" />
+          </QuickGroup>
+
+          <QuickGroup label="Ferramentas & outras frentes">
+            <QuickLink href={withUtm(LINKS.gestao3d)} title="Gestão3D" desc="Sistema de gestão e precificação para impressão 3D" />
+          </QuickGroup>
+
+          <QuickGroup label="Autoridade & conteúdo">
+            <QuickLink href={withUtm(LINKS.livro)} title="Livro — Empreender Nunca Foi Sorte" desc="Adquira o livro" />
+            <QuickLink href={withUtm(LINKS.substack)} title="Newsletter · Substack" desc="Ensaios sobre IA, negócios e mulheres" />
+            <QuickLink href={withUtm(LINKS.site)} title="Site oficial" desc="monikekineippe.com" />
+          </QuickGroup>
+        </section>
+
+        {/* 4b. REDES SOCIAIS */}
+        <section className="mt-12 fade-up d4">
+          <div className="gold-rule mb-8" />
+          <nav aria-label="Redes sociais" className="flex items-center justify-center gap-6">
+            <a
+              href={LINKS.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="transition-colors"
+              style={{ color: "#1C1C1C" }}
+            >
+              <Instagram className="w-5 h-5" strokeWidth={1.5} />
+            </a>
+            <a
+              href={LINKS.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              style={{ color: "#1C1C1C" }}
+            >
+              <Youtube className="w-5 h-5" strokeWidth={1.5} />
+            </a>
+            <a
+              href={LINKS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              style={{ color: "#1C1C1C" }}
+            >
+              <Linkedin className="w-5 h-5" strokeWidth={1.5} />
+            </a>
+          </nav>
+        </section>
+
+        {/* 5. RODAPÉ */}
+        <footer className="mt-14 text-center">
+          <p
+            className="serif text-sm"
+            style={{ color: "#1C1C1C99" }}
+          >
+            Monike Kineippe Consultoria e Palestra LTDA.
+          </p>
+          <p
+            className="mt-2 text-xs tracking-[0.25em]"
+            style={{ color: "#B8975A" }}
+            aria-hidden
+          >
+            💎 &nbsp; 🍀 &nbsp; ✨
+          </p>
+          <p className="mt-3 text-[11px]" style={{ color: "#1C1C1C66" }}>
+            © {new Date().getFullYear()} · Todos os direitos reservados
           </p>
         </footer>
       </main>
     </div>
   );
 };
+
+// ————————————————————————————————————————————————————————
+// Quick links
+// ————————————————————————————————————————————————————————
+const QuickGroup = ({ label, children }: { label: string; children: React.ReactNode }) => (
+  <div className="mb-8">
+    <p
+      className="text-[10px] tracking-[0.3em] uppercase text-center mb-4"
+      style={{ color: "#B8975A" }}
+    >
+      {label}
+    </p>
+    <div className="space-y-3">{children}</div>
+  </div>
+);
+
+const QuickLink = ({ href, title, desc }: { href: string; title: string; desc: string }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="card-lift group flex items-center gap-4 rounded-md px-5 py-4"
+    style={{ border: "1px solid #1C1C1C1A", backgroundColor: "#FFFFFF80" }}
+  >
+    <div className="flex-1 min-w-0">
+      <p className="serif text-base md:text-lg leading-tight" style={{ color: "#1C1C1C" }}>
+        {title}
+      </p>
+      <p className="text-xs md:text-sm mt-0.5" style={{ color: "#1C1C1C99" }}>
+        {desc}
+      </p>
+    </div>
+    <ArrowUpRight
+      className="w-4 h-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+      style={{ color: "#B8975A" }}
+    />
+  </a>
+);
 
 export default Links;
