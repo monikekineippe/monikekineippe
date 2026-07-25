@@ -10,7 +10,20 @@ import monike from "@/assets/monike-1.jpg";
  *
  * Para editar links depois: procure a constante LINKS abaixo.
  * Meta Pixel: já carregado globalmente no index.html (ID 1889631038500773).
+ * Para trocar a foto: substitua src/assets/monike-1.jpg por um headshot (close do rosto).
  */
+
+// Meta Pixel — fbq global (carregado no index.html)
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+const track = (eventName: string) => {
+  if (typeof window !== "undefined" && typeof window.fbq === "function") {
+    window.fbq("trackCustom", eventName);
+  }
+};
 
 // ————————————————————————————————————————————————————————
 // LINKS — edite aqui
@@ -18,7 +31,7 @@ import monike from "@/assets/monike-1.jpg";
 const LINKS = {
   // 3 Portas
   nexura: "https://nexurasensorial.com.br",
-  blamai: "", // PREENCHER quando o site da BlamAI estiver no ar
+  blamai: "https://agenciaai.com.br",
   mentorias: "https://www.monikekineippe.com/dona-de-si",
 
   // CTA principal
@@ -80,12 +93,14 @@ const ExtLink = ({
   children,
   ariaLabel,
   disabled,
+  onClick,
 }: {
   href: string;
   className?: string;
   children: React.ReactNode;
   ariaLabel?: string;
   disabled?: boolean;
+  onClick?: () => void;
 }) => {
   if (disabled || !href) {
     return (
@@ -95,7 +110,14 @@ const ExtLink = ({
     );
   }
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel} className={className}>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={ariaLabel}
+      className={className}
+      onClick={onClick}
+    >
       {children}
     </a>
   );
@@ -103,6 +125,17 @@ const ExtLink = ({
 
 const Links = () => {
   const withUtm = useUtmForwarder();
+
+  // Dispara PageView do Meta Pixel especificamente na rota /links
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof window.fbq === "function") {
+      window.fbq("track", "PageView");
+    }
+  }, []);
+
+  const openWith = (event: string) => () => track(event);
+
+
 
   return (
     <div
@@ -114,18 +147,24 @@ const Links = () => {
       }}
     >
       <Helmet>
-        <title>Monike Kineippe — Founder em série</title>
+        <title>Monike Kineippe — Escolha por onde entrar</title>
         <meta
           name="description"
           content="Hub oficial de Monike Kineippe. Negócios femininos com tecnologia, alma e estrutura: Nexura Sensorial, BlamAI e Mentorias."
         />
         <meta name="robots" content="index,follow" />
-        <meta property="og:title" content="Monike Kineippe — Founder em série" />
+        <meta property="og:title" content="Monike Kineippe — Escolha por onde entrar" />
         <meta
           property="og:description"
           content="Construo negócios com tecnologia, alma e estrutura. Escolha por onde entrar."
         />
         <meta property="og:type" content="profile" />
+        <meta property="og:image" content="https://monikekineippe.lovable.app/og-links.jpg" />
+        <meta property="og:url" content="https://monikekineippe.lovable.app/links" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Monike Kineippe — Escolha por onde entrar" />
+        <meta name="twitter:image" content="https://monikekineippe.lovable.app/og-links.jpg" />
+        <link rel="canonical" href="https://monikekineippe.lovable.app/links" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
@@ -166,7 +205,10 @@ const Links = () => {
               width={144}
               height={144}
               className="relative w-full h-full rounded-full object-cover"
-              style={{ boxShadow: "0 0 0 1px #B8975A, 0 0 0 6px #F7F4EF, 0 0 0 7px #B8975A55" }}
+              style={{
+                objectPosition: "top center",
+                boxShadow: "0 0 0 1px #B8975A, 0 0 0 6px #F7F4EF, 0 0 0 7px #B8975A55",
+              }}
             />
           </div>
 
@@ -209,6 +251,7 @@ const Links = () => {
               href={withUtm(LINKS.nexura)}
               className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px]"
               ariaLabel="Nexura Sensorial"
+              onClick={openWith("Clique_Nexura")}
             >
               <div
                 className="absolute inset-0 rounded-lg border pointer-events-none"
@@ -239,9 +282,9 @@ const Links = () => {
             {/* BlamAI */}
             <ExtLink
               href={withUtm(LINKS.blamai)}
-              disabled={!LINKS.blamai}
-              className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px] cursor-default"
-              ariaLabel="BlamAI — em breve"
+              className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px]"
+              ariaLabel="BlamAI — quero saber do lançamento"
+              onClick={openWith("Clique_BlamAI")}
             >
               <div
                 className="absolute inset-0 rounded-lg border pointer-events-none"
@@ -268,10 +311,10 @@ const Links = () => {
                 </p>
               </div>
               <div
-                className="relative mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase opacity-60"
+                className="relative mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase"
                 style={{ color: "#1E3A32" }}
               >
-                Em construção
+                Quero saber do lançamento <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
             </ExtLink>
 
@@ -280,6 +323,7 @@ const Links = () => {
               href={withUtm(LINKS.mentorias)}
               className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px]"
               ariaLabel="Mentorias & Palestras"
+              onClick={openWith("Clique_Mentorias")}
             >
               <div
                 className="absolute inset-0 rounded-lg border pointer-events-none"
@@ -336,6 +380,7 @@ const Links = () => {
               href={withUtm(LINKS.diagnostico)}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={openWith("Clique_Diagnostico")}
               className="inline-flex items-center justify-center gap-2 mt-7 px-8 py-3.5 text-sm tracking-[0.2em] uppercase transition-all hover:opacity-90"
               style={{
                 backgroundColor: "#B8975A",
@@ -353,6 +398,7 @@ const Links = () => {
                 href={LINKS.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={openWith("Clique_WhatsApp")}
                 className="inline-flex items-center justify-center gap-2 px-7 py-3 text-xs md:text-sm tracking-[0.18em] uppercase transition-all"
                 style={{
                   border: "1px solid #B8975A",
@@ -370,19 +416,19 @@ const Links = () => {
         {/* 4. LINKS RÁPIDOS */}
         <section className="mt-14 fade-up d3">
           <QuickGroup label="Comece por aqui">
-            <QuickLink href={withUtm(LINKS.vendaSemVender)} title="Venda $em Vender" desc="Workshop para vender sem forçar" />
-            <QuickLink href={withUtm(LINKS.corujah)} title="CoruJah" desc="IA que cria seu produto digital" />
-            <QuickLink href={withUtm(LINKS.empresaria40)} title="Comunidade Empresária 4.0" desc="Rede de mulheres empreendedoras" />
+            <QuickLink href={withUtm(LINKS.vendaSemVender)} title="Venda $em Vender" desc="Workshop para vender sem forçar" event="Clique_VendaSemVender" />
+            <QuickLink href={withUtm(LINKS.corujah)} title="CoruJah" desc="IA que cria seu produto digital" event="Clique_CoruJah" />
+            <QuickLink href={withUtm(LINKS.empresaria40)} title="Comunidade Empresária 4.0" desc="Rede de mulheres empreendedoras" event="Clique_Comunidade" />
           </QuickGroup>
 
           <QuickGroup label="Ferramentas & outras frentes">
-            <QuickLink href={withUtm(LINKS.gestao3d)} title="Gestão3D" desc="Sistema de gestão e precificação para impressão 3D" />
+            <QuickLink href={withUtm(LINKS.gestao3d)} title="Gestão3D" desc="Sistema de gestão e precificação para impressão 3D" event="Clique_Gestao3D" />
           </QuickGroup>
 
           <QuickGroup label="Autoridade & conteúdo">
-            <QuickLink href={withUtm(LINKS.livro)} title="Livro — Empreender Nunca Foi Sorte" desc="Adquira o livro" />
-            <QuickLink href={withUtm(LINKS.substack)} title="Newsletter · Substack" desc="Ensaios sobre IA, negócios e mulheres" />
-            <QuickLink href={withUtm(LINKS.site)} title="Site oficial" desc="monikekineippe.com" />
+            <QuickLink href={withUtm(LINKS.livro)} title="Livro — Empreender Nunca Foi Sorte" desc="Adquira o livro" event="Clique_Livro" />
+            <QuickLink href={withUtm(LINKS.substack)} title="Newsletter · Substack" desc="Ensaios sobre IA, negócios e mulheres" event="Clique_Newsletter" />
+            <QuickLink href={withUtm(LINKS.site)} title="Site oficial" desc="monikekineippe.com" event="Clique_Site" />
           </QuickGroup>
         </section>
 
@@ -460,11 +506,22 @@ const QuickGroup = ({ label, children }: { label: string; children: React.ReactN
   </div>
 );
 
-const QuickLink = ({ href, title, desc }: { href: string; title: string; desc: string }) => (
+const QuickLink = ({
+  href,
+  title,
+  desc,
+  event,
+}: {
+  href: string;
+  title: string;
+  desc: string;
+  event?: string;
+}) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
+    onClick={event ? () => track(event) : undefined}
     className="card-lift group flex items-center gap-4 rounded-md px-5 py-4"
     style={{ border: "1px solid #1C1C1C1A", backgroundColor: "#FFFFFF80" }}
   >
