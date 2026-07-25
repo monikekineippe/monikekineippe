@@ -323,6 +323,7 @@ const Links = () => {
               href={withUtm(LINKS.mentorias)}
               className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px]"
               ariaLabel="Mentorias & Palestras"
+              onClick={openWith("Clique_Mentorias")}
             >
               <div
                 className="absolute inset-0 rounded-lg border pointer-events-none"
