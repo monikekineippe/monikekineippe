@@ -147,13 +147,13 @@ const Links = () => {
       }}
     >
       <Helmet>
-        <title>Monike Kineippe — Founder em série</title>
+        <title>Monike Kineippe — Escolha por onde entrar</title>
         <meta
           name="description"
           content="Hub oficial de Monike Kineippe. Negócios femininos com tecnologia, alma e estrutura: Nexura Sensorial, BlamAI e Mentorias."
         />
         <meta name="robots" content="index,follow" />
-        <meta property="og:title" content="Monike Kineippe — Founder em série" />
+        <meta property="og:title" content="Monike Kineippe — Escolha por onde entrar" />
         <meta
           property="og:description"
           content="Construo negócios com tecnologia, alma e estrutura. Escolha por onde entrar."
