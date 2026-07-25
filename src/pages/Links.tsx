@@ -205,7 +205,10 @@ const Links = () => {
               width={144}
               height={144}
               className="relative w-full h-full rounded-full object-cover"
-              style={{ boxShadow: "0 0 0 1px #B8975A, 0 0 0 6px #F7F4EF, 0 0 0 7px #B8975A55" }}
+              style={{
+                objectPosition: "top center",
+                boxShadow: "0 0 0 1px #B8975A, 0 0 0 6px #F7F4EF, 0 0 0 7px #B8975A55",
+              }}
             />
           </div>
 
