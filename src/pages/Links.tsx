@@ -282,9 +282,9 @@ const Links = () => {
             {/* BlamAI */}
             <ExtLink
               href={withUtm(LINKS.blamai)}
-              disabled={!LINKS.blamai}
-              className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px] cursor-default"
-              ariaLabel="BlamAI — em breve"
+              className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px]"
+              ariaLabel="BlamAI — quero saber do lançamento"
+              onClick={openWith("Clique_BlamAI")}
             >
               <div
                 className="absolute inset-0 rounded-lg border pointer-events-none"
@@ -311,10 +311,10 @@ const Links = () => {
                 </p>
               </div>
               <div
-                className="relative mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase opacity-60"
+                className="relative mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase"
                 style={{ color: "#1E3A32" }}
               >
-                Em construção
+                Quero saber do lançamento <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
             </ExtLink>
 
