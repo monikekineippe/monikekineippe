@@ -225,8 +225,8 @@ const Links = () => {
           <div className="mx-auto mt-8 max-w-md">
             <div className="gold-rule mb-6" />
             <p
-              className="serif italic text-xl md:text-2xl leading-snug"
-              style={{ color: "#6B2430" }}
+              className="serif text-2xl md:text-3xl font-normal"
+              style={{ color: "#1F1F1F", lineHeight: 1.3 }}
             >
               Mulher empreende diferente.
               <br />
