@@ -416,19 +416,19 @@ const Links = () => {
         {/* 4. LINKS RÁPIDOS */}
         <section className="mt-14 fade-up d3">
           <QuickGroup label="Comece por aqui">
-            <QuickLink href={withUtm(LINKS.vendaSemVender)} title="Venda $em Vender" desc="Workshop para vender sem forçar" />
-            <QuickLink href={withUtm(LINKS.corujah)} title="CoruJah" desc="IA que cria seu produto digital" />
-            <QuickLink href={withUtm(LINKS.empresaria40)} title="Comunidade Empresária 4.0" desc="Rede de mulheres empreendedoras" />
+            <QuickLink href={withUtm(LINKS.vendaSemVender)} title="Venda $em Vender" desc="Workshop para vender sem forçar" event="Clique_VendaSemVender" />
+            <QuickLink href={withUtm(LINKS.corujah)} title="CoruJah" desc="IA que cria seu produto digital" event="Clique_CoruJah" />
+            <QuickLink href={withUtm(LINKS.empresaria40)} title="Comunidade Empresária 4.0" desc="Rede de mulheres empreendedoras" event="Clique_Comunidade" />
           </QuickGroup>
 
           <QuickGroup label="Ferramentas & outras frentes">
-            <QuickLink href={withUtm(LINKS.gestao3d)} title="Gestão3D" desc="Sistema de gestão e precificação para impressão 3D" />
+            <QuickLink href={withUtm(LINKS.gestao3d)} title="Gestão3D" desc="Sistema de gestão e precificação para impressão 3D" event="Clique_Gestao3D" />
           </QuickGroup>
 
           <QuickGroup label="Autoridade & conteúdo">
-            <QuickLink href={withUtm(LINKS.livro)} title="Livro — Empreender Nunca Foi Sorte" desc="Adquira o livro" />
-            <QuickLink href={withUtm(LINKS.substack)} title="Newsletter · Substack" desc="Ensaios sobre IA, negócios e mulheres" />
-            <QuickLink href={withUtm(LINKS.site)} title="Site oficial" desc="monikekineippe.com" />
+            <QuickLink href={withUtm(LINKS.livro)} title="Livro — Empreender Nunca Foi Sorte" desc="Adquira o livro" event="Clique_Livro" />
+            <QuickLink href={withUtm(LINKS.substack)} title="Newsletter · Substack" desc="Ensaios sobre IA, negócios e mulheres" event="Clique_Newsletter" />
+            <QuickLink href={withUtm(LINKS.site)} title="Site oficial" desc="monikekineippe.com" event="Clique_Site" />
           </QuickGroup>
         </section>
 
