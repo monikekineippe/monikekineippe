@@ -10,7 +10,20 @@ import monike from "@/assets/monike-1.jpg";
  *
  * Para editar links depois: procure a constante LINKS abaixo.
  * Meta Pixel: já carregado globalmente no index.html (ID 1889631038500773).
+ * Para trocar a foto: substitua src/assets/monike-1.jpg por um headshot (close do rosto).
  */
+
+// Meta Pixel — fbq global (carregado no index.html)
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+const track = (eventName: string) => {
+  if (typeof window !== "undefined" && typeof window.fbq === "function") {
+    window.fbq("trackCustom", eventName);
+  }
+};
 
 // ————————————————————————————————————————————————————————
 // LINKS — edite aqui
