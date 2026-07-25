@@ -380,6 +380,7 @@ const Links = () => {
               href={withUtm(LINKS.diagnostico)}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={openWith("Clique_Diagnostico")}
               className="inline-flex items-center justify-center gap-2 mt-7 px-8 py-3.5 text-sm tracking-[0.2em] uppercase transition-all hover:opacity-90"
               style={{
                 backgroundColor: "#B8975A",
@@ -397,6 +398,7 @@ const Links = () => {
                 href={LINKS.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={openWith("Clique_WhatsApp")}
                 className="inline-flex items-center justify-center gap-2 px-7 py-3 text-xs md:text-sm tracking-[0.18em] uppercase transition-all"
                 style={{
                   border: "1px solid #B8975A",
