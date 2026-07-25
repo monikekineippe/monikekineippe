@@ -67,6 +67,7 @@ const App = () => (
             <Route path="/prancha-visual-vsv-premium" element={<PranchaVisualVSV />} />
             <Route path="/webinar-heygen" element={<WebinarHeygen />} />
             <Route path="/links" element={<Links />} />
+            <Route path="/hub" element={<Links />} />
             <Route path="/lapidando-diamantes" element={<Navigate to="/mentorias" replace />} />
 
             {/* Páginas com Header/Footer */}
