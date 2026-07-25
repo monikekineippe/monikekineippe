@@ -93,12 +93,14 @@ const ExtLink = ({
   children,
   ariaLabel,
   disabled,
+  onClick,
 }: {
   href: string;
   className?: string;
   children: React.ReactNode;
   ariaLabel?: string;
   disabled?: boolean;
+  onClick?: () => void;
 }) => {
   if (disabled || !href) {
     return (
@@ -108,7 +110,14 @@ const ExtLink = ({
     );
   }
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel} className={className}>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={ariaLabel}
+      className={className}
+      onClick={onClick}
+    >
       {children}
     </a>
   );
