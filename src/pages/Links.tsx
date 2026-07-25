@@ -251,6 +251,7 @@ const Links = () => {
               href={withUtm(LINKS.nexura)}
               className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px]"
               ariaLabel="Nexura Sensorial"
+              onClick={openWith("Clique_Nexura")}
             >
               <div
                 className="absolute inset-0 rounded-lg border pointer-events-none"
