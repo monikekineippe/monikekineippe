@@ -316,8 +316,8 @@ const Links = () => {
             <ExtLink
               href={withUtm(LINKS.mentorias)}
               className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px]"
-              ariaLabel="Mentorias & Palestras"
-              onClick={openWith("Clique_Mentorias")}
+              ariaLabel="Mentoria & Aceleração"
+              onClick={openWith("Clique_Mentoria")}
             >
               <div
                 className="absolute inset-0 rounded-lg border pointer-events-none"
@@ -331,7 +331,7 @@ const Links = () => {
                   Frente 03
                 </p>
                 <h2 className="serif text-2xl md:text-[1.6rem] leading-tight" style={{ color: "#1F1F1F" }}>
-                  Mentorias & Palestras
+                  Mentoria & Aceleração
                 </h2>
                 <p className="mt-2 text-sm leading-relaxed" style={{ color: "#1F1F1F99" }}>
                   Transforme conhecimento em negócio previsível.
@@ -421,7 +421,7 @@ const Links = () => {
 
           <QuickGroup label="Autoridade & conteúdo">
             <QuickLink href={withUtm(LINKS.livro)} title="Livro — Empreender Nunca Foi Sorte" desc="Adquira o livro" event="Clique_Livro" />
-            <QuickLink href={withUtm(LINKS.substack)} title="Newsletter · Substack" desc="Ensaios sobre IA, negócios e mulheres" event="Clique_Newsletter" />
+            <QuickLink href={withUtm(LINKS.substack)} title="Newsletter · Substack" desc="Ideias e bastidores sobre IA, negócios e mulheres" event="Clique_Newsletter" />
             <QuickLink href={withUtm(LINKS.site)} title="Site oficial" desc="monikekineippe.com" event="Clique_Site" />
           </QuickGroup>
         </section>
@@ -520,7 +520,7 @@ const QuickLink = ({
     style={{ border: "1px solid #1F1F1F1A", backgroundColor: "#FFFFFF80" }}
   >
     <div className="flex-1 min-w-0">
-      <p className="serif text-base md:text-lg leading-tight" style={{ color: "#1F1F1F" }}>
+      <p className="font-medium text-base md:text-lg leading-tight" style={{ color: "#1F1F1F", fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif" }}>
         {title}
       </p>
       <p className="text-xs md:text-sm mt-0.5" style={{ color: "#1F1F1F99" }}>
