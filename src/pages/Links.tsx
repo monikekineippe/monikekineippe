@@ -126,6 +126,17 @@ const ExtLink = ({
 const Links = () => {
   const withUtm = useUtmForwarder();
 
+  // Dispara PageView do Meta Pixel especificamente na rota /links
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof window.fbq === "function") {
+      window.fbq("track", "PageView");
+    }
+  }, []);
+
+  const openWith = (event: string) => () => track(event);
+
+
+
   return (
     <div
       className="min-h-screen antialiased"
