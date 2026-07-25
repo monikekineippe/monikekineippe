@@ -6,7 +6,7 @@ import monike from "@/assets/monike-1.jpg";
 /**
  * Link na bio — hub "nave-mãe" da Monike Kineippe.
  * Estética: old money CEO / luxo minimalista.
- * Paleta: creme #F6F4EE, grafite #1F1F1F, verde #6B2430, dourado #B29966.
+ * Paleta oficial da marca: creme #F6F4EE, grafite #1F1F1F, vinho #6B2430, dourado champanhe #B29966.
  *
  * Para editar links depois: procure a constante LINKS abaixo.
  * Meta Pixel: já carregado globalmente no index.html (ID 1889631038500773).
