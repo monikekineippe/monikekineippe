@@ -246,12 +246,12 @@ const Links = () => {
         {/* 2. AS 3 PORTAS */}
         <section className="mt-14 fade-up d1" aria-label="As três frentes">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Nexura */}
+            {/* Mentoria & Aceleração */}
             <ExtLink
-              href={withUtm(LINKS.nexura)}
+              href={withUtm(LINKS.mentorias)}
               className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px]"
-              ariaLabel="Nexura Sensorial"
-              onClick={openWith("Clique_Nexura")}
+              ariaLabel="Mentoria & Aceleração"
+              onClick={openWith("Clique_Mentoria")}
             >
               <div
                 className="absolute inset-0 rounded-lg border pointer-events-none"
@@ -265,17 +265,17 @@ const Links = () => {
                   Frente 01
                 </p>
                 <h2 className="serif text-2xl md:text-[1.6rem] leading-tight" style={{ color: "#1F1F1F" }}>
-                  Nexura Sensorial
+                  Mentoria & Aceleração
                 </h2>
                 <p className="mt-2 text-sm leading-relaxed" style={{ color: "#1F1F1F99" }}>
-                  Produtos sensoriais 3D para crianças atípicas. Desenvolvimento com afeto.
+                  Transforme conhecimento em negócio previsível.
                 </p>
               </div>
               <div
                 className="relative mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase"
                 style={{ color: "#6B2430" }}
               >
-                Visitar <ArrowUpRight className="w-3.5 h-3.5" />
+                Conhecer <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
             </ExtLink>
 
@@ -312,12 +312,12 @@ const Links = () => {
               </div>
             </ExtLink>
 
-            {/* Mentorias */}
+            {/* Nexura Sensorial */}
             <ExtLink
-              href={withUtm(LINKS.mentorias)}
+              href={withUtm(LINKS.nexura)}
               className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px]"
-              ariaLabel="Mentoria & Aceleração"
-              onClick={openWith("Clique_Mentoria")}
+              ariaLabel="Nexura Sensorial"
+              onClick={openWith("Clique_Nexura")}
             >
               <div
                 className="absolute inset-0 rounded-lg border pointer-events-none"
@@ -331,17 +331,17 @@ const Links = () => {
                   Frente 03
                 </p>
                 <h2 className="serif text-2xl md:text-[1.6rem] leading-tight" style={{ color: "#1F1F1F" }}>
-                  Mentoria & Aceleração
+                  Nexura Sensorial
                 </h2>
                 <p className="mt-2 text-sm leading-relaxed" style={{ color: "#1F1F1F99" }}>
-                  Transforme conhecimento em negócio previsível.
+                  Produtos sensoriais 3D para crianças atípicas. Desenvolvimento com afeto.
                 </p>
               </div>
               <div
                 className="relative mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase"
                 style={{ color: "#6B2430" }}
               >
-                Conhecer <ArrowUpRight className="w-3.5 h-3.5" />
+                Visitar <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
             </ExtLink>
           </div>
@@ -468,13 +468,6 @@ const Links = () => {
             style={{ color: "#1F1F1F99" }}
           >
             Monike Kineippe Consultoria e Palestra LTDA.
-          </p>
-          <p
-            className="mt-2 text-xs tracking-[0.25em]"
-            style={{ color: "#B29966" }}
-            aria-hidden
-          >
-            💎 &nbsp; 🍀 &nbsp; ✨
           </p>
           <p className="mt-3 text-[11px]" style={{ color: "#1F1F1F66" }}>
             © {new Date().getFullYear()} · Todos os direitos reservados
