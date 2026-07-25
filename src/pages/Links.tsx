@@ -159,6 +159,12 @@ const Links = () => {
           content="Construo negócios com tecnologia, alma e estrutura. Escolha por onde entrar."
         />
         <meta property="og:type" content="profile" />
+        <meta property="og:image" content="https://monikekineippe.lovable.app/og-links.jpg" />
+        <meta property="og:url" content="https://monikekineippe.lovable.app/links" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Monike Kineippe — Escolha por onde entrar" />
+        <meta name="twitter:image" content="https://monikekineippe.lovable.app/og-links.jpg" />
+        <link rel="canonical" href="https://monikekineippe.lovable.app/links" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
