@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Instagram, Youtube, Linkedin, ArrowUpRight, MessageCircle } from "lucide-react";
-import monike from "@/assets/monike-1.jpg";
+import monike from "@/assets/monike-hub.jpg";
 
 /**
  * Link na bio — hub "nave-mãe" da Monike Kineippe.
