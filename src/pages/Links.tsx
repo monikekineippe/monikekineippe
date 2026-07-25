@@ -31,7 +31,7 @@ const track = (eventName: string) => {
 const LINKS = {
   // 3 Portas
   nexura: "https://nexurasensorial.com.br",
-  blamai: "", // PREENCHER quando o site da BlamAI estiver no ar
+  blamai: "https://agenciaai.com.br",
   mentorias: "https://www.monikekineippe.com/dona-de-si",
 
   // CTA principal
