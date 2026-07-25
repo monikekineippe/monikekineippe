@@ -225,8 +225,8 @@ const Links = () => {
           <div className="mx-auto mt-8 max-w-md">
             <div className="gold-rule mb-6" />
             <p
-              className="serif italic text-xl md:text-2xl leading-snug"
-              style={{ color: "#6B2430" }}
+              className="serif text-2xl md:text-3xl font-normal"
+              style={{ color: "#1F1F1F", lineHeight: 1.3 }}
             >
               Mulher empreende diferente.
               <br />
@@ -283,19 +283,13 @@ const Links = () => {
             <ExtLink
               href={withUtm(LINKS.blamai)}
               className="card-lift relative flex flex-col justify-between rounded-lg p-6 min-h-[180px]"
-              ariaLabel="BlamAI — quero saber do lançamento"
+              ariaLabel="BlamAI"
               onClick={openWith("Clique_BlamAI")}
             >
               <div
                 className="absolute inset-0 rounded-lg border pointer-events-none"
                 style={{ borderColor: "#1F1F1F14" }}
               />
-              <span
-                className="absolute top-4 right-4 text-[9px] tracking-[0.25em] uppercase px-2 py-1 rounded-sm"
-                style={{ backgroundColor: "#6B2430", color: "#F6F4EE" }}
-              >
-                Em breve
-              </span>
               <div className="relative">
                 <p
                   className="text-[10px] tracking-[0.3em] uppercase mb-3"
@@ -314,7 +308,7 @@ const Links = () => {
                 className="relative mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase"
                 style={{ color: "#6B2430" }}
               >
-                Quero saber do lançamento <ArrowUpRight className="w-3.5 h-3.5" />
+                Conhecer <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
             </ExtLink>
 
