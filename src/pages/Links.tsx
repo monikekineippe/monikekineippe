@@ -506,11 +506,22 @@ const QuickGroup = ({ label, children }: { label: string; children: React.ReactN
   </div>
 );
 
-const QuickLink = ({ href, title, desc }: { href: string; title: string; desc: string }) => (
+const QuickLink = ({
+  href,
+  title,
+  desc,
+  event,
+}: {
+  href: string;
+  title: string;
+  desc: string;
+  event?: string;
+}) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
+    onClick={event ? () => track(event) : undefined}
     className="card-lift group flex items-center gap-4 rounded-md px-5 py-4"
     style={{ border: "1px solid #1C1C1C1A", backgroundColor: "#FFFFFF80" }}
   >
