@@ -6,7 +6,7 @@ import monike from "@/assets/monike-1.jpg";
 /**
  * Link na bio — hub "nave-mãe" da Monike Kineippe.
  * Estética: old money CEO / luxo minimalista.
- * Paleta: creme #F7F4EF, grafite #1C1C1C, verde #1E3A32, dourado #B8975A.
+ * Paleta: creme #F6F4EE, grafite #1F1F1F, verde #6B2430, dourado #B29966.
  *
  * Para editar links depois: procure a constante LINKS abaixo.
  * Meta Pixel: já carregado globalmente no index.html (ID 1889631038500773).
@@ -141,8 +141,8 @@ const Links = () => {
     <div
       className="min-h-screen antialiased"
       style={{
-        backgroundColor: "#F7F4EF",
-        color: "#1C1C1C",
+        backgroundColor: "#F6F4EE",
+        color: "#1F1F1F",
         fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif",
       }}
     >
@@ -187,7 +187,7 @@ const Links = () => {
         @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
         .card-lift { transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
         .card-lift:hover { transform: translateY(-3px); box-shadow: 0 20px 40px -24px rgba(28,28,28,.18); }
-        .gold-rule { height:1px; background: linear-gradient(90deg, transparent, #B8975A66, transparent); }
+        .gold-rule { height:1px; background: linear-gradient(90deg, transparent, #B2996666, transparent); }
       `}</style>
 
       <main className="mx-auto w-full max-w-xl px-6 pt-14 pb-16 md:max-w-3xl md:pt-20">
@@ -196,7 +196,7 @@ const Links = () => {
           <div className="relative mx-auto w-32 h-32 md:w-36 md:h-36">
             <div
               className="absolute inset-0 rounded-full blur-2xl opacity-40"
-              style={{ backgroundColor: "#B8975A" }}
+              style={{ backgroundColor: "#B29966" }}
               aria-hidden
             />
             <img
@@ -207,17 +207,17 @@ const Links = () => {
               className="relative w-full h-full rounded-full object-cover"
               style={{
                 objectPosition: "top center",
-                boxShadow: "0 0 0 1px #B8975A, 0 0 0 6px #F7F4EF, 0 0 0 7px #B8975A55",
+                boxShadow: "0 0 0 1px #B29966, 0 0 0 6px #F6F4EE, 0 0 0 7px #B2996655",
               }}
             />
           </div>
 
-          <h1 className="serif mt-8 text-3xl md:text-5xl font-medium" style={{ color: "#1C1C1C" }}>
+          <h1 className="serif mt-8 text-3xl md:text-5xl font-medium" style={{ color: "#1F1F1F" }}>
             Monike Kineippe
           </h1>
           <p
             className="mt-3 text-sm md:text-base tracking-wide"
-            style={{ color: "#1C1C1C99" }}
+            style={{ color: "#1F1F1F99" }}
           >
             Founder em série · Construo negócios com tecnologia, alma e estrutura
           </p>
@@ -226,7 +226,7 @@ const Links = () => {
             <div className="gold-rule mb-6" />
             <p
               className="serif italic text-xl md:text-2xl leading-snug"
-              style={{ color: "#1E3A32" }}
+              style={{ color: "#6B2430" }}
             >
               Mulher empreende diferente.
               <br />
@@ -237,7 +237,7 @@ const Links = () => {
 
           <p
             className="mt-8 text-xs md:text-sm uppercase tracking-[0.28em]"
-            style={{ color: "#B8975A" }}
+            style={{ color: "#B29966" }}
           >
             Escolha por onde entrar ↓
           </p>
@@ -255,25 +255,25 @@ const Links = () => {
             >
               <div
                 className="absolute inset-0 rounded-lg border pointer-events-none"
-                style={{ borderColor: "#1C1C1C14" }}
+                style={{ borderColor: "#1F1F1F14" }}
               />
               <div className="relative">
                 <p
                   className="text-[10px] tracking-[0.3em] uppercase mb-3"
-                  style={{ color: "#B8975A" }}
+                  style={{ color: "#B29966" }}
                 >
                   Frente 01
                 </p>
-                <h2 className="serif text-2xl md:text-[1.6rem] leading-tight" style={{ color: "#1C1C1C" }}>
+                <h2 className="serif text-2xl md:text-[1.6rem] leading-tight" style={{ color: "#1F1F1F" }}>
                   Nexura Sensorial
                 </h2>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#1C1C1C99" }}>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#1F1F1F99" }}>
                   Produtos sensoriais 3D para crianças atípicas. Desenvolvimento com afeto.
                 </p>
               </div>
               <div
                 className="relative mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase"
-                style={{ color: "#1E3A32" }}
+                style={{ color: "#6B2430" }}
               >
                 Visitar <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
@@ -288,31 +288,31 @@ const Links = () => {
             >
               <div
                 className="absolute inset-0 rounded-lg border pointer-events-none"
-                style={{ borderColor: "#1C1C1C14" }}
+                style={{ borderColor: "#1F1F1F14" }}
               />
               <span
                 className="absolute top-4 right-4 text-[9px] tracking-[0.25em] uppercase px-2 py-1 rounded-sm"
-                style={{ backgroundColor: "#1E3A32", color: "#F7F4EF" }}
+                style={{ backgroundColor: "#6B2430", color: "#F6F4EE" }}
               >
                 Em breve
               </span>
               <div className="relative">
                 <p
                   className="text-[10px] tracking-[0.3em] uppercase mb-3"
-                  style={{ color: "#B8975A" }}
+                  style={{ color: "#B29966" }}
                 >
                   Frente 02
                 </p>
-                <h2 className="serif text-2xl md:text-[1.6rem] leading-tight" style={{ color: "#1C1C1C" }}>
+                <h2 className="serif text-2xl md:text-[1.6rem] leading-tight" style={{ color: "#1F1F1F" }}>
                   BlamAI<sup className="text-xs">®</sup>
                 </h2>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#1C1C1C99" }}>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#1F1F1F99" }}>
                   Agência de IA e automação para negócios.
                 </p>
               </div>
               <div
                 className="relative mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase"
-                style={{ color: "#1E3A32" }}
+                style={{ color: "#6B2430" }}
               >
                 Quero saber do lançamento <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
@@ -327,25 +327,25 @@ const Links = () => {
             >
               <div
                 className="absolute inset-0 rounded-lg border pointer-events-none"
-                style={{ borderColor: "#1C1C1C14" }}
+                style={{ borderColor: "#1F1F1F14" }}
               />
               <div className="relative">
                 <p
                   className="text-[10px] tracking-[0.3em] uppercase mb-3"
-                  style={{ color: "#B8975A" }}
+                  style={{ color: "#B29966" }}
                 >
                   Frente 03
                 </p>
-                <h2 className="serif text-2xl md:text-[1.6rem] leading-tight" style={{ color: "#1C1C1C" }}>
+                <h2 className="serif text-2xl md:text-[1.6rem] leading-tight" style={{ color: "#1F1F1F" }}>
                   Mentorias & Palestras
                 </h2>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#1C1C1C99" }}>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#1F1F1F99" }}>
                   Transforme conhecimento em negócio previsível.
                 </p>
               </div>
               <div
                 className="relative mt-6 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase"
-                style={{ color: "#1E3A32" }}
+                style={{ color: "#6B2430" }}
               >
                 Conhecer <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
@@ -357,16 +357,16 @@ const Links = () => {
         <section className="mt-14 fade-up d2">
           <div
             className="rounded-lg p-8 md:p-10 text-center relative overflow-hidden"
-            style={{ backgroundColor: "#1E3A32", color: "#F7F4EF" }}
+            style={{ backgroundColor: "#6B2430", color: "#F6F4EE" }}
           >
             <div
               className="absolute inset-x-8 top-4 h-px opacity-40"
-              style={{ background: "linear-gradient(90deg, transparent, #B8975A, transparent)" }}
+              style={{ background: "linear-gradient(90deg, transparent, #B29966, transparent)" }}
               aria-hidden
             />
             <p
               className="text-[10px] tracking-[0.35em] uppercase mb-4"
-              style={{ color: "#B8975A" }}
+              style={{ color: "#B29966" }}
             >
               Porta principal
             </p>
@@ -383,8 +383,8 @@ const Links = () => {
               onClick={openWith("Clique_Diagnostico")}
               className="inline-flex items-center justify-center gap-2 mt-7 px-8 py-3.5 text-sm tracking-[0.2em] uppercase transition-all hover:opacity-90"
               style={{
-                backgroundColor: "#B8975A",
-                color: "#1C1C1C",
+                backgroundColor: "#B29966",
+                color: "#1F1F1F",
                 fontWeight: 500,
               }}
             >
@@ -401,8 +401,8 @@ const Links = () => {
                 onClick={openWith("Clique_WhatsApp")}
                 className="inline-flex items-center justify-center gap-2 px-7 py-3 text-xs md:text-sm tracking-[0.18em] uppercase transition-all"
                 style={{
-                  border: "1px solid #B8975A",
-                  color: "#F7F4EF",
+                  border: "1px solid #B29966",
+                  color: "#F6F4EE",
                   backgroundColor: "transparent",
                 }}
               >
@@ -442,7 +442,7 @@ const Links = () => {
               rel="noopener noreferrer"
               aria-label="Instagram"
               className="transition-colors"
-              style={{ color: "#1C1C1C" }}
+              style={{ color: "#1F1F1F" }}
             >
               <Instagram className="w-5 h-5" strokeWidth={1.5} />
             </a>
@@ -451,7 +451,7 @@ const Links = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
-              style={{ color: "#1C1C1C" }}
+              style={{ color: "#1F1F1F" }}
             >
               <Youtube className="w-5 h-5" strokeWidth={1.5} />
             </a>
@@ -460,7 +460,7 @@ const Links = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              style={{ color: "#1C1C1C" }}
+              style={{ color: "#1F1F1F" }}
             >
               <Linkedin className="w-5 h-5" strokeWidth={1.5} />
             </a>
@@ -471,18 +471,18 @@ const Links = () => {
         <footer className="mt-14 text-center">
           <p
             className="serif text-sm"
-            style={{ color: "#1C1C1C99" }}
+            style={{ color: "#1F1F1F99" }}
           >
             Monike Kineippe Consultoria e Palestra LTDA.
           </p>
           <p
             className="mt-2 text-xs tracking-[0.25em]"
-            style={{ color: "#B8975A" }}
+            style={{ color: "#B29966" }}
             aria-hidden
           >
             💎 &nbsp; 🍀 &nbsp; ✨
           </p>
-          <p className="mt-3 text-[11px]" style={{ color: "#1C1C1C66" }}>
+          <p className="mt-3 text-[11px]" style={{ color: "#1F1F1F66" }}>
             © {new Date().getFullYear()} · Todos os direitos reservados
           </p>
         </footer>
@@ -498,7 +498,7 @@ const QuickGroup = ({ label, children }: { label: string; children: React.ReactN
   <div className="mb-8">
     <p
       className="text-[10px] tracking-[0.3em] uppercase text-center mb-4"
-      style={{ color: "#B8975A" }}
+      style={{ color: "#B29966" }}
     >
       {label}
     </p>
@@ -523,19 +523,19 @@ const QuickLink = ({
     rel="noopener noreferrer"
     onClick={event ? () => track(event) : undefined}
     className="card-lift group flex items-center gap-4 rounded-md px-5 py-4"
-    style={{ border: "1px solid #1C1C1C1A", backgroundColor: "#FFFFFF80" }}
+    style={{ border: "1px solid #1F1F1F1A", backgroundColor: "#FFFFFF80" }}
   >
     <div className="flex-1 min-w-0">
-      <p className="serif text-base md:text-lg leading-tight" style={{ color: "#1C1C1C" }}>
+      <p className="serif text-base md:text-lg leading-tight" style={{ color: "#1F1F1F" }}>
         {title}
       </p>
-      <p className="text-xs md:text-sm mt-0.5" style={{ color: "#1C1C1C99" }}>
+      <p className="text-xs md:text-sm mt-0.5" style={{ color: "#1F1F1F99" }}>
         {desc}
       </p>
     </div>
     <ArrowUpRight
       className="w-4 h-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-      style={{ color: "#B8975A" }}
+      style={{ color: "#B29966" }}
     />
   </a>
 );
