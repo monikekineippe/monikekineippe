@@ -386,25 +386,26 @@ const Links = () => {
               <ArrowUpRight className="w-4 h-4" />
             </a>
 
-            {/* 3b — WhatsApp palestras */}
-            <div className="mt-5">
-              <a
-                href={LINKS.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={openWith("Clique_WhatsApp")}
-                className="inline-flex items-center justify-center gap-2 px-7 py-3 text-xs md:text-sm tracking-[0.18em] uppercase transition-all"
-                style={{
-                  border: "1px solid #B29966",
-                  color: "#F6F4EE",
-                  backgroundColor: "transparent",
-                }}
-              >
-                <MessageCircle className="w-4 h-4" />
-                Palestras & eventos presenciais — WhatsApp
-              </a>
-            </div>
           </div>
+        </section>
+
+        {/* 3b. PALESTRAS — botão independente abaixo da Porta Principal */}
+        <section className="mt-8 fade-up d2">
+          <a
+            href={LINKS.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={openWith("Clique_WhatsApp")}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-lg px-7 py-3.5 text-xs md:text-sm tracking-[0.18em] uppercase transition-all hover:opacity-90"
+            style={{
+              border: "1px solid #B29966",
+              color: "#1F1F1F",
+              backgroundColor: "transparent",
+            }}
+          >
+            <MessageCircle className="w-4 h-4" style={{ color: "#B29966" }} />
+            Palestras e eventos presenciais no WhatsApp
+          </a>
         </section>
 
         {/* 4. LINKS RÁPIDOS */}
