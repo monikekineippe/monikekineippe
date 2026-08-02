@@ -147,24 +147,38 @@ const Links = () => {
       }}
     >
       <Helmet>
-        <title>Monike Kineippe — Escolha por onde entrar</title>
+        <title>Monike Kineippe | Founder em série e estrategista de negócios femininos</title>
         <meta
           name="description"
-          content="Hub oficial de Monike Kineippe. Negócios femininos com tecnologia, alma e estrutura: Nexura Sensorial, BlamAI e Mentorias."
+          content="Negócios femininos com alma, estrutura e IA humanizada. Escolha por onde entrar: Nexura Sensorial, BlamAI, mentorias e CoruJah."
         />
         <meta name="robots" content="index,follow" />
-        <meta property="og:title" content="Monike Kineippe — Escolha por onde entrar" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Monike Kineippe" />
+        <meta
+          property="og:title"
+          content="Monike Kineippe | Founder em série e estrategista de negócios femininos"
+        />
         <meta
           property="og:description"
-          content="Construo negócios com tecnologia, alma e estrutura. Escolha por onde entrar."
+          content="Negócios femininos com alma, estrutura e IA humanizada. Escolha por onde entrar."
         />
-        <meta property="og:type" content="profile" />
-        <meta property="og:image" content="https://monikekineippe.lovable.app/og-links.jpg" />
-        <meta property="og:url" content="https://monikekineippe.lovable.app/links" />
+        <meta property="og:url" content="https://monikekineippe.com/hub" />
+        <meta property="og:image" content="https://monikekineippe.com/og-links.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="pt_BR" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Monike Kineippe — Escolha por onde entrar" />
-        <meta name="twitter:image" content="https://monikekineippe.lovable.app/og-links.jpg" />
-        <link rel="canonical" href="https://monikekineippe.lovable.app/links" />
+        <meta
+          name="twitter:title"
+          content="Monike Kineippe | Founder em série e estrategista de negócios femininos"
+        />
+        <meta
+          name="twitter:description"
+          content="Negócios femininos com alma, estrutura e IA humanizada."
+        />
+        <meta name="twitter:image" content="https://monikekineippe.com/og-links.jpg" />
+        <link rel="canonical" href="https://monikekineippe.com/hub" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
