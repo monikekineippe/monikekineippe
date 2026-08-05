@@ -105,9 +105,9 @@ const faqData = [
 ];
 
 const depoimentos = [
-  { nome: "Ana", texto: "DEPOIMENTO PLACEHOLDER — Aguardando texto da Ana." },
-  { nome: "Ágata", texto: "DEPOIMENTO PLACEHOLDER — Aguardando texto da Ágata." },
-  { nome: "Aluna", texto: "DEPOIMENTO PLACEHOLDER — Aguardando terceiro depoimento." },
+  { nome: "Manu Lutzer", texto: "Monike não é só minha mentora: ela é a voz que fala a real. Em 3 sessões, ela me fez ver o que eu mesma não conseguia. Os encontros não são só sobre negócios, são sobre desafiar limites e transformar sonhos em ações." },
+  { nome: "Aluna do método", texto: "Minha estratégia foi criar narrativas de desejo. Ofertei meu curso por R$800 e vendi 8 de uma vez, com 80 pessoas na fila para a próxima oferta." },
+  { nome: "Aluna do workshop", texto: "Eu estava no escuro até conhecer a Monike. Hoje vejo meu negócio de uma outra perspectiva. Obrigada por abrir portas e acender as luzes." },
 ];
 
 /* ───────────────────────── Component ───────────────────────── */
@@ -478,7 +478,7 @@ const VendaSemVender = () => {
         <div className="container mx-auto px-6">
           <p className="font-serif text-2xl text-[#F5F0E8]/80 mb-8">Monike Kineippe</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-10 text-sm uppercase tracking-widest mb-10">
-            <a href="mailto:contato@monikekineippe.com.br" className="hover:text-[#B8973A] transition-colors">contato@monikekineippe.com.br</a>
+            <a href="mailto:contato@monikekineippe.com" className="hover:text-[#B8973A] transition-colors">contato@monikekineippe.com</a>
             <a href="/politica-de-privacidade" className="hover:text-[#B8973A] transition-colors">Política de Privacidade</a>
             <a href="/termos-de-uso" className="hover:text-[#B8973A] transition-colors">Termos de Uso</a>
           </div>
